@@ -1,0 +1,17 @@
+[
+  {
+    "query": "Preciso de uma nova skill para automatizar deploy no Vercel",
+    "should_trigger": true,
+    "note": "Solicitação direta de criação de skill"
+  },
+  {
+    "query": "Como posso criar um novo agente especialista em segurança?",
+    "should_trigger": true,
+    "note": "Solicitação de criação de agente"
+  },
+  {
+    "query": "Lista os arquivos do diretório atual",
+    "should_trigger": false,
+    "note": "Comando genérico de sistema, não deve ativar o skill-creator"
+  }
+]

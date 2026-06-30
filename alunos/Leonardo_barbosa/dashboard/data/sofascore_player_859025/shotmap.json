@@ -1,0 +1,177 @@
+{
+    "shotmap": [
+        {
+            "player": {
+                "name": "Aurélien Tchouaméni",
+                "firstName": "Aurelien",
+                "lastName": "Tchouameni",
+                "slug": "aurelien-tchouameni",
+                "shortName": "A. Tchouaméni",
+                "position": "M",
+                "jerseyNumber": "14",
+                "userCount": 157298,
+                "gender": "M",
+                "sofascoreId": "ATchouaméni",
+                "id": 859025,
+                "fieldTranslations": {
+                    "nameTranslation": {
+                        "ar": "أوريليان تشواميني",
+                        "bn": "অরেলিয়ান চৌমেনি",
+                        "hi": "ऑरेलियन टचौमेनी"
+                    },
+                    "shortNameTranslation": {
+                        "ar": "أ. تشواميني",
+                        "bn": "এ. চৌমেনি",
+                        "hi": "ए. टचौमेनी"
+                    }
+                }
+            },
+            "isHome": true,
+            "shotType": "post",
+            "situation": "assisted",
+            "playerCoordinates": {
+                "x": 23.5,
+                "y": 47.7,
+                "z": 0
+            },
+            "bodyPart": "right-foot",
+            "goalMouthLocation": "left",
+            "goalMouthCoordinates": {
+                "x": 0,
+                "y": 55.5,
+                "z": 2.5
+            },
+            "goalkeeper": {
+                "name": "Pierce Charles",
+                "firstName": "Pierce Charles",
+                "slug": "charles-pierce",
+                "shortName": "P. Charles",
+                "position": "G",
+                "jerseyNumber": "1",
+                "userCount": 568,
+                "gender": "M",
+                "id": 1154937,
+                "fieldTranslations": {
+                    "nameTranslation": {
+                        "ar": "تشارلز بيرس"
+                    },
+                    "shortNameTranslation": {
+                        "ar": "ت. بيرس"
+                    }
+                }
+            },
+            "id": 7475388,
+            "time": 20,
+            "timeSeconds": 1196,
+            "draw": {
+                "start": {
+                    "x": 47.7,
+                    "y": 23.5
+                },
+                "end": {
+                    "x": 44.5,
+                    "y": 0
+                },
+                "goal": {
+                    "x": 44.5,
+                    "y": 97.5
+                }
+            },
+            "reversedPeriodTime": 26,
+            "reversedPeriodTimeSeconds": 1504,
+            "periodTimeSeconds": 1196,
+            "incidentType": "shot"
+        },
+        {
+            "player": {
+                "name": "Aurélien Tchouaméni",
+                "firstName": "Aurelien",
+                "lastName": "Tchouameni",
+                "slug": "aurelien-tchouameni",
+                "shortName": "A. Tchouaméni",
+                "position": "M",
+                "jerseyNumber": "14",
+                "userCount": 157298,
+                "gender": "M",
+                "sofascoreId": "ATchouaméni",
+                "id": 859025,
+                "fieldTranslations": {
+                    "nameTranslation": {
+                        "ar": "أوريليان تشواميني",
+                        "bn": "অরেলিয়ান চৌমেনি",
+                        "hi": "ऑरेलियन टचौमेनी"
+                    },
+                    "shortNameTranslation": {
+                        "ar": "أ. تشواميني",
+                        "bn": "এ. চৌমেনি",
+                        "hi": "ए. टचौमेनी"
+                    }
+                }
+            },
+            "isHome": true,
+            "shotType": "block",
+            "situation": "regular",
+            "playerCoordinates": {
+                "x": 19.8,
+                "y": 46.5,
+                "z": 0
+            },
+            "bodyPart": "right-foot",
+            "goalMouthLocation": "low-centre",
+            "goalMouthCoordinates": {
+                "x": 0,
+                "y": 50.6,
+                "z": 19
+            },
+            "blockCoordinates": {
+                "x": 19.2,
+                "y": 46.6,
+                "z": 0
+            },
+            "goalkeeper": {
+                "name": "Pierce Charles",
+                "firstName": "Pierce Charles",
+                "slug": "charles-pierce",
+                "shortName": "P. Charles",
+                "position": "G",
+                "jerseyNumber": "1",
+                "userCount": 568,
+                "gender": "M",
+                "id": 1154937,
+                "fieldTranslations": {
+                    "nameTranslation": {
+                        "ar": "تشارلز بيرس"
+                    },
+                    "shortNameTranslation": {
+                        "ar": "ت. بيرس"
+                    }
+                }
+            },
+            "id": 7475386,
+            "time": 17,
+            "timeSeconds": 1007,
+            "draw": {
+                "start": {
+                    "x": 46.5,
+                    "y": 19.8
+                },
+                "block": {
+                    "x": 46.6,
+                    "y": 19.2
+                },
+                "end": {
+                    "x": 49.4,
+                    "y": 0
+                },
+                "goal": {
+                    "x": 49.4,
+                    "y": 81
+                }
+            },
+            "reversedPeriodTime": 29,
+            "reversedPeriodTimeSeconds": 1693,
+            "periodTimeSeconds": 1007,
+            "incidentType": "shot"
+        }
+    ]
+}

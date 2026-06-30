@@ -1,0 +1,110 @@
+{
+    "player": {
+        "name": "Lucas Paquetá",
+        "firstName": "Lucas",
+        "lastName": "Paqueta",
+        "slug": "lucas-paqueta",
+        "shortName": "L. Paquetá",
+        "position": "M",
+        "jerseyNumber": "20",
+        "height": 180,
+        "userCount": 73712,
+        "gender": "M",
+        "sofascoreId": "Paqueta",
+        "id": 839981,
+        "marketValueCurrency": "EUR",
+        "dateOfBirthTimestamp": 872553600,
+        "proposedMarketValueRaw": {
+            "value": 36000000,
+            "currency": "EUR"
+        },
+        "fieldTranslations": {
+            "nameTranslation": {
+                "ar": "لوكاس باكيتا",
+                "bn": "লুকাস পাকেতা",
+                "hi": "लुकास पेकटा"
+            },
+            "shortNameTranslation": {
+                "ar": "ل. باكيتا",
+                "bn": "এল. পাকেতা",
+                "hi": "एल. पेकटा"
+            }
+        }
+    },
+    "team": {
+        "name": "Brazil",
+        "slug": "brazil",
+        "shortName": "Brazil",
+        "gender": "M",
+        "sport": {
+            "name": "Football",
+            "slug": "football",
+            "id": 1
+        },
+        "userCount": 2441982,
+        "nameCode": "BRA",
+        "ranking": 6,
+        "disabled": false,
+        "national": true,
+        "type": 0,
+        "id": 4748,
+        "teamColors": {
+            "primary": "#ffff00",
+            "secondary": "#009933",
+            "text": "#009933"
+        },
+        "fieldTranslations": {
+            "nameTranslation": {
+                "ar": "البرازيل",
+                "bn": "ব্রাজিল",
+                "hi": "ब्राजील",
+                "ru": "Бразилия"
+            },
+            "shortNameTranslation": {}
+        }
+    },
+    "statistics": {
+        "totalPass": 27,
+        "accuratePass": 24,
+        "totalLongBalls": 1,
+        "goalAssist": 0,
+        "accurateOwnHalfPasses": 12,
+        "totalOwnHalfPasses": 12,
+        "accurateOppositionHalfPasses": 12,
+        "totalOppositionHalfPasses": 15,
+        "aerialLost": 1,
+        "duelLost": 2,
+        "duelWon": 1,
+        "totalContest": 1,
+        "shotOffTarget": 1,
+        "ballRecovery": 4,
+        "totalTackle": 1,
+        "unsuccessfulTouch": 2,
+        "minutesPlayed": 45,
+        "touches": 35,
+        "rating": 6.4,
+        "possessionLostCtrl": 6,
+        "totalBallCarriesDistance": 55.682468564181,
+        "ballCarriesCount": 7,
+        "totalProgression": 23.813310468379,
+        "bestBallCarryProgression": 10.432313662197,
+        "totalProgressiveBallCarriesDistance": 10.937136005372,
+        "progressiveBallCarriesCount": 1,
+        "keyPass": 1,
+        "ratingVersions": {
+            "original": 6.4,
+            "alternative": 6.7
+        },
+        "totalShots": 1,
+        "shotValueNormalized": -0.25,
+        "passValueNormalized": 0.12,
+        "dribbleValueNormalized": 0.05,
+        "defensiveValueNormalized": -0.05,
+        "statisticsType": {
+            "sportSlug": "football",
+            "statisticsType": "player"
+        }
+    },
+    "position": "M",
+    "extra": null
+}

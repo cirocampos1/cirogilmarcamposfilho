@@ -1,0 +1,105 @@
+{
+    "player": {
+        "name": "Mohamed Abdelmonem",
+        "firstName": "",
+        "lastName": "",
+        "slug": "mohamed-abdelmonem",
+        "shortName": "M. Abdelmonem",
+        "position": "D",
+        "jerseyNumber": "5",
+        "height": 183,
+        "userCount": 33016,
+        "gender": "M",
+        "sofascoreId": "mohamed_abdelmonem66",
+        "id": 926506,
+        "marketValueCurrency": "EUR",
+        "dateOfBirthTimestamp": 917827200,
+        "proposedMarketValueRaw": {
+            "value": 2700000,
+            "currency": "EUR"
+        },
+        "fieldTranslations": {
+            "nameTranslation": {
+                "ar": "محمد عبد المنعم",
+                "bn": "মোহাম্মদ আবদেলমোনেম",
+                "hi": "मोहम्मद अब्देलमोनम"
+            },
+            "shortNameTranslation": {
+                "ar": "م. عبد المنعم",
+                "bn": "এম.আবদেলমোনেম",
+                "hi": "एम. अब्देलमोनम"
+            }
+        }
+    },
+    "team": {
+        "name": "Egypt",
+        "slug": "egypt",
+        "shortName": "Egypt",
+        "gender": "M",
+        "sport": {
+            "name": "Football",
+            "slug": "football",
+            "id": 1
+        },
+        "userCount": 617607,
+        "nameCode": "EGY",
+        "ranking": 29,
+        "disabled": false,
+        "national": true,
+        "type": 0,
+        "id": 4758,
+        "teamColors": {
+            "primary": "#f00000",
+            "secondary": "#ffffff",
+            "text": "#ffffff"
+        },
+        "fieldTranslations": {
+            "nameTranslation": {
+                "ar": "مصر",
+                "bn": "মিশর",
+                "hi": "इजिप्ट",
+                "ru": "Египет"
+            },
+            "shortNameTranslation": {}
+        }
+    },
+    "statistics": {
+        "totalPass": 34,
+        "accuratePass": 34,
+        "totalLongBalls": 2,
+        "accurateLongBalls": 2,
+        "goalAssist": 0,
+        "accurateOwnHalfPasses": 18,
+        "totalOwnHalfPasses": 18,
+        "accurateOppositionHalfPasses": 16,
+        "totalOppositionHalfPasses": 16,
+        "aerialWon": 1,
+        "duelLost": 2,
+        "duelWon": 1,
+        "totalClearance": 1,
+        "interceptionWon": 2,
+        "fouls": 2,
+        "minutesPlayed": 45,
+        "touches": 40,
+        "rating": 6.5,
+        "totalBallCarriesDistance": 57.826381609079,
+        "ballCarriesCount": 8,
+        "totalProgression": 31.144927557503,
+        "progressiveBallCarriesCount": 0,
+        "keyPass": 1,
+        "ratingVersions": {
+            "original": 6.5,
+            "alternative": 6.8
+        },
+        "totalShots": 0,
+        "passValueNormalized": 0.1,
+        "dribbleValueNormalized": 0.06,
+        "defensiveValueNormalized": -0.17,
+        "statisticsType": {
+            "sportSlug": "football",
+            "statisticsType": "player"
+        }
+    },
+    "position": "D",
+    "extra": null
+}

@@ -1,0 +1,110 @@
+{
+    "player": {
+        "name": "Matheus Cunha",
+        "firstName": "Matheus",
+        "lastName": "Cunha",
+        "slug": "matheus-cunha",
+        "shortName": "M. Cunha",
+        "position": "F",
+        "jerseyNumber": "10",
+        "height": 184,
+        "userCount": 82048,
+        "gender": "M",
+        "sofascoreId": "Cunha",
+        "id": 886363,
+        "marketValueCurrency": "EUR",
+        "dateOfBirthTimestamp": 927763200,
+        "proposedMarketValueRaw": {
+            "value": 73000000,
+            "currency": "EUR"
+        },
+        "fieldTranslations": {
+            "nameTranslation": {
+                "ar": "ماثيوس كونيا",
+                "bn": "ম্যাথিউস কুনহা",
+                "hi": "मैथियस कुन्हा"
+            },
+            "shortNameTranslation": {
+                "ar": "م. كونيا",
+                "bn": "এম. কুনহা",
+                "hi": "एम. कुन्हा"
+            }
+        }
+    },
+    "team": {
+        "name": "Brazil",
+        "slug": "brazil",
+        "shortName": "Brazil",
+        "gender": "M",
+        "sport": {
+            "name": "Football",
+            "slug": "football",
+            "id": 1
+        },
+        "userCount": 2441982,
+        "nameCode": "BRA",
+        "ranking": 6,
+        "disabled": false,
+        "national": true,
+        "type": 0,
+        "id": 4748,
+        "teamColors": {
+            "primary": "#ffff00",
+            "secondary": "#009933",
+            "text": "#009933"
+        },
+        "fieldTranslations": {
+            "nameTranslation": {
+                "ar": "البرازيل",
+                "bn": "ব্রাজিল",
+                "hi": "ब्राजील",
+                "ru": "Бразилия"
+            },
+            "shortNameTranslation": {}
+        }
+    },
+    "statistics": {
+        "totalPass": 18,
+        "accuratePass": 14,
+        "goalAssist": 0,
+        "accurateOwnHalfPasses": 3,
+        "totalOwnHalfPasses": 4,
+        "accurateOppositionHalfPasses": 11,
+        "totalOppositionHalfPasses": 14,
+        "totalCross": 1,
+        "duelLost": 2,
+        "duelWon": 3,
+        "challengeLost": 1,
+        "dispossessed": 1,
+        "blockedScoringAttempt": 1,
+        "ballRecovery": 2,
+        "totalTackle": 1,
+        "unsuccessfulTouch": 1,
+        "wasFouled": 2,
+        "minutesPlayed": 45,
+        "touches": 26,
+        "rating": 6.7,
+        "possessionLostCtrl": 7,
+        "totalBallCarriesDistance": 85.491195465154,
+        "ballCarriesCount": 6,
+        "totalProgression": 23.328676378926,
+        "bestBallCarryProgression": 10.202229393399,
+        "totalProgressiveBallCarriesDistance": 11.445620341423,
+        "progressiveBallCarriesCount": 1,
+        "ratingVersions": {
+            "original": 6.7,
+            "alternative": 6.7
+        },
+        "totalShots": 1,
+        "shotValueNormalized": -0.06,
+        "passValueNormalized": 0.05,
+        "dribbleValueNormalized": 0.19,
+        "defensiveValueNormalized": -0.05,
+        "statisticsType": {
+            "sportSlug": "football",
+            "statisticsType": "player"
+        }
+    },
+    "position": "F",
+    "extra": null
+}

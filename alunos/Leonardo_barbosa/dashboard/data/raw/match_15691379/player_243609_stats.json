@@ -1,0 +1,104 @@
+{
+    "player": {
+        "name": "Alisson",
+        "firstName": "Alisson Ramses",
+        "lastName": "Alisson",
+        "slug": "alisson",
+        "shortName": "Alisson",
+        "position": "G",
+        "jerseyNumber": "1",
+        "height": 193,
+        "userCount": 71842,
+        "gender": "M",
+        "sofascoreId": "AlissonBecker",
+        "id": 243609,
+        "marketValueCurrency": "EUR",
+        "dateOfBirthTimestamp": 717984000,
+        "proposedMarketValueRaw": {
+            "value": 18700000,
+            "currency": "EUR"
+        },
+        "fieldTranslations": {
+            "nameTranslation": {
+                "ar": "أليسون",
+                "bn": "অ্যালিসন",
+                "hi": "एलिसन"
+            },
+            "shortNameTranslation": {
+                "ar": "أليسون",
+                "bn": "অ্যালিসন",
+                "hi": "एलिसन"
+            }
+        }
+    },
+    "team": {
+        "name": "Brazil",
+        "slug": "brazil",
+        "shortName": "Brazil",
+        "gender": "M",
+        "sport": {
+            "name": "Football",
+            "slug": "football",
+            "id": 1
+        },
+        "userCount": 2441982,
+        "nameCode": "BRA",
+        "ranking": 6,
+        "disabled": false,
+        "national": true,
+        "type": 0,
+        "id": 4748,
+        "teamColors": {
+            "primary": "#ffff00",
+            "secondary": "#009933",
+            "text": "#009933"
+        },
+        "fieldTranslations": {
+            "nameTranslation": {
+                "ar": "البرازيل",
+                "bn": "ব্রাজিল",
+                "hi": "ब्राजील",
+                "ru": "Бразилия"
+            },
+            "shortNameTranslation": {}
+        }
+    },
+    "statistics": {
+        "totalPass": 9,
+        "accuratePass": 7,
+        "totalLongBalls": 4,
+        "accurateLongBalls": 2,
+        "goalAssist": 0,
+        "accurateOwnHalfPasses": 5,
+        "totalOwnHalfPasses": 5,
+        "accurateOppositionHalfPasses": 2,
+        "totalOppositionHalfPasses": 4,
+        "totalClearance": 1,
+        "ballRecovery": 1,
+        "totalKeeperSweeper": 2,
+        "accurateKeeperSweeper": 2,
+        "minutesPlayed": 45,
+        "touches": 11,
+        "rating": 6.3,
+        "possessionLostCtrl": 2,
+        "totalBallCarriesDistance": 15.460590203329,
+        "ballCarriesCount": 3,
+        "totalProgression": 11.463881413948,
+        "progressiveBallCarriesCount": 0,
+        "ratingVersions": {
+            "original": 6.3,
+            "alternative": 6.4
+        },
+        "totalShots": 0,
+        "passValueNormalized": 0.03,
+        "dribbleValueNormalized": 0.03,
+        "defensiveValueNormalized": -0.1,
+        "goalkeeperValueNormalized": -0.54,
+        "statisticsType": {
+            "sportSlug": "football",
+            "statisticsType": "player"
+        }
+    },
+    "position": "G",
+    "extra": null
+}

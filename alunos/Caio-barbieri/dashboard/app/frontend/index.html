@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SofaScore Player Dashboard</title>
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard">
+        <header>
+            <h1>SofaScore Player Dashboard</h1>
+            <p>Performance & Estatísticas Detalhadas</p>
+            <div class="match-selector-wrapper">
+                <label for="match-select">🏆 Partida:</label>
+                <select id="match-select">
+                    <option value="">Carregando partidas...</option>
+                </select>
+            </div>
+            <div class="compare-grid player-selectors">
+                <div class="player-selector side-a">
+                    <label>Jogador A</label>
+                    <select id="player-select-a" disabled>
+                        <option value="">Carregando jogadores...</option>
+                    </select>
+                    <div id="player-info-a" class="player-info"></div>
+                </div>
+                <div class="player-selector side-b">
+                    <label>Jogador B</label>
+                    <select id="player-select-b" disabled>
+                        <option value="">Carregando jogadores...</option>
+                    </select>
+                    <div id="player-info-b" class="player-info"></div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="glass-panel map-container" id="panel-heatmap">
+                <h2>Mapa de Calor (Heatmap)</h2>
+                <div class="compare-grid">
+                    <div class="img-wrapper" id="heatmap-wrapper-a">
+                        <img id="heatmap-img-a" src="" alt="Carregando heatmap...">
+                        <div class="img-placeholder" id="heatmap-placeholder-a">
+                            <span class="placeholder-icon">🗺️</span>
+                            <span class="placeholder-text">Heatmap A indisponível</span>
+                        </div>
+                        <div class="skeleton-img" id="heatmap-skeleton-a"></div>
+                    </div>
+                    <div class="img-wrapper" id="heatmap-wrapper-b">
+                        <img id="heatmap-img-b" src="" alt="Carregando heatmap...">
+                        <div class="img-placeholder" id="heatmap-placeholder-b">
+                            <span class="placeholder-icon">🗺️</span>
+                            <span class="placeholder-text">Heatmap B indisponível</span>
+                        </div>
+                        <div class="skeleton-img" id="heatmap-skeleton-b"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-panel map-container" id="panel-shotmap">
+                <h2>Mapa de Chutes (Shotmap)</h2>
+                <div class="compare-grid">
+                    <div class="img-wrapper" id="shotmap-wrapper-a">
+                        <img id="shotmap-img-a" src="" alt="Carregando shotmap...">
+                        <div class="img-placeholder" id="shotmap-placeholder-a">
+                            <span class="placeholder-icon">🎯</span>
+                            <span class="placeholder-text">Shotmap A indisponível</span>
+                        </div>
+                        <div class="skeleton-img" id="shotmap-skeleton-a"></div>
+                    </div>
+                    <div class="img-wrapper" id="shotmap-wrapper-b">
+                        <img id="shotmap-img-b" src="" alt="Carregando shotmap...">
+                        <div class="img-placeholder" id="shotmap-placeholder-b">
+                            <span class="placeholder-icon">🎯</span>
+                            <span class="placeholder-text">Shotmap B indisponível</span>
+                        </div>
+                        <div class="skeleton-img" id="shotmap-skeleton-b"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-panel map-container" id="panel-passmap">
+                <h2>Mapa de Passes</h2>
+                <div class="compare-grid">
+                    <div class="img-wrapper" id="passmap-wrapper-a">
+                        <img id="passmap-img-a" src="" alt="Carregando passmap...">
+                        <div class="img-placeholder" id="passmap-placeholder-a">
+                            <span class="placeholder-icon">↗️</span>
+                            <span class="placeholder-text">Passmap A indisponível</span>
+                        </div>
+                        <div class="skeleton-img" id="passmap-skeleton-a"></div>
+                    </div>
+                    <div class="img-wrapper" id="passmap-wrapper-b">
+                        <img id="passmap-img-b" src="" alt="Carregando passmap...">
+                        <div class="img-placeholder" id="passmap-placeholder-b">
+                            <span class="placeholder-icon">↗️</span>
+                            <span class="placeholder-text">Passmap B indisponível</span>
+                        </div>
+                        <div class="skeleton-img" id="passmap-skeleton-b"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-panel stats-container">
+                <h2>Estatísticas Gerais</h2>
+                <div class="stat-tabs">
+                    <button class="stat-tab active" data-group="all">Todas</button>
+                    <button class="stat-tab" data-group="attack">Ataque</button>
+                    <button class="stat-tab" data-group="passing">Passe</button>
+                    <button class="stat-tab" data-group="defense">Defesa</button>
+                </div>
+                <div class="compare-grid">
+                    <div class="stats-col side-a">
+                        <div class="player-stats-header header-a" id="player-stats-header-a">Jogador A</div>
+                        <div id="stats-grid-a" class="stats-grid"></div>
+                        <div class="skeleton-stats" id="stats-skeleton-a">
+                            <div class="skeleton-card"></div><div class="skeleton-card"></div><div class="skeleton-card"></div>
+                            <div class="skeleton-card"></div><div class="skeleton-card"></div><div class="skeleton-card"></div>
+                        </div>
+                    </div>
+                    <div class="stats-col side-b">
+                        <div class="player-stats-header header-b" id="player-stats-header-b">Jogador B</div>
+                        <div id="stats-grid-b" class="stats-grid"></div>
+                        <div class="skeleton-stats" id="stats-skeleton-b">
+                            <div class="skeleton-card"></div><div class="skeleton-card"></div><div class="skeleton-card"></div>
+                            <div class="skeleton-card"></div><div class="skeleton-card"></div><div class="skeleton-card"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-panel events-container" id="panel-events">
+                <h2>Eventos da Partida</h2>
+                <div class="compare-grid">
+                    <div class="events-col side-a">
+                        <div class="events-grid" id="events-grid-a"></div>
+                        <div class="events-empty hidden" id="events-empty-a">
+                            <span class="placeholder-icon">📊</span>
+                            <span class="placeholder-text">Nenhum evento (A)</span>
+                        </div>
+                        <div class="skeleton-events" id="events-skeleton-a">
+                            <div class="skeleton-event-card"></div><div class="skeleton-event-card"></div>
+                            <div class="skeleton-event-card"></div><div class="skeleton-event-card"></div>
+                        </div>
+                    </div>
+                    <div class="events-col side-b">
+                        <div class="events-grid" id="events-grid-b"></div>
+                        <div class="events-empty hidden" id="events-empty-b">
+                            <span class="placeholder-icon">📊</span>
+                            <span class="placeholder-text">Nenhum evento (B)</span>
+                        </div>
+                        <div class="skeleton-events" id="events-skeleton-b">
+                            <div class="skeleton-event-card"></div><div class="skeleton-event-card"></div>
+                            <div class="skeleton-event-card"></div><div class="skeleton-event-card"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-panel radar-container" id="panel-radar">
+                <h2>Radar de Performance Comparativo (Interativo)</h2>
+                <div style="width: 100%; max-width: 450px; margin: 0 auto; display: flex; justify-content: center;">
+                    <canvas id="stats-radar"></canvas>
+                </div>
+            </div>
+
+            <div class="glass-panel pizza-container" id="panel-pizza">
+                <h2>Radar de Performance Geral (Percentis)</h2>
+                <div class="compare-grid">
+                    <div class="img-wrapper">
+                        <img id="pizza-img-a" src="" alt="Percentis do Jogador A">
+                        <div class="img-placeholder" id="pizza-placeholder-a">
+                            <span class="placeholder-icon">🍕</span>
+                            <span class="placeholder-text">Pizza A indisponível</span>
+                        </div>
+                    </div>
+                    <div class="img-wrapper">
+                        <img id="pizza-img-b" src="" alt="Percentis do Jogador B">
+                        <div class="img-placeholder" id="pizza-placeholder-b">
+                            <span class="placeholder-icon">🍕</span>
+                            <span class="placeholder-text">Pizza B indisponível</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </main>
+
+        <div id="error-toast" class="error-toast hidden">
+            <span id="error-message">Erro ao carregar dados</span>
+            <button onclick="this.parentElement.classList.add('hidden')">✕</button>
+        </div>
+    </div>
+
+    <script type="module" src="assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+{
+    "shotmap": [
+        {
+            "player": {
+                "name": "Ousmane Dembélé",
+                "firstName": "Ousmane",
+                "lastName": "Dembele",
+                "slug": "ousmane-dembele",
+                "shortName": "O. Dembélé",
+                "position": "F",
+                "jerseyNumber": "10",
+                "userCount": 311438,
+                "gender": "M",
+                "sofascoreId": "ODembélé",
+                "id": 818244,
+                "fieldTranslations": {
+                    "nameTranslation": {
+                        "ar": "عثمان ديمبيلي",
+                        "bn": "উসমান ডেম্বেলে",
+                        "hi": "उस्मान डेम्बेले",
+                        "ru": "Усман Дембеле"
+                    },
+                    "shortNameTranslation": {
+                        "ar": "ع. ديمبيلي",
+                        "bn": "ও. ডেম্বেলে",
+                        "hi": "ओ. डेम्बेले",
+                        "ru": "У. Дембеле"
+                    }
+                }
+            },
+            "isHome": true,
+            "shotType": "block",
+            "situation": "assisted",
+            "playerCoordinates": {
+                "x": 15,
+                "y": 43.8,
+                "z": 0
+            },
+            "bodyPart": "left-foot",
+            "goalMouthLocation": "low-centre",
+            "goalMouthCoordinates": {
+                "x": 0,
+                "y": 50.8,
+                "z": 19
+            },
+            "blockCoordinates": {
+                "x": 7.5,
+                "y": 46.9,
+                "z": 0
+            },
+            "goalkeeper": {
+                "name": "Pierce Charles",
+                "firstName": "Pierce Charles",
+                "slug": "charles-pierce",
+                "shortName": "P. Charles",
+                "position": "G",
+                "jerseyNumber": "1",
+                "userCount": 599,
+                "gender": "M",
+                "id": 1154937,
+                "fieldTranslations": {
+                    "nameTranslation": {
+                        "ar": "تشارلز بيرس",
+                        "ru": "Чарльз, Пирс"
+                    },
+                    "shortNameTranslation": {
+                        "ar": "ت. بيرس",
+                        "ru": "П. Чарльз"
+                    }
+                }
+            },
+            "id": 7475401,
+            "time": 43,
+            "timeSeconds": 2523,
+            "draw": {
+                "start": {
+                    "x": 43.8,
+                    "y": 15
+                },
+                "block": {
+                    "x": 46.9,
+                    "y": 7.5
+                },
+                "end": {
+                    "x": 49.2,
+                    "y": 0
+                },
+                "goal": {
+                    "x": 49.2,
+                    "y": 81
+                }
+            },
+            "reversedPeriodTime": 3,
+            "reversedPeriodTimeSeconds": 177,
+            "periodTimeSeconds": 2523,
+            "incidentType": "shot"
+        }
+    ]
+}

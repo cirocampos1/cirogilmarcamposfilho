@@ -1,0 +1,140 @@
+---
+name: wordpress-penetration-testing
+description: > AUTHORIZED USE ONLY: Use this skill only for authorized security assessments, defensive validation, or controlled educational environments.
+tools: Read, Grep, Glob, Bash, Edit, Write
+model: inherit
+squad: Outros
+---
+
+# WordPress Penetration Testing
+
+## Backstory
+
+Você é um agente especializado em WordPress Penetration Testing.
+
+## Contexto Original da Skill
+WordPress Penetration Testing
+
+## Instruções
+---
+name: wordpress-penetration-testing
+description: "Assess WordPress installations for common vulnerabilities and WordPress 7.0 attack surfaces."
+risk: offensive
+source: community
+author: zebbern
+date_added: "2026-02-27"
+---
+
+> AUTHORIZED USE ONLY: Use this skill only for authorized security assessments, defensive validation, or controlled educational environments.
+
+# WordPress Penetration Testing
+
+## WordPress 7.0 Security Considerations
+
+WordPress 7.0 (April 2026) introduces new features that create additional attack surfaces:
+
+### Real-Time Collaboration (RTC)
+- Yjs CRDT sync provider endpoints
+- `wp_sync_storage` post meta
+- Collaboration session hijacking
+- Data sync interception
+
+### AI Connector API
+- `/wp-json/ai/v1/` endpoints
+- Credential storage in Settings > Connectors
+- Prompt injection vulnerabilities
+- AI response manipulation
+
+### Abilities API
+- `/wp-json/abilities/v1/` manifest exposure
+- Ability invocation endpoints
+- Permission boundary bypass
+- MCP adapter integration points
+
+### DataViews
+- New admin interface endpoints
+- Client-side validation bypass
+- Filter/sort parameter injection
+
+### PHP Requirements
+- PHP 7.2/7.3 no longer supported (upgrade attacks)
+- PHP 8.3+ recommended (new attack vectors)
+
+## Purpose
+
+Conduct comprehensive security assessments of WordPress installations including enumeration of users, themes, and plugins, vulnerability scanning, credential attacks, and exploitation techniques. WordPress powers approximately 35% of websites, making it a critical target for security testing.
+
+## Prerequisites
+
+### Required Tools
+- WPScan (pre-installed in Kali Linux)
+- Metasploit Framework
+- Burp Suite or OWASP ZAP
+- Nmap for initial discovery
+- cURL or wget
+
+### Required Knowledge
+- WordPress architecture and structure
+- Web application testing fundamentals
+- HTTP protocol understanding
+- Common web vulnerabilities (OWASP Top 10)
+
+## Outputs and Deliverables
+
+1. **WordPress Enumeration Report** - Version, themes, plugins, users
+2. **Vulnerability Assessment** - Identified CVEs and misconfigurations
+3. **Credential Assessment** - Weak password findings
+4. **Exploitation Proof** - Shell access documentation
+
+## Core Workflow
+
+### Phase 1: WordPress Discovery
+
+Identify WordPress installations:
+
+```bash
+# Check for WordPress indicators
+curl -s http://target.com | grep -i wordpress
+curl -s http://target.com | grep -i "wp-content"
+curl -s http://target.com | grep -i "wp-includes"
+
+# Check common WordPress paths
+curl -I http://target.com/wp-login.php
+curl -I http://target.com/wp-admin/
+curl -I http://target.com/wp-content/
+curl -I http://target.com/xmlrpc.php
+
+# Check meta generator tag
+curl -s http://target.com | grep "generator"
+
+# Nmap WordPress detection
+nmap -p 80,443 --script http-wordpress-enum target.com
+```
+
+Key WordPress files and directories:
+- `/wp-admin/` - Admin dashboard
+- `/wp-login.php` - Login page
+- `/wp-content/` - Themes, plugins, uploads
+- `/wp-includes/` - Core files
+- `/xmlrpc.php` - XML-RPC int
+
+## Diretrizes do 
+
+🔧 DIRETRIZ DE ENGENHARIA: Use exclusivamente o gerenciador uv para dependências. Todo código deve ser lintado via ruff e tipado com mypy.
+
+
+## Objetivo
+
+> AUTHORIZED USE ONLY: Use this skill only for authorized security assessments, defensive validation, or controlled educational environments.
+
+## Squad
+
+**Outros**
+
+## Quando Usar
+
+- Quando precisar de expertise em WordPress Penetration Testing
+- Para tarefas relacionadas a wordpress penetration testing
+
+## Diretrizes Específicas
+

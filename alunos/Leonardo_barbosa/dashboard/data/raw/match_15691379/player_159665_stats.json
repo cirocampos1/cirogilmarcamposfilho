@@ -1,0 +1,112 @@
+{
+    "player": {
+        "name": "Mohamed Salah",
+        "firstName": "Mohamed",
+        "lastName": "Salah",
+        "slug": "mohamed-salah",
+        "shortName": "M. Salah",
+        "position": "M",
+        "jerseyNumber": "11",
+        "height": 175,
+        "userCount": 611111,
+        "gender": "M",
+        "sofascoreId": "MoSalah",
+        "id": 159665,
+        "marketValueCurrency": "EUR",
+        "dateOfBirthTimestamp": 708566400,
+        "proposedMarketValueRaw": {
+            "value": 21000000,
+            "currency": "EUR"
+        },
+        "fieldTranslations": {
+            "nameTranslation": {
+                "ar": "محمد صلاح",
+                "bn": "মোহাম্মদ সালাহ",
+                "hi": "मोहम्मद सलाह"
+            },
+            "shortNameTranslation": {
+                "ar": "م. صلاح",
+                "bn": "এম. সালাহ",
+                "hi": "एम. सलाह"
+            }
+        }
+    },
+    "team": {
+        "name": "Egypt",
+        "slug": "egypt",
+        "shortName": "Egypt",
+        "gender": "M",
+        "sport": {
+            "name": "Football",
+            "slug": "football",
+            "id": 1
+        },
+        "userCount": 617607,
+        "nameCode": "EGY",
+        "ranking": 29,
+        "disabled": false,
+        "national": true,
+        "type": 0,
+        "id": 4758,
+        "teamColors": {
+            "primary": "#f00000",
+            "secondary": "#ffffff",
+            "text": "#ffffff"
+        },
+        "fieldTranslations": {
+            "nameTranslation": {
+                "ar": "مصر",
+                "bn": "মিশর",
+                "hi": "इजिप्ट",
+                "ru": "Египет"
+            },
+            "shortNameTranslation": {}
+        }
+    },
+    "statistics": {
+        "totalPass": 17,
+        "accuratePass": 15,
+        "totalLongBalls": 1,
+        "accurateLongBalls": 1,
+        "goalAssist": 0,
+        "accurateOwnHalfPasses": 4,
+        "totalOwnHalfPasses": 4,
+        "accurateOppositionHalfPasses": 11,
+        "totalOppositionHalfPasses": 13,
+        "totalCross": 1,
+        "aerialLost": 1,
+        "duelLost": 3,
+        "duelWon": 2,
+        "totalContest": 3,
+        "wonContest": 1,
+        "blockedScoringAttempt": 1,
+        "ballRecovery": 3,
+        "unsuccessfulTouch": 2,
+        "wasFouled": 1,
+        "minutesPlayed": 45,
+        "touches": 25,
+        "rating": 6.5,
+        "possessionLostCtrl": 7,
+        "totalBallCarriesDistance": 108.40893635233,
+        "ballCarriesCount": 11,
+        "totalProgression": 59.272481242114,
+        "bestBallCarryProgression": 33.336144597657,
+        "totalProgressiveBallCarriesDistance": 57.544499989401,
+        "progressiveBallCarriesCount": 3,
+        "ratingVersions": {
+            "original": 6.5,
+            "alternative": 6.6
+        },
+        "totalShots": 1,
+        "shotValueNormalized": -0.07,
+        "passValueNormalized": -0.08,
+        "dribbleValueNormalized": 0.11,
+        "defensiveValueNormalized": 0,
+        "statisticsType": {
+            "sportSlug": "football",
+            "statisticsType": "player"
+        }
+    },
+    "position": "F",
+    "extra": null
+}

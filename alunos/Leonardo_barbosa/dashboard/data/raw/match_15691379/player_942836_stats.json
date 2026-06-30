@@ -1,0 +1,103 @@
+{
+    "player": {
+        "name": "Haissem Hassan",
+        "slug": "haissem-hassan",
+        "shortName": "H. Hassan",
+        "position": "M",
+        "jerseyNumber": "10",
+        "height": 175,
+        "userCount": 12168,
+        "gender": "M",
+        "id": 942836,
+        "marketValueCurrency": "EUR",
+        "dateOfBirthTimestamp": 1013126400,
+        "proposedMarketValueRaw": {
+            "value": 4099999,
+            "currency": "EUR"
+        },
+        "fieldTranslations": {
+            "nameTranslation": {
+                "ar": "هيثم حسن",
+                "bn": "হাইসেম হাসান",
+                "hi": "हैसेम हसन"
+            },
+            "shortNameTranslation": {
+                "ar": "ه. حسن",
+                "bn": "এইচ. হাসান",
+                "hi": "एच. हसन"
+            }
+        }
+    },
+    "team": {
+        "name": "Egypt",
+        "slug": "egypt",
+        "shortName": "Egypt",
+        "gender": "M",
+        "sport": {
+            "name": "Football",
+            "slug": "football",
+            "id": 1
+        },
+        "userCount": 617607,
+        "nameCode": "EGY",
+        "ranking": 29,
+        "disabled": false,
+        "national": true,
+        "type": 0,
+        "id": 4758,
+        "teamColors": {
+            "primary": "#f00000",
+            "secondary": "#ffffff",
+            "text": "#ffffff"
+        },
+        "fieldTranslations": {
+            "nameTranslation": {
+                "ar": "مصر",
+                "bn": "মিশর",
+                "hi": "इजिप्ट",
+                "ru": "Египет"
+            },
+            "shortNameTranslation": {}
+        }
+    },
+    "statistics": {
+        "totalPass": 12,
+        "accuratePass": 11,
+        "goalAssist": 0,
+        "accurateOwnHalfPasses": 7,
+        "totalOwnHalfPasses": 8,
+        "accurateOppositionHalfPasses": 4,
+        "totalOppositionHalfPasses": 4,
+        "totalCross": 1,
+        "duelLost": 1,
+        "duelWon": 1,
+        "totalContest": 1,
+        "ballRecovery": 3,
+        "unsuccessfulTouch": 1,
+        "wasFouled": 1,
+        "minutesPlayed": 45,
+        "touches": 16,
+        "rating": 6.5,
+        "possessionLostCtrl": 4,
+        "totalBallCarriesDistance": 89.800068992092,
+        "ballCarriesCount": 5,
+        "totalProgression": 39.445665527626,
+        "bestBallCarryProgression": 32.334036199168,
+        "totalProgressiveBallCarriesDistance": 70.781708371827,
+        "progressiveBallCarriesCount": 2,
+        "ratingVersions": {
+            "original": 6.5,
+            "alternative": 6.4
+        },
+        "totalShots": 0,
+        "passValueNormalized": 0.01,
+        "dribbleValueNormalized": 0.04,
+        "defensiveValueNormalized": -0.05,
+        "statisticsType": {
+            "sportSlug": "football",
+            "statisticsType": "player"
+        }
+    },
+    "position": "M",
+    "extra": null
+}

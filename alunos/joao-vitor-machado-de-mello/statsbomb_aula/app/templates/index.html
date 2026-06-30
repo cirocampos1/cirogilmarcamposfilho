@@ -1,0 +1,4070 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copa do Mundo 2022 - StatsBomb Tactical Room</title>
+    <style>
+        :root {
+            color-scheme: dark;
+            --bg: #150014;
+            --panel: rgba(49, 7, 34, 0.82);
+            --panel-strong: rgba(84, 10, 48, 0.94);
+            --line: rgba(246, 43, 102, 0.34);
+            --muted: #e2a9ba;
+            --text: #fff8ea;
+            --green: #38d6c7;
+            --cyan: #3bd7d0;
+            --gold: #f8d84d;
+            --red: #f52563;
+            --violet: #bd3a73;
+            --pitch: #142219;
+            --qatar: #5a0b36;
+            --qatar-deep: #220018;
+            --shadow: 0 20px 58px rgba(11, 0, 13, 0.46);
+        }
+
+        * { box-sizing: border-box; }
+
+        [hidden] { display: none !important; }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background:
+                repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.035) 0 1px, transparent 1px 82px),
+                repeating-linear-gradient(45deg, rgba(246, 43, 102, 0.10) 0 1px, transparent 1px 118px),
+                linear-gradient(90deg, rgba(91, 7, 48, 0.96), rgba(32, 0, 26, 0.92) 28%, rgba(15, 0, 19, 0.98) 72%),
+                var(--bg);
+            color: var(--text);
+            font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            letter-spacing: 0;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            background:
+                linear-gradient(90deg, transparent 0 calc(100% - 96px), rgba(248, 216, 77, 0.16) calc(100% - 95px) calc(100% - 93px), transparent calc(100% - 92px)),
+                repeating-linear-gradient(180deg, transparent 0 34px, rgba(248, 216, 77, 0.82) 34px 44px, transparent 44px 76px);
+            background-size: 100% 100%, 20px 76px;
+            background-position: 0 0, calc(100% - 80px) 54px;
+            background-repeat: no-repeat, repeat-y;
+            opacity: 0.35;
+            z-index: 0;
+        }
+
+        button, input { font: inherit; }
+
+        .app-shell {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: minmax(280px, 360px) minmax(0, 1fr);
+            min-height: 100vh;
+        }
+
+        .app-shell::before {
+            content: "";
+            position: fixed;
+            left: 360px;
+            bottom: 24px;
+            width: min(38vw, 520px);
+            height: min(38vw, 520px);
+            pointer-events: none;
+            opacity: 0.12;
+            background:
+                repeating-conic-gradient(from 12deg, transparent 0 9deg, rgba(248, 216, 77, 0.85) 10deg 12deg, transparent 13deg 24deg);
+            clip-path: polygon(50% 0, 57% 34%, 92% 18%, 66% 50%, 100% 56%, 62% 62%, 82% 94%, 50% 70%, 18% 94%, 38% 62%, 0 56%, 34% 50%, 8% 18%, 43% 34%);
+        }
+
+        .sidebar {
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            border-right: 1px solid rgba(248, 216, 77, 0.24);
+            background:
+                linear-gradient(180deg, rgba(91, 7, 48, 0.92), rgba(27, 0, 23, 0.95)),
+                var(--qatar-deep);
+            backdrop-filter: blur(18px);
+        }
+
+        .brand {
+            position: relative;
+            overflow: hidden;
+            padding: 24px;
+            border-bottom: 1px solid rgba(246, 43, 102, 0.38);
+            background:
+                linear-gradient(135deg, rgba(246, 43, 102, 0.16), transparent 48%),
+                repeating-linear-gradient(135deg, transparent 0 28px, rgba(59, 215, 208, 0.16) 29px 31px, transparent 32px 58px);
+        }
+
+        .brand::before {
+            content: "";
+            position: absolute;
+            right: 20px;
+            top: 22px;
+            width: 54px;
+            height: 54px;
+            background: var(--gold);
+            transform: rotate(45deg);
+            box-shadow:
+                -34px 34px 0 -16px rgba(248, 216, 77, 0.82),
+                -68px 68px 0 -22px rgba(59, 215, 208, 0.72);
+        }
+
+        .brand::after {
+            content: "";
+            position: absolute;
+            right: -46px;
+            bottom: -66px;
+            width: 190px;
+            height: 190px;
+            border: 2px solid rgba(246, 43, 102, 0.4);
+            transform: rotate(45deg);
+        }
+
+        .eyebrow {
+            position: relative;
+            color: var(--cyan);
+            font-size: 0.76rem;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        h1, h2, h3, p { margin: 0; }
+
+        h1 {
+            position: relative;
+            margin-top: 8px;
+            font-size: clamp(1.45rem, 2.4vw, 2.25rem);
+            line-height: 1.04;
+            text-shadow: 0 0 20px rgba(246, 43, 102, 0.28);
+        }
+
+        .brand p {
+            position: relative;
+            margin-top: 10px;
+            color: var(--muted);
+            line-height: 1.5;
+            font-size: 0.94rem;
+        }
+
+        .controls {
+            padding: 16px;
+            display: grid;
+            gap: 12px;
+            border-bottom: 1px solid rgba(246, 43, 102, 0.32);
+        }
+
+        .search {
+            width: 100%;
+            height: 42px;
+            border: 1px solid rgba(246, 43, 102, 0.35);
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.065);
+            color: var(--text);
+            padding: 0 12px;
+            outline: none;
+        }
+
+        .date-filter-row {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .clear-date {
+            height: 42px;
+            border: 1px solid rgba(246, 43, 102, 0.35);
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.07);
+            color: var(--muted);
+            padding: 0 10px;
+            cursor: pointer;
+        }
+
+        .search:focus {
+            border-color: rgba(59, 215, 208, 0.78);
+            box-shadow: 0 0 0 3px rgba(59, 215, 208, 0.13);
+        }
+
+        .stage-tabs {
+            display: flex;
+            gap: 8px;
+            overflow-x: auto;
+            padding-bottom: 2px;
+        }
+
+        .stage-tab {
+            flex: 0 0 auto;
+            height: 34px;
+            border: 1px solid rgba(246, 43, 102, 0.38);
+            border-radius: 999px;
+            background: transparent;
+            color: var(--muted);
+            padding: 0 12px;
+            cursor: pointer;
+        }
+
+        .stage-tab.active {
+            color: #1c001a;
+            border-color: var(--gold);
+            background: var(--gold);
+            font-weight: 800;
+        }
+
+        .match-list {
+            flex: 1;
+            overflow-y: auto;
+            padding: 12px;
+            display: grid;
+            align-content: start;
+            gap: 10px;
+        }
+
+        .match-card {
+            width: 100%;
+            border: 1px solid rgba(246, 43, 102, 0.32);
+            border-radius: 8px;
+            background:
+                linear-gradient(90deg, rgba(246, 43, 102, 0.08), rgba(255, 255, 255, 0.045)),
+                rgba(255, 255, 255, 0.055);
+            color: var(--text);
+            padding: 13px;
+            text-align: left;
+            cursor: pointer;
+            transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
+        }
+
+        .match-card:hover,
+        .match-card.active {
+            transform: translateY(-1px);
+            border-color: rgba(59, 215, 208, 0.76);
+            background:
+                linear-gradient(90deg, rgba(59, 215, 208, 0.14), rgba(246, 43, 102, 0.12)),
+                rgba(76, 201, 216, 0.09);
+        }
+
+        .match-card strong {
+            display: block;
+            font-size: 0.95rem;
+            line-height: 1.25;
+        }
+
+        .match-meta {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            margin-top: 8px;
+            color: var(--muted);
+            font-size: 0.78rem;
+        }
+
+        .content {
+            position: relative;
+            min-width: 0;
+            padding: 24px;
+            overflow: hidden;
+        }
+
+        .content::before {
+            content: "";
+            position: fixed;
+            left: 364px;
+            top: 0;
+            width: calc(100vw - 364px);
+            height: 100vh;
+            pointer-events: none;
+            background:
+                linear-gradient(90deg, transparent 0 52%, rgba(248, 216, 77, 0.08) 52% 52.3%, transparent 52.4%),
+                repeating-linear-gradient(90deg, transparent 0 90px, rgba(246, 43, 102, 0.08) 91px 92px, transparent 93px 180px);
+            opacity: 0.55;
+        }
+
+        .match-hero {
+            display: grid;
+            grid-template-columns: minmax(0, 1.2fr) minmax(260px, 0.8fr);
+            gap: 18px;
+            align-items: stretch;
+        }
+
+        .surface {
+            position: relative;
+            border: 1px solid rgba(246, 43, 102, 0.34);
+            border-radius: 8px;
+            background:
+                linear-gradient(145deg, rgba(246, 43, 102, 0.10), transparent 38%),
+                var(--panel);
+            box-shadow: var(--shadow);
+            backdrop-filter: blur(18px);
+        }
+
+        .surface::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            border-radius: inherit;
+            border-top: 1px solid rgba(248, 216, 77, 0.24);
+            border-left: 1px solid rgba(59, 215, 208, 0.16);
+        }
+
+        .scoreboard {
+            overflow: hidden;
+            padding: 22px;
+            min-height: 210px;
+            display: grid;
+            gap: 18px;
+        }
+
+        .scoreboard::after {
+            content: "";
+            position: absolute;
+            right: -48px;
+            top: -48px;
+            width: 180px;
+            height: 180px;
+            pointer-events: none;
+            opacity: 0.22;
+            background:
+                repeating-linear-gradient(45deg, transparent 0 12px, var(--gold) 13px 18px, transparent 19px 34px);
+            transform: rotate(45deg);
+        }
+
+        .score-line {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+            align-items: start;
+            gap: 16px;
+        }
+
+        .team-name {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            min-width: 0;
+            font-size: clamp(1.25rem, 1.75vw, 2rem);
+            line-height: 1.05;
+            font-weight: 900;
+            overflow-wrap: normal;
+            word-break: normal;
+        }
+
+        .team-name span:not(.team-flag):not(.flag-mini) {
+            min-width: 0;
+            overflow-wrap: normal;
+            white-space: nowrap;
+        }
+
+        .team-block {
+            min-width: 0;
+            display: grid;
+            gap: 8px;
+            align-content: start;
+        }
+
+        .team-block.away {
+            justify-items: end;
+            text-align: right;
+        }
+
+        .team-block.away .team-name {
+            justify-content: flex-end;
+            text-align: right;
+        }
+
+        .team-manager {
+            color: #f0bbc8;
+            font-size: 0.82rem;
+            line-height: 1.35;
+            font-weight: 750;
+        }
+
+        .goal-list {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+            min-height: 28px;
+        }
+
+        .team-block.away .goal-list {
+            justify-content: flex-end;
+        }
+
+        .goal-chip {
+            min-height: 26px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            border: 1px solid rgba(242, 189, 92, 0.28);
+            border-radius: 999px;
+            background: rgba(248, 216, 77, 0.12);
+            color: #ffe998;
+            padding: 3px 9px;
+            font-size: 0.76rem;
+            font-weight: 850;
+            max-width: 100%;
+            line-height: 1.15;
+        }
+
+        .goal-chip span {
+            min-width: 0;
+            overflow-wrap: anywhere;
+            white-space: normal;
+        }
+
+        .team-flag {
+            width: 44px;
+            height: 32px;
+            display: inline-grid;
+            place-items: center;
+            border-radius: 999px;
+            border: 2px solid rgba(255, 255, 255, 0.86);
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.28), 0 0 0 3px rgba(246, 43, 102, 0.18);
+            flex: 0 0 auto;
+        }
+
+        .flag-mini {
+            width: 28px;
+            height: 20px;
+            display: inline-block;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 255, 255, 0.76);
+            overflow: hidden;
+            vertical-align: middle;
+        }
+
+        .flag-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .score-pill {
+            min-width: 104px;
+            height: 68px;
+            border-radius: 8px;
+            display: grid;
+            place-items: center;
+            border: 1px solid rgba(248, 216, 77, 0.58);
+            background:
+                linear-gradient(135deg, rgba(248, 216, 77, 0.18), rgba(246, 43, 102, 0.16));
+            color: var(--gold);
+            font-size: 2rem;
+            font-weight: 900;
+            margin-top: 2px;
+            box-shadow: inset 0 0 0 1px rgba(255, 248, 234, 0.08);
+        }
+
+        .score-stack {
+            display: grid;
+            gap: 7px;
+            justify-items: center;
+        }
+
+        .shootout-score {
+            min-height: 27px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
+            border: 1px solid rgba(59, 215, 208, 0.38);
+            border-radius: 999px;
+            background: rgba(59, 215, 208, 0.1);
+            color: #bff8f2;
+            padding: 3px 10px;
+            font-size: 0.74rem;
+            font-weight: 850;
+            white-space: nowrap;
+        }
+
+        .match-facts {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 10px;
+        }
+
+        .fact {
+            border-left: 2px solid var(--cyan);
+            padding: 10px;
+            min-width: 0;
+        }
+
+        .label {
+            color: #e8a4b6;
+            font-size: 0.72rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.07em;
+        }
+
+        .value {
+            margin-top: 6px;
+            color: var(--text);
+            font-weight: 750;
+            overflow-wrap: anywhere;
+        }
+
+        .notes {
+            padding: 18px;
+            display: grid;
+            gap: 12px;
+            align-content: start;
+        }
+
+        .notes h2,
+        .section-title h2 {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .note-list {
+            display: grid;
+            gap: 10px;
+        }
+
+        .note {
+            border-top: 1px solid rgba(246, 43, 102, 0.28);
+            padding: 11px 0 0;
+            color: #f1d7dd;
+            line-height: 1.4;
+        }
+
+        .section {
+            margin-top: 22px;
+        }
+
+        .section-title {
+            display: flex;
+            align-items: end;
+            justify-content: space-between;
+            gap: 18px;
+            margin-bottom: 12px;
+        }
+
+        .section-title p {
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 12px;
+        }
+
+        .kpi {
+            min-height: 122px;
+            padding: 16px;
+            display: grid;
+            align-content: space-between;
+            border-top: 3px solid var(--cyan);
+        }
+
+        .kpi:nth-child(2) { border-top-color: var(--gold); }
+        .kpi:nth-child(3) { border-top-color: var(--green); }
+        .kpi:nth-child(4) { border-top-color: var(--violet); }
+
+        .kpi-value {
+            margin-top: 10px;
+            font-size: clamp(1.45rem, 3vw, 2.25rem);
+            font-weight: 900;
+        }
+
+        .split {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .split span:nth-child(2) {
+            color: var(--muted);
+            font-size: 0.8rem;
+            font-weight: 800;
+        }
+
+        .team-compare {
+            display: grid;
+            gap: 10px;
+            margin-top: 12px;
+        }
+
+        .match-center-grid {
+            display: grid;
+            grid-template-columns: minmax(320px, 0.92fr) minmax(360px, 1.08fr);
+            gap: 14px;
+            align-items: start;
+        }
+
+        .sofa-tabs {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+            border-bottom: 1px solid var(--line);
+            margin: -18px -18px 16px;
+            padding: 0 8px;
+        }
+
+        .sofa-tab {
+            height: 48px;
+            display: grid;
+            place-items: center;
+            color: #8f93ff;
+            font-size: 0.86rem;
+            font-weight: 800;
+            border-bottom: 3px solid transparent;
+            min-width: 0;
+            text-align: center;
+        }
+
+        .sofa-tab.active {
+            color: #b8bbff;
+            border-bottom-color: #7e83ff;
+        }
+
+        .period-pills,
+        .map-toolbar {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .player-select-row {
+            display: grid;
+            grid-template-columns: auto minmax(0, 1fr);
+            gap: 10px;
+            align-items: center;
+        }
+
+        .player-select-row label {
+            color: var(--muted);
+            font-size: 0.78rem;
+            font-weight: 850;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .player-select,
+        .compare-select {
+            width: 100%;
+            min-height: 44px;
+            border: 1px solid rgba(246, 43, 102, 0.36);
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.07);
+            color: var(--text);
+            padding: 0 10px;
+            outline: none;
+        }
+
+        .period-pill,
+        .map-toggle {
+            min-height: 34px;
+            border: 1px solid rgba(246, 43, 102, 0.38);
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.07);
+            color: var(--text);
+            padding: 0 14px;
+            font-weight: 850;
+            cursor: pointer;
+        }
+
+        .period-pill.active,
+        .map-toggle.active {
+            background: var(--gold);
+            color: #220018;
+            border-color: var(--gold);
+        }
+
+        .stats-board,
+        .interactive-board {
+            padding: 18px;
+        }
+
+        .stats-board h2,
+        .interactive-board h2 {
+            margin: 18px 0 14px;
+            text-align: center;
+            font-size: 1.15rem;
+        }
+
+        .stat-list {
+            display: grid;
+            gap: 14px;
+        }
+
+        .stat-row {
+            display: grid;
+            grid-template-columns: 58px minmax(0, 1fr) 58px;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .stat-row strong {
+            font-size: 1rem;
+        }
+
+        .stat-row strong:last-child {
+            text-align: right;
+        }
+
+        .stat-mid {
+            display: grid;
+            gap: 7px;
+        }
+
+        .stat-mid span {
+            text-align: center;
+            font-size: 0.78rem;
+            font-weight: 850;
+        }
+
+        .metric-label {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+        }
+
+        .metric-help {
+            width: 16px;
+            height: 16px;
+            display: inline-grid;
+            place-items: center;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 255, 255, 0.22);
+            color: var(--gold);
+            font-size: 0.68rem;
+            line-height: 1;
+            cursor: help;
+        }
+
+        .dual-track {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+            gap: 5px;
+            height: 7px;
+        }
+
+        .dual-track .left,
+        .dual-track .right {
+            position: relative;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.11);
+            overflow: hidden;
+        }
+
+        .dual-track .left::after,
+        .dual-track .right::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            width: var(--w, 0%);
+            background: var(--team-color, var(--green));
+        }
+
+        .dual-track .left::after {
+            right: 0;
+            left: auto;
+        }
+
+        .dual-track .right::after {
+            left: 0;
+        }
+
+        .interactive-board {
+            display: grid;
+            gap: 14px;
+        }
+
+        .map-mode-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .map-actions {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .expand-map,
+        .map-modal-close {
+            min-width: 44px;
+            min-height: 44px;
+            border: 1px solid rgba(59, 215, 208, 0.48);
+            border-radius: 999px;
+            background: rgba(59, 215, 208, 0.1);
+            color: var(--text);
+            padding: 0 14px;
+            font-weight: 850;
+            cursor: pointer;
+        }
+
+        .expand-map:hover,
+        .expand-map:focus-visible,
+        .map-modal-close:hover,
+        .map-modal-close:focus-visible {
+            border-color: var(--gold);
+            outline: 3px solid rgba(248, 216, 77, 0.18);
+        }
+
+        .flag-toggle {
+            min-width: 54px;
+            min-height: 34px;
+            border: 0;
+            border-radius: 999px;
+            background: rgba(0, 0, 0, 0.42);
+            color: var(--text);
+            padding: 3px 8px;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+
+        .flag-toggle .flag-mini {
+            margin-top: 3px;
+        }
+
+        .flag-toggle.active {
+            background: var(--gold);
+            color: #220018;
+        }
+
+        .interactive-pitch {
+            position: relative;
+            min-height: 330px;
+            border-radius: 8px;
+            background: #315f3b;
+            overflow: hidden;
+            border: 1px solid rgba(248, 216, 77, 0.22);
+        }
+
+        .interactive-pitch svg {
+            width: 100%;
+            height: 100%;
+            min-height: 330px;
+            display: block;
+        }
+
+        .pitch-event,
+        .pitch-pass,
+        .pitch-goal,
+        .penalty-attempt {
+            cursor: pointer;
+            transition: opacity 160ms ease, stroke-width 160ms ease, r 160ms ease;
+        }
+
+        .pitch-event:hover,
+        .pitch-event.active {
+            stroke-width: 1.6;
+            r: 2.5;
+        }
+
+        .pitch-goal:hover polygon,
+        .pitch-goal.active polygon {
+            stroke-width: 1.1;
+            filter: drop-shadow(0 0 3px rgba(242, 189, 92, 0.72));
+        }
+
+        .pitch-pass.active circle {
+            r: 1.25;
+            stroke: #fff8ea;
+            stroke-width: 0.35;
+        }
+
+        .pass-selection-outline {
+            pointer-events: none;
+            stroke: #fff8ea;
+            opacity: 0.76;
+        }
+
+        .penalty-attempt:hover,
+        .penalty-attempt.active {
+            filter: drop-shadow(0 0 5px rgba(255, 248, 234, 0.72));
+        }
+
+        .event-helper {
+            display: grid;
+            grid-template-columns: auto minmax(0, 1fr) auto;
+            gap: 12px;
+            align-items: center;
+            min-height: 72px;
+            padding: 12px;
+            border-top: 1px solid rgba(246, 43, 102, 0.3);
+        }
+
+        .event-helper .avatar {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            background: #fff8ea;
+            color: #220018;
+        }
+
+        .event-helper h3 {
+            font-size: 1rem;
+        }
+
+        .map-modal {
+            position: fixed;
+            inset: 0;
+            z-index: 50;
+            display: grid;
+            place-items: center;
+            padding: 24px;
+            background: rgba(10, 0, 10, 0.82);
+            backdrop-filter: blur(12px);
+        }
+
+        .map-modal-panel {
+            width: min(1180px, 96vw);
+            max-height: 94vh;
+            display: grid;
+            grid-template-rows: auto minmax(0, 1fr) auto;
+            gap: 14px;
+            border: 1px solid rgba(248, 216, 77, 0.5);
+            border-radius: 12px;
+            background: #26001f;
+            padding: 18px;
+            box-shadow: 0 30px 90px rgba(0, 0, 0, 0.68);
+        }
+
+        .map-modal-head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+        }
+
+        .map-modal-pitch {
+            width: 100%;
+            min-height: min(72vh, 720px);
+        }
+
+        .map-modal-pitch svg {
+            width: 100%;
+            height: 100%;
+            min-height: min(72vh, 720px);
+        }
+
+        .map-modal-pitch.shot-crop {
+            min-height: 0;
+            aspect-ratio: 2 / 1;
+        }
+
+        .map-modal-pitch.shot-crop svg {
+            min-height: 0;
+        }
+
+        body.modal-open {
+            overflow: hidden;
+        }
+
+        .helper-grid {
+            grid-column: 1 / -1;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 10px;
+            color: var(--muted);
+            font-size: 0.78rem;
+        }
+
+        .helper-grid strong {
+            display: block;
+            margin-top: 3px;
+            color: var(--text);
+        }
+
+        .player-compare-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 14px;
+        }
+
+        .comparison-shell {
+            padding: 14px;
+            display: grid;
+            gap: 14px;
+        }
+
+        .comparison-shell-head {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .compare-panel {
+            padding: 16px;
+            display: grid;
+            gap: 14px;
+            border: 1px solid rgba(246, 43, 102, 0.24);
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.035);
+        }
+
+        .compare-player-head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        .compare-summary {
+            display: grid;
+            grid-template-columns: 118px minmax(0, 1fr);
+            gap: 14px;
+            align-items: center;
+        }
+
+        .compare-summary .radar-chart-wrap,
+        .compare-summary .radar-svg {
+            width: 118px;
+            height: 118px;
+        }
+
+        .compare-title-row {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            min-width: 0;
+        }
+
+        .compare-title-row .flag-mini {
+            flex: 0 0 auto;
+        }
+
+        .compare-title-row h3 {
+            min-width: 0;
+            overflow-wrap: anywhere;
+            line-height: 1.15;
+        }
+
+        .compare-impact {
+            color: var(--gold);
+            font-size: 1.5rem;
+            font-weight: 900;
+        }
+
+        .compare-impact-wrap {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .compare-metrics {
+            display: grid;
+            gap: 10px;
+        }
+
+        .compare-metric-row {
+            display: grid;
+            grid-template-columns: 116px minmax(0, 1fr) 52px;
+            gap: 10px;
+            align-items: center;
+            color: var(--muted);
+            font-size: 0.82rem;
+        }
+
+        .compare-metric-row strong {
+            color: var(--text);
+            text-align: right;
+        }
+
+        .compare-metric-row span:first-child {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .bar-row {
+            display: grid;
+            grid-template-columns: 86px minmax(0, 1fr) 54px;
+            align-items: center;
+            gap: 10px;
+            color: var(--muted);
+            font-size: 0.8rem;
+        }
+
+        .track {
+            height: 8px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.10);
+            overflow: hidden;
+        }
+
+        .fill {
+            height: 100%;
+            border-radius: inherit;
+            background: linear-gradient(90deg, var(--cyan), var(--gold));
+            width: 0%;
+            transition: width 360ms ease;
+        }
+
+        .maps-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 14px;
+        }
+
+        .map-card {
+            padding: 14px;
+            min-height: 360px;
+            display: grid;
+            grid-template-rows: auto auto minmax(0, 1fr);
+            gap: 12px;
+        }
+
+        .map-card:not(:has(.momentum-controls)) {
+            grid-template-rows: auto minmax(0, 1fr);
+        }
+
+        .map-head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        .tag {
+            min-height: 26px;
+            display: inline-flex;
+            align-items: center;
+            border-radius: 999px;
+            border: 1px solid rgba(248, 216, 77, 0.3);
+            color: #f3c7d2;
+            padding: 0 10px;
+            font-size: 0.75rem;
+            white-space: nowrap;
+        }
+
+        .map-box {
+            min-height: 280px;
+            display: grid;
+            place-items: center;
+            border-radius: 8px;
+            background:
+                linear-gradient(135deg, rgba(59, 215, 208, 0.08), transparent 42%),
+                var(--pitch);
+            overflow: hidden;
+        }
+
+        .map-box img {
+            width: 100%;
+            max-height: 460px;
+            object-fit: contain;
+            display: block;
+        }
+
+        .xg-flow-wrap {
+            position: relative;
+            width: 100%;
+            display: grid;
+            gap: 10px;
+            padding: 10px;
+        }
+
+        .xg-flow-svg {
+            width: 100%;
+            min-height: 280px;
+            display: block;
+        }
+
+        .xg-point {
+            cursor: crosshair;
+        }
+
+        .xg-point:hover {
+            stroke-width: 2.2;
+            filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.44));
+        }
+
+        .xg-hover-readout {
+            min-height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            color: var(--muted);
+            font-size: 0.83rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 8px;
+        }
+
+        .xg-hover-readout strong {
+            color: var(--text);
+        }
+
+        .chart-tooltip {
+            position: absolute;
+            z-index: 10;
+            min-width: 190px;
+            max-width: 260px;
+            pointer-events: none;
+            border: 1px solid rgba(248, 216, 77, 0.62);
+            border-radius: 6px;
+            background: rgba(29, 2, 26, 0.96);
+            color: var(--text);
+            padding: 10px 12px;
+            box-shadow: 0 14px 34px rgba(0, 0, 0, 0.48);
+            transform: translate(12px, calc(-100% - 12px));
+            font-size: 0.78rem;
+            line-height: 1.35;
+        }
+
+        .chart-tooltip span {
+            display: block;
+            color: var(--cyan);
+            font-weight: 850;
+        }
+
+        .chart-tooltip strong {
+            display: block;
+            margin-top: 3px;
+            color: var(--gold);
+            font-size: 0.92rem;
+        }
+
+        .radar-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 14px;
+        }
+
+        .radar-card {
+            padding: 16px;
+            display: grid;
+            grid-template-columns: 118px minmax(0, 1fr);
+            gap: 14px;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .radar-card:hover,
+        .radar-card:focus-visible {
+            border-color: var(--gold);
+            outline: 3px solid rgba(248, 216, 77, 0.16);
+        }
+
+        .radar-card h3 {
+            font-size: 1rem;
+            line-height: 1.2;
+            overflow-wrap: anywhere;
+        }
+
+        .radar-card .team {
+            margin-top: 5px;
+            color: var(--muted);
+            font-size: 0.82rem;
+        }
+
+        .metric-chips {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+            margin-top: 11px;
+        }
+
+        .metric-chip {
+            border: 1px solid rgba(246, 43, 102, 0.26);
+            border-radius: 999px;
+            padding: 4px 8px;
+            color: #f2d5dc;
+            background: rgba(255, 255, 255, 0.055);
+            font-size: 0.74rem;
+            white-space: nowrap;
+        }
+
+        .metric-chip[title] {
+            cursor: help;
+        }
+
+        .metric-chip[title]:hover,
+        .metric-chip[title]:focus-visible {
+            border-color: var(--gold);
+            color: var(--text);
+            outline: 2px solid rgba(248, 216, 77, 0.2);
+        }
+
+        .dictionary-chart-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 14px;
+        }
+
+        .dictionary-chart {
+            min-height: 360px;
+            padding: 16px;
+            display: grid;
+            align-content: start;
+            gap: 14px;
+        }
+
+        .dictionary-chart h3 {
+            font-size: 1rem;
+        }
+
+        .dictionary-chart p {
+            color: var(--muted);
+            font-size: 0.82rem;
+            line-height: 1.45;
+        }
+
+        .per90-table-wrap {
+            overflow-x: auto;
+            padding: 4px;
+        }
+
+        .per90-table {
+            width: 100%;
+            min-width: 860px;
+            border-collapse: collapse;
+            font-size: 0.82rem;
+        }
+
+        .per90-table th,
+        .per90-table td {
+            padding: 11px 12px;
+            border-bottom: 1px solid rgba(246, 43, 102, 0.22);
+            text-align: right;
+            white-space: nowrap;
+        }
+
+        .per90-table th {
+            color: var(--cyan);
+            font-size: 0.72rem;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        .per90-sort {
+            min-height: 34px;
+            border: 0;
+            background: transparent;
+            color: inherit;
+            padding: 0;
+            font: inherit;
+            letter-spacing: inherit;
+            text-transform: inherit;
+            cursor: pointer;
+        }
+
+        .per90-sort:hover,
+        .per90-sort:focus-visible {
+            color: var(--gold);
+            outline: 2px solid rgba(248, 216, 77, 0.24);
+            outline-offset: 3px;
+        }
+
+        .pressure-explainer {
+            display: grid;
+            gap: 12px;
+        }
+
+        .pressure-explainer > p {
+            color: var(--muted);
+            font-size: 0.8rem;
+            line-height: 1.5;
+        }
+
+        .pressure-team-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 10px;
+        }
+
+        .pressure-team-panel {
+            display: grid;
+            gap: 7px;
+        }
+
+        .pressure-team-panel strong {
+            font-size: 0.82rem;
+        }
+
+        .pressure-direction {
+            color: var(--cyan);
+            font-size: 0.76rem;
+            font-weight: 850;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        .pressure-team-panel img {
+            width: 100%;
+            border-radius: 6px;
+            background: #22312b;
+        }
+
+        .per90-table th:first-child,
+        .per90-table td:first-child,
+        .per90-table th:nth-child(2),
+        .per90-table td:nth-child(2) {
+            text-align: left;
+        }
+
+        .per90-table tbody tr:hover {
+            background: rgba(59, 215, 208, 0.07);
+        }
+
+        .per90-table tbody tr {
+            cursor: pointer;
+        }
+
+        .analysis-modal {
+            position: fixed;
+            inset: 0;
+            z-index: 60;
+            display: grid;
+            place-items: center;
+            padding: 24px;
+            background: rgba(10, 0, 10, 0.86);
+            backdrop-filter: blur(12px);
+        }
+
+        .analysis-modal-panel {
+            width: min(1180px, 96vw);
+            max-height: 94vh;
+            overflow: auto;
+            border: 1px solid rgba(248, 216, 77, 0.5);
+            border-radius: 12px;
+            background: #26001f;
+            padding: 18px;
+            box-shadow: 0 30px 90px rgba(0, 0, 0, 0.68);
+        }
+        .impact-grid,
+        .summary-card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 10px;
+        }
+        .impact-card,
+        .summary-card {
+            padding: 12px;
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            background: rgba(255,255,255,.025);
+        }
+        .impact-card p,
+        .summary-card span {
+            color: var(--muted);
+            font-size: 12px;
+        }
+        .table-filter-grid,
+        .metric-category-tabs,
+        .action-filter-row,
+        .momentum-controls {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 10px 0;
+        }
+        .momentum-controls {
+            flex-wrap: nowrap;
+            gap: 6px;
+            margin: 0;
+            align-items: center;
+        }
+        .momentum-toolbar {
+            display: grid;
+            gap: 7px;
+        }
+        .momentum-controls .flag-toggle {
+            flex: 0 1 auto;
+            min-height: 32px;
+            height: 32px;
+            padding: 0 12px;
+            border-radius: 999px;
+            font-size: 0.78rem;
+            line-height: 1;
+        }
+        .momentum-toolbar + .map-box {
+            min-height: 0;
+            align-self: stretch;
+        }
+        .table-filter-grid select,
+        .table-filter-grid input {
+            min-width: 145px;
+            flex: 1;
+        }
+        .comparison-category {
+            margin-top: 18px;
+        }
+        .comparison-category h3 {
+            color: var(--gold);
+            margin-bottom: 8px;
+        }
+        .comparison-category-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+            margin: 14px 0;
+        }
+        .comparison-category-tab {
+            min-height: 32px;
+            padding: 0 12px;
+            border: 1px solid var(--line);
+            border-radius: 999px;
+            background: rgba(255,255,255,.035);
+            color: var(--text);
+            cursor: pointer;
+        }
+        .comparison-category-tab.active {
+            border-color: var(--gold);
+            background: var(--gold);
+            color: #2b001e;
+        }
+        .momentum-caption {
+            margin: -5px 0 0;
+            color: var(--muted);
+            font-size: .76rem;
+        }
+        .player-action-map {
+            aspect-ratio: 3 / 2;
+            width: 100%;
+            min-height: 260px;
+        }
+        .player-action-map svg {
+            width: 100%;
+            height: 100%;
+        }
+        .metric-cell-detail {
+            display: grid;
+            gap: 2px;
+        }
+        .metric-cell-detail small {
+            color: var(--muted);
+        }
+
+        .analysis-modal-head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 14px;
+            margin-bottom: 16px;
+        }
+
+        .expanded-radar-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 16px;
+        }
+
+        .expanded-radar-card {
+            padding: 16px;
+            display: grid;
+            grid-template-columns: minmax(180px, 240px) minmax(0, 1fr);
+            gap: 18px;
+            align-items: center;
+        }
+
+        .expanded-radar-card .radar-chart-wrap,
+        .expanded-radar-card .radar-svg {
+            width: 100%;
+            height: auto;
+        }
+
+        .modal-metric-table {
+            width: 100%;
+            margin-top: 18px;
+            border-collapse: collapse;
+            font-size: 0.84rem;
+        }
+
+        .modal-metric-table th,
+        .modal-metric-table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid rgba(246, 43, 102, 0.22);
+            text-align: center;
+        }
+
+        .modal-metric-table th:first-child,
+        .modal-metric-table td:first-child {
+            text-align: left;
+        }
+
+        .metric-winner {
+            color: var(--gold);
+            font-weight: 900;
+            background: rgba(248, 216, 77, 0.09);
+        }
+
+        .chart-metric-helper {
+            position: fixed;
+            z-index: 80;
+            pointer-events: none;
+            border: 1px solid rgba(248, 216, 77, 0.62);
+            border-radius: 6px;
+            background: rgba(29, 2, 26, 0.97);
+            padding: 8px 10px;
+            color: var(--text);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.48);
+            font-size: 0.78rem;
+        }
+
+        .chart-metric-helper strong {
+            color: var(--gold);
+        }
+
+        .radar-reference-legend {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 8px;
+            color: var(--muted);
+            font-size: 0.72rem;
+        }
+
+        .radar-reference-legend span {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .radar-reference-legend i {
+            width: 12px;
+            height: 7px;
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            background: rgba(255, 255, 255, 0.13);
+        }
+
+        .chart-legend {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            color: var(--muted);
+            font-size: 0.74rem;
+        }
+
+        .chart-legend span {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .chart-legend i {
+            width: 10px;
+            height: 10px;
+            border-radius: 2px;
+            display: inline-block;
+        }
+
+        .horizontal-chart {
+            display: grid;
+            gap: 12px;
+        }
+
+        .horizontal-chart-row {
+            display: grid;
+            gap: 6px;
+        }
+
+        .horizontal-chart-label {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            color: var(--muted);
+            font-size: 0.76rem;
+        }
+
+        .horizontal-chart-label strong {
+            color: var(--text);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .chart-bars {
+            display: grid;
+            gap: 4px;
+        }
+
+        .chart-bar {
+            height: 8px;
+            min-width: 2px;
+            border-radius: 999px;
+            background: var(--bar-color, var(--cyan));
+            box-shadow: 0 0 10px color-mix(in srgb, var(--bar-color, var(--cyan)) 32%, transparent);
+        }
+
+        .defensive-team-chart {
+            display: grid;
+            gap: 14px;
+        }
+
+        .defensive-team-row {
+            display: grid;
+            gap: 7px;
+            padding: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.035);
+        }
+
+        .defensive-team-head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .radar-svg {
+            width: 118px;
+            height: 118px;
+            display: block;
+        }
+
+        .radar-chart-wrap {
+            position: relative;
+            width: 118px;
+            height: 118px;
+        }
+
+        .radar-point {
+            cursor: pointer;
+            outline: none;
+            transition: r 160ms ease, stroke-width 160ms ease, filter 160ms ease;
+        }
+
+        .radar-point:hover,
+        .radar-point:focus {
+            r: 4;
+            stroke: #fff8ea;
+            stroke-width: 1.4;
+            filter: drop-shadow(0 0 4px rgba(248, 216, 77, 0.72));
+        }
+
+        .radar-tooltip {
+            min-width: 170px;
+            z-index: 20;
+        }
+
+        .empty,
+        .loading,
+        .error {
+            min-height: 460px;
+            display: grid;
+            place-items: center;
+            text-align: center;
+            color: var(--muted);
+        }
+
+        .loading-mark {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            border: 4px solid rgba(246, 43, 102, 0.22);
+            border-top-color: var(--gold);
+            animation: spin 900ms linear infinite;
+            margin: 0 auto 14px;
+        }
+
+        .skeleton {
+            min-height: 100%;
+            width: 100%;
+            background: linear-gradient(90deg, rgba(255,255,255,0.05), rgba(255,255,255,0.12), rgba(255,255,255,0.05));
+            background-size: 220% 100%;
+            animation: shimmer 1200ms linear infinite;
+        }
+
+        @keyframes spin { to { transform: rotate(360deg); } }
+        @keyframes shimmer { to { background-position: -220% 0; } }
+
+        @media (max-width: 1080px) {
+            .app-shell { grid-template-columns: 1fr; }
+            .app-shell::before { left: auto; right: -180px; bottom: 18vh; }
+            .content::before { left: 0; width: 100vw; }
+            .sidebar {
+                position: relative;
+                height: auto;
+                max-height: 44vh;
+                border-right: 0;
+                border-bottom: 1px solid var(--line);
+            }
+            .match-hero,
+            .maps-grid,
+            .match-center-grid,
+            .player-compare-grid,
+            .dictionary-chart-grid { grid-template-columns: 1fr; }
+            .kpi-grid,
+            .radar-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        }
+
+        @media (max-width: 680px) {
+            body::before { opacity: 0.18; background-position: 0 0, calc(100% - 26px) 54px; }
+            .app-shell::before { opacity: 0.08; width: 360px; height: 360px; }
+            .content { padding: 14px; }
+            .brand { padding: 18px; }
+            .score-line { grid-template-columns: 1fr; }
+            .team-block.away {
+                justify-items: start;
+                text-align: left;
+            }
+            .team-block.away .team-name { justify-content: flex-start; }
+            .team-block.away .goal-list { justify-content: flex-start; }
+            .team-name span:not(.team-flag):not(.flag-mini) { white-space: normal; }
+            .score-pill { width: 100%; }
+            .score-stack { width: 100%; }
+            .match-facts,
+            .kpi-grid,
+            .radar-grid { grid-template-columns: 1fr; }
+            .radar-card { grid-template-columns: 96px minmax(0, 1fr); }
+            .radar-chart-wrap,
+            .radar-svg { width: 96px; height: 96px; }
+            .compare-summary { grid-template-columns: 96px minmax(0, 1fr); }
+            .compare-summary .radar-chart-wrap,
+            .compare-summary .radar-svg { width: 96px; height: 96px; }
+            .section-title { align-items: start; flex-direction: column; }
+            .map-modal { padding: 8px; }
+            .map-modal-panel { width: 100%; max-height: 98vh; padding: 12px; }
+            .analysis-modal { padding: 8px; }
+            .analysis-modal-panel { width: 100%; max-height: 98vh; padding: 12px; }
+            .expanded-radar-grid,
+            .expanded-radar-card { grid-template-columns: 1fr; }
+            .map-modal-pitch,
+            .map-modal-pitch svg { min-height: 62vh; }
+            .map-modal-pitch.shot-crop,
+            .map-modal-pitch.shot-crop svg { aspect-ratio: 2 / 1; min-height: 0; }
+            .pressure-team-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="app-shell">
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="eyebrow">Qatar 2022 Tactical Room</div>
+                <h1>World Cup Analytics</h1>
+                <p>StatsBomb Open Data em leitura de jogo, pressão, progressão e criação.</p>
+            </div>
+            <div class="controls">
+                <input id="match-search" class="search" type="search" placeholder="Buscar seleção ou data">
+                <div class="date-filter-row">
+                    <input id="date-filter" class="search" type="text" inputmode="numeric" placeholder="Filtrar data dd/mm/aaaa">
+                    <button id="clear-date" class="clear-date" type="button">Limpar</button>
+                </div>
+                <div id="stage-tabs" class="stage-tabs"></div>
+            </div>
+            <div id="match-list" class="match-list">
+                <div class="loading"><div><div class="loading-mark"></div><p>Carregando partidas...</p></div></div>
+            </div>
+        </aside>
+
+        <main class="content">
+            <div id="empty-state" class="empty surface">
+                <div>
+                    <div class="eyebrow">Pronto para análise</div>
+                    <h2 style="margin-top: 8px;">Aguardando partida</h2>
+                </div>
+            </div>
+
+            <div id="dashboard" hidden>
+                <section class="match-hero">
+                    <div class="scoreboard surface">
+                        <div>
+                            <div class="eyebrow" id="match-stage">-</div>
+                            <div class="score-line">
+                                <div class="team-block">
+                                    <h2 class="team-name"><span id="home-flag" class="team-flag"></span><span id="home-team">-</span></h2>
+                                    <div id="home-manager-inline" class="team-manager">-</div>
+                                    <div id="home-goals" class="goal-list"></div>
+                                </div>
+                                <div class="score-stack">
+                                    <div id="match-score" class="score-pill">0-0</div>
+                                    <div id="shootout-score" class="shootout-score" hidden></div>
+                                </div>
+                                <div class="team-block away">
+                                    <h2 class="team-name"><span id="away-team">-</span><span id="away-flag" class="team-flag"></span></h2>
+                                    <div id="away-manager-inline" class="team-manager">-</div>
+                                    <div id="away-goals" class="goal-list"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="match-facts">
+                            <div class="fact"><div class="label">Data</div><div id="match-date-time" class="value">-</div></div>
+                            <div class="fact"><div class="label">Estádio</div><div id="match-stadium" class="value">-</div></div>
+                            <div class="fact"><div class="label">Árbitro</div><div id="match-referee" class="value">-</div></div>
+                        </div>
+                    </div>
+
+                    <div class="notes surface">
+                        <h2>História do jogo</h2>
+                        <div id="tactical-notes" class="note-list"></div>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <div class="section-title">
+                        <div>
+                            <h2>Top 3 impactos da partida</h2>
+                            <p>Atletas com maior influência contextual, considerando a própria função.</p>
+                        </div>
+                    </div>
+                    <div id="top-impacts" class="impact-grid"></div>
+                </section>
+
+                <section class="section match-center-grid">
+                    <article class="stats-board surface">
+                        <div class="period-pills">
+                            <button class="period-pill active" type="button" data-period="all">Todos</button>
+                            <button class="period-pill" type="button" data-period="1">1º</button>
+                            <button class="period-pill" type="button" data-period="2">2º</button>
+                        </div>
+                        <h2>Visão geral da partida</h2>
+                        <div id="team-compare" class="stat-list"></div>
+                    </article>
+
+                    <article class="interactive-board surface">
+                        <div class="map-mode-row">
+                            <h2 id="interactive-map-title">Mapa de chutes</h2>
+                            <div class="map-actions">
+                                <div class="map-toolbar" id="map-mode-controls">
+                                    <button class="map-toggle active" type="button" data-mode="shots">Chutes</button>
+                                    <button class="map-toggle" type="button" data-mode="passes">Passes</button>
+                                    <button id="penalty-map-toggle" class="map-toggle" type="button" data-mode="penalties" hidden>Pênaltis</button>
+                                </div>
+                                <button id="expand-map" class="expand-map" type="button" aria-haspopup="dialog" aria-controls="map-modal">
+                                    Ampliar
+                                </button>
+                            </div>
+                        </div>
+                        <div class="map-toolbar" id="team-map-controls"></div>
+                        <div id="shot-filter-controls" class="map-toolbar">
+                            <button class="flag-toggle active" type="button" data-shot-filter="all">Todos</button>
+                            <button class="flag-toggle" type="button" data-shot-filter="goals">Somente gols</button>
+                            <button class="flag-toggle" type="button" data-shot-filter="on_target">No alvo</button>
+                            <button class="flag-toggle" type="button" data-shot-filter="high_xg">xG alto</button>
+                            <select id="shot-type-filter" class="player-select" aria-label="Tipo de finalização">
+                                <option value="all">Todos os tipos</option>
+                            </select>
+                        </div>
+                        <div id="event-player-controls" class="player-select-row" hidden>
+                            <label for="event-player-select">Jogador</label>
+                            <select id="event-player-select" class="player-select"></select>
+                        </div>
+                        <div id="interactive-map" class="interactive-pitch"></div>
+                        <div id="event-map-legend" class="radar-reference-legend"></div>
+                        <div id="event-helper" class="event-helper"></div>
+                    </article>
+                </section>
+
+                <section class="section">
+                    <div class="section-title">
+                        <div>
+                            <h2>Comparar jogadores</h2>
+                            <p>Escolha dois atletas da partida para comparar criação, progressão e pressão</p>
+                        </div>
+                    </div>
+                    <article class="comparison-shell surface">
+                        <div class="comparison-shell-head">
+                            <button id="expand-comparison" class="expand-map" type="button" aria-haspopup="dialog" aria-controls="comparison-modal">
+                                Ampliar comparação
+                            </button>
+                        </div>
+                        <div class="player-compare-grid">
+                            <article class="compare-panel">
+                                <select id="compare-player-a" class="compare-select"></select>
+                                <div id="compare-card-a"></div>
+                            </article>
+                            <article class="compare-panel">
+                                <select id="compare-player-b" class="compare-select"></select>
+                                <div id="compare-card-b"></div>
+                            </article>
+                        </div>
+                    </article>
+                </section>
+
+                <section class="section">
+                    <div class="section-title">
+                        <div>
+                            <h2>Radares dos jogadores</h2>
+                            <p>Desempenho nesta partida comparado à distribuição da mesma função na Copa.</p>
+                            <div class="radar-reference-legend">
+                                <span>Ata = Ataque</span><span>Cri = Criação</span><span>Def = Defesa</span>
+                                <span>Pas = Passe</span><span>Pre = Pressão</span><span>Pro = Progressão</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="radar-grid" class="radar-grid"></div>
+                </section>
+
+                <section class="section">
+                    <div class="section-title">
+                        <div>
+                            <h2>Métricas da partida</h2>
+                            <p>Valores calculados somente com base neste jogo. Use o filtro de minutos para evitar comparações com amostras muito pequenas.</p>
+                        </div>
+                    </div>
+                    <div class="per90-table-wrap surface">
+                        <div class="table-filter-grid">
+                            <select id="player-table-team" aria-label="Filtrar por time"></select>
+                            <select id="player-table-position" aria-label="Filtrar por posição"></select>
+                            <select id="player-table-macro" aria-label="Filtrar por macroposição"></select>
+                            <select id="player-table-minutes" aria-label="Mínimo de minutos">
+                                <option value="0">0 minutos</option>
+                                <option value="15">15 minutos</option>
+                                <option value="30" selected>30 minutos</option>
+                                <option value="45">45 minutos</option>
+                                <option value="60">60 minutos</option>
+                                <option value="90">90 minutos</option>
+                            </select>
+                            <select id="player-table-metric" aria-label="Tipo de métrica">
+                                <option value="all">Todas as métricas</option>
+                                <option value="attack">Ataque</option>
+                                <option value="creation">Criação</option>
+                                <option value="progression">Progressão</option>
+                                <option value="passing">Passe</option>
+                                <option value="defense">Defesa</option>
+                                <option value="pressure">Pressão</option>
+                            </select>
+                        </div>
+                        <table id="per90-table" class="per90-table">
+                            <thead>
+                                <tr>
+                                    <th><button class="per90-sort" data-per90-sort="player">Jogador</button></th>
+                                    <th><button class="per90-sort" data-per90-sort="team">Time</button></th>
+                                    <th><button class="per90-sort" data-per90-sort="position">Posição</button></th>
+                                    <th><button class="per90-sort" data-per90-sort="minutes">Min.</button></th>
+                                    <th><button class="per90-sort" data-per90-sort="influence_index">Influência</button></th>
+                                    <th><button class="per90-sort" data-per90-sort="xg">xG</button></th>
+                                    <th><button class="per90-sort" data-per90-sort="xa">xA</button></th>
+                                    <th><button class="per90-sort" data-per90-sort="completed_passes">Passes certos</button></th>
+                                    <th><button class="per90-sort" data-per90-sort="pass_accuracy">Precisão</button></th>
+                                    <th><button class="per90-sort" data-per90-sort="progressive_passes">P+</button></th>
+                                    <th><button class="per90-sort" data-per90-sort="progressive_carries">C+</button></th>
+                                    <th><button class="per90-sort" data-per90-sort="pressures">Pressões</button></th>
+                                    <th><button class="per90-sort" data-per90-sort="counterpressures">Counterpress</button></th>
+                                    <th><button class="per90-sort" data-per90-sort="ball_recoveries">Recuperações</button></th>
+                                    <th><button class="per90-sort" data-per90-sort="contextual_score">Perfil contextual</button></th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <div class="section-title">
+                        <div>
+                            <h2>Mapas do jogo</h2>
+                            <p>Fluxo de xG interativo e zonas de pressão geradas pelo motor Matplotlib</p>
+                        </div>
+                    </div>
+                    <div class="maps-grid">
+                        <article class="map-card surface">
+                            <div class="map-head"><h3>Momentum da partida</h3><span class="tag">Estado do jogo</span></div>
+                            <div class="momentum-toolbar">
+                                <div class="momentum-controls">
+                                    <button class="flag-toggle active" data-momentum-mode="xg">xG</button>
+                                    <button class="flag-toggle" data-momentum-mode="pressure">Pressão</button>
+                                    <button class="flag-toggle" data-momentum-mode="progression">Progressão</button>
+                                    <button class="flag-toggle" data-momentum-mode="shots">Finalizações</button>
+                                </div>
+                                <p class="momentum-caption">xG em visão acumulada; pressão, progressão e finalizações em Blocos de 5 minutos.</p>
+                            </div>
+                            <div id="xgflow-container" class="map-box"></div>
+                        </article>
+                        <article class="map-card surface">
+                            <div class="map-head"><h3>Mapa de pressão por equipe</h3><span class="tag">Zonas de pressão</span></div>
+                            <div id="pressuremap-container" class="map-box"></div>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <div class="dictionary-chart-grid">
+                        <article class="dictionary-chart surface">
+                            <div>
+                                <h3>Construtores de jogo</h3>
+                                <p>xA e passes progressivos dos principais criadores da partida.</p>
+                            </div>
+                            <div id="playmaker-chart"></div>
+                        </article>
+                        <article class="dictionary-chart surface">
+                            <div>
+                                <h3>Intensidade defensiva</h3>
+                                <p>Counterpress e intensidade baseada no PPDA. Quanto menor o PPDA, maior a pressão.</p>
+                            </div>
+                            <div id="defensive-intensity-chart"></div>
+                        </article>
+                        <article class="dictionary-chart surface">
+                            <div>
+                                <h3>Progressões dos jogadores</h3>
+                                <p>Passes, conduções e distância percorrida em progressão durante a partida.</p>
+                            </div>
+                            <div id="progression-chart"></div>
+                        </article>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <div id="map-modal" class="map-modal" role="dialog" aria-modal="true" aria-labelledby="map-modal-title" hidden>
+        <section class="map-modal-panel">
+            <header class="map-modal-head">
+                <h2 id="map-modal-title">Mapa ampliado</h2>
+                <button id="close-map-modal" class="map-modal-close" type="button" aria-label="Fechar mapa ampliado">
+                    Fechar
+                </button>
+            </header>
+            <div id="map-modal-content" class="interactive-pitch map-modal-pitch"></div>
+            <div id="map-modal-helper" class="event-helper"></div>
+        </section>
+    </div>
+
+    <div id="comparison-modal" class="analysis-modal" role="dialog" aria-modal="true" aria-labelledby="comparison-modal-title" hidden>
+        <section class="analysis-modal-panel">
+            <header class="analysis-modal-head">
+                <div>
+                    <h2 id="comparison-modal-title">Comparação ampliada</h2>
+                    <p>Totais do jogo, perfil contextual 0–100 e influência base 100 contra a própria função.</p>
+                </div>
+                <button id="close-comparison-modal" class="map-modal-close" type="button">Fechar</button>
+            </header>
+            <div id="comparison-modal-content"></div>
+        </section>
+    </div>
+
+    <div id="player-modal" class="analysis-modal" role="dialog" aria-modal="true" aria-labelledby="player-modal-title" hidden>
+        <section class="analysis-modal-panel">
+            <header class="analysis-modal-head">
+                <div>
+                    <h2 id="player-modal-title">Detalhes do jogador</h2>
+                    <p>Métricas do jogador neste jogo e referência da função no torneio.</p>
+                </div>
+                <button id="close-player-modal" class="map-modal-close" type="button">Fechar</button>
+            </header>
+            <div id="player-modal-content"></div>
+        </section>
+    </div>
+
+    <div id="chart-metric-helper" class="chart-metric-helper" hidden></div>
+
+    <script>
+        const state = {
+            matches: [],
+            stage: 'Todos',
+            selectedMatchId: null,
+            currentData: null,
+            mapMode: 'shots',
+            mapTeam: 'all',
+            shotFilter: 'all',
+            shotType: 'all',
+            selectedEventIndex: 0,
+            period: 'all',
+            mapPlayer: 'all',
+            compareA: '',
+            compareB: '',
+            xgHover: null,
+            currentMapEvents: [],
+            per90Sort: { key: 'minutes', direction: 'desc' },
+            detailPlayer: '',
+            playerTableFilters: { team: 'all', position: 'all', macro: 'all', minutes: 30, metric: 'all' },
+            playerActionFilter: 'all',
+            momentumMode: 'xg',
+            comparisonCategory: 'Resumo'
+        };
+        let mapModalReturnFocus = null;
+        let analysisModalReturnFocus = null;
+
+        const el = (id) => document.getElementById(id);
+        const fmt = (value, digits = 2) => Number(value || 0).toFixed(digits);
+        const penaltyDestination = (value) => (
+            value === null || value === undefined ? 'N/D' : fmt(value, 1)
+        );
+        const ppda = (value) => value === null || value === undefined ? '-' : fmt(value, 2);
+        const efficiencyDisplay = (percentage, numerator, denominator) => {
+            const volume = `(${Math.round(Number(numerator || 0))}/${Math.round(Number(denominator || 0))})`;
+            return percentage === null || percentage === undefined
+                ? `N/D ${volume}`
+                : `${fmt(percentage, 1)}% ${volume}`;
+        };
+
+        document.addEventListener('DOMContentLoaded', async () => {
+            el('match-search').addEventListener('input', renderMatches);
+            el('date-filter').addEventListener('input', renderMatches);
+            el('clear-date').addEventListener('click', () => {
+                el('date-filter').value = '';
+                renderMatches();
+            });
+            document.querySelectorAll('[data-mode]').forEach((button) => {
+                button.addEventListener('click', () => {
+                    state.mapMode = button.dataset.mode;
+                    state.selectedEventIndex = 0;
+                    state.mapPlayer = 'all';
+                    document.querySelectorAll('[data-mode]').forEach((item) => item.classList.toggle('active', item === button));
+                    renderInteractiveMap();
+                });
+            });
+            document.querySelectorAll('[data-period]').forEach((button) => {
+                button.addEventListener('click', () => {
+                    state.period = button.dataset.period;
+                    state.selectedEventIndex = 0;
+                    state.mapPlayer = 'all';
+                    document.querySelectorAll('[data-period]').forEach((item) => item.classList.toggle('active', item === button));
+                    hydrateDashboard(state.currentData);
+                });
+            });
+            document.querySelectorAll('[data-shot-filter]').forEach((button) => {
+                button.addEventListener('click', () => {
+                    state.shotFilter = button.dataset.shotFilter;
+                    state.selectedEventIndex = 0;
+                    document.querySelectorAll('[data-shot-filter]').forEach((item) => {
+                        item.classList.toggle('active', item === button);
+                    });
+                    renderInteractiveMap();
+                });
+            });
+            el('shot-type-filter').addEventListener('change', (event) => {
+                state.shotType = event.target.value;
+                state.selectedEventIndex = 0;
+                renderInteractiveMap();
+            });
+            el('event-player-select').addEventListener('change', (event) => {
+                state.mapPlayer = event.target.value;
+                state.selectedEventIndex = 0;
+                renderInteractiveMap();
+            });
+            el('compare-player-a').addEventListener('change', (event) => {
+                state.compareA = event.target.value;
+                renderPlayerComparison();
+            });
+            ['team', 'position', 'macro', 'metric'].forEach((key) => {
+                el(`player-table-${key}`).addEventListener('change', (event) => {
+                    state.playerTableFilters[key] = event.target.value;
+                    renderPer90Table(((state.currentData || {}).summary || {}).player_comparison || []);
+                });
+            });
+            el('player-table-minutes').addEventListener('change', (event) => {
+                state.playerTableFilters.minutes = Number(event.target.value || 0);
+                renderPer90Table(((state.currentData || {}).summary || {}).player_comparison || []);
+            });
+            document.querySelectorAll('[data-momentum-mode]').forEach((button) => {
+                button.addEventListener('click', () => {
+                    state.momentumMode = button.dataset.momentumMode;
+                    document.querySelectorAll('[data-momentum-mode]').forEach((item) => {
+                        item.classList.toggle('active', item === button);
+                    });
+                    renderCharts((state.currentData || {}).charts || {}, (state.currentData || {}).summary || {});
+                });
+            });
+            el('compare-player-b').addEventListener('change', (event) => {
+                state.compareB = event.target.value;
+                renderPlayerComparison();
+            });
+            el('expand-map').addEventListener('click', openMapModal);
+            el('expand-comparison').addEventListener('click', openComparisonModal);
+            el('close-map-modal').addEventListener('click', closeMapModal);
+            el('close-comparison-modal').addEventListener('click', () => closeAnalysisModal('comparison-modal'));
+            el('close-player-modal').addEventListener('click', () => closeAnalysisModal('player-modal'));
+            el('map-modal').addEventListener('click', (event) => {
+                if (event.target === el('map-modal')) closeMapModal();
+            });
+            ['comparison-modal', 'player-modal'].forEach((modalId) => {
+                el(modalId).addEventListener('click', (event) => {
+                    if (event.target === el(modalId)) closeAnalysisModal(modalId);
+                });
+            });
+            document.addEventListener('keydown', (event) => {
+                if (event.key === 'Escape' && !el('map-modal').hidden) {
+                    closeMapModal();
+                } else if (event.key === 'Escape' && !el('comparison-modal').hidden) {
+                    closeAnalysisModal('comparison-modal');
+                } else if (event.key === 'Escape' && !el('player-modal').hidden) {
+                    closeAnalysisModal('player-modal');
+                }
+            });
+            await loadMatches();
+        });
+
+        async function loadMatches() {
+            try {
+                const response = await fetch('/api/matches');
+                const data = await response.json();
+                state.matches = data.matches || [];
+                renderStageTabs();
+                renderMatches();
+            } catch (error) {
+                el('match-list').innerHTML = '<div class="error surface"><p>Erro ao carregar partidas.</p></div>';
+            }
+        }
+
+        function renderStageTabs() {
+            const stages = ['Todos', ...new Set(state.matches.map((match) => match.competition_stage).filter(Boolean))];
+            el('stage-tabs').innerHTML = stages.map((stage) => `
+                <button class="stage-tab ${stage === state.stage ? 'active' : ''}" data-stage="${stage}">${stage}</button>
+            `).join('');
+
+            document.querySelectorAll('.stage-tab').forEach((button) => {
+                button.addEventListener('click', () => {
+                    state.stage = button.dataset.stage;
+                    renderStageTabs();
+                    renderMatches();
+                });
+            });
+        }
+
+        function renderMatches() {
+            const query = el('match-search').value.trim().toLowerCase();
+            const dateFilter = el('date-filter').value;
+            const matches = state.matches.filter((match) => {
+                const label = `${match.display_label} ${match.home_team} ${match.away_team} ${match.match_date_display}`.toLowerCase();
+                const stageOk = state.stage === 'Todos' || match.competition_stage === state.stage;
+                const dateOk = !dateFilter || (match.match_date_display || '').includes(dateFilter);
+                return stageOk && dateOk && label.includes(query);
+            });
+
+            if (!matches.length) {
+                el('match-list').innerHTML = '<div class="empty"><p>Nenhuma partida encontrada.</p></div>';
+                return;
+            }
+
+            el('match-list').innerHTML = matches.map((match) => `
+                <button class="match-card ${match.match_id === state.selectedMatchId ? 'active' : ''}" data-match-id="${match.match_id}">
+                    <strong>${flagBadge(match, 'home', 'mini')} ${match.display_label} ${flagBadge(match, 'away', 'mini')}</strong>
+                    <span class="match-meta"><span>${match.match_date_display}</span><span>${match.competition_stage || ''}</span></span>
+                </button>
+            `).join('');
+
+            document.querySelectorAll('.match-card').forEach((card) => {
+                card.addEventListener('click', () => loadMatch(Number(card.dataset.matchId)));
+            });
+        }
+
+        async function loadMatch(matchId) {
+            state.selectedMatchId = matchId;
+            renderMatches();
+            showDashboardLoading();
+
+            try {
+                const response = await fetch(`/api/matches/${matchId}`);
+                if (!response.ok) throw new Error('match unavailable');
+                const data = await response.json();
+                state.currentData = data;
+                state.mapMode = 'shots';
+                state.mapTeam = 'all';
+                state.shotFilter = 'all';
+                state.shotType = 'all';
+                state.selectedEventIndex = 0;
+                state.period = 'all';
+                state.mapPlayer = 'all';
+                state.compareA = '';
+                state.compareB = '';
+                document.querySelectorAll('[data-shot-filter]').forEach((item) => {
+                    item.classList.toggle('active', item.dataset.shotFilter === 'all');
+                });
+                document.querySelectorAll('[data-period]').forEach((item) => item.classList.toggle('active', item.dataset.period === 'all'));
+                hydrateDashboard(data);
+            } catch (error) {
+                el('dashboard').hidden = true;
+                el('empty-state').hidden = false;
+                el('empty-state').innerHTML = '<div><div class="eyebrow">Erro</div><h2 style="margin-top: 8px;">Partida indisponível</h2></div>';
+            }
+        }
+
+        function showDashboardLoading() {
+            el('empty-state').hidden = true;
+            el('dashboard').hidden = false;
+            ['interactive-map', 'xgflow-container', 'pressuremap-container'].forEach((id) => {
+                el(id).innerHTML = '<div class="skeleton"></div>';
+            });
+            el('event-helper').innerHTML = '<div class="avatar">⚽</div><div><h3>Processando eventos...</h3></div>';
+            el('tactical-notes').innerHTML = '<div class="note">Processando leitura tática...</div>';
+            el('radar-grid').innerHTML = '';
+        }
+
+        function hydrateDashboard(data) {
+            const summary = data.summary || {};
+            const metrics = summary.advanced_metrics || {};
+            const home = metrics.home || {};
+            const away = metrics.away || {};
+
+            el('home-team').innerText = summary.home_team || 'Casa';
+            el('away-team').innerText = summary.away_team || 'Fora';
+            setFlagElement(el('home-flag'), summary.home_flag_url, summary.home_flag_code);
+            setFlagElement(el('away-flag'), summary.away_flag_url, summary.away_flag_code);
+            el('match-score').innerText = summary.score || '0 - 0';
+            renderShootoutScore(summary.penalty_shootout || {});
+            el('match-stage').innerText = summary.competition_stage || '-';
+            el('match-date-time').innerText = formatDateTime(summary.date_display || summary.date, summary.kick_off);
+            el('match-stadium').innerText = summary.stadium || '-';
+            el('match-referee').innerText = summary.referee || '-';
+            el('home-manager-inline').innerText = summary.home_manager || 'Técnico não informado';
+            el('away-manager-inline').innerText = summary.away_manager || 'Técnico não informado';
+            renderGoalList('home-goals', summary.home_goals_grouped || summary.home_goals || []);
+            renderGoalList('away-goals', summary.away_goals_grouped || summary.away_goals || []);
+            el('penalty-map-toggle').hidden = !((data.events || {}).penalties || []).length;
+
+            const periodMetrics = (summary.period_metrics || {})[state.period] || metrics;
+            renderTeamCompare(summary, periodMetrics.home || home, periodMetrics.away || away);
+            renderTeamMapControls(summary);
+            renderInteractiveMap();
+            renderNotes(summary.tactical_notes || []);
+            renderTopImpacts(summary.top_impacts || []);
+            renderPlayerComparisonControls(summary.player_comparison || []);
+            renderPlayerComparison();
+            scheduleSecondaryRenders(data, periodMetrics, summary);
+        }
+
+        function scheduleSecondaryRenders(data, periodMetrics, summary) {
+            const expectedMatchId = data.match_id;
+            const renderQueue = [
+                () => renderRadars(summary.player_radars || []),
+                () => renderPer90Table(summary.player_comparison || []),
+                () => renderCharts(data.charts || {}, summary),
+                () => renderImages(data.images || {}),
+                () => renderDictionaryCharts(summary.player_comparison || [], periodMetrics, summary),
+            ];
+            const runNext = () => {
+                if (state.currentData?.match_id !== expectedMatchId || !renderQueue.length) return;
+                renderQueue.shift()();
+                if (renderQueue.length) schedule(runNext);
+            };
+            const schedule = (callback) => {
+                if ('requestIdleCallback' in window) {
+                    window.requestIdleCallback(callback, { timeout: 120 });
+                } else {
+                    window.setTimeout(callback, 16);
+                }
+            };
+            schedule(runNext);
+        }
+
+        function formatDateTime(date, kickOff) {
+            const time = kickOff ? String(kickOff).replace('.000', '').slice(0, 5) : '';
+            return [date, time].filter(Boolean).join(' - ') || '-';
+        }
+
+        function renderShootoutScore(shootout) {
+            const node = el('shootout-score');
+            if (!shootout.occurred) {
+                node.hidden = true;
+                node.innerHTML = '';
+                return;
+            }
+            node.hidden = false;
+            node.innerHTML = `<span>Pênaltis</span><strong>${shootout.home_score} - ${shootout.away_score}</strong>`;
+            node.title = [
+                ...(shootout.home_attempts || []).map((attempt) => `${attempt.player}: ${attempt.result}`),
+                ...(shootout.away_attempts || []).map((attempt) => `${attempt.player}: ${attempt.result}`),
+            ].join(' | ');
+        }
+
+        function renderGoalList(containerId, goals) {
+            el(containerId).innerHTML = goals.length
+                ? goals.map((goal) => {
+                    const minutes = goal.minute_labels ? goal.minute_labels.join(', ') : goal.minute_label;
+                    const suffix = goal.goals && goal.goals > 1 ? ` (${goal.goals})` : '';
+                    return `<div class="goal-chip"><strong>${minutes}</strong><span>${goal.player}${suffix}</span></div>`;
+                }).join('')
+                : '';
+        }
+
+        function metricHelp(text) {
+            return text
+                ? `<span class="metric-help" title="${text}" aria-label="${text}" role="note" tabindex="0">?</span>`
+                : '';
+        }
+
+        function metricLabel(label, help) {
+            return `<span class="metric-label">${label}${metricHelp(help)}</span>`;
+        }
+
+        function renderTeamCompare(summary, home, away) {
+            const rows = [
+                { label: 'Gols esperados (xG)', home: fmt(home.xg), away: fmt(away.xg) },
+                { label: 'xG por chute', home: fmt(home.xg_per_shot), away: fmt(away.xg_per_shot) },
+                { label: 'Assistências esperadas (xA)', home: fmt(home.xa), away: fmt(away.xa) },
+                { label: 'Finalizações', home: home.shots || 0, away: away.shots || 0 },
+                { label: 'Chutes certos', home: home.shots_on_target || 0, away: away.shots_on_target || 0 },
+                { label: 'Precisão dos chutes', home: `${home.shot_accuracy || 0}%`, away: `${away.shot_accuracy || 0}%`, percentage: true },
+                { label: 'Conversão das finalizações', home: efficiencyDisplay(home.shot_conversion, home.goals, home.shots), away: efficiencyDisplay(away.shot_conversion, away.goals, away.shots), percentage: true },
+                { label: 'Passes', home: home.passes || 0, away: away.passes || 0 },
+                { label: 'Passes certos', home: home.completed_passes || 0, away: away.completed_passes || 0 },
+                { label: 'Precisão dos passes', home: `${home.pass_accuracy || 0}%`, away: `${away.pass_accuracy || 0}%`, percentage: true },
+                { label: 'Passes sob pressão', home: efficiencyDisplay(home.passes_under_pressure_accuracy, home.passes_under_pressure_completed, home.passes_under_pressure_total), away: efficiencyDisplay(away.passes_under_pressure_accuracy, away.passes_under_pressure_completed, away.passes_under_pressure_total), percentage: true },
+                { label: 'Passes progressivos', home: home.progressive_passes || 0, away: away.progressive_passes || 0 },
+                { label: 'Conduções progressivas', home: home.progressive_carries || 0, away: away.progressive_carries || 0 },
+                { label: 'Distância em progressão', home: fmt(home.total_progression_distance, 1), away: fmt(away.total_progression_distance, 1) },
+                { label: 'Dribles certos', home: home.successful_dribbles || 0, away: away.successful_dribbles || 0 },
+                { label: 'Aproveitamento dos dribles', home: `${home.dribble_accuracy || 0}%`, away: `${away.dribble_accuracy || 0}%`, percentage: true },
+                { label: 'Desarmes certos', home: home.successful_tackles || 0, away: away.successful_tackles || 0 },
+                { label: 'Aproveitamento dos desarmes', home: `${home.tackle_accuracy || 0}%`, away: `${away.tackle_accuracy || 0}%`, percentage: true },
+                { label: 'Pressão pós-perda', home: home.counterpressures || 0, away: away.counterpressures || 0, help: 'Ações de pressão logo após perder a bola, tentando recuperar antes que o rival organize a posse.' },
+                { label: 'Percentual de counterpress', home: efficiencyDisplay(home.counterpress_percentage, home.counterpressures, home.pressure_events), away: efficiencyDisplay(away.counterpress_percentage, away.counterpressures, away.pressure_events), percentage: true },
+                { label: 'Recuperações no campo ofensivo', home: home.offensive_recoveries || 0, away: away.offensive_recoveries || 0 },
+                { label: 'Ações defensivas', home: home.defensive_actions || 0, away: away.defensive_actions || 0 },
+                { label: 'PPDA aproximado', home: ppda(home.ppda), away: ppda(away.ppda), help: 'Passes permitidos ao adversário antes de uma ação defensiva. Quanto menor, mais agressiva tende a ser a pressão.' }
+            ];
+
+            el('team-compare').innerHTML = rows.map(({ label, home: homeValue, away: awayValue, help, percentage }) => {
+                const homeNumber = parseMetric(homeValue);
+                const awayNumber = parseMetric(awayValue);
+                const maxValue = Math.max(homeNumber, awayNumber, 1);
+                const homeWidth = percentage ? Math.min(homeNumber, 100) : (homeNumber / maxValue) * 100;
+                const awayWidth = percentage ? Math.min(awayNumber, 100) : (awayNumber / maxValue) * 100;
+                return `
+                    <div class="stat-row">
+                        <strong>${homeValue}</strong>
+                        <div class="stat-mid">
+                            ${metricLabel(label, help)}
+                            <div class="dual-track">
+                                <div class="left" style="--w: ${homeWidth}%; --team-color: ${summary.home_primary_color || '#41d394'};"
+                                    data-chart-metric="${label}" data-chart-value="${homeValue}" data-chart-context="${summary.home_team || 'Casa'}" tabindex="0"></div>
+                                <div class="right" style="--w: ${awayWidth}%; --team-color: ${summary.away_primary_color || '#7e83ff'};"
+                                    data-chart-metric="${label}" data-chart-value="${awayValue}" data-chart-context="${summary.away_team || 'Fora'}" tabindex="0"></div>
+                            </div>
+                        </div>
+                        <strong>${awayValue}</strong>
+                    </div>
+                `;
+            }).join('');
+            bindChartMetricHelpers(el('team-compare'));
+        }
+
+        function parseMetric(value) {
+            const parsed = parseFloat(String(value).replace('%', '').replace(',', '.'));
+            return Number.isFinite(parsed) ? parsed : 0;
+        }
+
+        function renderTeamMapControls(summary) {
+            const buttons = [
+                ['all', 'Todos'],
+                ['home', flagBadge(summary, 'home', 'mini')],
+                ['away', flagBadge(summary, 'away', 'mini')]
+            ];
+            el('team-map-controls').innerHTML = buttons.map(([value, label]) => `
+                <button class="flag-toggle ${state.mapTeam === value ? 'active' : ''}" type="button" data-team-filter="${value}">${label}</button>
+            `).join('');
+            document.querySelectorAll('[data-team-filter]').forEach((button) => {
+                button.addEventListener('click', () => {
+                    state.mapTeam = button.dataset.teamFilter;
+                    state.selectedEventIndex = 0;
+                    renderTeamMapControls(summary);
+                    renderInteractiveMap();
+                });
+            });
+            document.querySelectorAll('[data-mode]').forEach((button) => {
+                button.classList.toggle('active', button.dataset.mode === state.mapMode);
+            });
+        }
+
+        function renderInteractiveMap() {
+            const data = state.currentData;
+            if (!data) return;
+            let events = ((data.events || {})[state.mapMode] || [])
+                .filter((event) => state.period === 'all' || String(event.period) === state.period)
+                .filter((event) => state.mapTeam === 'all' || event.team === state.mapTeam);
+            const titles = {
+                shots: 'Mapa de chutes',
+                passes: 'Mapa de passes',
+                penalties: 'Mapa de pênaltis',
+            };
+            const title = titles[state.mapMode] || 'Mapa de eventos';
+            el('interactive-map-title').innerText = title;
+            el('shot-filter-controls').hidden = state.mapMode !== 'shots';
+            el('event-map-legend').innerHTML = state.mapMode === 'shots'
+                ? '<span>Círculo = chute</span><span>Estrela = gol</span><span>Tamanho = xG</span><span>Cor = equipe</span>'
+                : state.mapMode === 'passes'
+                    ? '<span>Seta = direção do passe</span><span>Verde = certo</span><span>Vermelho = errado</span>'
+                    : '<span>Símbolo = resultado da cobrança</span><span>Cor = equipe</span>';
+            renderMapPlayerControls(events);
+
+            if (['shots', 'passes'].includes(state.mapMode) && state.mapPlayer !== 'all') {
+                events = events.filter((event) => event.player === state.mapPlayer);
+            }
+            if (state.mapMode === 'shots' && state.shotFilter === 'goals') {
+                events = events.filter((event) => event.is_goal);
+            }
+            if (state.mapMode === 'shots' && state.shotFilter === 'on_target') {
+                events = events.filter((event) => event.on_target);
+            }
+            if (state.mapMode === 'shots' && state.shotFilter === 'high_xg') {
+                events = events.filter((event) => Number(event.xg || 0) >= 0.20);
+            }
+            if (state.mapMode === 'shots') {
+                const shotTypes = [...new Set((((data.events || {}).shots) || []).map((event) => event.shot_type).filter(Boolean))].sort();
+                el('shot-type-filter').innerHTML = [
+                    '<option value="all">Todos os tipos</option>',
+                    ...shotTypes.map((type) => `<option value="${type}">${type}</option>`),
+                ].join('');
+                if (!shotTypes.includes(state.shotType)) state.shotType = 'all';
+                el('shot-type-filter').value = state.shotType;
+                if (state.shotType !== 'all') events = events.filter((event) => event.shot_type === state.shotType);
+            }
+            state.currentMapEvents = events;
+
+            if (!events.length) {
+                el('interactive-map').innerHTML = '<div class="empty"><p>Sem eventos para este filtro.</p></div>';
+                renderEventHelper(null);
+                syncMapModal();
+                return;
+            }
+
+            state.selectedEventIndex = Math.min(state.selectedEventIndex, events.length - 1);
+            el('interactive-map').innerHTML = mapMarkupForMode(events);
+
+            bindMapEventInteractions(el('interactive-map'), events);
+            renderEventHelper(events[state.selectedEventIndex]);
+            syncMapModal();
+        }
+
+        function bindMapEventInteractions(root, events) {
+            if (!root) return;
+            root.querySelectorAll('[data-event-index]').forEach((node) => {
+                node.addEventListener('click', () => {
+                    state.selectedEventIndex = Number(node.dataset.eventIndex);
+                    renderInteractiveMap();
+                });
+            });
+        }
+
+        function mapMarkupForMode(events, markerSuffix = '', expanded = false) {
+            const offensiveCrop = state.mapMode === 'shots' && expanded;
+            if (state.mapMode === 'shots') return shotPitchSvg(events, offensiveCrop);
+            if (state.mapMode === 'passes') return passPitchSvg(events, markerSuffix);
+            return penaltyGoalSvg(events);
+        }
+
+        function openMapModal() {
+            mapModalReturnFocus = document.activeElement;
+            const suffix = state.mapMode === 'penalties' ? 'ampliado' : 'recorte ofensivo ampliado';
+            el('map-modal-title').innerText = `${el('interactive-map-title').innerText} — ${suffix}`;
+            el('map-modal').hidden = false;
+            document.body.classList.add('modal-open');
+            syncMapModal();
+            el('close-map-modal').focus();
+        }
+
+        function closeMapModal() {
+            el('map-modal').hidden = true;
+            document.body.classList.remove('modal-open');
+            if (mapModalReturnFocus) mapModalReturnFocus.focus();
+        }
+
+        function syncMapModal() {
+            if (el('map-modal').hidden) return;
+            const events = state.currentMapEvents || [];
+            el('map-modal-content').classList.toggle('shot-crop', state.mapMode === 'shots');
+            el('map-modal-content').innerHTML = events.length
+                ? mapMarkupForMode(events, '-modal', true)
+                : '<div class="empty"><p>Sem eventos para este filtro.</p></div>';
+            bindMapEventInteractions(el('map-modal-content'), events);
+            el('map-modal-helper').innerHTML = eventHelperMarkup(
+                events[state.selectedEventIndex] || null
+            );
+        }
+
+        function renderMapPlayerControls(events) {
+            const wrapper = el('event-player-controls');
+            const select = el('event-player-select');
+            if (!['shots', 'passes'].includes(state.mapMode)) {
+                wrapper.hidden = true;
+                select.innerHTML = '';
+                return;
+            }
+
+            const players = [...new Set(events.map((event) => event.player))].sort();
+            wrapper.hidden = false;
+            if (!players.length) {
+                select.innerHTML = '<option value="all">Sem jogadores no filtro</option>';
+                return;
+            }
+
+            if (state.mapMode === 'shots') {
+                select.innerHTML = [
+                    '<option value="all">Todos os jogadores</option>',
+                    ...players.map((player) => `<option value="${player}">${player}</option>`),
+                ].join('');
+                if (state.mapPlayer !== 'all' && !players.includes(state.mapPlayer)) {
+                    state.mapPlayer = 'all';
+                }
+            }
+
+            if (state.mapMode === 'passes') {
+                select.innerHTML = players
+                    .map((player) => `<option value="${player}">${player}</option>`)
+                    .join('');
+                if (state.mapPlayer === 'all' || !players.includes(state.mapPlayer)) {
+                    state.mapPlayer = players[0];
+                }
+            }
+            select.value = state.mapPlayer;
+        }
+
+        function pitchLines() {
+            return `
+                <rect x="0" y="0" width="120" height="80" fill="#49774e" />
+                <rect x=".5" y=".5" width="119" height="79" fill="none" stroke="rgba(255,255,255,.72)" stroke-width="1" />
+                <line x1="60" y1=".5" x2="60" y2="79.5" stroke="rgba(255,255,255,.58)" stroke-width=".7" />
+                <circle cx="60" cy="40" r="9" fill="none" stroke="rgba(255,255,255,.45)" stroke-width=".6" />
+                <circle cx="60" cy="40" r=".8" fill="rgba(255,255,255,.72)" />
+                <rect x="0" y="18" width="18" height="44" fill="none" stroke="rgba(255,255,255,.58)" stroke-width=".7" />
+                <rect x="102" y="18" width="18" height="44" fill="none" stroke="rgba(255,255,255,.58)" stroke-width=".7" />
+                <rect x="0" y="30" width="6" height="20" fill="none" stroke="rgba(255,255,255,.58)" stroke-width=".7" />
+                <rect x="114" y="30" width="6" height="20" fill="none" stroke="rgba(255,255,255,.58)" stroke-width=".7" />
+                <circle cx="12" cy="40" r=".7" fill="rgba(255,255,255,.72)" />
+                <circle cx="108" cy="40" r=".7" fill="rgba(255,255,255,.72)" />
+                <path d="M 18 32.7 A 9 9 0 0 1 18 47.3" fill="none" stroke="rgba(255,255,255,.48)" stroke-width=".6" />
+                <path d="M 102 32.7 A 9 9 0 0 0 102 47.3" fill="none" stroke="rgba(255,255,255,.48)" stroke-width=".6" />
+            `;
+        }
+
+        function teamColor(team) {
+            const summary = ((state.currentData || {}).summary || {});
+            if (team === 'home') return summary.home_primary_color || '#4ade80';
+            if (team === 'away') return summary.away_primary_color || '#818cf8';
+            return '#f7f4ee';
+        }
+
+        function starPoints(cx, cy, outer, inner, points = 5) {
+            const coords = [];
+            for (let index = 0; index < points * 2; index += 1) {
+                const radius = index % 2 === 0 ? outer : inner;
+                const angle = (-90 + index * 180 / points) * Math.PI / 180;
+                coords.push(`${cx + Math.cos(angle) * radius},${cy + Math.sin(angle) * radius}`);
+            }
+            return coords.join(' ');
+        }
+
+        function shotPitchSvg(events, expanded = false) {
+            const nodes = events.map((event, index) => {
+                const color = teamColor(event.team);
+                const radius = Math.max(1.4, Math.min(4.6, 1.6 + Number(event.xg || 0) * 7));
+                if (event.is_goal) {
+                    return `
+                        <g class="pitch-goal ${index === state.selectedEventIndex ? 'active' : ''}" data-event-index="${index}">
+                            <polygon points="${starPoints(event.x, event.y, radius + 2.1, Math.max(1.2, radius * 0.52))}"
+                                fill="${color}" stroke="#f2bd5c" stroke-width=".75" opacity=".98">
+                                <title>${event.tooltip}</title>
+                            </polygon>
+                        </g>
+                    `;
+                }
+                return `
+                    <circle class="pitch-event ${index === state.selectedEventIndex ? 'active' : ''}" data-event-index="${index}"
+                        cx="${event.x}" cy="${event.y}" r="${radius}" fill="${color}" stroke="#f7f4ee" stroke-width=".7" opacity=".56">
+                        <title>${event.tooltip}</title>
+                    </circle>
+                `;
+            }).join('');
+            const content = `${pitchLines()}${nodes}`;
+            return `
+                <svg viewBox="${expanded ? '0 0 80 40' : '0 0 120 80'}" role="img" aria-label="Mapa de chutes">
+                    ${expanded ? `<g transform="matrix(0 -1 1 0 0 120)">${content}</g>` : content}
+                </svg>
+            `;
+        }
+
+        const PASS_COMPLETE_COLOR = '#22c55e';
+        const PASS_INCOMPLETE_COLOR = '#ef4444';
+
+        function passPitchSvg(events, markerSuffix = '', expanded = false) {
+            const lines = events.map((event, index) => {
+                const color = event.completed ? PASS_COMPLETE_COLOR : PASS_INCOMPLETE_COLOR;
+                const arrow = event.completed ? 'complete' : 'incomplete';
+                const width = event.progressive ? 0.95 : 0.45;
+                const opacity = event.progressive ? 0.9 : 0.58;
+                const selected = index === state.selectedEventIndex;
+                return `
+                    <g class="pitch-pass ${selected ? 'active' : ''}" data-event-index="${index}">
+                        ${selected ? `
+                            <line class="pass-selection-outline"
+                                x1="${event.x}" y1="${event.y}" x2="${event.end_x}" y2="${event.end_y}"
+                                stroke-width="${width + 0.7}" />
+                        ` : ''}
+                        <line x1="${event.x}" y1="${event.y}" x2="${event.end_x}" y2="${event.end_y}"
+                            stroke="${color}" stroke-width="${width}" opacity="${opacity}"
+                            marker-end="url(#pass-arrow-${arrow}${markerSuffix})" />
+                        <circle cx="${event.x}" cy="${event.y}" r="1.05" fill="${color}" opacity=".96" />
+                        <title>${event.tooltip}</title>
+                    </g>
+                `;
+            }).join('');
+            return `
+                <svg viewBox="${expanded ? '0 0 80 40' : '0 0 120 80'}" role="img" aria-label="Mapa de passes">
+                    <defs>
+                        <marker id="pass-arrow-complete${markerSuffix}" viewBox="0 0 5 5" refX="4.5" refY="2.5"
+                            markerWidth="4" markerHeight="4" orient="auto" markerUnits="userSpaceOnUse">
+                            <path d="M 0 0 L 5 2.5 L 0 5 z" fill="${PASS_COMPLETE_COLOR}" />
+                        </marker>
+                        <marker id="pass-arrow-incomplete${markerSuffix}" viewBox="0 0 5 5" refX="4.5" refY="2.5"
+                            markerWidth="4" markerHeight="4" orient="auto" markerUnits="userSpaceOnUse">
+                            <path d="M 0 0 L 5 2.5 L 0 5 z" fill="${PASS_INCOMPLETE_COLOR}" />
+                        </marker>
+                    </defs>
+                    ${expanded
+                        ? `<g transform="matrix(0 -1 1 0 0 120)">${pitchLines()}${lines}</g>`
+                        : `${pitchLines()}${lines}`
+                    }
+                </svg>
+            `;
+        }
+
+        function penaltyGoalSvg(events) {
+            const nodes = events.map((event, index) => {
+                if (event.end_y == null || event.end_z == null) {
+                    return '';
+                }
+                const endY = Number(event.end_y);
+                const endZ = Number(event.end_z);
+                if (!Number.isFinite(endY) || !Number.isFinite(endZ)) {
+                    return '';
+                }
+                const x = endY;
+                const y = 2.67 - endZ;
+                const color = teamColor(event.team);
+                if (event.scored) {
+                    return `
+                        <g class="penalty-attempt ${index === state.selectedEventIndex ? 'active' : ''}" data-event-index="${index}">
+                            <circle cx="${x}" cy="${y}" r=".34" fill="${color}" stroke="#f8d84d" stroke-width=".12">
+                                <title>${event.tooltip}</title>
+                            </circle>
+                            <path d="M ${x - .15} ${y} L ${x - .03} ${y + .13} L ${x + .18} ${y - .16}" fill="none" stroke="#fff8ea" stroke-width=".10" />
+                        </g>
+                    `;
+                }
+                const saved = event.outcome === 'Saved';
+                return `
+                    <g class="penalty-attempt ${index === state.selectedEventIndex ? 'active' : ''}" data-event-index="${index}">
+                        <circle cx="${x}" cy="${y}" r=".34" fill="${saved ? '#f8d84d' : '#f52563'}" stroke="#fff8ea" stroke-width=".10">
+                            <title>${event.tooltip}</title>
+                        </circle>
+                        ${saved
+                            ? `<rect x="${x - .13}" y="${y - .13}" width=".26" height=".26" fill="#220018" />`
+                            : `<path d="M ${x - .15} ${y - .15} L ${x + .15} ${y + .15} M ${x + .15} ${y - .15} L ${x - .15} ${y + .15}" stroke="#fff8ea" stroke-width=".10" />`
+                        }
+                    </g>
+                `;
+            }).join('');
+            return `
+                <svg viewBox="34 -0.5 12 4.2" role="img" aria-label="Destino das cobranças de pênalti">
+                    <rect x="34" y="-0.5" width="12" height="4.2" fill="#16231d" />
+                    <rect x="36" y="0" width="8" height="2.67" fill="rgba(255,255,255,.035)" stroke="#fff8ea" stroke-width=".10" />
+                    ${[37, 38, 39, 40, 41, 42, 43].map((x) => `<line x1="${x}" y1="0" x2="${x}" y2="2.67" stroke="rgba(255,255,255,.11)" stroke-width=".035" />`).join('')}
+                    ${[.5, 1, 1.5, 2, 2.5].map((y) => `<line x1="36" y1="${y}" x2="44" y2="${y}" stroke="rgba(255,255,255,.11)" stroke-width=".035" />`).join('')}
+                    <text x="40" y="3.25" text-anchor="middle" fill="#e2a9ba" font-size=".32">Destino das cobranças</text>
+                    ${nodes}
+                </svg>
+            `;
+        }
+
+        function renderEventHelper(event) {
+            el('event-helper').innerHTML = eventHelperMarkup(event);
+        }
+
+        function eventHelperMarkup(event) {
+            if (!event) {
+                return '<div class="avatar">⚽</div><div><h3>Nenhum evento no filtro</h3></div>';
+            }
+            const isShot = state.mapMode === 'shots';
+            const isPenalty = state.mapMode === 'penalties';
+            return `
+                <div class="avatar">${flagImage(event.flag_url, event.flag_code)}</div>
+                <div>
+                    <h3>${event.player}</h3>
+                    <p style="color: var(--muted); margin-top: 4px;">${isShot || isPenalty ? event.team_name : `${event.team_name} para ${event.recipient}`}</p>
+                </div>
+                <strong>${event.minute_label}</strong>
+                <div class="helper-grid">
+                    <div>${isShot || isPenalty ? 'Resultado' : 'Passe'}<strong>${event.result}</strong></div>
+                    <div>${isPenalty ? 'Destino horizontal' : (isShot ? 'xG' : 'Distância')}<strong>${isPenalty ? penaltyDestination(event.end_y) : (isShot ? fmt(event.xg) : `${event.length}m`)}</strong></div>
+                    <div>${isShot || isPenalty ? 'Parte do corpo' : 'Progressivo'}<strong>${isShot || isPenalty ? event.body_part : (event.progressive ? 'Sim' : 'Não')}</strong></div>
+                </div>
+            `;
+        }
+
+        function renderPlayerComparisonControls(players) {
+            const eligiblePlayers = players.filter((player) => player.eligible_for_radar);
+            const options = eligiblePlayers.map((player) => `<option value="${player.player}">${player.player} - ${player.position}</option>`).join('');
+            el('compare-player-a').innerHTML = options;
+            el('compare-player-b').innerHTML = options;
+            if (!eligiblePlayers.length) return;
+
+            if (!state.compareA || !eligiblePlayers.some((player) => player.player === state.compareA)) {
+                state.compareA = eligiblePlayers[0].player;
+            }
+            if (!state.compareB || !eligiblePlayers.some((player) => player.player === state.compareB)) {
+                state.compareB = (eligiblePlayers[1] || eligiblePlayers[0]).player;
+            }
+            el('compare-player-a').value = state.compareA;
+            el('compare-player-b').value = state.compareB;
+        }
+
+        function renderPlayerComparison() {
+            const players = (((state.currentData || {}).summary || {}).player_comparison || [])
+                .filter((player) => player.eligible_for_radar);
+            const playerA = players.find((player) => player.player === state.compareA) || players[0];
+            const playerB = players.find((player) => player.player === state.compareB) || players[1] || players[0];
+
+            renderPlayerCompareCard('compare-card-a', playerA, playerB);
+            renderPlayerCompareCard('compare-card-b', playerB, playerA);
+        }
+
+        function comparisonPlayers() {
+            const players = (((state.currentData || {}).summary || {}).player_comparison || [])
+                .filter((player) => player.eligible_for_radar);
+            return [
+                players.find((player) => player.player === state.compareA) || players[0],
+                players.find((player) => player.player === state.compareB) || players[1] || players[0],
+            ];
+        }
+
+        function openComparisonModal() {
+            const [playerA, playerB] = comparisonPlayers();
+            if (!playerA || !playerB) return;
+            analysisModalReturnFocus = document.activeElement;
+            renderComparisonModal(playerA, playerB);
+            el('comparison-modal').hidden = false;
+            document.body.classList.add('modal-open');
+            el('close-comparison-modal').focus();
+        }
+
+        function renderComparisonModal(playerA, playerB) {
+            el('comparison-modal-content').innerHTML = comparisonModalMarkup(playerA, playerB);
+            bindRadarInteractions(el('comparison-modal-content'));
+            bindComparisonModalControls();
+        }
+
+        function comparisonOptions(selected) {
+            const players = (((state.currentData || {}).summary || {}).player_comparison || [])
+                .filter((player) => player.eligible_for_radar);
+            return players.map((player) => `
+                <option value="${player.player}" ${player.player === selected ? 'selected' : ''}>
+                    ${player.player} - ${player.position}
+                </option>
+            `).join('');
+        }
+
+        function bindComparisonModalControls() {
+            el('modal-compare-player-a')?.addEventListener('change', (event) => {
+                syncComparisonSelection('A', event.target.value);
+            });
+            el('modal-compare-player-b')?.addEventListener('change', (event) => {
+                syncComparisonSelection('B', event.target.value);
+            });
+            document.querySelectorAll('[data-comparison-category]').forEach((button) => {
+                button.addEventListener('click', () => {
+                    state.comparisonCategory = button.dataset.comparisonCategory;
+                    const [playerA, playerB] = comparisonPlayers();
+                    renderComparisonModal(playerA, playerB);
+                });
+            });
+        }
+
+        function syncComparisonSelection(side, playerName) {
+            state[`compare${side}`] = playerName;
+            el(`compare-player-${side.toLowerCase()}`).value = playerName;
+            renderPlayerComparison();
+            const [playerA, playerB] = comparisonPlayers();
+            renderComparisonModal(playerA, playerB);
+        }
+
+        function comparisonModalMarkup(playerA, playerB) {
+            const categories = Object.keys(playerA.comparison_categories || {});
+            const activeCategory = (
+                state.comparisonCategory === 'Resumo'
+                || categories.includes(state.comparisonCategory)
+            ) ? state.comparisonCategory : 'Resumo';
+            const tabLabel = (category) => category === 'Finalização' ? 'Ataque' : category;
+            const categoryItem = (player, category, key) => (
+                player.comparison_categories?.[category] || []
+            ).find((item) => item.key === key) || {};
+            const metricCell = (player, category, key, isWinner) => {
+                const item = categoryItem(player, category, key);
+                const layer = player.metric_layers?.[key] || {};
+                const primary = item.display || fmt(item.raw_value, metricDigits(key));
+                const hasContext = layer.position_average_score_0_100 !== null
+                    && layer.position_average_score_0_100 !== undefined;
+                const delta = hasContext
+                    ? Number(layer.score_0_100 || 0) - Number(layer.position_average_score_0_100 || 0)
+                    : null;
+                return `
+                    <td class="${isWinner ? 'metric-winner' : ''}">
+                        <div class="metric-cell-detail">
+                            <strong>${primary}</strong>
+                            <small>Total produzido no jogo</small>
+                            ${hasContext ? `<small>Perfil ${Math.round(layer.score_0_100)}/100 · ${delta >= 0 ? '+' : ''}${Math.round(delta)} pts vs referência</small>` : ''}
+                        </div>
+                    </td>
+                `;
+            };
+            return `
+                <div class="player-compare-grid" style="margin-bottom: 16px;">
+                    <label>Jogador 1
+                        <select id="modal-compare-player-a" class="compare-select">${comparisonOptions(playerA.player)}</select>
+                    </label>
+                    <label>Jogador 2
+                        <select id="modal-compare-player-b" class="compare-select">${comparisonOptions(playerB.player)}</select>
+                    </label>
+                </div>
+                <div class="comparison-category-tabs">
+                    ${['Resumo', ...categories].map((category) => `
+                        <button class="comparison-category-tab ${activeCategory === category ? 'active' : ''}"
+                            type="button" data-comparison-category="${category}">${tabLabel(category)}</button>
+                    `).join('')}
+                </div>
+                ${activeCategory === 'Resumo' ? `
+                    <div class="note" style="margin-bottom: 16px;">${comparisonSummary(playerA, playerB)}</div>
+                    <div class="expanded-radar-grid">
+                        ${[playerA, playerB].map((player) => `
+                            <article class="expanded-radar-card surface">
+                                ${radarChart(player.dimension_scores || {}, player, player.radar_labels || {})}
+                                <div>
+                                    <h3>${player.player}</h3>
+                                    <p>${player.team} · ${player.position} · referência ${player.macro_position}</p>
+                                    <strong>Influência ${fmt(player.influence_index, 1)}</strong>
+                                    <p>${player.influence_delta_pct >= 0 ? '+' : ''}${fmt(player.influence_delta_pct, 1)}% vs média da função</p>
+                                    <p>Perfil contextual: ${fmt(player.contextual_score, 1)}/100</p>
+                                    <div class="radar-reference-legend">
+                                        <span><i style="background: rgba(65,211,148,.34); border-color: #41d394;"></i>Jogador nesta partida</span>
+                                        <span><i></i>Média da macroposição na Copa</span>
+                                        <span>Escala 0–100 contra a distribuição da função</span>
+                                    </div>
+                                </div>
+                            </article>
+                        `).join('')}
+                    </div>
+                ` : [activeCategory].map((category) => `
+                    <section class="comparison-category">
+                        <h3>${tabLabel(category)}</h3>
+                        <p>Valores principais = totais do jogo. Perfil 0–100 = contexto contra atletas da mesma função na Copa.</p>
+                        <table class="modal-metric-table">
+                            <thead><tr><th>Métrica</th><th>${playerA.player}</th><th>${playerB.player}</th></tr></thead>
+                            <tbody>
+                                ${(playerA.comparison_categories?.[category] || []).map((item) => {
+                                    const other = categoryItem(playerB, category, item.key);
+                                    const first = item.percentage_value ?? playerA.metric_layers?.[item.key]?.score_0_100 ?? item.raw_value ?? 0;
+                                    const second = other.percentage_value ?? playerB.metric_layers?.[item.key]?.score_0_100 ?? other.raw_value ?? 0;
+                                    return `<tr>
+                                        <td>${metricDisplayLabel(item.key)}</td>
+                                        ${metricCell(playerA, category, item.key, first > second)}
+                                        ${metricCell(playerB, category, item.key, second > first)}
+                                    </tr>`;
+                                }).join('')}
+                            </tbody>
+                        </table>
+                    </section>
+                `).join('')}
+            `;
+        }
+
+        function comparisonSummary(playerA, playerB) {
+            const dimensions = [
+                ['progression', 'progressão'],
+                ['creation', 'criação'],
+                ['defense', 'defesa'],
+                ['pressure', 'pressão'],
+                ['attack', 'ameaça ofensiva'],
+            ];
+            const differences = dimensions.map(([key, label]) => ({
+                key,
+                label,
+                difference: Number(playerA.dimension_scores?.[key] || 0)
+                    - Number(playerB.dimension_scores?.[key] || 0),
+            })).sort((first, second) => Math.abs(second.difference) - Math.abs(first.difference));
+            const phrases = differences.slice(0, 2).map((item) => {
+                const leader = item.difference >= 0 ? playerA : playerB;
+                const trailer = item.difference >= 0 ? playerB : playerA;
+                const leaderScore = Number(leader.dimension_scores?.[item.key] || 0);
+                const trailerScore = Number(trailer.dimension_scores?.[item.key] || 0);
+                return `${leader.player} levou vantagem em ${item.label}: ${Math.round(leaderScore)}/100 contra ${Math.round(trailerScore)}/100 de ${trailer.player}`;
+            });
+            return `${phrases.join('. ')}. Os perfis contextuais comparam cada atleta à distribuição da própria função na Copa; os valores das tabelas são totais deste jogo.`;
+        }
+
+        function openPlayerModal(playerName) {
+            const players = ((state.currentData || {}).summary || {}).player_comparison || [];
+            const player = players.find((item) => item.player === playerName);
+            if (!player) return;
+            state.detailPlayer = playerName;
+            state.playerActionFilter = 'all';
+            analysisModalReturnFocus = document.activeElement;
+            el('player-modal-title').innerText = player.player;
+            el('player-modal-content').innerHTML = playerModalMarkup(player);
+            el('player-modal').hidden = false;
+            document.body.classList.add('modal-open');
+            bindRadarInteractions(el('player-modal-content'));
+            bindPlayerActionFilters(player);
+            el('close-player-modal').focus();
+        }
+
+        function playerModalMarkup(player) {
+            const metrics = Object.entries(player.metric_layers || {});
+            return `
+                <article class="expanded-radar-card surface">
+                    ${player.eligible_for_radar
+                        ? radarChart(player.radar || {}, player, player.radar_labels || {})
+                        : '<div class="empty"><p>Radar indisponível: mínimo de 30 minutos.</p></div>'
+                    }
+                    <div>
+                        <h3>${player.team} · ${player.position}</h3>
+                        <p>Comparado à macroposição ${player.macro_position} na Copa. Escala por percentis p05–p95.</p>
+                        <strong>Influência ${fmt(player.influence_index, 1)}</strong>
+                        <p>${player.influence_delta_pct >= 0 ? '+' : ''}${fmt(player.influence_delta_pct, 1)}% vs média da função</p>
+                        <p>Perfil contextual: ${fmt(player.contextual_score, 1)}/100</p>
+                        <div class="metric-chips">
+                            ${Object.entries(player.dimension_scores || {})
+                                .map(([key, value]) => radarMetricChip(key, `${Math.round(value)}/100`, player.radar_labels || {}))
+                                .join('')}
+                        </div>
+                    </div>
+                </article>
+                <article class="expanded-radar-card surface">
+                    ${radarChart(player.efficiency_radar || {}, { ...player, hide_average: true }, efficiencyRadarLabels())}
+                    <div>
+                        <h3>Radar de eficiência</h3>
+                        <p>Percentuais sempre acompanhados do volume observado.</p>
+                        <div class="metric-chips">
+                            ${Object.entries(player.efficiency_volumes || {}).map(([key, volume]) => `
+                                <span class="metric-chip" title="${metricDisplayLabel(key)}">${shortMetricLabel(key, metricDisplayLabel(key))} ${volume.display}</span>
+                            `).join('')}
+                        </div>
+                    </div>
+                </article>
+                <section class="surface" style="padding: 14px; margin: 14px 0;">
+                    <h3>Mapa de ações</h3>
+                    <div class="action-filter-row">
+                        ${playerActionFilterButtons()}
+                    </div>
+                    <div id="player-action-map" class="player-action-map">${playerActionMapMarkup(player.player, state.playerActionFilter)}</div>
+                    <div id="player-main-events" class="note-list">${playerMainEventsMarkup(player.player)}</div>
+                </section>
+                ${positionSpecificMetricsMarkup(player)}
+                <table class="modal-metric-table">
+                    <thead><tr><th>Métrica</th><th>Valor no jogo</th><th>Perfil contextual</th><th>Vs referência</th></tr></thead>
+                    <tbody>
+                        <tr><td>Minutos</td><td>${fmt(player.minutes, 1)}</td><td>—</td><td>${player.low_minutes ? '⚠ Amostra pequena' : 'Amostra válida'}</td></tr>
+                        ${metrics.map(([key, layer]) => {
+                            const hasPositionAverage = layer.position_average_score_0_100 !== null && layer.position_average_score_0_100 !== undefined;
+                            const delta = hasPositionAverage
+                                ? Number(layer.score_0_100 || 0) - Number(layer.position_average_score_0_100 || 0)
+                                : null;
+                            const rawDisplay = layer.percentage_value !== null && layer.percentage_value !== undefined
+                                ? efficiencyDisplay(layer.percentage_value, layer.raw_value, layer.volume_denominator)
+                                : fmt(layer.raw_value, metricDigits(key));
+                            return `
+                        <tr>
+                            <td>${metricDisplayLabel(key)}</td>
+                            <td>${rawDisplay}</td>
+                            <td>${Math.round(layer.score_0_100 || 0)}/100</td>
+                            <td>${delta === null ? 'N/D' : `${delta >= 0 ? '+' : ''}${Math.round(delta)} pts`}</td>
+                        </tr>`;
+                        }).join('')}
+                    </tbody>
+                </table>
+            `;
+        }
+
+        function efficiencyRadarLabels() {
+            return {
+                goalkeeper_save_percentage: 'Taxa de defesas',
+                goalkeeper_claim_percentage: 'Domínio de bolas',
+                goalkeeper_sweeper_percentage: 'Atuação fora da área',
+                pass_accuracy: 'Precisão de passe',
+                passes_under_pressure_accuracy: 'Precisão sob pressão',
+                dribble_accuracy: 'Dribles',
+                tackle_accuracy: 'Desarmes',
+                duel_accuracy: 'Duelos',
+                aerial_duel_accuracy: 'Duelos aéreos',
+                shot_conversion: 'Conversão',
+                cross_accuracy: 'Cruzamentos',
+            };
+        }
+
+        function positionSpecificMetricsMarkup(player) {
+            const keysByMacro = {
+                Goleiro: [
+                    'goalkeeper_saves', 'goalkeeper_shots_faced',
+                    'goalkeeper_goals_conceded', 'goalkeeper_xg_faced',
+                    'goalkeeper_goals_prevented', 'goalkeeper_actions',
+                    'goalkeeper_actions_outside_box', 'completed_passes',
+                    'completed_long_passes', 'long_pass_accuracy',
+                ],
+                Zagueiro: ['clearances', 'blocks', 'interceptions', 'successful_tackles', 'aerial_duels_won', 'aerial_duel_accuracy', 'progressive_passes', 'completed_long_passes'],
+                'Lateral/Ala': ['crosses', 'completed_crosses', 'cross_accuracy', 'passes_into_box', 'progressive_passes', 'progressive_carries', 'ball_recoveries', 'pressures', 'duels_won'],
+                'Volante/Meio-campista': ['passes_under_pressure', 'passes_under_pressure_accuracy', 'progressive_passes', 'progressive_carries', 'total_progression_distance', 'ball_recoveries', 'counterpressures', 'interceptions', 'xa', 'shot_assists'],
+                'Meia ofensivo/Ponta': ['xg', 'xa', 'shots', 'shots_on_target', 'xg_per_shot', 'dribbles', 'successful_dribbles', 'dribble_accuracy', 'progressive_carries', 'shot_assists', 'pressures_final_third'],
+                Centroavante: ['xg', 'xa', 'shots', 'shots_on_target', 'xg_per_shot', 'dribbles', 'successful_dribbles', 'dribble_accuracy', 'progressive_carries', 'shot_assists', 'pressures_final_third'],
+            };
+            const keys = keysByMacro[player.macro_position] || [];
+            const percentageKeys = new Set([
+                'long_pass_accuracy', 'aerial_duel_accuracy', 'cross_accuracy',
+                'passes_under_pressure_accuracy', 'dribble_accuracy',
+            ]);
+            return `
+                <section class="surface" style="padding: 14px; margin: 14px 0;">
+                    <h3>Métricas específicas da função</h3>
+                    <div class="summary-card-grid">
+                        ${keys.map((key) => {
+                            const value = player[key];
+                            const display = percentageKeys.has(key)
+                                ? `${value === null || value === undefined ? 'N/D' : `${fmt(value, 1)}%`}`
+                                : fmt(value, metricDigits(key));
+                            return `<div class="summary-card"><span>${metricDisplayLabel(key)}</span><strong>${display}</strong></div>`;
+                        }).join('')}
+                    </div>
+                </section>
+            `;
+        }
+
+        function playerActionFilterButtons() {
+            const filters = [
+                ['all', 'Todas'], ['pass', 'Passes'], ['progressive_pass', 'Passes progressivos'],
+                ['carry', 'Conduções'], ['progressive_carry', 'Conduções progressivas'],
+                ['pressure', 'Pressões'], ['counterpress', 'Counterpress'],
+                ['recovery', 'Recuperações'], ['tackle', 'Desarmes'],
+                ['interception', 'Interceptações'], ['shot', 'Chutes'], ['defensive', 'Defensivas'],
+            ];
+            return filters.map(([value, label]) => `
+                <button class="flag-toggle ${state.playerActionFilter === value ? 'active' : ''}" data-player-action-filter="${value}">${label}</button>
+            `).join('');
+        }
+
+        function playerActionMapMarkup(playerName, filter) {
+            const actions = (((state.currentData || {}).events || {}).player_actions || [])
+                .filter((action) => action.player === playerName)
+                .filter((action) => filter === 'all' || action.event_type === filter);
+            const colors = {
+                pass: '#41d394', progressive_pass: '#f8d84d', carry: '#7e83ff',
+                progressive_carry: '#3bd7d0', pressure: '#f52563', counterpress: '#ff7a45',
+                recovery: '#7be495', tackle: '#f2bd5c', interception: '#ffffff',
+                shot: '#ff3b76', defensive: '#b7c0ca',
+            };
+            const nodes = actions.map((action) => {
+                const color = colors[action.event_type] || '#ffffff';
+                if (['pass', 'progressive_pass', 'carry', 'progressive_carry'].includes(action.event_type) && action.end_x !== null) {
+                    return `<g><line x1="${action.x}" y1="${action.y}" x2="${action.end_x}" y2="${action.end_y}" stroke="${color}" stroke-width=".65" opacity=".72" /><circle cx="${action.x}" cy="${action.y}" r="1.1" fill="${color}"><title>${action.tooltip}</title></circle></g>`;
+                }
+                return `<circle cx="${action.x}" cy="${action.y}" r="${action.event_type === 'shot' ? 2.2 : 1.5}" fill="${color}" stroke="#fff" stroke-width=".35" opacity=".82"><title>${action.tooltip}</title></circle>`;
+            }).join('');
+            return `<svg viewBox="0 0 120 80" role="img" aria-label="Mapa de ações de ${playerName}">${pitchLines()}${nodes}</svg>`;
+        }
+
+        function playerMainEventsMarkup(playerName) {
+            const actions = (((state.currentData || {}).events || {}).player_actions || [])
+                .filter((action) => action.player === playerName)
+                .filter((action) => ['shot', 'progressive_pass', 'progressive_carry', 'counterpress', 'interception'].includes(action.event_type))
+                .slice(0, 8);
+            return actions.length
+                ? actions.map((action) => `<div class="note"><strong>${action.minute_label}</strong> · ${metricDisplayLabel(action.event_type)} · ${action.tooltip}</div>`).join('')
+                : '<div class="note">Sem eventos principais no filtro.</div>';
+        }
+
+        function bindPlayerActionFilters(player) {
+            el('player-modal-content').querySelectorAll('[data-player-action-filter]').forEach((button) => {
+                button.addEventListener('click', () => {
+                    state.playerActionFilter = button.dataset.playerActionFilter;
+                    el('player-modal-content').querySelectorAll('[data-player-action-filter]').forEach((item) => item.classList.toggle('active', item === button));
+                    el('player-action-map').innerHTML = playerActionMapMarkup(player.player, state.playerActionFilter);
+                });
+            });
+        }
+
+        function closeAnalysisModal(modalId) {
+            el(modalId).hidden = true;
+            if (el('comparison-modal').hidden && el('player-modal').hidden && el('map-modal').hidden) {
+                document.body.classList.remove('modal-open');
+            }
+            if (analysisModalReturnFocus) analysisModalReturnFocus.focus();
+        }
+
+        function renderPlayerCompareCard(containerId, player, opponent) {
+            if (!player) {
+                el(containerId).innerHTML = '<div class="empty"><p>Sem jogador para comparar.</p></div>';
+                return;
+            }
+
+            const metrics = Object.keys(player.radar || {}).map((key) => [
+                player.radar_labels?.[key] || key,
+                player.dimension_scores?.[key] ?? 0,
+                player.radar?.[key] || 0,
+            ]);
+
+            el(containerId).innerHTML = `
+                <div class="compare-summary">
+                    ${radarChart(player.radar || {}, player, player.radar_labels || {})}
+                    <div>
+                        <div class="compare-player-head">
+                            <div class="compare-title-row">
+                                <span class="flag-mini">${flagImage(player.team_flag_url, player.team_flag_code)}</span>
+                                <h3>${player.player}</h3>
+                            </div>
+                            <span class="compare-impact-wrap">
+                                <strong class="compare-impact">Influência ${fmt(player.influence_index, 1)}</strong>
+                                ${metricHelp(influenceExplanation(player))}
+                            </span>
+                        </div>
+                        <div class="metric-chips">
+                            <span class="metric-chip">${player.position}</span>
+                            <span class="metric-chip">${player.influence_delta_pct >= 0 ? '+' : ''}${Math.round(player.influence_delta_pct)}% vs média</span>
+                            <span class="metric-chip">Perfil contextual ${fmt(player.contextual_score, 1)}/100</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="compare-metrics">
+                    ${metrics.map(([label, value, normalized]) => {
+                        return `
+                            <div class="compare-metric-row">
+                                <span>${label}</span>
+                                <div class="track"><div class="fill" style="width: ${normalized}%"
+                                    data-chart-metric="${label}" data-chart-value="${Math.round(value)}/100"
+                                    data-chart-context="${player.player}" tabindex="0"></div></div>
+                                <strong>${Math.round(value)}/100</strong>
+                            </div>
+                        `;
+                    }).join('')}
+                </div>
+            `;
+            bindRadarInteractions(el(containerId));
+            bindChartMetricHelpers(el(containerId));
+        }
+
+        function renderNotes(notes) {
+            const safeNotes = notes.length ? notes : ['Dados carregados para leitura tática desta partida.'];
+            el('tactical-notes').innerHTML = safeNotes.map((note) => `<div class="note">${note}</div>`).join('');
+        }
+
+        function renderTopImpacts(players) {
+            el('top-impacts').innerHTML = players.length
+                ? players.slice(0, 3).map((player, index) => `
+                    <article class="impact-card">
+                        <span class="tag">#${index + 1}</span>
+                        <h3>${player.player}</h3>
+                        <strong>${player.team} · ${player.position}</strong>
+                        <p>${player.reason}</p>
+                    </article>
+                `).join('')
+                : '<div class="empty"><p>Sem impactos elegíveis.</p></div>';
+        }
+
+        function renderRadars(players) {
+            if (!players.length) {
+                el('radar-grid').innerHTML = '<div class="empty surface"><p>Sem radar disponível.</p></div>';
+                return;
+            }
+            el('radar-grid').innerHTML = players.map((player) => `
+                <article class="radar-card surface" data-player-detail="${player.player}" tabindex="0" role="button" aria-label="Abrir detalhes de ${player.player}">
+                    ${radarChart(player.radar, player, player.metric_labels || {})}
+                    <div>
+                        <h3>${player.player}</h3>
+                        <div class="team">${player.position} | Influência ${fmt(player.influence_index, 1)}</div>
+                        <div class="team">${player.influence_delta_pct >= 0 ? '+' : ''}${Math.round(player.influence_delta_pct)}% vs média da função</div>
+                        <div class="team">Perfil contextual ${fmt(player.contextual_score, 1)}/100</div>
+                        <div class="metric-chips">
+                            ${Object.entries(player.metrics || {})
+                                .slice(0, 4)
+                                .map(([key, value]) => radarMetricChip(key, value, { [key]: metricDisplayLabel(key) }))
+                                .join('')}
+                        </div>
+                        <div class="radar-reference-legend">
+                            <span><i style="background: rgba(65,211,148,.34); border-color: #41d394;"></i>Jogador nesta partida</span>
+                            <span><i></i>Média da macroposição na Copa</span>
+                            <span>Escala 0–100 contra a distribuição da função no torneio</span>
+                        </div>
+                    </div>
+                </article>
+            `).join('');
+            bindRadarInteractions(el('radar-grid'));
+            bindPlayerDetailInteractions(el('radar-grid'));
+        }
+
+        function bindPlayerDetailInteractions(root) {
+            root?.querySelectorAll('[data-player-detail]').forEach((node) => {
+                const open = () => openPlayerModal(node.dataset.playerDetail);
+                node.addEventListener('click', open);
+                node.addEventListener('keydown', (event) => {
+                    if (event.key === 'Enter' || event.key === ' ') {
+                        event.preventDefault();
+                        open();
+                    }
+                });
+            });
+        }
+
+        function radarMetricChip(key, value, labelsByKey) {
+            const fullLabel = labelsByKey[key] || key;
+            const numericValue = Number(value);
+            const displayValue = Number.isFinite(numericValue)
+                ? (Number.isInteger(numericValue) ? numericValue : fmt(numericValue))
+                : value;
+            return `<span class="metric-chip" title="${fullLabel}" aria-label="${fullLabel}: ${displayValue}" tabindex="0">
+                ${shortMetricLabel(key, fullLabel)} ${displayValue}
+            </span>`;
+        }
+
+        function influenceExplanation(player) {
+            const parts = Object.entries(player.dimension_scores || {}).map(([key, value]) => {
+                const label = player.radar_labels?.[key] || key;
+                return `${label}: ${Math.round(value)}/100`;
+            });
+            return `Influência base 100: 100 representa a média de ${player.macro_position} na Copa. ${parts.join(' · ')}.`;
+        }
+
+        function metricDisplayLabel(key) {
+            const labels = {
+                xg: 'Gols esperados (xG)',
+                xa: 'Assistências esperadas (xA)',
+                shots: 'Chutes',
+                shots_on_target: 'Chutes certos',
+                passes: 'Passes',
+                completed_passes: 'Passes certos',
+                long_passes: 'Passes longos',
+                completed_long_passes: 'Passes longos certos',
+                passes_under_pressure: 'Passes sob pressão',
+                completed_passes_under_pressure: 'Passes certos sob pressão',
+                progressive_passes: 'Passes progressivos',
+                progressive_carries: 'Conduções progressivas',
+                progressive_pass_distance: 'Distância em passes progressivos',
+                progressive_carry_distance: 'Distância em conduções progressivas',
+                total_progression_distance: 'Distância percorrida em progressão',
+                successful_dribbles: 'Dribles certos',
+                successful_tackles: 'Desarmes certos',
+                pressures: 'Pressões',
+                defensive_actions: 'Ações defensivas',
+                interceptions: 'Interceptações',
+                clearances: 'Cortes',
+                blocks: 'Bloqueios',
+                ball_recoveries: 'Recuperações',
+                goalkeeper_saves: 'Defesas',
+                goalkeeper_claims: 'Bolas dominadas',
+                goalkeeper_actions_outside_box: 'Ações fora da área',
+                pass_accuracy: 'Precisão de passe',
+                passes_under_pressure_accuracy: 'Precisão sob pressão',
+                long_pass_accuracy: 'Precisão de passe longo',
+                cross_accuracy: 'Precisão de cruzamentos',
+                dribble_accuracy: 'Aproveitamento em dribles',
+                tackle_accuracy: 'Aproveitamento em desarmes',
+                duel_accuracy: 'Aproveitamento em duelos',
+                aerial_duel_accuracy: 'Aproveitamento aéreo',
+                shot_conversion: 'Conversão de finalizações',
+                shots_on_target_conversion: 'Conversão no alvo',
+                counterpress_percentage: 'Percentual de counterpress',
+                passes_into_final_third: 'Passes para o terço final',
+                passes_into_box: 'Passes para a área',
+                crosses: 'Cruzamentos',
+                completed_crosses: 'Cruzamentos certos',
+                shot_assists: 'Passes para finalização',
+                cutbacks: 'Cutbacks',
+                through_balls: 'Passes em profundidade',
+                xg_per_shot: 'xG por chute',
+                counterpressures: 'Counterpress',
+                pressures_final_third: 'Pressões no terço final',
+                tackles: 'Tentativas de desarme',
+                duels: 'Duelos',
+                duels_won: 'Duelos vencidos',
+                aerial_duels: 'Duelos aéreos',
+                aerial_duels_won: 'Duelos aéreos vencidos',
+                fouls_committed: 'Faltas cometidas',
+                fouls_won: 'Faltas sofridas',
+                cards: 'Cartões',
+                pass: 'Passe',
+                progressive_pass: 'Passe progressivo',
+                carry: 'Condução',
+                progressive_carry: 'Condução progressiva',
+                pressure: 'Pressão',
+                counterpress: 'Counterpress',
+                recovery: 'Recuperação',
+                tackle: 'Desarme',
+                interception: 'Interceptação',
+                shot: 'Chute',
+                defensive: 'Ação defensiva',
+            };
+            return labels[key] || key;
+        }
+
+        function metricDigits(key) {
+            return ['xg', 'xa'].includes(key) ? 2 : (key.includes('distance') ? 1 : 0);
+        }
+
+        function renderPer90Table(players) {
+            const body = el('per90-table')?.querySelector('tbody');
+            if (!body) return;
+            const sortValue = (player, key) => {
+                if (['player', 'team', 'position', 'minutes', 'influence_index', 'contextual_score', 'pass_accuracy'].includes(key)) return player[key];
+                return player[key] ?? (player.per90 || {})[key] ?? 0;
+            };
+            const unique = (key) => [...new Set(players.map((player) => player[key]).filter(Boolean))].sort();
+            const setOptions = (id, values, current, label) => {
+                const select = el(id);
+                select.innerHTML = [`<option value="all">${label}</option>`, ...values.map((value) => `<option value="${value}">${value}</option>`)].join('');
+                select.value = values.includes(current) ? current : 'all';
+            };
+            setOptions('player-table-team', unique('team'), state.playerTableFilters.team, 'Todos os times');
+            setOptions('player-table-position', unique('position'), state.playerTableFilters.position, 'Todas as posições');
+            setOptions('player-table-macro', unique('macro_position'), state.playerTableFilters.macro, 'Todas as macroposições');
+            const { key, direction } = state.per90Sort;
+            const multiplier = direction === 'asc' ? 1 : -1;
+            const rows = [...players]
+                .filter((player) => Number(player.minutes || 0) > 0)
+                .filter((player) => state.playerTableFilters.team === 'all' || player.team === state.playerTableFilters.team)
+                .filter((player) => state.playerTableFilters.position === 'all' || player.position === state.playerTableFilters.position)
+                .filter((player) => state.playerTableFilters.macro === 'all' || player.macro_position === state.playerTableFilters.macro)
+                .filter((player) => Number(player.minutes || 0) >= state.playerTableFilters.minutes)
+                .filter((player) => state.playerTableFilters.metric === 'all' || Number(player.dimension_scores?.[state.playerTableFilters.metric] || 0) > 0)
+                .sort((first, second) => {
+                    if (state.playerTableFilters.metric !== 'all') {
+                        return (
+                            Number(second.dimension_scores?.[state.playerTableFilters.metric] || 0)
+                            - Number(first.dimension_scores?.[state.playerTableFilters.metric] || 0)
+                        );
+                    }
+                    const firstValue = sortValue(first, key);
+                    const secondValue = sortValue(second, key);
+                    if (typeof firstValue === 'string') {
+                        return firstValue.localeCompare(secondValue, 'pt-BR') * multiplier;
+                    }
+                    return (Number(firstValue || 0) - Number(secondValue || 0)) * multiplier;
+                });
+            body.innerHTML = rows.length
+                ? rows.map((player) => {
+                    return `
+                        <tr data-player-detail="${player.player}" tabindex="0">
+                            <td><strong>${player.player}</strong>${player.low_minutes ? '<span class="metric-chip">⚠ Amostra pequena</span>' : ''}</td>
+                            <td>${player.team}</td>
+                            <td>${player.position}</td>
+                            <td>${fmt(player.minutes, 1)}</td>
+                            <td>${fmt(player.influence_index, 1)}</td>
+                            <td>${fmt(player.xg, 2)}</td>
+                            <td>${fmt(player.xa, 2)}</td>
+                            <td>${Math.round(player.completed_passes || 0)}</td>
+                            <td>${efficiencyDisplay(player.pass_accuracy, player.completed_passes, player.passes)}</td>
+                            <td>${Math.round(player.progressive_passes || 0)}</td>
+                            <td>${Math.round(player.progressive_carries || 0)}</td>
+                            <td>${Math.round(player.pressures || 0)}</td>
+                            <td>${Math.round(player.counterpressures || 0)}</td>
+                            <td>${Math.round(player.ball_recoveries || 0)}</td>
+                            <td>${fmt(player.contextual_score, 1)}/100</td>
+                        </tr>
+                    `;
+                }).join('')
+                : '<tr><td colspan="15">Nenhum jogador corresponde aos filtros.</td></tr>';
+            document.querySelectorAll('[data-per90-sort]').forEach((button) => {
+                const active = button.dataset.per90Sort === key;
+                button.innerText = `${button.innerText.replace(/\s[↑↓]$/, '')}${active ? (direction === 'asc' ? ' ↑' : ' ↓') : ''}`;
+                button.closest('th')?.setAttribute('aria-sort', active ? (direction === 'asc' ? 'ascending' : 'descending') : 'none');
+                button.onclick = () => {
+                    const nextKey = button.dataset.per90Sort;
+                    state.per90Sort = {
+                        key: nextKey,
+                        direction: state.per90Sort.key === nextKey && state.per90Sort.direction === 'desc'
+                            ? 'asc'
+                            : 'desc',
+                    };
+                    renderPer90Table(players);
+                };
+            });
+            bindPlayerDetailInteractions(body);
+        }
+
+        function renderDictionaryCharts(players, metrics, summary) {
+            const rankingPlayers = players.filter((player) => player.minutes >= 45);
+            const playmakers = [...rankingPlayers]
+                .sort((first, second) => (second.xa - first.xa) || (second.progressive_passes - first.progressive_passes))
+                .slice(0, 6);
+            const progressors = [...rankingPlayers]
+                .sort((first, second) => second.total_progression - first.total_progression)
+                .slice(0, 8);
+
+            el('playmaker-chart').innerHTML = dualMetricChart(playmakers, [
+                { key: 'xa', label: 'xA', short: 'xA', color: '#f8d84d', digits: 2 },
+                { key: 'progressive_passes', label: 'Passes progressivos', short: 'P+', color: '#3bd7d0', digits: 0 },
+            ], 'Criação dos jogadores');
+
+            el('progression-chart').innerHTML = dualMetricChart(progressors, [
+                { key: 'progressive_passes', label: 'Passes progressivos', short: 'P+', color: '#3bd7d0', digits: 0 },
+                { key: 'progressive_carries', label: 'Conduções progressivas', short: 'C+', color: '#f52563', digits: 0 },
+                { key: 'total_progression_distance', label: 'Distância percorrida em progressão (unidades StatsBomb)', short: 'u.', color: '#f8d84d', digits: 1 },
+            ], 'Progressões dos jogadores');
+
+            el('defensive-intensity-chart').innerHTML = defensiveIntensityChart(metrics, summary);
+            bindChartMetricHelpers(document);
+        }
+
+        function dualMetricChart(rows, series, ariaLabel) {
+            if (!rows.length) return '<div class="empty"><p>Sem dados para este gráfico.</p></div>';
+            const maxima = Object.fromEntries(series.map((item) => [
+                item.key,
+                Math.max(...rows.map((row) => Number(row[item.key] || 0)), 1),
+            ]));
+            const legend = series.map((item) => `
+                <span><i style="background: ${item.color};"></i>${item.label}</span>
+            `).join('');
+            const content = rows.map((row) => {
+                const values = series.map((item) => {
+                    const value = Number(row[item.key] || 0);
+                    const display = item.digits ? fmt(value, item.digits) : Math.round(value);
+                    const width = (value / maxima[item.key]) * 100;
+                    return {
+                        ...item,
+                        value,
+                        display,
+                        width,
+                    };
+                });
+                return `
+                    <div class="horizontal-chart-row" title="${row.player}: ${values.map((item) => `${item.label} ${item.display}`).join(', ')}">
+                        <div class="horizontal-chart-label">
+                            <strong>${row.player}</strong>
+                            <span>${values.map((item) => `${item.display} ${item.short}`).join(' · ')}</span>
+                        </div>
+                        <div class="chart-bars">
+                            ${values.map((item) => `
+                                <div class="chart-bar" style="width: ${item.width}%; --bar-color: ${item.color};"
+                                    data-chart-metric="${item.label}" data-chart-value="${item.display}"
+                                    role="img" tabindex="0" aria-label="${row.player}, ${item.label}: ${item.display}"></div>
+                            `).join('')}
+                        </div>
+                    </div>
+                `;
+            }).join('');
+            return `
+                <div class="chart-legend">${legend}</div>
+                <div class="horizontal-chart" role="img" aria-label="${ariaLabel}">${content}</div>
+            `;
+        }
+
+        function defensiveIntensityChart(metrics, summary) {
+            const home = metrics.home || {};
+            const away = metrics.away || {};
+            const teams = [
+                {
+                    name: summary.home_team || 'Casa',
+                    color: summary.home_primary_color || '#3bd7d0',
+                    counterpress: Number(home.counterpressures || 0),
+                    ppda: home.ppda,
+                },
+                {
+                    name: summary.away_team || 'Fora',
+                    color: summary.away_primary_color || '#f52563',
+                    counterpress: Number(away.counterpressures || 0),
+                    ppda: away.ppda,
+                },
+            ];
+            const maxCounterpress = Math.max(...teams.map((team) => team.counterpress), 1);
+            const validPpda = teams.map((team) => Number(team.ppda)).filter((value) => Number.isFinite(value) && value > 0);
+            const maxPpda = validPpda.length ? Math.max(...validPpda) : 1;
+            return `
+                <div class="chart-legend">
+                    <span><i style="background: var(--cyan);"></i>Counterpress</span>
+                    <span><i style="background: var(--gold);"></i>PPDA (menor = mais pressão)</span>
+                </div>
+                <div class="defensive-team-chart">
+                    ${teams.map((team) => {
+                        const ppdaValue = Number(team.ppda);
+                        const ppdaAvailable = Number.isFinite(ppdaValue) && ppdaValue > 0;
+                        const ppdaWidth = ppdaAvailable ? (ppdaValue / maxPpda) * 100 : 0;
+                        return `
+                            <div class="defensive-team-row">
+                                <div class="defensive-team-head">
+                                    <strong>${team.name}</strong>
+                                    <span>${team.counterpress} counterpress · PPDA ${ppdaAvailable ? fmt(ppdaValue) : '-'}</span>
+                                </div>
+                                <div class="chart-bars">
+                                    <div class="chart-bar" style="width: ${(team.counterpress / maxCounterpress) * 100}%; --bar-color: var(--cyan);"
+                                        data-chart-metric="Counterpress" data-chart-value="${team.counterpress} ações"
+                                        tabindex="0" aria-label="${team.name}, Counterpress: ${team.counterpress} ações"></div>
+                                    <div class="chart-bar" style="width: ${ppdaWidth}%; --bar-color: var(--gold);"
+                                        data-chart-metric="PPDA" data-chart-value="${ppdaAvailable ? fmt(ppdaValue) : '-'}"
+                                        tabindex="0" aria-label="${team.name}, PPDA: ${ppdaAvailable ? fmt(ppdaValue) : '-'}"></div>
+                                </div>
+                            </div>
+                        `;
+                    }).join('')}
+                </div>
+            `;
+        }
+
+        function bindChartMetricHelpers(root) {
+            const helper = el('chart-metric-helper');
+            root.querySelectorAll('[data-chart-metric]').forEach((bar) => {
+                const show = (event) => {
+                    const box = bar.getBoundingClientRect();
+                    helper.hidden = false;
+                    helper.innerHTML = `
+                        ${bar.dataset.chartContext ? `<span>${bar.dataset.chartContext}</span>` : ''}
+                        <span>${bar.dataset.chartMetric}</span>
+                        <strong>${bar.dataset.chartValue}</strong>
+                    `;
+                    helper.style.left = `${event?.clientX || box.left + box.width / 2}px`;
+                    helper.style.top = `${(event?.clientY || box.top) - 10}px`;
+                    helper.style.transform = 'translate(12px, -100%)';
+                };
+                const hide = () => { helper.hidden = true; };
+                bar.addEventListener('mouseenter', show);
+                bar.addEventListener('mousemove', show);
+                bar.addEventListener('mouseleave', hide);
+                bar.addEventListener('focus', show);
+                bar.addEventListener('blur', hide);
+            });
+        }
+
+        function shortMetricLabel(key, label) {
+            const aliases = {
+                goalkeeper_saves: 'Def',
+                goalkeeper_claims: 'Dom',
+                completed_passes: 'Pass',
+                ball_recoveries: 'Rec',
+                defensive_actions: 'AD',
+                pressures: 'Pr',
+                successful_tackles: 'Des',
+                interceptions: 'Int',
+                clearances: 'Crt',
+                blocks: 'Blq',
+                progressive_passes: 'P+',
+                progressive_carries: 'C+',
+                xa: 'xA',
+                xg: 'xG',
+                shots_on_target: 'Ch',
+                successful_dribbles: 'Dr',
+                attack: 'Ata',
+                creation: 'Cri',
+                progression: 'Pro',
+                passing: 'Pas',
+                defense: 'Def',
+                pressure: 'Pre',
+                goal_defense: 'Gol',
+                footwork: 'Pés',
+                long_balls: 'Long',
+                sweeper: 'Fora',
+                pressure_received: 'Sob',
+                build_up: 'Cons',
+                pass_accuracy: 'Pas%',
+                passes_under_pressure_accuracy: 'Sob%',
+                long_pass_accuracy: 'Long%',
+                dribble_accuracy: 'Dr%',
+                tackle_accuracy: 'Des%',
+                duel_accuracy: 'Due%',
+                aerial_duel_accuracy: 'Aér%',
+                shot_conversion: 'Conv',
+                cross_accuracy: 'Cruz%',
+                goalkeeper_save_percentage: 'Def%',
+                goalkeeper_claim_percentage: 'Dom%',
+                goalkeeper_sweeper_percentage: 'Fora%',
+            };
+            return aliases[key] || label || key;
+        }
+
+        function radarChart(radar, player = {}, labelsByKey = {}) {
+            return `
+                <div class="radar-chart-wrap">
+                    <div class="chart-tooltip radar-tooltip" hidden></div>
+                    ${radarSvg(radar, player, labelsByKey)}
+                </div>
+            `;
+        }
+
+        function radarSvg(radar, player = {}, labelsByKey = {}) {
+            const keys = Object.keys(radar || {});
+            const labels = keys.map((key) => shortMetricLabel(key, labelsByKey[key]));
+            const center = 60;
+            const maxRadius = 45;
+            const angleStep = keys.length ? 360 / keys.length : 60;
+            const polygonAt = (radius) => keys.map((key, index) => {
+                const angle = (-90 + index * angleStep) * Math.PI / 180;
+                return `${center + Math.cos(angle) * radius},${center + Math.sin(angle) * radius}`;
+            }).join(' ');
+            const points = keys.map((key, index) => {
+                const angle = (-90 + index * angleStep) * Math.PI / 180;
+                const radius = maxRadius * ((radar[key] || 0) / 100);
+                return `${center + Math.cos(angle) * radius},${center + Math.sin(angle) * radius}`;
+            }).join(' ');
+            const positionAverage = player.position_average_radar || {};
+            const averagePoints = keys.map((key, index) => {
+                const angle = (-90 + index * angleStep) * Math.PI / 180;
+                const radius = maxRadius * ((positionAverage[key] || 0) / 100);
+                return `${center + Math.cos(angle) * radius},${center + Math.sin(angle) * radius}`;
+            }).join(' ');
+
+            const spokes = keys.map((key, index) => {
+                const angle = (-90 + index * angleStep) * Math.PI / 180;
+                const x = center + Math.cos(angle) * maxRadius;
+                const y = center + Math.sin(angle) * maxRadius;
+                const lx = center + Math.cos(angle) * 55;
+                const ly = center + Math.sin(angle) * 55;
+                const label = labelsByKey[key] || labels[index];
+                return `<line x1="${center}" y1="${center}" x2="${x}" y2="${y}" stroke="rgba(255,255,255,.14)" />
+                        <text x="${lx}" y="${ly}" text-anchor="middle" dominant-baseline="middle" fill="#a7b0ba" font-size="9">
+                            <title>${label}: ${radar[key] || 0}/100</title>${labels[index]}
+                        </text>`;
+            }).join('');
+
+            const dots = keys.map((key, index) => {
+                const angle = (-90 + index * angleStep) * Math.PI / 180;
+                const radius = maxRadius * ((radar[key] || 0) / 100);
+                const x = center + Math.cos(angle) * radius;
+                const y = center + Math.sin(angle) * radius;
+                const label = labelsByKey[key] || labels[index];
+                return `<circle class="radar-point" data-radar-point
+                    data-metric="${label}" data-value="${radar[key] || 0}/100" data-normalized="${radar[key] || 0}"
+                    cx="${x}" cy="${y}" r="2.4" fill="#f2bd5c" tabindex="0" focusable="true"
+                    role="button" aria-label="${label}: ${radar[key] || 0} de 100">
+                    <title>${player.player || 'Jogador'} | ${label}: ${radar[key] || 0}/100</title>
+                </circle>`;
+            }).join('');
+
+            return `
+                <svg class="radar-svg" viewBox="0 0 120 120" role="img" aria-label="Radar do jogador">
+                    <title>${player.player || 'Jogador'} nesta partida, normalizado pela distribuição p05–p95 da macroposição na Copa e comparado à média contextual da função.</title>
+                    <polygon points="${polygonAt(maxRadius)}" fill="rgba(255,255,255,.03)" stroke="rgba(255,255,255,.16)" />
+                    <polygon points="${polygonAt(maxRadius * .66)}" fill="none" stroke="rgba(255,255,255,.10)" />
+                    ${spokes}
+                    ${player.hide_average ? '' : `
+                        <polygon points="${averagePoints}" fill="rgba(255,255,255,.10)" stroke="rgba(255,255,255,.58)" stroke-width="1.2">
+                            <title>Média ponderada por minutos da macroposição em toda a Copa</title>
+                        </polygon>
+                    `}
+                    <polygon points="${points}" fill="rgba(65,211,148,.34)" stroke="#41d394" stroke-width="2" />
+                    ${dots}
+                    <circle cx="60" cy="60" r="3" fill="#f2bd5c" />
+                </svg>
+            `;
+        }
+
+        function bindRadarInteractions(root) {
+            if (!root) return;
+            root.querySelectorAll('[data-radar-point]').forEach((node) => {
+                const wrapper = node.closest('.radar-chart-wrap');
+                const tooltip = wrapper?.querySelector('.radar-tooltip');
+                if (!wrapper || !tooltip) return;
+
+                const showTooltip = (event) => {
+                    const bounds = wrapper.getBoundingClientRect();
+                    const pointBounds = node.getBoundingClientRect();
+                    const clientX = event?.clientX || pointBounds.left + pointBounds.width / 2;
+                    const clientY = event?.clientY || pointBounds.top + pointBounds.height / 2;
+                    tooltip.hidden = false;
+                    tooltip.innerHTML = `
+                        <span>${node.dataset.metric}</span>
+                        <strong>${node.dataset.normalized}/100</strong>
+                    `;
+                    tooltip.style.left = `${clientX - bounds.left}px`;
+                    tooltip.style.top = `${clientY - bounds.top}px`;
+                };
+                const hideTooltip = () => { tooltip.hidden = true; };
+
+                node.addEventListener('mouseenter', showTooltip);
+                node.addEventListener('mousemove', showTooltip);
+                node.addEventListener('mouseleave', hideTooltip);
+                node.addEventListener('focus', showTooltip);
+                node.addEventListener('blur', hideTooltip);
+                node.addEventListener('click', showTooltip);
+                node.addEventListener('keydown', (event) => {
+                    if (event.key === 'Enter' || event.key === ' ') {
+                        event.preventDefault();
+                        showTooltip(event);
+                    }
+                });
+            });
+        }
+
+        function renderCharts(charts, summary) {
+            if (state.momentumMode === 'xg') {
+                renderXgFlow(charts.xg_flow, summary);
+            } else {
+                renderMomentum(charts.momentum, summary, state.momentumMode);
+            }
+        }
+
+        function renderMomentum(momentum, summary, mode) {
+            if (!momentum?.buckets?.length) {
+                el('xgflow-container').innerHTML = '<div class="empty"><p>Sem dados de momentum.</p></div>';
+                return;
+            }
+            const fields = momentum.series?.[mode] || [];
+            const valueFor = (bucket, side) => fields.reduce((total, key) => total + Number(bucket[side]?.[key] || 0), 0);
+            const values = momentum.buckets.flatMap((bucket) => [valueFor(bucket, 'home'), valueFor(bucket, 'away')]);
+            const maxValue = Math.max(...values, 1);
+            const width = 640;
+            const height = 300;
+            const baseline = 150;
+            const plotWidth = 580;
+            const barWidth = plotWidth / momentum.buckets.length;
+            const homeColor = summary.home_primary_color || '#41d394';
+            const awayColor = summary.away_primary_color || '#818cf8';
+            const bars = momentum.buckets.map((bucket, index) => {
+                const x = 40 + index * barWidth;
+                const homeValue = valueFor(bucket, 'home');
+                const awayValue = valueFor(bucket, 'away');
+                const homeHeight = (homeValue / maxValue) * 110;
+                const awayHeight = (awayValue / maxValue) * 110;
+                return `
+                    <rect x="${x}" y="${baseline - homeHeight}" width="${Math.max(barWidth - 2, 2)}" height="${homeHeight}" fill="${homeColor}" opacity=".82">
+                        <title>${summary.home_team}: ${homeValue} · ${bucket.start}-${bucket.end}'</title>
+                    </rect>
+                    <rect x="${x}" y="${baseline}" width="${Math.max(barWidth - 2, 2)}" height="${awayHeight}" fill="${awayColor}" opacity=".82">
+                        <title>${summary.away_team}: ${awayValue} · ${bucket.start}-${bucket.end}'</title>
+                    </rect>
+                `;
+            }).join('');
+            el('xgflow-container').innerHTML = `
+                <svg viewBox="0 0 ${width} ${height}" role="img" aria-label="Momentum de ${mode}">
+                    <rect width="${width}" height="${height}" rx="8" fill="#16231d" />
+                    <line x1="40" y1="${baseline}" x2="620" y2="${baseline}" stroke="rgba(255,255,255,.42)" />
+                    ${bars}
+                    <text x="42" y="20" fill="${homeColor}" font-size="12">${summary.home_team}</text>
+                    <text x="42" y="286" fill="${awayColor}" font-size="12">${summary.away_team}</text>
+                    <text x="620" y="286" text-anchor="end" fill="#a7b0ba" font-size="11">Blocos de ${momentum.bucket_minutes} minutos</text>
+                </svg>
+            `;
+        }
+
+        function renderXgFlow(flow, summary) {
+            if (!flow || !flow.home || !flow.away) {
+                el('xgflow-container').innerHTML = '<div class="empty"><p>Sem fluxo de xG para este jogo.</p></div>';
+                return;
+            }
+            el('xgflow-container').innerHTML = xgFlowSvg(flow, summary);
+            document.querySelectorAll('[data-xg-point]').forEach((node) => {
+                node.addEventListener('mouseenter', () => {
+                    const target = el('xg-readout');
+                    const tooltip = el('xg-tooltip');
+                    if (target) {
+                        target.innerHTML = `<span>${node.dataset.team}</span><strong>${node.dataset.minute}' | xG ${node.dataset.xg}</strong>`;
+                    }
+                    if (tooltip) {
+                        tooltip.hidden = false;
+                        tooltip.innerHTML = `<span>${node.dataset.team}</span><strong>${node.dataset.minute}' | xG acumulado ${node.dataset.xg}</strong>`;
+                    }
+                });
+                node.addEventListener('mousemove', (event) => {
+                    const tooltip = el('xg-tooltip');
+                    const wrapper = el('xgflow-container').querySelector('.xg-flow-wrap');
+                    if (!tooltip || !wrapper) return;
+                    const bounds = wrapper.getBoundingClientRect();
+                    tooltip.style.left = `${event.clientX - bounds.left}px`;
+                    tooltip.style.top = `${event.clientY - bounds.top}px`;
+                });
+                node.addEventListener('mouseleave', () => {
+                    const tooltip = el('xg-tooltip');
+                    if (tooltip) tooltip.hidden = true;
+                });
+            });
+        }
+
+        function xgFlowSvg(flow, summary) {
+            const width = 640;
+            const height = 300;
+            const pad = { left: 44, right: 18, top: 24, bottom: 38 };
+            const maxMinute = Math.max(...flow.home.minutes, ...flow.away.minutes, 90);
+            const maxXg = Math.max(...flow.home.xg, ...flow.away.xg, 1);
+            const plotW = width - pad.left - pad.right;
+            const plotH = height - pad.top - pad.bottom;
+            const sx = (minute) => pad.left + (Number(minute || 0) / maxMinute) * plotW;
+            const sy = (xg) => pad.top + plotH - (Number(xg || 0) / maxXg) * plotH;
+            const makeStepPath = (side) => {
+                const minutes = flow[side].minutes;
+                const xg = flow[side].xg;
+                if (!minutes.length) return '';
+                let path = `M ${sx(minutes[0])} ${sy(xg[0])}`;
+                for (let index = 1; index < minutes.length; index += 1) {
+                    path += ` H ${sx(minutes[index])} V ${sy(xg[index])}`;
+                }
+                return path;
+            };
+            const pointNodes = (side, label, color) => flow[side].minutes.map((minute, index) => `
+                <circle class="xg-point" data-xg-point="${side}-${index}" data-team="${label}" data-minute="${minute}" data-xg="${fmt(flow[side].xg[index])}"
+                    cx="${sx(minute)}" cy="${sy(flow[side].xg[index])}" r="4" fill="${color}" stroke="#f7f4ee" stroke-width="1">
+                    <title>${label} | ${minute}' | xG acumulado ${fmt(flow[side].xg[index])}</title>
+                </circle>
+            `).join('');
+            const homeColor = summary.home_primary_color || '#41d394';
+            const awayColor = summary.away_primary_color || '#818cf8';
+            const grid = [0, 0.25, 0.5, 0.75, 1].map((ratio) => {
+                const y = pad.top + plotH - ratio * plotH;
+                const value = maxXg * ratio;
+                return `<line x1="${pad.left}" y1="${y}" x2="${width - pad.right}" y2="${y}" stroke="rgba(255,255,255,.09)" />
+                        <text x="8" y="${y + 4}" fill="#a7b0ba" font-size="11">${fmt(value, 1)}</text>`;
+            }).join('');
+
+            return `
+                <div class="xg-flow-wrap">
+                    <div id="xg-tooltip" class="chart-tooltip" hidden></div>
+                    <svg class="xg-flow-svg" viewBox="0 0 ${width} ${height}" role="img" aria-label="Fluxo de xG interativo">
+                        <rect width="${width}" height="${height}" rx="8" fill="#16231d" />
+                        ${grid}
+                        <line x1="${pad.left}" y1="${pad.top + plotH}" x2="${width - pad.right}" y2="${pad.top + plotH}" stroke="rgba(255,255,255,.35)" />
+                        <line x1="${pad.left}" y1="${pad.top}" x2="${pad.left}" y2="${pad.top + plotH}" stroke="rgba(255,255,255,.35)" />
+                        <text x="${pad.left}" y="${height - 10}" fill="#a7b0ba" font-size="11">Minuto</text>
+                        <text x="8" y="18" fill="#a7b0ba" font-size="11">xG</text>
+                        <path d="${makeStepPath('home')}" fill="none" stroke="${homeColor}" stroke-width="4" stroke-linejoin="round" />
+                        <path d="${makeStepPath('away')}" fill="none" stroke="${awayColor}" stroke-width="4" stroke-linejoin="round" />
+                        ${pointNodes('home', summary.home_team || 'Casa', homeColor)}
+                        ${pointNodes('away', summary.away_team || 'Fora', awayColor)}
+                    </svg>
+                    <div id="xg-readout" class="xg-hover-readout">
+                        <span>Passe o mouse pelos pontos do fluxo xG</span>
+                        <strong>${summary.home_team || 'Casa'} ${fmt(flow.home.xg.at(-1))} | ${summary.away_team || 'Fora'} ${fmt(flow.away.xg.at(-1))}</strong>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderImages(images) {
+            renderPressureMaps(images.pressure_maps || []);
+        }
+
+        function renderPressureMaps(maps) {
+            const container = el('pressuremap-container');
+            if (!maps.length) {
+                container.innerHTML = '<div class="empty"><p>Sem mapa de pressão para este jogo.</p></div>';
+                return;
+            }
+            container.innerHTML = `
+                <div class="pressure-explainer">
+                    <p><strong>Como ler:</strong> Maior intensidade de cor significa maior concentração de eventos de pressão daquela equipe. Os dois campos estão orientados com a equipe atacando da esquerda para a direita. O mapa mostra onde a pressão ocorreu, não se ela recuperou a bola.</p>
+                    <div class="pressure-team-grid">
+                        ${maps.map((map) => `
+                            <figure class="pressure-team-panel">
+                                <strong>${map.team} · ${map.events} pressões</strong>
+                                <img src="data:image/png;base64,${map.image}" alt="Mapa de pressão de ${map.team}">
+                                <span class="pressure-direction">Direção do ataque →</span>
+                            </figure>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+        }
+
+        function setImage(containerId, image, alt) {
+            el(containerId).innerHTML = image
+                ? `<img src="data:image/png;base64,${image}" alt="${alt}">`
+                : '<div class="empty"><p>Sem imagem para este jogo.</p></div>';
+        }
+
+        function setFlagElement(node, url, code) {
+            node.innerHTML = flagImage(url, code);
+        }
+
+        function flagImage(url, code) {
+            if (!url) return `<span>${code || 'TBD'}</span>`;
+            return `<img class="flag-img" src="${url}" alt="${code || 'Bandeira'}">`;
+        }
+
+        function flagBadge(source, side, size = 'mini') {
+            const code = source[`${side}_flag_code`] || 'TBD';
+            const url = source[`${side}_flag_url`];
+            const klass = size === 'mini' ? 'flag-mini' : 'team-flag';
+            return `<span class="${klass}">${flagImage(url, code)}</span>`;
+        }
+    </script>
+</body>
+</html>

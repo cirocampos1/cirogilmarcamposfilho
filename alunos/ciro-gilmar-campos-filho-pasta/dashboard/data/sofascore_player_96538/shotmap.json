@@ -1,0 +1,89 @@
+{
+    "shotmap": [
+        {
+            "player": {
+                "name": "Lucas Digne",
+                "slug": "lucas-digne",
+                "shortName": "L. Digne",
+                "position": "D",
+                "jerseyNumber": "12",
+                "userCount": 5936,
+                "gender": "M",
+                "sofascoreId": "LDigne",
+                "id": 96538,
+                "fieldTranslations": {
+                    "nameTranslation": {
+                        "ar": "لوكاس دينييه",
+                        "bn": "লুকাস ডিগনে",
+                        "hi": "लुकास डिग्ने",
+                        "ru": "Лукас Динь"
+                    },
+                    "shortNameTranslation": {
+                        "ar": "ل. دينييه",
+                        "bn": "এল. ডিগনে",
+                        "hi": "एल. डिग्ने",
+                        "ru": "Л. Динь"
+                    }
+                }
+            },
+            "isHome": true,
+            "shotType": "miss",
+            "situation": "assisted",
+            "playerCoordinates": {
+                "x": 20,
+                "y": 34.2,
+                "z": 0
+            },
+            "bodyPart": "left-foot",
+            "goalMouthLocation": "high",
+            "goalMouthCoordinates": {
+                "x": 0,
+                "y": 53.6,
+                "z": 69.4
+            },
+            "goalkeeper": {
+                "name": "Pierce Charles",
+                "firstName": "Pierce Charles",
+                "slug": "charles-pierce",
+                "shortName": "P. Charles",
+                "position": "G",
+                "jerseyNumber": "1",
+                "userCount": 599,
+                "gender": "M",
+                "id": 1154937,
+                "fieldTranslations": {
+                    "nameTranslation": {
+                        "ar": "تشارلز بيرس",
+                        "ru": "Чарльз, Пирс"
+                    },
+                    "shortNameTranslation": {
+                        "ar": "ت. بيرس",
+                        "ru": "П. Чарльз"
+                    }
+                }
+            },
+            "id": 7475699,
+            "time": 90,
+            "addedTime": 4,
+            "timeSeconds": 5591,
+            "draw": {
+                "start": {
+                    "x": 34.2,
+                    "y": 20
+                },
+                "end": {
+                    "x": 46.4,
+                    "y": 0
+                },
+                "goal": {
+                    "x": 46.4,
+                    "y": 30.6
+                }
+            },
+            "reversedPeriodTime": 1,
+            "reversedPeriodTimeSeconds": 709,
+            "periodTimeSeconds": 191,
+            "incidentType": "shot"
+        }
+    ]
+}

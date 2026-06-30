@@ -1,0 +1,105 @@
+{
+    "player": {
+        "name": "Mahmoud Trézéguet",
+        "slug": "mahmoud-trezeguet",
+        "shortName": "M. Trézéguet",
+        "position": "M",
+        "jerseyNumber": "7",
+        "height": 179,
+        "userCount": 40989,
+        "gender": "M",
+        "sofascoreId": "mahmoudtrezeguet",
+        "id": 295361,
+        "marketValueCurrency": "EUR",
+        "dateOfBirthTimestamp": 780969600,
+        "proposedMarketValueRaw": {
+            "value": 4099999,
+            "currency": "EUR"
+        },
+        "fieldTranslations": {
+            "nameTranslation": {
+                "ar": "محمود تريزيجيه",
+                "bn": "মাহমুদ ট্রেজেগুয়েট",
+                "hi": "महमूद ट्रेज़ेगेट"
+            },
+            "shortNameTranslation": {
+                "ar": "م. تريزيجيه",
+                "bn": "এম. ট্রেজেগুয়েট",
+                "hi": "एम. ट्रेज़ेगेट"
+            }
+        }
+    },
+    "team": {
+        "name": "Egypt",
+        "slug": "egypt",
+        "shortName": "Egypt",
+        "gender": "M",
+        "sport": {
+            "name": "Football",
+            "slug": "football",
+            "id": 1
+        },
+        "userCount": 617607,
+        "nameCode": "EGY",
+        "ranking": 29,
+        "disabled": false,
+        "national": true,
+        "type": 0,
+        "id": 4758,
+        "teamColors": {
+            "primary": "#f00000",
+            "secondary": "#ffffff",
+            "text": "#ffffff"
+        },
+        "fieldTranslations": {
+            "nameTranslation": {
+                "ar": "مصر",
+                "bn": "মিশর",
+                "hi": "इजिप्ट",
+                "ru": "Египет"
+            },
+            "shortNameTranslation": {}
+        }
+    },
+    "statistics": {
+        "totalPass": 18,
+        "accuratePass": 15,
+        "totalLongBalls": 1,
+        "accurateLongBalls": 1,
+        "goalAssist": 0,
+        "accurateOwnHalfPasses": 9,
+        "totalOwnHalfPasses": 11,
+        "accurateOppositionHalfPasses": 6,
+        "totalOppositionHalfPasses": 7,
+        "duelLost": 2,
+        "duelWon": 1,
+        "dispossessed": 1,
+        "ballRecovery": 1,
+        "wasFouled": 1,
+        "fouls": 1,
+        "minutesPlayed": 45,
+        "touches": 23,
+        "rating": 6.4,
+        "possessionLostCtrl": 5,
+        "totalBallCarriesDistance": 127.4151088623,
+        "ballCarriesCount": 11,
+        "totalProgression": 18.706995292637,
+        "bestBallCarryProgression": 19.230856575297,
+        "totalProgressiveBallCarriesDistance": 61.716885254097,
+        "progressiveBallCarriesCount": 2,
+        "ratingVersions": {
+            "original": 6.4,
+            "alternative": 6.4
+        },
+        "totalShots": 0,
+        "passValueNormalized": -0.03,
+        "dribbleValueNormalized": 0.12,
+        "defensiveValueNormalized": -0.07,
+        "statisticsType": {
+            "sportSlug": "football",
+            "statisticsType": "player"
+        }
+    },
+    "position": "M",
+    "extra": null
+}

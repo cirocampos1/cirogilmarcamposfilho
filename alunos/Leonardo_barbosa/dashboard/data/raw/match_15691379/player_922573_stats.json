@@ -1,0 +1,100 @@
+{
+    "player": {
+        "name": "Gabriel Martinelli",
+        "slug": "gabriel-martinelli",
+        "shortName": "G. Martinelli",
+        "position": "F",
+        "jerseyNumber": "11",
+        "height": 180,
+        "userCount": 74055,
+        "gender": "M",
+        "sofascoreId": "GabiMartinelli",
+        "id": 922573,
+        "marketValueCurrency": "EUR",
+        "dateOfBirthTimestamp": 992822400,
+        "proposedMarketValueRaw": {
+            "value": 42000000,
+            "currency": "EUR"
+        },
+        "fieldTranslations": {
+            "nameTranslation": {
+                "ar": "غابرييل مارتينيلي",
+                "bn": "গ্যাব্রিয়েল মার্টিনেলি",
+                "hi": "गेब्रियल मार्टिनेली"
+            },
+            "shortNameTranslation": {
+                "ar": "غ. مارتينيلي",
+                "bn": "জি. মার্টিনেলি",
+                "hi": "जी. मार्टिनेली"
+            }
+        }
+    },
+    "team": {
+        "name": "Brazil",
+        "slug": "brazil",
+        "shortName": "Brazil",
+        "gender": "M",
+        "sport": {
+            "name": "Football",
+            "slug": "football",
+            "id": 1
+        },
+        "userCount": 2441982,
+        "nameCode": "BRA",
+        "ranking": 6,
+        "disabled": false,
+        "national": true,
+        "type": 0,
+        "id": 4748,
+        "teamColors": {
+            "primary": "#ffff00",
+            "secondary": "#009933",
+            "text": "#009933"
+        },
+        "fieldTranslations": {
+            "nameTranslation": {
+                "ar": "البرازيل",
+                "bn": "ব্রাজিল",
+                "hi": "ब्राजील",
+                "ru": "Бразилия"
+            },
+            "shortNameTranslation": {}
+        }
+    },
+    "statistics": {
+        "totalPass": 7,
+        "accuratePass": 4,
+        "totalLongBalls": 1,
+        "goalAssist": 0,
+        "totalOwnHalfPasses": 1,
+        "accurateOppositionHalfPasses": 4,
+        "totalOppositionHalfPasses": 6,
+        "aerialLost": 1,
+        "duelLost": 1,
+        "duelWon": 1,
+        "ballRecovery": 1,
+        "wasFouled": 1,
+        "minutesPlayed": 19,
+        "touches": 8,
+        "rating": 6.5,
+        "possessionLostCtrl": 3,
+        "totalBallCarriesDistance": 35.340891234464,
+        "ballCarriesCount": 3,
+        "totalProgression": -9.8465404980081,
+        "progressiveBallCarriesCount": 0,
+        "ratingVersions": {
+            "original": 6.5,
+            "alternative": 6.6
+        },
+        "totalShots": 0,
+        "passValueNormalized": -0.03,
+        "dribbleValueNormalized": 0.02,
+        "defensiveValueNormalized": 0,
+        "statisticsType": {
+            "sportSlug": "football",
+            "statisticsType": "player"
+        }
+    },
+    "position": "F",
+    "extra": null
+}

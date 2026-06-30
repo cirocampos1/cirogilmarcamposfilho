@@ -1,0 +1,108 @@
+{
+    "player": {
+        "name": "Luiz Henrique",
+        "firstName": "Luiz Henrique",
+        "lastName": "",
+        "slug": "luiz-henrique",
+        "shortName": "L. Henrique",
+        "position": "M",
+        "jerseyNumber": "11",
+        "height": 182,
+        "userCount": 24749,
+        "gender": "M",
+        "sofascoreId": "luizhenrique_07",
+        "id": 1035995,
+        "marketValueCurrency": "EUR",
+        "dateOfBirthTimestamp": 978393600,
+        "proposedMarketValueRaw": {
+            "value": 25000000,
+            "currency": "EUR"
+        },
+        "fieldTranslations": {
+            "nameTranslation": {
+                "ar": "لويس هنريكي",
+                "bn": "লুইজ হেনরিক",
+                "hi": "लुईज़ हेनरिक"
+            },
+            "shortNameTranslation": {
+                "ar": "ل. هنريكي",
+                "bn": "এল. হেনরিক নেটো",
+                "hi": "एल. हेनरिक"
+            }
+        }
+    },
+    "team": {
+        "name": "Brazil",
+        "slug": "brazil",
+        "shortName": "Brazil",
+        "gender": "M",
+        "sport": {
+            "name": "Football",
+            "slug": "football",
+            "id": 1
+        },
+        "userCount": 2441982,
+        "nameCode": "BRA",
+        "ranking": 6,
+        "disabled": false,
+        "national": true,
+        "type": 0,
+        "id": 4748,
+        "teamColors": {
+            "primary": "#ffff00",
+            "secondary": "#009933",
+            "text": "#009933"
+        },
+        "fieldTranslations": {
+            "nameTranslation": {
+                "ar": "البرازيل",
+                "bn": "ব্রাজিল",
+                "hi": "ब्राजील",
+                "ru": "Бразилия"
+            },
+            "shortNameTranslation": {}
+        }
+    },
+    "statistics": {
+        "totalPass": 12,
+        "accuratePass": 9,
+        "totalLongBalls": 1,
+        "accurateLongBalls": 1,
+        "goalAssist": 0,
+        "accurateOwnHalfPasses": 1,
+        "totalOwnHalfPasses": 1,
+        "accurateOppositionHalfPasses": 8,
+        "totalOppositionHalfPasses": 11,
+        "totalCross": 2,
+        "duelLost": 2,
+        "duelWon": 1,
+        "dispossessed": 2,
+        "totalContest": 1,
+        "wonContest": 1,
+        "unsuccessfulTouch": 1,
+        "minutesPlayed": 45,
+        "touches": 22,
+        "rating": 6.6,
+        "possessionLostCtrl": 9,
+        "totalBallCarriesDistance": 83.01602753476,
+        "ballCarriesCount": 7,
+        "totalProgression": 47.297103269194,
+        "bestBallCarryProgression": 24.178769979907,
+        "totalProgressiveBallCarriesDistance": 49.854170697501,
+        "progressiveBallCarriesCount": 3,
+        "ratingVersions": {
+            "original": 6.6,
+            "alternative": 6.6
+        },
+        "totalShots": 0,
+        "passValueNormalized": -0.03,
+        "dribbleValueNormalized": 0.13,
+        "defensiveValueNormalized": 0,
+        "statisticsType": {
+            "sportSlug": "football",
+            "statisticsType": "player"
+        }
+    },
+    "position": "F",
+    "extra": null
+}

@@ -1,0 +1,28 @@
+[project]
+name = "statsbomb_aula"
+version = "0.1.0"
+description = "Dashboard for Statsbomb World Cup 2022 Data"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi",
+    "uvicorn",
+    "jinja2",
+]
+
+[project.optional-dependencies]
+build = [
+    "matplotlib",
+    "mplsoccer",
+    "pandas",
+    "pyarrow>=24.0.0",
+    "seaborn",
+    "statsbombpy",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["app", "scripts"]

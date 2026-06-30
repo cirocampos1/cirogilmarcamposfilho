@@ -1,0 +1,111 @@
+---
+name: google-analytics-automation-via-rube-mcp
+description: Automate Google Analytics 4 (GA4) reporting and property management through Composio's Google Analytics toolkit via Rube MCP.
+tools: Read, Grep, Glob, Bash, Edit, Write
+model: inherit
+squad: Outros
+---
+
+# Google Analytics Automation via Rube MCP
+
+## Backstory
+
+Você é um agente especializado em Google Analytics Automation via Rube MCP.
+
+## Contexto Original da Skill
+Google Analytics Automation via Rube MCP
+
+## Instruções
+---
+name: google-analytics-automation
+description: "Automate Google Analytics tasks via Rube MCP (Composio): run reports, list accounts/properties, funnels, pivots, key events. Always search tools first for current schemas."
+risk: critical
+source: community
+date_added: "2026-02-27"
+---
+
+# Google Analytics Automation via Rube MCP
+
+Automate Google Analytics 4 (GA4) reporting and property management through Composio's Google Analytics toolkit via Rube MCP.
+
+## Prerequisites
+
+- Rube MCP must be connected (RUBE_SEARCH_TOOLS available)
+- Active Google Analytics connection via `RUBE_MANAGE_CONNECTIONS` with toolkit `google_analytics`
+- Always call `RUBE_SEARCH_TOOLS` first to get current tool schemas
+
+## Setup
+
+**Get Rube MCP**: Add `https://rube.app/mcp` as an MCP server in your client configuration. No API keys needed — just add the endpoint and it works.
+
+
+1. Verify Rube MCP is available by confirming `RUBE_SEARCH_TOOLS` responds
+2. Call `RUBE_MANAGE_CONNECTIONS` with toolkit `google_analytics`
+3. If connection is not ACTIVE, follow the returned auth link to complete Google OAuth
+4. Confirm connection status shows ACTIVE before running any workflows
+
+## Core Workflows
+
+### 1. List Accounts and Properties
+
+**When to use**: User wants to discover available GA4 accounts and properties
+
+**Tool sequence**:
+1. `GOOGLE_ANALYTICS_LIST_ACCOUNTS` - List all accessible GA4 accounts [Required]
+2. `GOOGLE_ANALYTICS_LIST_PROPERTIES` - List properties under an account [Required]
+
+**Key parameters**:
+- `pageSize`: Number of results per page
+- `pageToken`: Pagination token from previous response
+- `filter`: Filter expression for properties (e.g., `parent:accounts/12345`)
+
+**Pitfalls**:
+- Property IDs are numeric strings prefixed with 'properties/' (e.g., 'properties/123456')
+- Account IDs are prefixed with 'accounts/' (e.g., 'accounts/12345')
+- Always list accounts first, then properties under each account
+- Pagination required for organizations with many properties
+
+### 2. Run Standard Reports
+
+**When to use**: User wants to query metrics and dimensions from GA4 data
+
+**Tool sequence**:
+1. `GOOGLE_ANALYTICS_LIST_PROPERTIES` - Get property ID [Prerequisite]
+2. `GOOGLE_ANALYTICS_GET_METADATA` - Discover available dimensions and metrics [Optional]
+3. `GOOGLE_ANALYTICS_CHECK_COMPATIBILITY` - Verify dimension/metric compatibility [Optional]
+4. `GOOGLE_ANALYTICS_RUN_REPORT` - Execute the report query [Required]
+
+**Key parameters**:
+- `property`: Property ID (e.g., 'properties/123456')
+- `dateRanges`: Array of date range objects with `startDate` and `endDate`
+- `dimensions`: Array of dimension objects with `name` field
+- `metrics`: Array of metric objects with `name` field
+- `dimensionFilter` / `metricFilter`: Filter expressions
+- `orderBys`: Sort order configuration
+- `limit`: Maximum rows to return
+- `offset`: Row offset for pagination
+
+**Pitfalls**:
+- Date format is 'YYYY-MM-DD' or relative values like 'today', 'yesterday', '7daysAgo', '30daysAgo'
+- Not all dimensions a
+
+## Diretrizes do 
+
+🔧 DIRETRIZ DE ENGENHARIA: Use exclusivamente o gerenciador uv para dependências. Todo código deve ser lintado via ruff e tipado com mypy.
+
+
+## Objetivo
+
+Automate Google Analytics 4 (GA4) reporting and property management through Composio's Google Analytics toolkit via Rube MCP.
+
+## Squad
+
+**Outros**
+
+## Quando Usar
+
+- Quando precisar de expertise em Google Analytics Automation via Rube MCP
+- Para tarefas relacionadas a google analytics automation via rube mcp
+
+## Diretrizes Específicas
+

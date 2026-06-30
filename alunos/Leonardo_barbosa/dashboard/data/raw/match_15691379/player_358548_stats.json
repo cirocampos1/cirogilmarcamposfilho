@@ -1,0 +1,104 @@
+{
+    "player": {
+        "name": "Léo Pereira",
+        "slug": "leo-pereira",
+        "shortName": "L. Pereira",
+        "position": "D",
+        "jerseyNumber": "4",
+        "height": 189,
+        "userCount": 14715,
+        "gender": "M",
+        "sofascoreId": "leopereira4",
+        "id": 358548,
+        "marketValueCurrency": "EUR",
+        "dateOfBirthTimestamp": 823046400,
+        "proposedMarketValueRaw": {
+            "value": 9400000,
+            "currency": "EUR"
+        },
+        "fieldTranslations": {
+            "nameTranslation": {
+                "ar": "ليو بيريرا",
+                "bn": "লিও পেরেইরা",
+                "hi": "लियो परेरा"
+            },
+            "shortNameTranslation": {
+                "ar": "ل. بيريرا",
+                "bn": "এল. পেরেরা",
+                "hi": "एल. परेरा"
+            }
+        }
+    },
+    "team": {
+        "name": "Brazil",
+        "slug": "brazil",
+        "shortName": "Brazil",
+        "gender": "M",
+        "sport": {
+            "name": "Football",
+            "slug": "football",
+            "id": 1
+        },
+        "userCount": 2441982,
+        "nameCode": "BRA",
+        "ranking": 6,
+        "disabled": false,
+        "national": true,
+        "type": 0,
+        "id": 4748,
+        "teamColors": {
+            "primary": "#ffff00",
+            "secondary": "#009933",
+            "text": "#009933"
+        },
+        "fieldTranslations": {
+            "nameTranslation": {
+                "ar": "البرازيل",
+                "bn": "ব্রাজিল",
+                "hi": "ब्राजील",
+                "ru": "Бразилия"
+            },
+            "shortNameTranslation": {}
+        }
+    },
+    "statistics": {
+        "totalPass": 26,
+        "accuratePass": 26,
+        "totalLongBalls": 2,
+        "accurateLongBalls": 2,
+        "goalAssist": 0,
+        "accurateOwnHalfPasses": 15,
+        "totalOwnHalfPasses": 15,
+        "accurateOppositionHalfPasses": 11,
+        "totalOppositionHalfPasses": 11,
+        "duelLost": 1,
+        "totalClearance": 1,
+        "outfielderBlock": 2,
+        "interceptionWon": 1,
+        "ballRecovery": 1,
+        "unsuccessfulTouch": 1,
+        "fouls": 1,
+        "minutesPlayed": 45,
+        "touches": 31,
+        "rating": 7.2,
+        "possessionLostCtrl": 1,
+        "totalBallCarriesDistance": 113.81032158334,
+        "ballCarriesCount": 16,
+        "totalProgression": 53.251036514644,
+        "progressiveBallCarriesCount": 0,
+        "ratingVersions": {
+            "original": 7.2,
+            "alternative": 7.1
+        },
+        "totalShots": 0,
+        "passValueNormalized": 0.32,
+        "dribbleValueNormalized": 0.07,
+        "defensiveValueNormalized": 0.3,
+        "statisticsType": {
+            "sportSlug": "football",
+            "statisticsType": "player"
+        }
+    },
+    "position": "D",
+    "extra": null
+}

@@ -1,0 +1,89 @@
+{
+    "shotmap": [
+        {
+            "player": {
+                "name": "Casemiro",
+                "firstName": "Carlos Henrique",
+                "lastName": "Casemiro",
+                "slug": "casemiro",
+                "shortName": "Casemiro",
+                "position": "M",
+                "jerseyNumber": "18",
+                "userCount": 99211,
+                "gender": "M",
+                "sofascoreId": "Casemiro",
+                "id": 122951,
+                "fieldTranslations": {
+                    "nameTranslation": {
+                        "ar": "كاسيميرو",
+                        "bn": "ক্যাসেমিরো",
+                        "hi": "कैसेमिरो"
+                    },
+                    "shortNameTranslation": {
+                        "ar": "كاسيميرو",
+                        "bn": "ক্যাসেমিরো",
+                        "hi": "कैसेमिरो"
+                    }
+                }
+            },
+            "isHome": true,
+            "shotType": "miss",
+            "situation": "set-piece",
+            "playerCoordinates": {
+                "x": 1.6,
+                "y": 56.2,
+                "z": 0
+            },
+            "bodyPart": "right-foot",
+            "goalMouthLocation": "close-right",
+            "goalMouthCoordinates": {
+                "x": 0,
+                "y": 43.2,
+                "z": 18.1
+            },
+            "goalkeeper": {
+                "name": "Mostafa Shobeir",
+                "slug": "mostafa-shobeir",
+                "shortName": "M. Shobeir",
+                "position": "G",
+                "jerseyNumber": "31",
+                "userCount": 6456,
+                "gender": "M",
+                "id": 1048378,
+                "fieldTranslations": {
+                    "nameTranslation": {
+                        "ar": "مصطفى شوبير",
+                        "bn": "মোস্তফা শোবের",
+                        "hi": "मुस्तफा शोबैर"
+                    },
+                    "shortNameTranslation": {
+                        "ar": "م. شوبير",
+                        "bn": "এম. শোবের",
+                        "hi": "एम. शोबैर"
+                    }
+                }
+            },
+            "id": 7460736,
+            "time": 44,
+            "timeSeconds": 2590,
+            "draw": {
+                "start": {
+                    "x": 56.2,
+                    "y": 1.6
+                },
+                "end": {
+                    "x": 56.8,
+                    "y": 0
+                },
+                "goal": {
+                    "x": 56.8,
+                    "y": 81.9
+                }
+            },
+            "reversedPeriodTime": 2,
+            "reversedPeriodTimeSeconds": 110,
+            "periodTimeSeconds": 2590,
+            "incidentType": "shot"
+        }
+    ]
+}

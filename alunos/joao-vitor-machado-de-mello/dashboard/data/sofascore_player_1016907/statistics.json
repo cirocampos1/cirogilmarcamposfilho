@@ -1,0 +1,112 @@
+{
+	"player": {
+		"name": "Igor Thiago",
+		"firstName": "",
+		"lastName": "",
+		"slug": "igor-thiago",
+		"shortName": "I. Thiago",
+		"position": "F",
+		"jerseyNumber": "9",
+		"height": 191,
+		"userCount": 48404,
+		"gender": "M",
+		"id": 1016907,
+		"marketValueCurrency": "EUR",
+		"dateOfBirthTimestamp": 993513600,
+		"proposedMarketValueRaw": {
+			"value": 52000000,
+			"currency": "EUR"
+		},
+		"fieldTranslations": {
+			"nameTranslation": {
+				"ar": "إيغور تياغو",
+				"bn": "ইগর থিয়াগো",
+				"hi": "इगोर थियागो",
+				"ru": "Игорь Тьяго"
+			},
+			"shortNameTranslation": {
+				"ar": "إ. تياغو",
+				"bn": "আই. থিয়াগো",
+				"hi": "आई. थियागो",
+				"ru": "И. Тьяго"
+			}
+		}
+	},
+	"team": {
+		"name": "Brazil",
+		"slug": "brazil",
+		"shortName": "Brazil",
+		"gender": "M",
+		"sport": {
+			"name": "Football",
+			"slug": "football",
+			"id": 1
+		},
+		"userCount": 2507976,
+		"nameCode": "BRA",
+		"ranking": 6,
+		"disabled": false,
+		"national": true,
+		"type": 0,
+		"id": 4748,
+		"teamColors": {
+			"primary": "#ffff00",
+			"secondary": "#009933",
+			"text": "#009933"
+		},
+		"fieldTranslations": {
+			"nameTranslation": {
+				"ar": "البرازيل",
+				"bn": "ব্রাজিল",
+				"hi": "ब्राजील",
+				"ru": "Бразилия"
+			},
+			"shortNameTranslation": {}
+		}
+	},
+	"statistics": {
+		"totalPass": 7,
+		"accuratePass": 3,
+		"goalAssist": 0,
+		"accurateOwnHalfPasses": 1,
+		"totalOwnHalfPasses": 1,
+		"accurateOppositionHalfPasses": 2,
+		"totalOppositionHalfPasses": 6,
+		"aerialLost": 1,
+		"aerialWon": 1,
+		"duelLost": 2,
+		"duelWon": 1,
+		"dispossessed": 1,
+		"bigChanceMissed": 1,
+		"onTargetScoringAttempt": 1,
+		"blockedScoringAttempt": 1,
+		"interceptionWon": 1,
+		"ballRecovery": 1,
+		"unsuccessfulTouch": 1,
+		"minutesPlayed": 45,
+		"touches": 13,
+		"rating": 6.5,
+		"possessionLostCtrl": 6,
+		"totalBallCarriesDistance": 35.77146767392,
+		"ballCarriesCount": 4,
+		"totalProgression": 18.672883366118,
+		"bestBallCarryProgression": 9.707339528981,
+		"totalProgressiveBallCarriesDistance": 28.608867866588,
+		"progressiveBallCarriesCount": 3,
+		"ratingVersions": {
+			"original": 6.5,
+			"alternative": 6.3
+		},
+		"totalShots": 2,
+		"shotValueNormalized": -0.44,
+		"passValueNormalized": -0.1,
+		"dribbleValueNormalized": 0.38,
+		"defensiveValueNormalized": 0,
+		"statisticsType": {
+			"sportSlug": "football",
+			"statisticsType": "player"
+		}
+	},
+	"position": "F",
+	"extra": null
+}

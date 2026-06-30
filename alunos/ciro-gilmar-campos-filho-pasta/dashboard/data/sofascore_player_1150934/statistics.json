@@ -1,0 +1,107 @@
+{
+    "player": {
+        "name": "Jamie Donley",
+        "firstName": "Jamie Donley",
+        "lastName": "",
+        "slug": "jamie-donley",
+        "shortName": "J. Donley",
+        "position": "M",
+        "jerseyNumber": "33",
+        "height": 183,
+        "userCount": 1490,
+        "gender": "M",
+        "id": 1150934,
+        "marketValueCurrency": "EUR",
+        "dateOfBirthTimestamp": 1104710400,
+        "proposedMarketValueRaw": {
+            "value": 1600000,
+            "currency": "EUR"
+        },
+        "fieldTranslations": {
+            "nameTranslation": {
+                "ar": "جيمي دونلي",
+                "bn": "জেমি ডনলি",
+                "hi": "जेमी डोनली",
+                "ru": "Джейми Донли"
+            },
+            "shortNameTranslation": {
+                "ar": "ج. دونلي",
+                "bn": "জে. ডনলি",
+                "hi": "जे. डोनली",
+                "ru": "Д. Донли"
+            }
+        }
+    },
+    "team": {
+        "name": "Northern Ireland",
+        "slug": "northern-ireland",
+        "shortName": "Northern Ireland",
+        "gender": "M",
+        "sport": {
+            "name": "Football",
+            "slug": "football",
+            "id": 1
+        },
+        "userCount": 28272,
+        "nameCode": "NIR",
+        "ranking": 70,
+        "disabled": false,
+        "national": true,
+        "type": 0,
+        "id": 4786,
+        "teamColors": {
+            "primary": "#1c9239",
+            "secondary": "#ffffff",
+            "text": "#ffffff"
+        },
+        "fieldTranslations": {
+            "nameTranslation": {
+                "ar": "أيرلندا الشمالية",
+                "bn": "নর্দান আয়ারল্যান্ড",
+                "hi": "नॉर्दर्न आयरलैंड",
+                "ru": "Северная Ирландия"
+            },
+            "shortNameTranslation": {}
+        }
+    },
+    "statistics": {
+        "totalPass": 15,
+        "accuratePass": 11,
+        "goalAssist": 0,
+        "accurateOwnHalfPasses": 9,
+        "totalOwnHalfPasses": 11,
+        "accurateOppositionHalfPasses": 2,
+        "totalOppositionHalfPasses": 4,
+        "aerialLost": 1,
+        "aerialWon": 1,
+        "duelLost": 7,
+        "duelWon": 1,
+        "challengeLost": 1,
+        "dispossessed": 2,
+        "totalContest": 3,
+        "ballRecovery": 1,
+        "unsuccessfulTouch": 2,
+        "minutesPlayed": 79,
+        "touches": 25,
+        "rating": 6.2,
+        "possessionLostCtrl": 11,
+        "totalBallCarriesDistance": 39.309067438524,
+        "ballCarriesCount": 5,
+        "totalProgression": 21.372637378193,
+        "progressiveBallCarriesCount": 0,
+        "ratingVersions": {
+            "original": 6.2,
+            "alternative": 6.1
+        },
+        "totalShots": 0,
+        "passValueNormalized": -0.1,
+        "dribbleValueNormalized": 0.03,
+        "defensiveValueNormalized": -0.07,
+        "statisticsType": {
+            "sportSlug": "football",
+            "statisticsType": "player"
+        }
+    },
+    "position": "F",
+    "extra": null
+}

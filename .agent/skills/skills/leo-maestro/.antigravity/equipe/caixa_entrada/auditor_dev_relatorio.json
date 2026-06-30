@@ -1,0 +1,205 @@
+{
+  "agente": "AuditorDev",
+  "tarefa_id": 5,
+  "status": "CONCLUIDO",
+  "data": "2026-03-19",
+  "horario": "12:26:49",
+  "checklist": {
+    "itens_verificados": 15,
+    "itens_aprovados": 14,
+    "itens_reprovados": 0,
+    "itens_atencao": 1
+  },
+  "arquivos_auditados": [
+    {
+      "caminho": "app/routers/crm.py",
+      "status": "APROVADO",
+      "verificacoes": [
+        "Prefixo /api/crm configurado",
+        "Autenticação via sessão implementada",
+        "Fallback de 3 níveis para queries SQL presente",
+        "AD_OBSERVACAO removido conforme especificação",
+        "Mapeamento Kanban correto (_map_to_kanban_stage)"
+      ]
+    },
+    {
+      "caminho": "app/main.py",
+      "status": "APROVADO",
+      "verificacoes": [
+        "Router CRM incluído via include_router",
+        "CORS configurado para localhost:3000",
+        "Static files servidos em /crm/*",
+        "Fallback SPA para index.html implementado",
+        "Rotas _next tratadas corretamente"
+      ]
+    },
+    {
+      "caminho": "crm/out/index.html",
+      "status": "APROVADO",
+      "verificacoes": [
+        "Build estático presente",
+        "Asset prefix /crm configurado",
+        "Título:  CRM"
+      ]
+    },
+    {
+      "caminho": "crm/lib//client.ts",
+      "status": "APROVADO",
+      "verificacoes": [
+        "Base URL configurável via env",
+        "Credentials include para cookies",
+        "Tipagens TypeScript completas",
+        "Tratamento de erro 401 implementado"
+      ]
+    },
+    {
+      "caminho": "crm/lib/actions/sankhya-pedidos.ts",
+      "status": "APROVADO",
+      "verificacoes": [
+        "Import correto do client ",
+        "Mappers de dados implementados",
+        "Actions com tratamento de erro",
+        "Array validation presente"
+      ]
+    },
+    {
+      "caminho": "crm/lib/sankhya/services/pedidos.ts",
+      "status": "APROVADO_COM_RESSALVAS",
+      "verificacoes": [
+        "Mapeamento Kanban consistente com backend",
+        "Queries SQL direto no Sankhya",
+        "Tabelas corretas (TGFCAB, TGFITE)"
+      ],
+      "observacao": "Arquivo mantém compatibilidade dual (SQL direto + API). Recomenda-se depreciar em favor do client.ts"
+    }
+  ],
+  "mapeamento_kanban_validado": {
+    "qualificacao": {
+      "regra": "STATUSNOTA = 'P'",
+      "backend": "crm.py:403-404",
+      "frontend": "pedidos.ts:65",
+      "status": "OK"
+    },
+    "bloqueado_negociacao": {
+      "regra": "STATUS_PEDIDO = 'BLOQUEADO'",
+      "backend": "crm.py:401-402",
+      "frontend": "pedidos.ts:65",
+      "status": "OK"
+    },
+    "revisao_tecnica": {
+      "regra": "AD_VAL_LIB_ORC > 0",
+      "backend": "crm.py:399-400",
+      "frontend": "pedidos.ts:64",
+      "status": "OK"
+    },
+    "fechado_ganho": {
+      "regra": "STATUSNOTA = 'L'",
+      "backend": "crm.py:397-398",
+      "frontend": "pedidos.ts:63",
+      "status": "OK"
+    },
+    "perdido": {
+      "regra": "STATUSNOTA = 'C'",
+      "backend": "crm.py:395-396",
+      "frontend": "pedidos.ts:62",
+      "status": "OK"
+    }
+  },
+  "fallback_tres_niveis": {
+    "status": "IMPLEMENTADO",
+    "niveis": [
+      {
+        "nivel": 1,
+        "nome": "Produção Full",
+        "caracteristicas": [
+          "VW_STATUS_PEDIDO",
+          "FC_SALDOPROP_",
+          "AD_NUFAP",
+          "AD_VAL_LIB_ORC"
+        ]
+      },
+      {
+        "nivel": 2,
+        "nome": "Produção Sem View",
+        "caracteristicas": [
+          "Sem VW_STATUS_PEDIDO",
+          "Com FC_SALDOPROP_",
+          "Valores default para STATUS_PEDIDO"
+        ]
+      },
+      {
+        "nivel": 3,
+        "nome": "Safe Mode",
+        "caracteristicas": [
+          "Sem colunas AD",
+          "Sem functions custom",
+          "Valores default (0, 'PENDENTE')"
+        ]
+      }
+    ]
+  },
+  "recomendacoes": [
+    {
+      "prioridade": "ALTA",
+      "descricao": "Executar testes manuais das APIs antes de liberar para produção",
+      "acao": "Usar o CHECKLIST_TESTES_CRM.md"
+    },
+    {
+      "prioridade": "MEDIA",
+      "descricao": "Criar .env.local no crm/ com NEXT_PUBLIC__URL",
+      "acao": "echo 'NEXT_PUBLIC__URL=http://localhost:8000' > crm/.env.local"
+    },
+    {
+      "prioridade": "MEDIA",
+      "descricao": "Monitorar logs do fallback para identificar queries usadas",
+      "acao": "Verificar log: 'Perfil Query: X'"
+    },
+    {
+      "prioridade": "BAIXA",
+      "descricao": "Documentar a view VW_STATUS_PEDIDO no schema do Sankhya",
+      "acao": "Adicionar à documentação técnica"
+    },
+    {
+      "prioridade": "BAIXA",
+      "descricao": "Considerar depreciar pedidos.ts service em favor do client.ts",
+      "acao": "Refatoração futura para unificar camada de acesso"
+    }
+  ],
+  "riscos_identificados": [
+    {
+      "nivel": "BAIXO",
+      "descricao": "VW_STATUS_PEDIDO pode não existir no banco",
+      "mitigacao": "Fallback nível 2/3 cobre esta situação"
+    },
+    {
+      "nivel": "BAIXO",
+      "descricao": "FC_SALDOPROP_ pode não existir",
+      "mitigacao": "Fallback nível 3 retorna 0"
+    },
+    {
+      "nivel": "BAIXO",
+      "descricao": "AD_VAL_LIB_ORC pode não existir na TGFCAB",
+      "mitigacao": "Fallback nível 3 retorna 0"
+    }
+  ],
+  "metricas_codigo": {
+    "app_routers_crm_py": {
+      "linhas": 708,
+      "endpoints": 15,
+      "cobertura_fallback": "100%"
+    },
+    "crm_lib__client_ts": {
+      "linhas": 249,
+      "funcoes_exportadas": 12,
+      "interfaces": 4
+    },
+    "crm_build": {
+      "arquivos": 21,
+      "tamanho_total": "~850KB",
+      "status": "OK"
+    }
+  },
+  "status_final": "APROVADO",
+  "parecer": "Integração CRM +  validada com sucesso. Código bem estruturado, com fallback robusto de 3 níveis para lidar com schema variável do Sankhya. Mapeamento Kanban consistente entre frontend e backend. Pronto para testes de integração.",
+  "assinatura": "AuditorDev - Esquadrão LeoMaster"
+}

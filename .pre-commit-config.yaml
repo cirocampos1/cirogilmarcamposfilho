@@ -1,0 +1,40 @@
+repos:
+  # 1. Formatação (O "Standard" do Python)
+  - repo: https://github.com/psf/black
+    rev: 24.10.0
+    hooks:
+      - id: black
+        language_version: python3.12
+
+  # 2. Linter, Isort e Segurança (Tudo em um só, muito mais rápido)
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.6.9
+    hooks:
+      - id: ruff
+        args: [--fix, --exit-non-zero-on-fix] # Tenta corrigir erros automaticamente
+
+  # 3. Proteção de Credenciais (Crucial para a )
+  - repo: https://github.com/Yelp/detect-secrets
+    rev: v1.5.0
+    hooks:
+      - id: detect-secrets
+        args: ["--baseline", ".secrets.baseline"]
+        exclude: .*/tests/.*
+
+  # 4. Checagens básicas do Git (Espaços, arquivos grandes, etc)
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-added-large-files
+
+  # 5. Validação de Commits (Padrão Iuricode / ORQUESTRA SDD)
+  - repo: local
+    hooks:
+      - id: verify-commit-msg
+        name: Validar Emojis nos Commits ()
+        entry: scripts/verify_commit_msg.py
+        language: script
+        stages: [commit-msg]

@@ -1,0 +1,104 @@
+{
+    "player": {
+        "name": "Marquinhos",
+        "firstName": "Marcos",
+        "lastName": "Marquinhos",
+        "slug": "marquinhos",
+        "shortName": "Marquinhos",
+        "position": "D",
+        "jerseyNumber": "5",
+        "height": 183,
+        "userCount": 42806,
+        "gender": "M",
+        "sofascoreId": "marquinhosm5",
+        "id": 155995,
+        "marketValueCurrency": "EUR",
+        "dateOfBirthTimestamp": 768873600,
+        "proposedMarketValueRaw": {
+            "value": 29000000,
+            "currency": "EUR"
+        },
+        "fieldTranslations": {
+            "nameTranslation": {
+                "ar": "ماركينيوس",
+                "bn": "মারকুইনহোস",
+                "hi": "मार्क्विन्होस"
+            },
+            "shortNameTranslation": {
+                "ar": "ماركينيوس",
+                "bn": "মারকুইনহোস",
+                "hi": "मार्क्विन्होस"
+            }
+        }
+    },
+    "team": {
+        "name": "Brazil",
+        "slug": "brazil",
+        "shortName": "Brazil",
+        "gender": "M",
+        "sport": {
+            "name": "Football",
+            "slug": "football",
+            "id": 1
+        },
+        "userCount": 2441982,
+        "nameCode": "BRA",
+        "ranking": 6,
+        "disabled": false,
+        "national": true,
+        "type": 0,
+        "id": 4748,
+        "teamColors": {
+            "primary": "#ffff00",
+            "secondary": "#009933",
+            "text": "#009933"
+        },
+        "fieldTranslations": {
+            "nameTranslation": {
+                "ar": "البرازيل",
+                "bn": "ব্রাজিল",
+                "hi": "ब्राजील",
+                "ru": "Бразилия"
+            },
+            "shortNameTranslation": {}
+        }
+    },
+    "statistics": {
+        "totalPass": 43,
+        "accuratePass": 42,
+        "totalLongBalls": 2,
+        "accurateLongBalls": 2,
+        "goalAssist": 0,
+        "accurateOwnHalfPasses": 33,
+        "totalOwnHalfPasses": 34,
+        "accurateOppositionHalfPasses": 9,
+        "totalOppositionHalfPasses": 9,
+        "duelLost": 1,
+        "totalClearance": 4,
+        "ballRecovery": 3,
+        "errorLeadToAGoal": 1,
+        "fouls": 1,
+        "minutesPlayed": 45,
+        "touches": 47,
+        "rating": 5.9,
+        "possessionLostCtrl": 1,
+        "totalBallCarriesDistance": 192.08075755626,
+        "ballCarriesCount": 23,
+        "totalProgression": 145.91249874442,
+        "progressiveBallCarriesCount": 0,
+        "ratingVersions": {
+            "original": 5.9,
+            "alternative": 5.9
+        },
+        "totalShots": 0,
+        "passValueNormalized": 0.03,
+        "dribbleValueNormalized": 0.11,
+        "defensiveValueNormalized": -0.47,
+        "statisticsType": {
+            "sportSlug": "football",
+            "statisticsType": "player"
+        }
+    },
+    "position": "D",
+    "extra": null
+}

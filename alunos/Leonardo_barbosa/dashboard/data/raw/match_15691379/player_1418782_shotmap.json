@@ -1,0 +1,88 @@
+{
+    "shotmap": [
+        {
+            "player": {
+                "name": "Mostafa Ziko",
+                "firstName": "Mostafa Ziko",
+                "lastName": "",
+                "slug": "mostafa-ziko",
+                "shortName": "M. Ziko",
+                "position": "M",
+                "jerseyNumber": "30",
+                "userCount": 1102,
+                "gender": "M",
+                "id": 1418782,
+                "fieldTranslations": {
+                    "nameTranslation": {
+                        "ar": "مصطفى زيكو"
+                    },
+                    "shortNameTranslation": {
+                        "ar": "م. زيكو"
+                    }
+                }
+            },
+            "isHome": false,
+            "shotType": "goal",
+            "goalType": "regular",
+            "situation": "regular",
+            "playerCoordinates": {
+                "x": 17.8,
+                "y": 33.6,
+                "z": 0
+            },
+            "bodyPart": "right-foot",
+            "goalMouthLocation": "low-right",
+            "goalMouthCoordinates": {
+                "x": 0,
+                "y": 46.9,
+                "z": 3.2
+            },
+            "goalkeeper": {
+                "name": "Alisson",
+                "firstName": "Alisson Ramses",
+                "lastName": "Alisson",
+                "slug": "alisson",
+                "shortName": "Alisson",
+                "position": "G",
+                "jerseyNumber": "1",
+                "userCount": 71842,
+                "gender": "M",
+                "sofascoreId": "AlissonBecker",
+                "id": 243609,
+                "fieldTranslations": {
+                    "nameTranslation": {
+                        "ar": "أليسون",
+                        "bn": "অ্যালিসন",
+                        "hi": "एलिसन"
+                    },
+                    "shortNameTranslation": {
+                        "ar": "أليسون",
+                        "bn": "অ্যালিসন",
+                        "hi": "एलिसन"
+                    }
+                }
+            },
+            "id": 7460304,
+            "time": 11,
+            "timeSeconds": 613,
+            "draw": {
+                "start": {
+                    "x": 33.6,
+                    "y": 17.8
+                },
+                "end": {
+                    "x": 53.1,
+                    "y": 0
+                },
+                "goal": {
+                    "x": 53.1,
+                    "y": 96.8
+                }
+            },
+            "reversedPeriodTime": 35,
+            "reversedPeriodTimeSeconds": 2087,
+            "periodTimeSeconds": 613,
+            "incidentType": "shot"
+        }
+    ]
+}

@@ -1,0 +1,104 @@
+{
+    "player": {
+        "name": "Mostafa Ziko",
+        "firstName": "Mostafa Ziko",
+        "lastName": "",
+        "slug": "mostafa-ziko",
+        "shortName": "M. Ziko",
+        "position": "M",
+        "jerseyNumber": "30",
+        "height": 180,
+        "userCount": 1102,
+        "gender": "M",
+        "id": 1418782,
+        "marketValueCurrency": "EUR",
+        "dateOfBirthTimestamp": 862099200,
+        "proposedMarketValueRaw": {
+            "value": 2000000,
+            "currency": "EUR"
+        },
+        "fieldTranslations": {
+            "nameTranslation": {
+                "ar": "مصطفى زيكو"
+            },
+            "shortNameTranslation": {
+                "ar": "م. زيكو"
+            }
+        }
+    },
+    "team": {
+        "name": "Egypt",
+        "slug": "egypt",
+        "shortName": "Egypt",
+        "gender": "M",
+        "sport": {
+            "name": "Football",
+            "slug": "football",
+            "id": 1
+        },
+        "userCount": 617607,
+        "nameCode": "EGY",
+        "ranking": 29,
+        "disabled": false,
+        "national": true,
+        "type": 0,
+        "id": 4758,
+        "teamColors": {
+            "primary": "#f00000",
+            "secondary": "#ffffff",
+            "text": "#ffffff"
+        },
+        "fieldTranslations": {
+            "nameTranslation": {
+                "ar": "مصر",
+                "bn": "মিশর",
+                "hi": "इजिप्ट",
+                "ru": "Египет"
+            },
+            "shortNameTranslation": {}
+        }
+    },
+    "statistics": {
+        "totalPass": 9,
+        "accuratePass": 7,
+        "goalAssist": 0,
+        "accurateOwnHalfPasses": 4,
+        "totalOwnHalfPasses": 4,
+        "accurateOppositionHalfPasses": 3,
+        "totalOppositionHalfPasses": 5,
+        "aerialWon": 1,
+        "duelLost": 5,
+        "duelWon": 1,
+        "challengeLost": 1,
+        "dispossessed": 4,
+        "onTargetScoringAttempt": 1,
+        "goals": 1,
+        "interceptionWon": 1,
+        "ballRecovery": 3,
+        "unsuccessfulTouch": 1,
+        "minutesPlayed": 76,
+        "touches": 19,
+        "rating": 7.1,
+        "possessionLostCtrl": 7,
+        "totalBallCarriesDistance": 5.2284896480724,
+        "ballCarriesCount": 1,
+        "totalProgression": 2.3446006002248,
+        "progressiveBallCarriesCount": 0,
+        "keyPass": 1,
+        "ratingVersions": {
+            "original": 7.1,
+            "alternative": 6.8
+        },
+        "totalShots": 1,
+        "shotValueNormalized": 0.51,
+        "passValueNormalized": -0.07,
+        "dribbleValueNormalized": -0.02,
+        "defensiveValueNormalized": -0.16,
+        "statisticsType": {
+            "sportSlug": "football",
+            "statisticsType": "player"
+        }
+    },
+    "position": "M",
+    "extra": null
+}

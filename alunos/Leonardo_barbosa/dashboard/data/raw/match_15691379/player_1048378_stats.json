@@ -1,0 +1,106 @@
+{
+    "player": {
+        "name": "Mostafa Shobeir",
+        "slug": "mostafa-shobeir",
+        "shortName": "M. Shobeir",
+        "position": "G",
+        "jerseyNumber": "31",
+        "height": 185,
+        "userCount": 6456,
+        "gender": "M",
+        "id": 1048378,
+        "marketValueCurrency": "EUR",
+        "dateOfBirthTimestamp": 953251200,
+        "proposedMarketValueRaw": {
+            "value": 1300000,
+            "currency": "EUR"
+        },
+        "fieldTranslations": {
+            "nameTranslation": {
+                "ar": "مصطفى شوبير",
+                "bn": "মোস্তফা শোবের",
+                "hi": "मुस्तफा शोबैर"
+            },
+            "shortNameTranslation": {
+                "ar": "م. شوبير",
+                "bn": "এম. শোবের",
+                "hi": "एम. शोबैर"
+            }
+        }
+    },
+    "team": {
+        "name": "Egypt",
+        "slug": "egypt",
+        "shortName": "Egypt",
+        "gender": "M",
+        "sport": {
+            "name": "Football",
+            "slug": "football",
+            "id": 1
+        },
+        "userCount": 617607,
+        "nameCode": "EGY",
+        "ranking": 29,
+        "disabled": false,
+        "national": true,
+        "type": 0,
+        "id": 4758,
+        "teamColors": {
+            "primary": "#f00000",
+            "secondary": "#ffffff",
+            "text": "#ffffff"
+        },
+        "fieldTranslations": {
+            "nameTranslation": {
+                "ar": "مصر",
+                "bn": "মিশর",
+                "hi": "इजिप्ट",
+                "ru": "Египет"
+            },
+            "shortNameTranslation": {}
+        }
+    },
+    "statistics": {
+        "totalPass": 39,
+        "accuratePass": 31,
+        "totalLongBalls": 16,
+        "accurateLongBalls": 9,
+        "goalAssist": 0,
+        "accurateOwnHalfPasses": 30,
+        "totalOwnHalfPasses": 34,
+        "accurateOppositionHalfPasses": 1,
+        "totalOppositionHalfPasses": 5,
+        "aerialWon": 2,
+        "duelWon": 2,
+        "totalClearance": 2,
+        "ballRecovery": 14,
+        "goodHighClaim": 2,
+        "savedShotsFromInsideTheBox": 4,
+        "saves": 4,
+        "punches": 1,
+        "minutesPlayed": 90,
+        "touches": 53,
+        "rating": 7.2,
+        "possessionLostCtrl": 8,
+        "totalBallCarriesDistance": 11.06643513237,
+        "ballCarriesCount": 2,
+        "totalProgression": 1.6420299913683,
+        "progressiveBallCarriesCount": 0,
+        "keeperSaveValue": 0.2224,
+        "ratingVersions": {
+            "original": 7.2,
+            "alternative": 7.7
+        },
+        "totalShots": 0,
+        "passValueNormalized": 0.08,
+        "dribbleValueNormalized": -0.02,
+        "defensiveValueNormalized": -0.06,
+        "goalkeeperValueNormalized": 0.26,
+        "statisticsType": {
+            "sportSlug": "football",
+            "statisticsType": "player"
+        }
+    },
+    "position": "G",
+    "extra": null
+}

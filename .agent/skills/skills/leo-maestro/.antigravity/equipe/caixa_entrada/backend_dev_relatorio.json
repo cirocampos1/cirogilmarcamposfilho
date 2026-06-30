@@ -1,0 +1,65 @@
+{
+  "agente": "BackendDev",
+  "tarefa_id": 2,
+  "status": "CONCLUIDO",
+  "data": "2026-03-19",
+  "alteracoes": [
+    {
+      "arquivo": "app/routers/crm.py",
+      "linhas": "296-312",
+      "acao": "remoção",
+      "motivo": "Coluna AD_OBSERVACAO não existe na TGFCAB conforme confirmado pelo ExploradorSQL. Removida das queries de fallback nível 1, 2 e 3 para evitar erros em produção."
+    },
+    {
+      "arquivo": "app/routers/crm.py",
+      "linhas": "296-312",
+      "acao": "validação",
+      "motivo": "Fallback de 3 níveis validado e preservado: (1) Produção Full com VW_STATUS_PEDIDO, (2) Produção sem View, (3) Safe Mode sem colunas AD_ e funções custom."
+    }
+  ],
+  "endpoints_validados": [
+    "/api/crm/clientes",
+    "/api/crm/clientes/{codparc}",
+    "/api/crm/clientes/{codparc}/pedidos",
+    "/api/crm/pedidos",
+    "/api/crm/pedidos/{nunota}/itens",
+    "/api/crm/prospectos",
+    "/api/crm/vendedores",
+    "/api/crm/advisor"
+  ],
+  "estruturas_confirmadas": {
+    "AD_VAL_LIB_ORC": {
+      "tabela": "TGFCAB",
+      "status": "CONFIRMADO",
+      "uso": "Mapeamento para estágio 'revisao_tecnica' no Kanban"
+    },
+    "AD_NUFAP": {
+      "tabela": "TGFCAB",
+      "status": "CONFIRMADO",
+      "uso": "Referência à fase de pipeline/proposta"
+    },
+    "FC_SALDOPROP_": {
+      "tabela": "function",
+      "status": "CONFIRMADO",
+      "uso": "Cálculo de saúde financeira por NUNOTA"
+    },
+    "FC_SALDOPROP__POR_PARC": {
+      "arquivo": "app/services/advisor_service.py",
+      "linha": 39,
+      "status": "CONFIRMADO",
+      "uso": "Cálculo de saúde financeira por CODPARC no AdvisorService"
+    },
+    "VW_STATUS_PEDIDO": {
+      "tipo": "view",
+      "status": "CONFIRMADO",
+      "uso": "Determina status BLOQUEADO/PENDENTE para Kanban"
+    },
+    "AD_OBSERVACAO": {
+      "tabela": "TGFCAB",
+      "status": "NAO_ENCONTRADO",
+      "acao": "REMOVIDO das queries",
+      "alternativa": "TCSFAP.AD_OBSERVACAOETAPA (se necessário no futuro, requer JOIN com AD_NUFAP)"
+    }
+  },
+  "observacoes": "Todas as APIs CRM foram validadas. O fallback de 3 níveis está operacional e removerá AD_OBSERVACAO automaticamente se a coluna não existir. O campo AD_OBSERVACAOETAPA na TCSFAP pode ser utilizado futuramente se houver necessidade de exibir observações, através de JOIN com AD_NUFAP. Nenhuma alteração destrutiva foi realizada - apenas ajuste defensivo nas queries."
+}

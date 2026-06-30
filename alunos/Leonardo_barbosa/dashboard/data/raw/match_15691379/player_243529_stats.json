@@ -1,0 +1,104 @@
+{
+    "player": {
+        "name": "Weverton",
+        "firstName": "Weverton",
+        "lastName": "Weverton",
+        "slug": "weverton",
+        "shortName": "Weverton",
+        "position": "G",
+        "jerseyNumber": "1",
+        "height": 189,
+        "userCount": 8942,
+        "gender": "M",
+        "sofascoreId": "Weverton",
+        "id": 243529,
+        "marketValueCurrency": "EUR",
+        "dateOfBirthTimestamp": 566352000,
+        "proposedMarketValueRaw": {
+            "value": 750000,
+            "currency": "EUR"
+        },
+        "fieldTranslations": {
+            "nameTranslation": {
+                "ar": "ويفرتون",
+                "bn": "ওয়েভারটন",
+                "hi": "वेवर्टन"
+            },
+            "shortNameTranslation": {
+                "ar": "ويفرتون",
+                "bn": "ওয়েভারটন",
+                "hi": "वेवर्टन"
+            }
+        }
+    },
+    "team": {
+        "name": "Brazil",
+        "slug": "brazil",
+        "shortName": "Brazil",
+        "gender": "M",
+        "sport": {
+            "name": "Football",
+            "slug": "football",
+            "id": 1
+        },
+        "userCount": 2441982,
+        "nameCode": "BRA",
+        "ranking": 6,
+        "disabled": false,
+        "national": true,
+        "type": 0,
+        "id": 4748,
+        "teamColors": {
+            "primary": "#ffff00",
+            "secondary": "#009933",
+            "text": "#009933"
+        },
+        "fieldTranslations": {
+            "nameTranslation": {
+                "ar": "البرازيل",
+                "bn": "ব্রাজিল",
+                "hi": "ब्राजील",
+                "ru": "Бразилия"
+            },
+            "shortNameTranslation": {}
+        }
+    },
+    "statistics": {
+        "totalPass": 15,
+        "accuratePass": 7,
+        "totalLongBalls": 12,
+        "accurateLongBalls": 4,
+        "goalAssist": 0,
+        "accurateOwnHalfPasses": 4,
+        "totalOwnHalfPasses": 6,
+        "accurateOppositionHalfPasses": 3,
+        "totalOppositionHalfPasses": 9,
+        "ballRecovery": 3,
+        "savedShotsFromInsideTheBox": 1,
+        "saves": 1,
+        "minutesPlayed": 45,
+        "touches": 18,
+        "rating": 6.8,
+        "possessionLostCtrl": 8,
+        "totalBallCarriesDistance": 17.21976604708,
+        "ballCarriesCount": 4,
+        "totalProgression": 4.1009228385813,
+        "progressiveBallCarriesCount": 0,
+        "keeperSaveValue": 0.0661,
+        "ratingVersions": {
+            "original": 6.8,
+            "alternative": 6.7
+        },
+        "totalShots": 0,
+        "passValueNormalized": 0.04,
+        "dribbleValueNormalized": -0.03,
+        "defensiveValueNormalized": 0.15,
+        "goalkeeperValueNormalized": 0.08,
+        "statisticsType": {
+            "sportSlug": "football",
+            "statisticsType": "player"
+        }
+    },
+    "position": "G",
+    "extra": null
+}

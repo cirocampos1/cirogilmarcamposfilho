@@ -1,0 +1,98 @@
+{
+    "player": {
+        "name": "Wesley",
+        "slug": "wesley-franca",
+        "shortName": "Wesley",
+        "position": "M",
+        "jerseyNumber": "43",
+        "height": 178,
+        "userCount": 30931,
+        "gender": "M",
+        "sofascoreId": "WesleyFranca03",
+        "id": 1134200,
+        "marketValueCurrency": "EUR",
+        "dateOfBirthTimestamp": 1062806400,
+        "proposedMarketValueRaw": {
+            "value": 43000000,
+            "currency": "EUR"
+        },
+        "fieldTranslations": {
+            "nameTranslation": {
+                "ar": "ويسلي",
+                "bn": "ওয়েসলি",
+                "hi": "वेस्ली"
+            },
+            "shortNameTranslation": {
+                "ar": "ويسلي",
+                "bn": "ওয়েসলি",
+                "hi": "वेस्ली"
+            }
+        }
+    },
+    "team": {
+        "name": "Brazil",
+        "slug": "brazil",
+        "shortName": "Brazil",
+        "gender": "M",
+        "sport": {
+            "name": "Football",
+            "slug": "football",
+            "id": 1
+        },
+        "userCount": 2441982,
+        "nameCode": "BRA",
+        "ranking": 6,
+        "disabled": false,
+        "national": true,
+        "type": 0,
+        "id": 4748,
+        "teamColors": {
+            "primary": "#ffff00",
+            "secondary": "#009933",
+            "text": "#009933"
+        },
+        "fieldTranslations": {
+            "nameTranslation": {
+                "ar": "البرازيل",
+                "bn": "ব্রাজিল",
+                "hi": "ब्राजील",
+                "ru": "Бразилия"
+            },
+            "shortNameTranslation": {}
+        }
+    },
+    "statistics": {
+        "totalPass": 7,
+        "accuratePass": 6,
+        "goalAssist": 0,
+        "accurateOwnHalfPasses": 5,
+        "totalOwnHalfPasses": 5,
+        "accurateOppositionHalfPasses": 1,
+        "totalOppositionHalfPasses": 2,
+        "totalCross": 1,
+        "duelLost": 1,
+        "fouls": 1,
+        "minutesPlayed": 17,
+        "touches": 8,
+        "rating": 6.2,
+        "possessionLostCtrl": 2,
+        "totalBallCarriesDistance": 23.786804642585,
+        "ballCarriesCount": 3,
+        "totalProgression": 1.3565239196087,
+        "progressiveBallCarriesCount": 0,
+        "ratingVersions": {
+            "original": 6.2,
+            "alternative": 6.2
+        },
+        "totalShots": 0,
+        "passValueNormalized": -0.01,
+        "dribbleValueNormalized": 0.04,
+        "defensiveValueNormalized": -0.18,
+        "statisticsType": {
+            "sportSlug": "football",
+            "statisticsType": "player"
+        }
+    },
+    "position": "D",
+    "extra": null
+}

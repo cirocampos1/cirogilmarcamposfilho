@@ -1,0 +1,101 @@
+{
+    "shotmap": [
+        {
+            "player": {
+                "name": "Mohamed Salah",
+                "firstName": "Mohamed",
+                "lastName": "Salah",
+                "slug": "mohamed-salah",
+                "shortName": "M. Salah",
+                "position": "M",
+                "jerseyNumber": "11",
+                "userCount": 611111,
+                "gender": "M",
+                "sofascoreId": "MoSalah",
+                "id": 159665,
+                "fieldTranslations": {
+                    "nameTranslation": {
+                        "ar": "محمد صلاح",
+                        "bn": "মোহাম্মদ সালাহ",
+                        "hi": "मोहम्मद सलाह"
+                    },
+                    "shortNameTranslation": {
+                        "ar": "م. صلاح",
+                        "bn": "এম. সালাহ",
+                        "hi": "एम. सलाह"
+                    }
+                }
+            },
+            "isHome": false,
+            "shotType": "block",
+            "situation": "assisted",
+            "playerCoordinates": {
+                "x": 20.8,
+                "y": 56.9,
+                "z": 0
+            },
+            "bodyPart": "right-foot",
+            "goalMouthLocation": "low-centre",
+            "goalMouthCoordinates": {
+                "x": 0,
+                "y": 50.9,
+                "z": 19
+            },
+            "blockCoordinates": {
+                "x": 16.8,
+                "y": 55.4,
+                "z": 0
+            },
+            "goalkeeper": {
+                "name": "Weverton",
+                "firstName": "Weverton",
+                "lastName": "Weverton",
+                "slug": "weverton",
+                "shortName": "Weverton",
+                "position": "G",
+                "jerseyNumber": "1",
+                "userCount": 8942,
+                "gender": "M",
+                "sofascoreId": "Weverton",
+                "id": 243529,
+                "fieldTranslations": {
+                    "nameTranslation": {
+                        "ar": "ويفرتون",
+                        "bn": "ওয়েভারটন",
+                        "hi": "वेवर्टन"
+                    },
+                    "shortNameTranslation": {
+                        "ar": "ويفرتون",
+                        "bn": "ওয়েভারটন",
+                        "hi": "वेवर्टन"
+                    }
+                }
+            },
+            "id": 7461079,
+            "time": 58,
+            "timeSeconds": 3465,
+            "draw": {
+                "start": {
+                    "x": 56.9,
+                    "y": 20.8
+                },
+                "block": {
+                    "x": 55.4,
+                    "y": 16.8
+                },
+                "end": {
+                    "x": 49.1,
+                    "y": 0
+                },
+                "goal": {
+                    "x": 49.1,
+                    "y": 81
+                }
+            },
+            "reversedPeriodTime": 33,
+            "reversedPeriodTimeSeconds": 1935,
+            "periodTimeSeconds": 765,
+            "incidentType": "shot"
+        }
+    ]
+}

@@ -1,0 +1,109 @@
+{
+    "player": {
+        "name": "Mohanad Lasheen",
+        "firstName": "",
+        "lastName": "",
+        "slug": "mohanad-lasheen",
+        "shortName": "M. Lasheen",
+        "position": "M",
+        "jerseyNumber": "14",
+        "height": 179,
+        "userCount": 897,
+        "gender": "M",
+        "id": 918506,
+        "marketValueCurrency": "EUR",
+        "dateOfBirthTimestamp": 833328000,
+        "proposedMarketValueRaw": {
+            "value": 3200000,
+            "currency": "EUR"
+        },
+        "fieldTranslations": {
+            "nameTranslation": {
+                "ar": "مهند لاشين",
+                "bn": "মোহনাদ লাশীন",
+                "hi": "मोहनद लाशीन"
+            },
+            "shortNameTranslation": {
+                "ar": "م. لاشين",
+                "bn": "এম. লাশিন",
+                "hi": "एम. लाशीन"
+            }
+        }
+    },
+    "team": {
+        "name": "Egypt",
+        "slug": "egypt",
+        "shortName": "Egypt",
+        "gender": "M",
+        "sport": {
+            "name": "Football",
+            "slug": "football",
+            "id": 1
+        },
+        "userCount": 617607,
+        "nameCode": "EGY",
+        "ranking": 29,
+        "disabled": false,
+        "national": true,
+        "type": 0,
+        "id": 4758,
+        "teamColors": {
+            "primary": "#f00000",
+            "secondary": "#ffffff",
+            "text": "#ffffff"
+        },
+        "fieldTranslations": {
+            "nameTranslation": {
+                "ar": "مصر",
+                "bn": "মিশর",
+                "hi": "इजिप्ट",
+                "ru": "Египет"
+            },
+            "shortNameTranslation": {}
+        }
+    },
+    "statistics": {
+        "totalPass": 35,
+        "accuratePass": 32,
+        "totalLongBalls": 2,
+        "accurateLongBalls": 2,
+        "goalAssist": 0,
+        "accurateOwnHalfPasses": 23,
+        "totalOwnHalfPasses": 25,
+        "accurateOppositionHalfPasses": 9,
+        "totalOppositionHalfPasses": 10,
+        "aerialWon": 3,
+        "duelLost": 2,
+        "duelWon": 7,
+        "dispossessed": 1,
+        "totalClearance": 3,
+        "ballRecovery": 6,
+        "totalTackle": 3,
+        "wonTackle": 2,
+        "errorLeadToAGoal": 1,
+        "wasFouled": 1,
+        "fouls": 1,
+        "minutesPlayed": 75,
+        "touches": 44,
+        "rating": 6.8,
+        "possessionLostCtrl": 4,
+        "totalBallCarriesDistance": 61.25693735647,
+        "ballCarriesCount": 9,
+        "totalProgression": 14.211600188433,
+        "progressiveBallCarriesCount": 0,
+        "ratingVersions": {
+            "original": 6.8,
+            "alternative": 6.3
+        },
+        "totalShots": 0,
+        "passValueNormalized": 0.01,
+        "dribbleValueNormalized": 0.07,
+        "defensiveValueNormalized": -0.21,
+        "statisticsType": {
+            "sportSlug": "football",
+            "statisticsType": "player"
+        }
+    },
+    "position": "M",
+    "extra": null
+}

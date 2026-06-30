@@ -1,0 +1,106 @@
+{
+    "player": {
+        "name": "Fabinho",
+        "firstName": "Fabio",
+        "lastName": "Fabinho",
+        "slug": "fabinho",
+        "shortName": "Fabinho",
+        "position": "M",
+        "jerseyNumber": "8",
+        "height": 187,
+        "userCount": 11879,
+        "gender": "M",
+        "sofascoreId": "Fabinho",
+        "id": 243585,
+        "marketValueCurrency": "EUR",
+        "dateOfBirthTimestamp": 751334400,
+        "proposedMarketValueRaw": {
+            "value": 11900000,
+            "currency": "EUR"
+        },
+        "fieldTranslations": {
+            "nameTranslation": {
+                "ar": "فابينيو",
+                "bn": "ফ্যাবিনহো",
+                "hi": "फैबिन्हो"
+            },
+            "shortNameTranslation": {
+                "ar": "فابينيو",
+                "bn": "ফ্যাবিনহো",
+                "hi": "फैबिन्हो"
+            }
+        }
+    },
+    "team": {
+        "name": "Brazil",
+        "slug": "brazil",
+        "shortName": "Brazil",
+        "gender": "M",
+        "sport": {
+            "name": "Football",
+            "slug": "football",
+            "id": 1
+        },
+        "userCount": 2441982,
+        "nameCode": "BRA",
+        "ranking": 6,
+        "disabled": false,
+        "national": true,
+        "type": 0,
+        "id": 4748,
+        "teamColors": {
+            "primary": "#ffff00",
+            "secondary": "#009933",
+            "text": "#009933"
+        },
+        "fieldTranslations": {
+            "nameTranslation": {
+                "ar": "البرازيل",
+                "bn": "ব্রাজিল",
+                "hi": "ब्राजील",
+                "ru": "Бразилия"
+            },
+            "shortNameTranslation": {}
+        }
+    },
+    "statistics": {
+        "totalPass": 24,
+        "accuratePass": 22,
+        "totalLongBalls": 1,
+        "goalAssist": 0,
+        "accurateOwnHalfPasses": 10,
+        "totalOwnHalfPasses": 10,
+        "accurateOppositionHalfPasses": 12,
+        "totalOppositionHalfPasses": 14,
+        "aerialLost": 1,
+        "duelLost": 2,
+        "duelWon": 3,
+        "challengeLost": 1,
+        "totalClearance": 1,
+        "ballRecovery": 3,
+        "totalTackle": 1,
+        "wasFouled": 2,
+        "minutesPlayed": 45,
+        "touches": 30,
+        "rating": 6.8,
+        "possessionLostCtrl": 2,
+        "totalBallCarriesDistance": 69.601760552309,
+        "ballCarriesCount": 8,
+        "totalProgression": 18.344688981856,
+        "progressiveBallCarriesCount": 0,
+        "ratingVersions": {
+            "original": 6.8,
+            "alternative": 6.7
+        },
+        "totalShots": 0,
+        "passValueNormalized": 0.07,
+        "dribbleValueNormalized": 0.06,
+        "defensiveValueNormalized": -0.01,
+        "statisticsType": {
+            "sportSlug": "football",
+            "statisticsType": "player"
+        }
+    },
+    "position": "M",
+    "extra": null
+}

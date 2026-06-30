@@ -1,0 +1,2053 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "label": "routes.py",
+      "file_type": "code",
+      "source_file": "app/api/routes.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "api_routes",
+      "community": 7,
+      "norm_label": "routes.py"
+    },
+    {
+      "label": "get_matches()",
+      "file_type": "code",
+      "source_file": "app/api/routes.py",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "api_routes_get_matches",
+      "community": 7,
+      "norm_label": "get_matches()"
+    },
+    {
+      "label": "get_match_detail()",
+      "file_type": "code",
+      "source_file": "app/api/routes.py",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "api_routes_get_match_detail",
+      "community": 7,
+      "norm_label": "get_match_detail()"
+    },
+    {
+      "label": "main.py",
+      "file_type": "code",
+      "source_file": "app/main.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "app_main",
+      "community": 8,
+      "norm_label": "main.py"
+    },
+    {
+      "label": "serve_dashboard()",
+      "file_type": "code",
+      "source_file": "app/main.py",
+      "source_location": "L30",
+      "_origin": "ast",
+      "id": "app_main_serve_dashboard",
+      "community": 8,
+      "norm_label": "serve_dashboard()"
+    },
+    {
+      "label": "Request",
+      "file_type": "code",
+      "source_file": "app/main.py",
+      "source_location": "L30",
+      "_origin": "ast",
+      "id": "request",
+      "community": 8,
+      "norm_label": "request"
+    },
+    {
+      "label": "plotter.py",
+      "file_type": "code",
+      "source_file": "app/services/plotter.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "services_plotter",
+      "community": 6,
+      "norm_label": "plotter.py"
+    },
+    {
+      "label": "get_base64_image()",
+      "file_type": "code",
+      "source_file": "app/services/plotter.py",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "services_plotter_get_base64_image",
+      "community": 6,
+      "norm_label": "get_base64_image()"
+    },
+    {
+      "label": "get_pitch()",
+      "file_type": "code",
+      "source_file": "app/services/plotter.py",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "services_plotter_get_pitch",
+      "community": 6,
+      "norm_label": "get_pitch()"
+    },
+    {
+      "label": "plot_shotmap()",
+      "file_type": "code",
+      "source_file": "app/services/plotter.py",
+      "source_location": "L25",
+      "_origin": "ast",
+      "id": "services_plotter_plot_shotmap",
+      "community": 6,
+      "norm_label": "plot_shotmap()"
+    },
+    {
+      "label": "plot_jointgrid_shotmap()",
+      "file_type": "code",
+      "source_file": "app/services/plotter.py",
+      "source_location": "L54",
+      "_origin": "ast",
+      "id": "services_plotter_plot_jointgrid_shotmap",
+      "community": 6,
+      "norm_label": "plot_jointgrid_shotmap()"
+    },
+    {
+      "label": "plot_pass_network()",
+      "file_type": "code",
+      "source_file": "app/services/plotter.py",
+      "source_location": "L124",
+      "_origin": "ast",
+      "id": "services_plotter_plot_pass_network",
+      "community": 6,
+      "norm_label": "plot_pass_network()"
+    },
+    {
+      "label": "plot_xg_flow()",
+      "file_type": "code",
+      "source_file": "app/services/plotter.py",
+      "source_location": "L212",
+      "_origin": "ast",
+      "id": "services_plotter_plot_xg_flow",
+      "community": 6,
+      "norm_label": "plot_xg_flow()"
+    },
+    {
+      "label": "plot_pressure_heatmap()",
+      "file_type": "code",
+      "source_file": "app/services/plotter.py",
+      "source_location": "L239",
+      "_origin": "ast",
+      "id": "services_plotter_plot_pressure_heatmap",
+      "community": 6,
+      "norm_label": "plot_pressure_heatmap()"
+    },
+    {
+      "label": "statsbomb_parser.py",
+      "file_type": "code",
+      "source_file": "app/services/statsbomb_parser.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "services_statsbomb_parser",
+      "community": 1,
+      "norm_label": "statsbomb_parser.py"
+    },
+    {
+      "label": "replace_nan()",
+      "file_type": "code",
+      "source_file": "app/services/statsbomb_parser.py",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "services_statsbomb_parser_replace_nan",
+      "community": 1,
+      "norm_label": "replace_nan()"
+    },
+    {
+      "label": "get_matches()",
+      "file_type": "code",
+      "source_file": "app/services/statsbomb_parser.py",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "services_statsbomb_parser_get_matches",
+      "community": 1,
+      "norm_label": "get_matches()"
+    },
+    {
+      "label": "get_match_events()",
+      "file_type": "code",
+      "source_file": "app/services/statsbomb_parser.py",
+      "source_location": "L25",
+      "_origin": "ast",
+      "id": "services_statsbomb_parser_get_match_events",
+      "community": 1,
+      "norm_label": "get_match_events()"
+    },
+    {
+      "label": "get_match_lineups()",
+      "file_type": "code",
+      "source_file": "app/services/statsbomb_parser.py",
+      "source_location": "L33",
+      "_origin": "ast",
+      "id": "services_statsbomb_parser_get_match_lineups",
+      "community": 1,
+      "norm_label": "get_match_lineups()"
+    },
+    {
+      "label": "extract_shots()",
+      "file_type": "code",
+      "source_file": "app/services/statsbomb_parser.py",
+      "source_location": "L41",
+      "_origin": "ast",
+      "id": "services_statsbomb_parser_extract_shots",
+      "community": 1,
+      "norm_label": "extract_shots()"
+    },
+    {
+      "label": "extract_passes()",
+      "file_type": "code",
+      "source_file": "app/services/statsbomb_parser.py",
+      "source_location": "L48",
+      "_origin": "ast",
+      "id": "services_statsbomb_parser_extract_passes",
+      "community": 1,
+      "norm_label": "extract_passes()"
+    },
+    {
+      "label": "extract_pressure_events()",
+      "file_type": "code",
+      "source_file": "app/services/statsbomb_parser.py",
+      "source_location": "L55",
+      "_origin": "ast",
+      "id": "services_statsbomb_parser_extract_pressure_events",
+      "community": 1,
+      "norm_label": "extract_pressure_events()"
+    },
+    {
+      "label": "calculate_advanced_metrics()",
+      "file_type": "code",
+      "source_file": "app/services/statsbomb_parser.py",
+      "source_location": "L62",
+      "_origin": "ast",
+      "id": "services_statsbomb_parser_calculate_advanced_metrics",
+      "community": 1,
+      "norm_label": "calculate_advanced_metrics()"
+    },
+    {
+      "label": "extract_xg_flow()",
+      "file_type": "code",
+      "source_file": "app/services/statsbomb_parser.py",
+      "source_location": "L103",
+      "_origin": "ast",
+      "id": "services_statsbomb_parser_extract_xg_flow",
+      "community": 1,
+      "norm_label": "extract_xg_flow()"
+    },
+    {
+      "label": "is_progressive_pass()",
+      "file_type": "code",
+      "source_file": "app/services/statsbomb_parser.py",
+      "source_location": "L136",
+      "_origin": "ast",
+      "id": "services_statsbomb_parser_is_progressive_pass",
+      "community": 1,
+      "norm_label": "is_progressive_pass()"
+    },
+    {
+      "label": "calculate_player_statistics()",
+      "file_type": "code",
+      "source_file": "app/services/statsbomb_parser.py",
+      "source_location": "L150",
+      "_origin": "ast",
+      "id": "services_statsbomb_parser_calculate_player_statistics",
+      "community": 1,
+      "norm_label": "calculate_player_statistics()"
+    },
+    {
+      "label": "app.js",
+      "file_type": "code",
+      "source_file": "app/static/js/app.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "js_app",
+      "community": 0,
+      "norm_label": "app.js"
+    },
+    {
+      "label": "currentMatchPlayersStats",
+      "file_type": "code",
+      "source_file": "app/static/js/app.js",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "js_app_currentmatchplayersstats",
+      "community": 0,
+      "norm_label": "currentmatchplayersstats"
+    },
+    {
+      "label": "loadMatch()",
+      "file_type": "code",
+      "source_file": "app/static/js/app.js",
+      "source_location": "L60",
+      "_origin": "ast",
+      "id": "js_app_loadmatch",
+      "community": 0,
+      "norm_label": "loadmatch()"
+    },
+    {
+      "label": "PlayerSelector.js",
+      "file_type": "code",
+      "source_file": "app/static/js/components/PlayerSelector.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "components_playerselector",
+      "community": 0,
+      "norm_label": "playerselector.js"
+    },
+    {
+      "label": "PlayerSelector",
+      "file_type": "code",
+      "source_file": "app/static/js/components/PlayerSelector.js",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "components_playerselector_playerselector",
+      "community": 0,
+      "norm_label": "playerselector"
+    },
+    {
+      "label": ".constructor()",
+      "file_type": "code",
+      "source_file": "app/static/js/components/PlayerSelector.js",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "components_playerselector_playerselector_constructor",
+      "community": 0,
+      "norm_label": ".constructor()"
+    },
+    {
+      "label": ".populate()",
+      "file_type": "code",
+      "source_file": "app/static/js/components/PlayerSelector.js",
+      "source_location": "L24",
+      "_origin": "ast",
+      "id": "components_playerselector_playerselector_populate",
+      "community": 0,
+      "norm_label": ".populate()"
+    },
+    {
+      "label": ".handleSelectionChange()",
+      "file_type": "code",
+      "source_file": "app/static/js/components/PlayerSelector.js",
+      "source_location": "L84",
+      "_origin": "ast",
+      "id": "components_playerselector_playerselector_handleselectionchange",
+      "community": 0,
+      "norm_label": ".handleselectionchange()"
+    },
+    {
+      "label": "StatsRadar.js",
+      "file_type": "code",
+      "source_file": "app/static/js/components/StatsRadar.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "components_statsradar",
+      "community": 0,
+      "norm_label": "statsradar.js"
+    },
+    {
+      "label": "StatsRadar",
+      "file_type": "code",
+      "source_file": "app/static/js/components/StatsRadar.js",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "components_statsradar_statsradar",
+      "community": 0,
+      "norm_label": "statsradar"
+    },
+    {
+      "label": ".constructor()",
+      "file_type": "code",
+      "source_file": "app/static/js/components/StatsRadar.js",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "components_statsradar_statsradar_constructor",
+      "community": 0,
+      "norm_label": ".constructor()"
+    },
+    {
+      "label": ".update()",
+      "file_type": "code",
+      "source_file": "app/static/js/components/StatsRadar.js",
+      "source_location": "L32",
+      "_origin": "ast",
+      "id": "components_statsradar_statsradar_update",
+      "community": 0,
+      "norm_label": ".update()"
+    },
+    {
+      "label": ".updateAbsoluteStatsTable()",
+      "file_type": "code",
+      "source_file": "app/static/js/components/StatsRadar.js",
+      "source_location": "L186",
+      "_origin": "ast",
+      "id": "components_statsradar_statsradar_updateabsolutestatstable",
+      "community": 0,
+      "norm_label": ".updateabsolutestatstable()"
+    },
+    {
+      "label": "api.js",
+      "file_type": "code",
+      "source_file": "app/static/js/services/api.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "services_api",
+      "community": 0,
+      "norm_label": "api.js"
+    },
+    {
+      "label": "fetchMatches()",
+      "file_type": "code",
+      "source_file": "app/static/js/services/api.js",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "services_api_fetchmatches",
+      "community": 0,
+      "norm_label": "fetchmatches()"
+    },
+    {
+      "label": "fetchMatchDetails()",
+      "file_type": "code",
+      "source_file": "app/static/js/services/api.js",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "services_api_fetchmatchdetails",
+      "community": 0,
+      "norm_label": "fetchmatchdetails()"
+    },
+    {
+      "label": "competitions.json",
+      "file_type": "code",
+      "source_file": "competitions.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "competitions",
+      "community": 11,
+      "norm_label": "competitions.json"
+    },
+    {
+      "label": "fetch_world_cup_data.py",
+      "file_type": "code",
+      "source_file": "scripts/fetch_world_cup_data.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "scripts_fetch_world_cup_data",
+      "community": 10,
+      "norm_label": "fetch_world_cup_data.py"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "scripts/fetch_world_cup_data.py",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "scripts_fetch_world_cup_data_main",
+      "community": 10,
+      "norm_label": "main()"
+    },
+    {
+      "label": "test_parser.py",
+      "file_type": "code",
+      "source_file": "tests/test_parser.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "tests_test_parser",
+      "community": 1,
+      "norm_label": "test_parser.py"
+    },
+    {
+      "label": "test_is_progressive_pass()",
+      "file_type": "code",
+      "source_file": "tests/test_parser.py",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "tests_test_parser_test_is_progressive_pass",
+      "community": 1,
+      "norm_label": "test_is_progressive_pass()"
+    },
+    {
+      "label": "test_calculate_advanced_metrics()",
+      "file_type": "code",
+      "source_file": "tests/test_parser.py",
+      "source_location": "L28",
+      "_origin": "ast",
+      "id": "tests_test_parser_test_calculate_advanced_metrics",
+      "community": 1,
+      "norm_label": "test_calculate_advanced_metrics()"
+    },
+    {
+      "label": "test_calculate_player_statistics()",
+      "file_type": "code",
+      "source_file": "tests/test_parser.py",
+      "source_location": "L79",
+      "_origin": "ast",
+      "id": "tests_test_parser_test_calculate_player_statistics",
+      "community": 1,
+      "norm_label": "test_calculate_player_statistics()"
+    },
+    {
+      "label": "README.md",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "readme",
+      "community": 9,
+      "norm_label": "readme.md"
+    },
+    {
+      "label": "Statsbomb World Cup 2022 Dashboard",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "readme_statsbomb_world_cup_2022_dashboard",
+      "community": 9,
+      "norm_label": "statsbomb world cup 2022 dashboard"
+    },
+    {
+      "label": "README_DESAFIO_2.md",
+      "file_type": "document",
+      "source_file": "README_DESAFIO_2.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "readme_desafio_2",
+      "community": 3,
+      "norm_label": "readme_desafio_2.md"
+    },
+    {
+      "label": "\ud83c\udfc6 Desafio 2: Evolu\u00e7\u00e3o T\u00e1tica do Dashboard (Para Casa)",
+      "file_type": "document",
+      "source_file": "README_DESAFIO_2.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "readme_desafio_2_desafio_2_evolu\u00e7\u00e3o_t\u00e1tica_do_dashboard_para_casa",
+      "community": 3,
+      "norm_label": "\ud83c\udfc6 desafio 2: evolucao tatica do dashboard (para casa)"
+    },
+    {
+      "label": "\ud83c\udfaf O Objetivo",
+      "file_type": "document",
+      "source_file": "README_DESAFIO_2.md",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "readme_desafio_2_o_objetivo",
+      "community": 3,
+      "norm_label": "\ud83c\udfaf o objetivo"
+    },
+    {
+      "label": "Requisitos do Desafio:",
+      "file_type": "document",
+      "source_file": "README_DESAFIO_2.md",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "readme_desafio_2_requisitos_do_desafio",
+      "community": 3,
+      "norm_label": "requisitos do desafio:"
+    },
+    {
+      "label": "\ud83e\udd16 Como Orquestrar seu Esquadr\u00e3o (Guia do Aluno)",
+      "file_type": "document",
+      "source_file": "README_DESAFIO_2.md",
+      "source_location": "L25",
+      "_origin": "ast",
+      "id": "readme_desafio_2_como_orquestrar_seu_esquadr\u00e3o_guia_do_aluno",
+      "community": 3,
+      "norm_label": "\ud83e\udd16 como orquestrar seu esquadrao (guia do aluno)"
+    },
+    {
+      "label": "Passo 0: Preparando o Vesti\u00e1rio (Setup) \ud83c\udfdf\ufe0f",
+      "file_type": "document",
+      "source_file": "README_DESAFIO_2.md",
+      "source_location": "L29",
+      "_origin": "ast",
+      "id": "readme_desafio_2_passo_0_preparando_o_vesti\u00e1rio_setup",
+      "community": 3,
+      "norm_label": "passo 0: preparando o vestiario (setup) \ud83c\udfdf\ufe0f"
+    },
+    {
+      "label": "Passo 1: Invoque o Maestro L\u00e9o \ud83c\udfbc",
+      "file_type": "document",
+      "source_file": "README_DESAFIO_2.md",
+      "source_location": "L35",
+      "_origin": "ast",
+      "id": "readme_desafio_2_passo_1_invoque_o_maestro_l\u00e9o",
+      "community": 3,
+      "norm_label": "passo 1: invoque o maestro leo \ud83c\udfbc"
+    },
+    {
+      "label": "Passo 2: O Brainstorming \ud83e\udde0",
+      "file_type": "document",
+      "source_file": "README_DESAFIO_2.md",
+      "source_location": "L39",
+      "_origin": "ast",
+      "id": "readme_desafio_2_passo_2_o_brainstorming",
+      "community": 3,
+      "norm_label": "passo 2: o brainstorming \ud83e\udde0"
+    },
+    {
+      "label": "Passo 3: Ative os Especialistas (UI/UX e Frontend) \ud83c\udfa8",
+      "file_type": "document",
+      "source_file": "README_DESAFIO_2.md",
+      "source_location": "L43",
+      "_origin": "ast",
+      "id": "readme_desafio_2_passo_3_ative_os_especialistas_ui_ux_e_frontend",
+      "community": 3,
+      "norm_label": "passo 3: ative os especialistas (ui/ux e frontend) \ud83c\udfa8"
+    },
+    {
+      "label": "Passo 4: Aprenda com o Professor L\u00e9o \ud83c\udf93",
+      "file_type": "document",
+      "source_file": "README_DESAFIO_2.md",
+      "source_location": "L48",
+      "_origin": "ast",
+      "id": "readme_desafio_2_passo_4_aprenda_com_o_professor_l\u00e9o",
+      "community": 3,
+      "norm_label": "passo 4: aprenda com o professor leo \ud83c\udf93"
+    },
+    {
+      "label": "\ud83d\udca1 Dicas de Ouro",
+      "file_type": "document",
+      "source_file": "README_DESAFIO_2.md",
+      "source_location": "L54",
+      "_origin": "ast",
+      "id": "readme_desafio_2_dicas_de_ouro",
+      "community": 3,
+      "norm_label": "\ud83d\udca1 dicas de ouro"
+    },
+    {
+      "label": "DATA_DICTIONARY.md",
+      "file_type": "document",
+      "source_file": "docs/DATA_DICTIONARY.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_data_dictionary",
+      "community": 2,
+      "norm_label": "data_dictionary.md"
+    },
+    {
+      "label": "Dicion\u00e1rio de Dados: StatsBomb Open Data",
+      "file_type": "document",
+      "source_file": "docs/DATA_DICTIONARY.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_data_dictionary_dicion\u00e1rio_de_dados_statsbomb_open_data",
+      "community": 2,
+      "norm_label": "dicionario de dados: statsbomb open data"
+    },
+    {
+      "label": "1. Dicion\u00e1rio de Eventos Principais",
+      "file_type": "document",
+      "source_file": "docs/DATA_DICTIONARY.md",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "docs_data_dictionary_1_dicion\u00e1rio_de_eventos_principais",
+      "community": 2,
+      "norm_label": "1. dicionario de eventos principais"
+    },
+    {
+      "label": "1.1 Passes (`type.name == \"Pass\"`)",
+      "file_type": "document",
+      "source_file": "docs/DATA_DICTIONARY.md",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "docs_data_dictionary_1_1_passes_type_name_pass",
+      "community": 2,
+      "norm_label": "1.1 passes (`type.name == \"pass\"`)"
+    },
+    {
+      "label": "1.2 Finaliza\u00e7\u00f5es (`type.name == \"Shot\"`)",
+      "file_type": "document",
+      "source_file": "docs/DATA_DICTIONARY.md",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "docs_data_dictionary_1_2_finaliza\u00e7\u00f5es_type_name_shot",
+      "community": 2,
+      "norm_label": "1.2 finalizacoes (`type.name == \"shot\"`)"
+    },
+    {
+      "label": "1.3 Condu\u00e7\u00f5es (`type.name == \"Carry\"`)",
+      "file_type": "document",
+      "source_file": "docs/DATA_DICTIONARY.md",
+      "source_location": "L27",
+      "_origin": "ast",
+      "id": "docs_data_dictionary_1_3_condu\u00e7\u00f5es_type_name_carry",
+      "community": 2,
+      "norm_label": "1.3 conducoes (`type.name == \"carry\"`)"
+    },
+    {
+      "label": "1.4 A\u00e7\u00f5es Defensivas (`Pressure`, `Duel`, `Interception`, `Clearance`, `Block`)",
+      "file_type": "document",
+      "source_file": "docs/DATA_DICTIONARY.md",
+      "source_location": "L31",
+      "_origin": "ast",
+      "id": "docs_data_dictionary_1_4_a\u00e7\u00f5es_defensivas_pressure_duel_interception_clearance_block",
+      "community": 2,
+      "norm_label": "1.4 acoes defensivas (`pressure`, `duel`, `interception`, `clearance`, `block`)"
+    },
+    {
+      "label": "2. O Que Podemos Fazer (Vis\u00e3o T\u00e1tica / Professor L\u00e9o)",
+      "file_type": "document",
+      "source_file": "docs/DATA_DICTIONARY.md",
+      "source_location": "L38",
+      "_origin": "ast",
+      "id": "docs_data_dictionary_2_o_que_podemos_fazer_vis\u00e3o_t\u00e1tica_professor_l\u00e9o",
+      "community": 2,
+      "norm_label": "2. o que podemos fazer (visao tatica / professor leo)"
+    },
+    {
+      "label": "A. An\u00e1lise de Construtores de Jogo (Playmakers)",
+      "file_type": "document",
+      "source_file": "docs/DATA_DICTIONARY.md",
+      "source_location": "L42",
+      "_origin": "ast",
+      "id": "docs_data_dictionary_a_an\u00e1lise_de_construtores_de_jogo_playmakers",
+      "community": 2,
+      "norm_label": "a. analise de construtores de jogo (playmakers)"
+    },
+    {
+      "label": "B. An\u00e1lise de Intensidade Defensiva",
+      "file_type": "document",
+      "source_file": "docs/DATA_DICTIONARY.md",
+      "source_location": "L46",
+      "_origin": "ast",
+      "id": "docs_data_dictionary_b_an\u00e1lise_de_intensidade_defensiva",
+      "community": 2,
+      "norm_label": "b. analise de intensidade defensiva"
+    },
+    {
+      "label": "C. Valoriza\u00e7\u00e3o da Posse de Bola e Progress\u00e3o (Ball Progression)",
+      "file_type": "document",
+      "source_file": "docs/DATA_DICTIONARY.md",
+      "source_location": "L50",
+      "_origin": "ast",
+      "id": "docs_data_dictionary_c_valoriza\u00e7\u00e3o_da_posse_de_bola_e_progress\u00e3o_ball_progression",
+      "community": 2,
+      "norm_label": "c. valorizacao da posse de bola e progressao (ball progression)"
+    },
+    {
+      "label": "D. Radares Individuais (Player Radars)",
+      "file_type": "document",
+      "source_file": "docs/DATA_DICTIONARY.md",
+      "source_location": "L54",
+      "_origin": "ast",
+      "id": "docs_data_dictionary_d_radares_individuais_player_radars",
+      "community": 2,
+      "norm_label": "d. radares individuais (player radars)"
+    },
+    {
+      "label": "PROJECT_DOCUMENTATION.md",
+      "file_type": "document",
+      "source_file": "docs/PROJECT_DOCUMENTATION.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_project_documentation",
+      "community": 4,
+      "norm_label": "project_documentation.md"
+    },
+    {
+      "label": "Documenta\u00e7\u00e3o do Projeto: StatsBomb Analytics",
+      "file_type": "document",
+      "source_file": "docs/PROJECT_DOCUMENTATION.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_project_documentation_documenta\u00e7\u00e3o_do_projeto_statsbomb_analytics",
+      "community": 4,
+      "norm_label": "documentacao do projeto: statsbomb analytics"
+    },
+    {
+      "label": "1. Vis\u00e3o Geral",
+      "file_type": "document",
+      "source_file": "docs/PROJECT_DOCUMENTATION.md",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "docs_project_documentation_1_vis\u00e3o_geral",
+      "community": 4,
+      "norm_label": "1. visao geral"
+    },
+    {
+      "label": "2. Estrutura de Diret\u00f3rios",
+      "file_type": "document",
+      "source_file": "docs/PROJECT_DOCUMENTATION.md",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "docs_project_documentation_2_estrutura_de_diret\u00f3rios",
+      "community": 4,
+      "norm_label": "2. estrutura de diretorios"
+    },
+    {
+      "label": "3. Componentes Principais",
+      "file_type": "document",
+      "source_file": "docs/PROJECT_DOCUMENTATION.md",
+      "source_location": "L26",
+      "_origin": "ast",
+      "id": "docs_project_documentation_3_componentes_principais",
+      "community": 4,
+      "norm_label": "3. componentes principais"
+    },
+    {
+      "label": "3.1. Processamento de Dados (`statsbomb_parser.py`)",
+      "file_type": "document",
+      "source_file": "docs/PROJECT_DOCUMENTATION.md",
+      "source_location": "L28",
+      "_origin": "ast",
+      "id": "docs_project_documentation_3_1_processamento_de_dados_statsbomb_parser_py",
+      "community": 4,
+      "norm_label": "3.1. processamento de dados (`statsbomb_parser.py`)"
+    },
+    {
+      "label": "3.2. Motor de Visualiza\u00e7\u00e3o (`plotter.py`)",
+      "file_type": "document",
+      "source_file": "docs/PROJECT_DOCUMENTATION.md",
+      "source_location": "L38",
+      "_origin": "ast",
+      "id": "docs_project_documentation_3_2_motor_de_visualiza\u00e7\u00e3o_plotter_py",
+      "community": 4,
+      "norm_label": "3.2. motor de visualizacao (`plotter.py`)"
+    },
+    {
+      "label": "3.3. API (`routes.py` e `main.py`)",
+      "file_type": "document",
+      "source_file": "docs/PROJECT_DOCUMENTATION.md",
+      "source_location": "L46",
+      "_origin": "ast",
+      "id": "docs_project_documentation_3_3_api_routes_py_e_main_py",
+      "community": 4,
+      "norm_label": "3.3. api (`routes.py` e `main.py`)"
+    },
+    {
+      "label": "3.4. Frontend (`index.html`)",
+      "file_type": "document",
+      "source_file": "docs/PROJECT_DOCUMENTATION.md",
+      "source_location": "L52",
+      "_origin": "ast",
+      "id": "docs_project_documentation_3_4_frontend_index_html",
+      "community": 4,
+      "norm_label": "3.4. frontend (`index.html`)"
+    },
+    {
+      "label": "4. Depend\u00eancias",
+      "file_type": "document",
+      "source_file": "docs/PROJECT_DOCUMENTATION.md",
+      "source_location": "L59",
+      "_origin": "ast",
+      "id": "docs_project_documentation_4_depend\u00eancias",
+      "community": 4,
+      "norm_label": "4. dependencias"
+    },
+    {
+      "label": "TECH_LEAD_ANALYSIS.md",
+      "file_type": "document",
+      "source_file": "docs/TECH_LEAD_ANALYSIS.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_tech_lead_analysis",
+      "community": 5,
+      "norm_label": "tech_lead_analysis.md"
+    },
+    {
+      "label": "An\u00e1lise do Tech Lead: Estimativa de Recursos e Custos do Projeto",
+      "file_type": "document",
+      "source_file": "docs/TECH_LEAD_ANALYSIS.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_tech_lead_analysis_an\u00e1lise_do_tech_lead_estimativa_de_recursos_e_custos_do_projeto",
+      "community": 5,
+      "norm_label": "analise do tech lead: estimativa de recursos e custos do projeto"
+    },
+    {
+      "label": "1. Escopo Constru\u00eddo (O Produto)",
+      "file_type": "document",
+      "source_file": "docs/TECH_LEAD_ANALYSIS.md",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "docs_tech_lead_analysis_1_escopo_constru\u00eddo_o_produto",
+      "community": 5,
+      "norm_label": "1. escopo construido (o produto)"
+    },
+    {
+      "label": "2. Squad Necess\u00e1ria (Modelo Tradicional)",
+      "file_type": "document",
+      "source_file": "docs/TECH_LEAD_ANALYSIS.md",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "docs_tech_lead_analysis_2_squad_necess\u00e1ria_modelo_tradicional",
+      "community": 5,
+      "norm_label": "2. squad necessaria (modelo tradicional)"
+    },
+    {
+      "label": "3. Estimativas de Tempo e Custo (Humanos vs. IA)",
+      "file_type": "document",
+      "source_file": "docs/TECH_LEAD_ANALYSIS.md",
+      "source_location": "L26",
+      "_origin": "ast",
+      "id": "docs_tech_lead_analysis_3_estimativas_de_tempo_e_custo_humanos_vs_ia",
+      "community": 5,
+      "norm_label": "3. estimativas de tempo e custo (humanos vs. ia)"
+    },
+    {
+      "label": "3.1. Fluxo Tradicional Humano",
+      "file_type": "document",
+      "source_file": "docs/TECH_LEAD_ANALYSIS.md",
+      "source_location": "L28",
+      "_origin": "ast",
+      "id": "docs_tech_lead_analysis_3_1_fluxo_tradicional_humano",
+      "community": 5,
+      "norm_label": "3.1. fluxo tradicional humano"
+    },
+    {
+      "label": "3.2. Fluxo \u00c1gil Impulsionado por IA (O que foi executado)",
+      "file_type": "document",
+      "source_file": "docs/TECH_LEAD_ANALYSIS.md",
+      "source_location": "L40",
+      "_origin": "ast",
+      "id": "docs_tech_lead_analysis_3_2_fluxo_\u00e1gil_impulsionado_por_ia_o_que_foi_executado",
+      "community": 5,
+      "norm_label": "3.2. fluxo agil impulsionado por ia (o que foi executado)"
+    },
+    {
+      "label": "4. Veredito e Conclus\u00e3o",
+      "file_type": "document",
+      "source_file": "docs/TECH_LEAD_ANALYSIS.md",
+      "source_location": "L49",
+      "_origin": "ast",
+      "id": "docs_tech_lead_analysis_4_veredito_e_conclus\u00e3o",
+      "community": 5,
+      "norm_label": "4. veredito e conclusao"
+    },
+    {
+      "label": "competitions_list.md",
+      "file_type": "document",
+      "source_file": "docs/competitions_list.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_competitions_list",
+      "community": 12,
+      "norm_label": "competitions_list.md"
+    },
+    {
+      "label": "world_cup_2022_matches.md",
+      "file_type": "document",
+      "source_file": "docs/world_cup_2022_matches.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_world_cup_2022_matches",
+      "community": 13,
+      "norm_label": "world_cup_2022_matches.md"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/routes.py",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "api_routes",
+      "target": "api_routes_get_match_detail",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/routes.py",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "api_routes",
+      "target": "api_routes_get_matches",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/routes.py",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "api_routes_get_match_detail",
+      "target": "api_routes_get_matches",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/main.py",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "app_main",
+      "target": "app_main_serve_dashboard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "app/main.py",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "app_main_serve_dashboard",
+      "target": "request",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/services/plotter.py",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "services_plotter",
+      "target": "services_plotter_get_base64_image",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/services/plotter.py",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "services_plotter",
+      "target": "services_plotter_get_pitch",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/services/plotter.py",
+      "source_location": "L54",
+      "weight": 1.0,
+      "source": "services_plotter",
+      "target": "services_plotter_plot_jointgrid_shotmap",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/services/plotter.py",
+      "source_location": "L124",
+      "weight": 1.0,
+      "source": "services_plotter",
+      "target": "services_plotter_plot_pass_network",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/services/plotter.py",
+      "source_location": "L239",
+      "weight": 1.0,
+      "source": "services_plotter",
+      "target": "services_plotter_plot_pressure_heatmap",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/services/plotter.py",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "services_plotter",
+      "target": "services_plotter_plot_shotmap",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/services/plotter.py",
+      "source_location": "L212",
+      "weight": 1.0,
+      "source": "services_plotter",
+      "target": "services_plotter_plot_xg_flow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/services/plotter.py",
+      "source_location": "L122",
+      "weight": 1.0,
+      "source": "services_plotter_plot_jointgrid_shotmap",
+      "target": "services_plotter_get_base64_image",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/services/plotter.py",
+      "source_location": "L210",
+      "weight": 1.0,
+      "source": "services_plotter_plot_pass_network",
+      "target": "services_plotter_get_base64_image",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/services/plotter.py",
+      "source_location": "L268",
+      "weight": 1.0,
+      "source": "services_plotter_plot_pressure_heatmap",
+      "target": "services_plotter_get_base64_image",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/services/plotter.py",
+      "source_location": "L52",
+      "weight": 1.0,
+      "source": "services_plotter_plot_shotmap",
+      "target": "services_plotter_get_base64_image",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/services/plotter.py",
+      "source_location": "L237",
+      "weight": 1.0,
+      "source": "services_plotter_plot_xg_flow",
+      "target": "services_plotter_get_base64_image",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/services/plotter.py",
+      "source_location": "L65",
+      "weight": 1.0,
+      "source": "services_plotter_plot_jointgrid_shotmap",
+      "target": "services_plotter_get_pitch",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/services/plotter.py",
+      "source_location": "L181",
+      "weight": 1.0,
+      "source": "services_plotter_plot_pass_network",
+      "target": "services_plotter_get_pitch",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/services/plotter.py",
+      "source_location": "L240",
+      "weight": 1.0,
+      "source": "services_plotter_plot_pressure_heatmap",
+      "target": "services_plotter_get_pitch",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/services/plotter.py",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "services_plotter_plot_shotmap",
+      "target": "services_plotter_get_pitch",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/services/plotter.py",
+      "source_location": "L60",
+      "weight": 1.0,
+      "source": "services_plotter_plot_jointgrid_shotmap",
+      "target": "services_plotter_plot_shotmap",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/services/statsbomb_parser.py",
+      "source_location": "L62",
+      "weight": 1.0,
+      "source": "services_statsbomb_parser",
+      "target": "services_statsbomb_parser_calculate_advanced_metrics",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/services/statsbomb_parser.py",
+      "source_location": "L150",
+      "weight": 1.0,
+      "source": "services_statsbomb_parser",
+      "target": "services_statsbomb_parser_calculate_player_statistics",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/services/statsbomb_parser.py",
+      "source_location": "L48",
+      "weight": 1.0,
+      "source": "services_statsbomb_parser",
+      "target": "services_statsbomb_parser_extract_passes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/services/statsbomb_parser.py",
+      "source_location": "L55",
+      "weight": 1.0,
+      "source": "services_statsbomb_parser",
+      "target": "services_statsbomb_parser_extract_pressure_events",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/services/statsbomb_parser.py",
+      "source_location": "L41",
+      "weight": 1.0,
+      "source": "services_statsbomb_parser",
+      "target": "services_statsbomb_parser_extract_shots",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/services/statsbomb_parser.py",
+      "source_location": "L103",
+      "weight": 1.0,
+      "source": "services_statsbomb_parser",
+      "target": "services_statsbomb_parser_extract_xg_flow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/services/statsbomb_parser.py",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "services_statsbomb_parser",
+      "target": "services_statsbomb_parser_get_match_events",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/services/statsbomb_parser.py",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "services_statsbomb_parser",
+      "target": "services_statsbomb_parser_get_match_lineups",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/services/statsbomb_parser.py",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "services_statsbomb_parser",
+      "target": "services_statsbomb_parser_get_matches",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/services/statsbomb_parser.py",
+      "source_location": "L136",
+      "weight": 1.0,
+      "source": "services_statsbomb_parser",
+      "target": "services_statsbomb_parser_is_progressive_pass",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/services/statsbomb_parser.py",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "services_statsbomb_parser",
+      "target": "services_statsbomb_parser_replace_nan",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/services/statsbomb_parser.py",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "services_statsbomb_parser_get_match_events",
+      "target": "services_statsbomb_parser_replace_nan",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/services/statsbomb_parser.py",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "services_statsbomb_parser_get_match_lineups",
+      "target": "services_statsbomb_parser_replace_nan",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/services/statsbomb_parser.py",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "services_statsbomb_parser_get_matches",
+      "target": "services_statsbomb_parser_replace_nan",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_parser.py",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "tests_test_parser",
+      "target": "services_statsbomb_parser_calculate_advanced_metrics",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_parser.py",
+      "source_location": "L67",
+      "weight": 1.0,
+      "source": "tests_test_parser_test_calculate_advanced_metrics",
+      "target": "services_statsbomb_parser_calculate_advanced_metrics",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/services/statsbomb_parser.py",
+      "source_location": "L226",
+      "weight": 1.0,
+      "source": "services_statsbomb_parser_calculate_player_statistics",
+      "target": "services_statsbomb_parser_is_progressive_pass",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_parser.py",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "tests_test_parser",
+      "target": "services_statsbomb_parser_is_progressive_pass",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_parser.py",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "tests_test_parser_test_is_progressive_pass",
+      "target": "services_statsbomb_parser_is_progressive_pass",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_parser.py",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "tests_test_parser",
+      "target": "services_statsbomb_parser_calculate_player_statistics",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_parser.py",
+      "source_location": "L99",
+      "weight": 1.0,
+      "source": "tests_test_parser_test_calculate_player_statistics",
+      "target": "services_statsbomb_parser_calculate_player_statistics",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/static/js/app.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "js_app",
+      "target": "components_playerselector",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/static/js/app.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "js_app",
+      "target": "components_playerselector_playerselector",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/static/js/app.js",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "js_app",
+      "target": "components_statsradar",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/static/js/app.js",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "js_app",
+      "target": "components_statsradar_statsradar",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/static/js/app.js",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "js_app",
+      "target": "js_app_currentmatchplayersstats",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/static/js/app.js",
+      "source_location": "L60",
+      "weight": 1.0,
+      "source": "js_app",
+      "target": "js_app_loadmatch",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/static/js/app.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "js_app",
+      "target": "services_api",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/static/js/app.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "js_app",
+      "target": "services_api_fetchmatchdetails",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/static/js/app.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "js_app",
+      "target": "services_api_fetchmatches",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/static/js/app.js",
+      "source_location": "L76",
+      "weight": 1.0,
+      "source": "js_app_loadmatch",
+      "target": "services_api_fetchmatchdetails",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/static/js/components/PlayerSelector.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "components_playerselector",
+      "target": "components_playerselector_playerselector",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/static/js/components/PlayerSelector.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "components_playerselector_playerselector",
+      "target": "components_playerselector_playerselector_constructor",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/static/js/components/PlayerSelector.js",
+      "source_location": "L84",
+      "weight": 1.0,
+      "source": "components_playerselector_playerselector",
+      "target": "components_playerselector_playerselector_handleselectionchange",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/static/js/components/PlayerSelector.js",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "components_playerselector_playerselector",
+      "target": "components_playerselector_playerselector_populate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/static/js/components/PlayerSelector.js",
+      "source_location": "L81",
+      "weight": 1.0,
+      "source": "components_playerselector_playerselector_populate",
+      "target": "components_playerselector_playerselector_handleselectionchange",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/static/js/components/StatsRadar.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "components_statsradar",
+      "target": "components_statsradar_statsradar",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/static/js/components/StatsRadar.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "components_statsradar_statsradar",
+      "target": "components_statsradar_statsradar_constructor",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/static/js/components/StatsRadar.js",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "components_statsradar_statsradar",
+      "target": "components_statsradar_statsradar_update",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/static/js/components/StatsRadar.js",
+      "source_location": "L186",
+      "weight": 1.0,
+      "source": "components_statsradar_statsradar",
+      "target": "components_statsradar_statsradar_updateabsolutestatstable",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/static/js/components/StatsRadar.js",
+      "source_location": "L91",
+      "weight": 1.0,
+      "source": "components_statsradar_statsradar_update",
+      "target": "components_statsradar_statsradar_updateabsolutestatstable",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/static/js/services/api.js",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "services_api",
+      "target": "services_api_fetchmatchdetails",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/static/js/services/api.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "services_api",
+      "target": "services_api_fetchmatches",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/fetch_world_cup_data.py",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "scripts_fetch_world_cup_data",
+      "target": "scripts_fetch_world_cup_data_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_parser.py",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "tests_test_parser",
+      "target": "tests_test_parser_test_calculate_advanced_metrics",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_parser.py",
+      "source_location": "L79",
+      "weight": 1.0,
+      "source": "tests_test_parser",
+      "target": "tests_test_parser_test_calculate_player_statistics",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_parser.py",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "tests_test_parser",
+      "target": "tests_test_parser_test_is_progressive_pass",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "readme",
+      "target": "readme_statsbomb_world_cup_2022_dashboard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README_DESAFIO_2.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "readme_desafio_2",
+      "target": "readme_desafio_2_desafio_2_evolu\u00e7\u00e3o_t\u00e1tica_do_dashboard_para_casa",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README_DESAFIO_2.md",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "readme_desafio_2_desafio_2_evolu\u00e7\u00e3o_t\u00e1tica_do_dashboard_para_casa",
+      "target": "readme_desafio_2_como_orquestrar_seu_esquadr\u00e3o_guia_do_aluno",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README_DESAFIO_2.md",
+      "source_location": "L54",
+      "weight": 1.0,
+      "source": "readme_desafio_2_desafio_2_evolu\u00e7\u00e3o_t\u00e1tica_do_dashboard_para_casa",
+      "target": "readme_desafio_2_dicas_de_ouro",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README_DESAFIO_2.md",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "readme_desafio_2_desafio_2_evolu\u00e7\u00e3o_t\u00e1tica_do_dashboard_para_casa",
+      "target": "readme_desafio_2_o_objetivo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README_DESAFIO_2.md",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "readme_desafio_2_o_objetivo",
+      "target": "readme_desafio_2_requisitos_do_desafio",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README_DESAFIO_2.md",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "readme_desafio_2_como_orquestrar_seu_esquadr\u00e3o_guia_do_aluno",
+      "target": "readme_desafio_2_passo_0_preparando_o_vesti\u00e1rio_setup",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README_DESAFIO_2.md",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "readme_desafio_2_como_orquestrar_seu_esquadr\u00e3o_guia_do_aluno",
+      "target": "readme_desafio_2_passo_1_invoque_o_maestro_l\u00e9o",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README_DESAFIO_2.md",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "readme_desafio_2_como_orquestrar_seu_esquadr\u00e3o_guia_do_aluno",
+      "target": "readme_desafio_2_passo_2_o_brainstorming",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README_DESAFIO_2.md",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "readme_desafio_2_como_orquestrar_seu_esquadr\u00e3o_guia_do_aluno",
+      "target": "readme_desafio_2_passo_3_ative_os_especialistas_ui_ux_e_frontend",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README_DESAFIO_2.md",
+      "source_location": "L48",
+      "weight": 1.0,
+      "source": "readme_desafio_2_como_orquestrar_seu_esquadr\u00e3o_guia_do_aluno",
+      "target": "readme_desafio_2_passo_4_aprenda_com_o_professor_l\u00e9o",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/DATA_DICTIONARY.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "docs_data_dictionary",
+      "target": "docs_data_dictionary_dicion\u00e1rio_de_dados_statsbomb_open_data",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/DATA_DICTIONARY.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "docs_data_dictionary_dicion\u00e1rio_de_dados_statsbomb_open_data",
+      "target": "docs_data_dictionary_1_dicion\u00e1rio_de_eventos_principais",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/DATA_DICTIONARY.md",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "docs_data_dictionary_dicion\u00e1rio_de_dados_statsbomb_open_data",
+      "target": "docs_data_dictionary_2_o_que_podemos_fazer_vis\u00e3o_t\u00e1tica_professor_l\u00e9o",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/DATA_DICTIONARY.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "docs_data_dictionary_1_dicion\u00e1rio_de_eventos_principais",
+      "target": "docs_data_dictionary_1_1_passes_type_name_pass",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/DATA_DICTIONARY.md",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "docs_data_dictionary_1_dicion\u00e1rio_de_eventos_principais",
+      "target": "docs_data_dictionary_1_2_finaliza\u00e7\u00f5es_type_name_shot",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/DATA_DICTIONARY.md",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "docs_data_dictionary_1_dicion\u00e1rio_de_eventos_principais",
+      "target": "docs_data_dictionary_1_3_condu\u00e7\u00f5es_type_name_carry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/DATA_DICTIONARY.md",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "docs_data_dictionary_1_dicion\u00e1rio_de_eventos_principais",
+      "target": "docs_data_dictionary_1_4_a\u00e7\u00f5es_defensivas_pressure_duel_interception_clearance_block",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/DATA_DICTIONARY.md",
+      "source_location": "L42",
+      "weight": 1.0,
+      "source": "docs_data_dictionary_2_o_que_podemos_fazer_vis\u00e3o_t\u00e1tica_professor_l\u00e9o",
+      "target": "docs_data_dictionary_a_an\u00e1lise_de_construtores_de_jogo_playmakers",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/DATA_DICTIONARY.md",
+      "source_location": "L46",
+      "weight": 1.0,
+      "source": "docs_data_dictionary_2_o_que_podemos_fazer_vis\u00e3o_t\u00e1tica_professor_l\u00e9o",
+      "target": "docs_data_dictionary_b_an\u00e1lise_de_intensidade_defensiva",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/DATA_DICTIONARY.md",
+      "source_location": "L50",
+      "weight": 1.0,
+      "source": "docs_data_dictionary_2_o_que_podemos_fazer_vis\u00e3o_t\u00e1tica_professor_l\u00e9o",
+      "target": "docs_data_dictionary_c_valoriza\u00e7\u00e3o_da_posse_de_bola_e_progress\u00e3o_ball_progression",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/DATA_DICTIONARY.md",
+      "source_location": "L54",
+      "weight": 1.0,
+      "source": "docs_data_dictionary_2_o_que_podemos_fazer_vis\u00e3o_t\u00e1tica_professor_l\u00e9o",
+      "target": "docs_data_dictionary_d_radares_individuais_player_radars",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PROJECT_DOCUMENTATION.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "docs_project_documentation",
+      "target": "docs_project_documentation_documenta\u00e7\u00e3o_do_projeto_statsbomb_analytics",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PROJECT_DOCUMENTATION.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "docs_project_documentation_documenta\u00e7\u00e3o_do_projeto_statsbomb_analytics",
+      "target": "docs_project_documentation_1_vis\u00e3o_geral",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PROJECT_DOCUMENTATION.md",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "docs_project_documentation_documenta\u00e7\u00e3o_do_projeto_statsbomb_analytics",
+      "target": "docs_project_documentation_2_estrutura_de_diret\u00f3rios",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PROJECT_DOCUMENTATION.md",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "docs_project_documentation_documenta\u00e7\u00e3o_do_projeto_statsbomb_analytics",
+      "target": "docs_project_documentation_3_componentes_principais",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PROJECT_DOCUMENTATION.md",
+      "source_location": "L59",
+      "weight": 1.0,
+      "source": "docs_project_documentation_documenta\u00e7\u00e3o_do_projeto_statsbomb_analytics",
+      "target": "docs_project_documentation_4_depend\u00eancias",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PROJECT_DOCUMENTATION.md",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "docs_project_documentation_3_componentes_principais",
+      "target": "docs_project_documentation_3_1_processamento_de_dados_statsbomb_parser_py",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PROJECT_DOCUMENTATION.md",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "docs_project_documentation_3_componentes_principais",
+      "target": "docs_project_documentation_3_2_motor_de_visualiza\u00e7\u00e3o_plotter_py",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PROJECT_DOCUMENTATION.md",
+      "source_location": "L46",
+      "weight": 1.0,
+      "source": "docs_project_documentation_3_componentes_principais",
+      "target": "docs_project_documentation_3_3_api_routes_py_e_main_py",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PROJECT_DOCUMENTATION.md",
+      "source_location": "L52",
+      "weight": 1.0,
+      "source": "docs_project_documentation_3_componentes_principais",
+      "target": "docs_project_documentation_3_4_frontend_index_html",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/TECH_LEAD_ANALYSIS.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "docs_tech_lead_analysis",
+      "target": "docs_tech_lead_analysis_an\u00e1lise_do_tech_lead_estimativa_de_recursos_e_custos_do_projeto",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/TECH_LEAD_ANALYSIS.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "docs_tech_lead_analysis_an\u00e1lise_do_tech_lead_estimativa_de_recursos_e_custos_do_projeto",
+      "target": "docs_tech_lead_analysis_1_escopo_constru\u00eddo_o_produto",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/TECH_LEAD_ANALYSIS.md",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "docs_tech_lead_analysis_an\u00e1lise_do_tech_lead_estimativa_de_recursos_e_custos_do_projeto",
+      "target": "docs_tech_lead_analysis_2_squad_necess\u00e1ria_modelo_tradicional",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/TECH_LEAD_ANALYSIS.md",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "docs_tech_lead_analysis_an\u00e1lise_do_tech_lead_estimativa_de_recursos_e_custos_do_projeto",
+      "target": "docs_tech_lead_analysis_3_estimativas_de_tempo_e_custo_humanos_vs_ia",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/TECH_LEAD_ANALYSIS.md",
+      "source_location": "L49",
+      "weight": 1.0,
+      "source": "docs_tech_lead_analysis_an\u00e1lise_do_tech_lead_estimativa_de_recursos_e_custos_do_projeto",
+      "target": "docs_tech_lead_analysis_4_veredito_e_conclus\u00e3o",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/TECH_LEAD_ANALYSIS.md",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "docs_tech_lead_analysis_3_estimativas_de_tempo_e_custo_humanos_vs_ia",
+      "target": "docs_tech_lead_analysis_3_1_fluxo_tradicional_humano",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/TECH_LEAD_ANALYSIS.md",
+      "source_location": "L40",
+      "weight": 1.0,
+      "source": "docs_tech_lead_analysis_3_estimativas_de_tempo_e_custo_humanos_vs_ia",
+      "target": "docs_tech_lead_analysis_3_2_fluxo_\u00e1gil_impulsionado_por_ia_o_que_foi_executado",
+      "confidence_score": 1.0
+    }
+  ],
+  "hyperedges": [],
+  "built_at_commit": "2a7238fe16e7f36b1be6697923ee113446b74f61"
+}

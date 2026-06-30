@@ -1,0 +1,188 @@
+{
+    "shotmap": [
+        {
+            "player": {
+                "name": "Vinícius Júnior",
+                "slug": "vinicius-junior",
+                "shortName": "Vinícius Jr.",
+                "position": "F",
+                "jerseyNumber": "7",
+                "userCount": 1419648,
+                "gender": "M",
+                "sofascoreId": "ViniJr",
+                "id": 868812,
+                "fieldTranslations": {
+                    "nameTranslation": {
+                        "ar": "فينيسيوس جونيور",
+                        "bn": "ভিনিসিয়াস জুনিয়র",
+                        "hi": "विनीसियस जूनियर"
+                    },
+                    "shortNameTranslation": {
+                        "ar": "فينيسيوس",
+                        "bn": "ভিনিসিয়াস",
+                        "hi": "विनीसियस"
+                    }
+                }
+            },
+            "isHome": true,
+            "shotType": "save",
+            "situation": "regular",
+            "playerCoordinates": {
+                "x": 9.5,
+                "y": 45.9,
+                "z": 0
+            },
+            "bodyPart": "left-foot",
+            "goalMouthLocation": "low-centre",
+            "goalMouthCoordinates": {
+                "x": 0,
+                "y": 51.1,
+                "z": 19
+            },
+            "blockCoordinates": {
+                "x": 4.5,
+                "y": 47.5,
+                "z": 0
+            },
+            "goalkeeper": {
+                "name": "Mostafa Shobeir",
+                "slug": "mostafa-shobeir",
+                "shortName": "M. Shobeir",
+                "position": "G",
+                "jerseyNumber": "31",
+                "userCount": 6456,
+                "gender": "M",
+                "id": 1048378,
+                "fieldTranslations": {
+                    "nameTranslation": {
+                        "ar": "مصطفى شوبير",
+                        "bn": "মোস্তফা শোবের",
+                        "hi": "मुस्तफा शोबैर"
+                    },
+                    "shortNameTranslation": {
+                        "ar": "م. شوبير",
+                        "bn": "এম. শোবের",
+                        "hi": "एम. शोबैर"
+                    }
+                }
+            },
+            "id": 7460735,
+            "time": 42,
+            "timeSeconds": 2483,
+            "draw": {
+                "start": {
+                    "x": 45.9,
+                    "y": 9.5
+                },
+                "block": {
+                    "x": 47.5,
+                    "y": 4.5
+                },
+                "end": {
+                    "x": 48.9,
+                    "y": 0
+                },
+                "goal": {
+                    "x": 48.9,
+                    "y": 81
+                }
+            },
+            "reversedPeriodTime": 4,
+            "reversedPeriodTimeSeconds": 217,
+            "periodTimeSeconds": 2483,
+            "incidentType": "shot"
+        },
+        {
+            "player": {
+                "name": "Vinícius Júnior",
+                "slug": "vinicius-junior",
+                "shortName": "Vinícius Jr.",
+                "position": "F",
+                "jerseyNumber": "7",
+                "userCount": 1419648,
+                "gender": "M",
+                "sofascoreId": "ViniJr",
+                "id": 868812,
+                "fieldTranslations": {
+                    "nameTranslation": {
+                        "ar": "فينيسيوس جونيور",
+                        "bn": "ভিনিসিয়াস জুনিয়র",
+                        "hi": "विनीसियस जूनियर"
+                    },
+                    "shortNameTranslation": {
+                        "ar": "فينيسيوس",
+                        "bn": "ভিনিসিয়াস",
+                        "hi": "विनीसियस"
+                    }
+                }
+            },
+            "isHome": true,
+            "shotType": "save",
+            "situation": "fast-break",
+            "playerCoordinates": {
+                "x": 5.2,
+                "y": 40.2,
+                "z": 0
+            },
+            "bodyPart": "right-foot",
+            "goalMouthLocation": "low-centre",
+            "goalMouthCoordinates": {
+                "x": 0,
+                "y": 51,
+                "z": 5.1
+            },
+            "blockCoordinates": {
+                "x": 2.8,
+                "y": 42.8,
+                "z": 0
+            },
+            "goalkeeper": {
+                "name": "Mostafa Shobeir",
+                "slug": "mostafa-shobeir",
+                "shortName": "M. Shobeir",
+                "position": "G",
+                "jerseyNumber": "31",
+                "userCount": 6456,
+                "gender": "M",
+                "id": 1048378,
+                "fieldTranslations": {
+                    "nameTranslation": {
+                        "ar": "مصطفى شوبير",
+                        "bn": "মোস্তফা শোবের",
+                        "hi": "मुस्तफा शोबैर"
+                    },
+                    "shortNameTranslation": {
+                        "ar": "م. شوبير",
+                        "bn": "এম. শোবের",
+                        "hi": "एम. शोबैर"
+                    }
+                }
+            },
+            "id": 7460432,
+            "time": 26,
+            "timeSeconds": 1526,
+            "draw": {
+                "start": {
+                    "x": 40.2,
+                    "y": 5.2
+                },
+                "block": {
+                    "x": 42.8,
+                    "y": 2.8
+                },
+                "end": {
+                    "x": 49,
+                    "y": 0
+                },
+                "goal": {
+                    "x": 49,
+                    "y": 94.9
+                }
+            },
+            "reversedPeriodTime": 20,
+            "reversedPeriodTimeSeconds": 1174,
+            "periodTimeSeconds": 1526,
+            "incidentType": "shot"
+        }
+    ]
+}

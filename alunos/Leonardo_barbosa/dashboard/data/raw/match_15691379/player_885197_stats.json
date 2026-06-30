@@ -1,0 +1,106 @@
+{
+    "player": {
+        "name": "Bremer",
+        "firstName": "",
+        "lastName": "",
+        "slug": "bremer",
+        "shortName": "Bremer",
+        "position": "D",
+        "jerseyNumber": "3",
+        "height": 188,
+        "userCount": 13905,
+        "gender": "M",
+        "sofascoreId": "Bremer",
+        "id": 885197,
+        "marketValueCurrency": "EUR",
+        "dateOfBirthTimestamp": 858643200,
+        "proposedMarketValueRaw": {
+            "value": 33000000,
+            "currency": "EUR"
+        },
+        "fieldTranslations": {
+            "nameTranslation": {
+                "ar": "بريمر",
+                "bn": "ব্রেমার",
+                "hi": "ब्रेमर"
+            },
+            "shortNameTranslation": {
+                "ar": "بريمر",
+                "bn": "ব্রেমার",
+                "hi": "ब्रेमर"
+            }
+        }
+    },
+    "team": {
+        "name": "Brazil",
+        "slug": "brazil",
+        "shortName": "Brazil",
+        "gender": "M",
+        "sport": {
+            "name": "Football",
+            "slug": "football",
+            "id": 1
+        },
+        "userCount": 2441982,
+        "nameCode": "BRA",
+        "ranking": 6,
+        "disabled": false,
+        "national": true,
+        "type": 0,
+        "id": 4748,
+        "teamColors": {
+            "primary": "#ffff00",
+            "secondary": "#009933",
+            "text": "#009933"
+        },
+        "fieldTranslations": {
+            "nameTranslation": {
+                "ar": "البرازيل",
+                "bn": "ব্রাজিল",
+                "hi": "ब्राजील",
+                "ru": "Бразилия"
+            },
+            "shortNameTranslation": {}
+        }
+    },
+    "statistics": {
+        "totalPass": 27,
+        "accuratePass": 27,
+        "totalLongBalls": 3,
+        "accurateLongBalls": 3,
+        "goalAssist": 0,
+        "accurateOwnHalfPasses": 22,
+        "totalOwnHalfPasses": 22,
+        "accurateOppositionHalfPasses": 5,
+        "totalOppositionHalfPasses": 5,
+        "aerialLost": 1,
+        "duelLost": 2,
+        "duelWon": 1,
+        "totalClearance": 2,
+        "interceptionWon": 1,
+        "ballRecovery": 2,
+        "wasFouled": 1,
+        "fouls": 1,
+        "minutesPlayed": 45,
+        "touches": 31,
+        "rating": 6.8,
+        "totalBallCarriesDistance": 89.262700216421,
+        "ballCarriesCount": 10,
+        "totalProgression": 24.508439508674,
+        "progressiveBallCarriesCount": 0,
+        "ratingVersions": {
+            "original": 6.8,
+            "alternative": 6.8
+        },
+        "totalShots": 0,
+        "passValueNormalized": 0.06,
+        "dribbleValueNormalized": 0.02,
+        "defensiveValueNormalized": 0,
+        "statisticsType": {
+            "sportSlug": "football",
+            "statisticsType": "player"
+        }
+    },
+    "position": "D",
+    "extra": null
+}

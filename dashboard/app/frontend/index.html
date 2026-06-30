@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SofaScore Player Dashboard</title>
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard">
+        <header>
+            <h1>SofaScore Player Dashboard</h1>
+            <p>Performance & Estatísticas Detalhadas</p>
+            <div class="match-selector" style="margin-bottom: 10px;">
+                <select id="match-select" disabled>
+                    <option value="">Carregando jogos...</option>
+                </select>
+            </div>
+            <div class="player-selector">
+                <select id="player-select" disabled>
+                    <option value="">Carregando jogadores...</option>
+                </select>
+                <div id="player-info" class="player-info"></div>
+            </div>
+        </header>
+
+        <main>
+            <div class="glass-panel map-container" id="panel-heatmap">
+                <h2>Mapa de Calor (Heatmap)</h2>
+                <div class="img-wrapper" id="heatmap-wrapper">
+                    <img id="heatmap-img" src="" alt="Carregando heatmap...">
+                    <div class="img-placeholder" id="heatmap-placeholder">
+                        <span class="placeholder-icon">🗺️</span>
+                        <span class="placeholder-text">Heatmap indisponível</span>
+                        <span class="placeholder-sub">Dados de posicionamento não registrados</span>
+                    </div>
+                    <div class="skeleton-img" id="heatmap-skeleton"></div>
+                </div>
+            </div>
+
+            <div class="glass-panel map-container" id="panel-shotmap">
+                <h2>Mapa de Chutes (Shotmap)</h2>
+                <div class="img-wrapper" id="shotmap-wrapper">
+                    <img id="shotmap-img" src="" alt="Carregando shotmap...">
+                    <div class="img-placeholder" id="shotmap-placeholder">
+                        <span class="placeholder-icon">🎯</span>
+                        <span class="placeholder-text">Shotmap indisponível</span>
+                        <span class="placeholder-sub">Nenhum chute registrado</span>
+                    </div>
+                    <div class="skeleton-img" id="shotmap-skeleton"></div>
+                </div>
+            </div>
+
+            <div class="glass-panel map-container" id="panel-passmap">
+                <h2>Mapa de Passes</h2>
+                <div class="img-wrapper" id="passmap-wrapper">
+                    <img id="passmap-img" src="" alt="Carregando passmap...">
+                    <div class="img-placeholder" id="passmap-placeholder">
+                        <span class="placeholder-icon">↗️</span>
+                        <span class="placeholder-text">Passmap indisponível</span>
+                        <span class="placeholder-sub">Nenhum passe registrado</span>
+                    </div>
+                    <div class="skeleton-img" id="passmap-skeleton"></div>
+                </div>
+            </div>
+
+            <div class="glass-panel stats-container">
+                <h2>Estatísticas Gerais</h2>
+                <div class="stat-tabs">
+                    <button class="stat-tab active" data-group="all">Todas</button>
+                    <button class="stat-tab" data-group="attack">Ataque</button>
+                    <button class="stat-tab" data-group="passing">Passe</button>
+                    <button class="stat-tab" data-group="defense">Defesa</button>
+                </div>
+                <div id="stats-grid" class="stats-grid"></div>
+                <div class="skeleton-stats" id="stats-skeleton">
+                    <div class="skeleton-card"></div>
+                    <div class="skeleton-card"></div>
+                    <div class="skeleton-card"></div>
+                    <div class="skeleton-card"></div>
+                    <div class="skeleton-card"></div>
+                    <div class="skeleton-card"></div>
+                </div>
+            </div>
+
+            <div class="glass-panel events-container" id="panel-events">
+                <h2>Eventos da Partida</h2>
+                <div class="events-grid" id="events-grid">
+                    <div class="event-category" data-type="pass">
+                        <div class="event-header">
+                            <span class="event-icon">⤴️</span>
+                            <span class="event-label">Passes</span>
+                            <span class="event-count" id="event-pass-count">0</span>
+                        </div>
+                        <div class="event-bar-wrapper">
+                            <div class="event-bar" id="event-pass-bar"></div>
+                        </div>
+                        <div class="event-detail" id="event-pass-detail">Precisão: 0%</div>
+                    </div>
+                    <div class="event-category" data-type="dribble">
+                        <div class="event-header">
+                            <span class="event-icon">💨</span>
+                            <span class="event-label">Dribles</span>
+                            <span class="event-count" id="event-dribble-count">0</span>
+                        </div>
+                        <div class="event-bar-wrapper">
+                            <div class="event-bar" id="event-dribble-bar"></div>
+                        </div>
+                        <div class="event-detail" id="event-dribble-detail">Sucesso: 0%</div>
+                    </div>
+                    <div class="event-category" data-type="defensive">
+                        <div class="event-header">
+                            <span class="event-icon">🛡️</span>
+                            <span class="event-label">Defensivas</span>
+                            <span class="event-count" id="event-defensive-count">0</span>
+                        </div>
+                        <div class="event-bar-wrapper">
+                            <div class="event-bar" id="event-defensive-bar"></div>
+                        </div>
+                        <div class="event-detail" id="event-defensive-detail">Ações: 0</div>
+                    </div>
+                    <div class="event-category" data-type="ball_carry">
+                        <div class="event-header">
+                            <span class="event-icon">🏃</span>
+                            <span class="event-label">Conduções</span>
+                            <span class="event-count" id="event-ball_carry-count">0</span>
+                        </div>
+                        <div class="event-bar-wrapper">
+                            <div class="event-bar" id="event-ball_carry-bar"></div>
+                        </div>
+                        <div class="event-detail" id="event-ball_carry-detail">Distância: 0</div>
+                    </div>
+                </div>
+                <div class="events-empty" id="events-empty">
+                    <span class="placeholder-icon">📊</span>
+                    <span class="placeholder-text">Nenhum evento disponível</span>
+                </div>
+                <div class="skeleton-events" id="events-skeleton">
+                    <div class="skeleton-event-card"></div>
+                    <div class="skeleton-event-card"></div>
+                    <div class="skeleton-event-card"></div>
+                    <div class="skeleton-event-card"></div>
+                </div>
+            </div>
+
+            <div class="glass-panel radar-container">
+                <h2>Radar de Performance</h2>
+                <canvas id="stats-radar"></canvas>
+                <div class="skeleton-radar" id="radar-skeleton"></div>
+            </div>
+        </main>
+
+        <div id="error-toast" class="error-toast hidden">
+            <span id="error-message">Erro ao carregar dados</span>
+            <button onclick="this.parentElement.classList.add('hidden')">✕</button>
+        </div>
+    </div>
+
+    <script type="module" src="assets/js/app.js?v=3"></script>
+</body>
+</html>

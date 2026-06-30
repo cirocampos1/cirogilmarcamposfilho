@@ -1,0 +1,77 @@
+# ==============================================================================
+# 🏫 CBF Academy — Python para Dados | Monorepo .gitignore
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. Python & Ambientes Virtuais
+# ------------------------------------------------------------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+
+# ------------------------------------------------------------------------------
+# 2. Inteligência Artificial & Agentes (IA)
+# ------------------------------------------------------------------------------
+# 🚨 [PARA CASA] INSTRUÇÃO IMPORTANTE:
+# Estes arquivos estão temporariamente liberados para que você baixe os modelos de teste,
+# configurações do OpenCode e histórico base do projeto.
+#
+# 👉 APÓS CLONAR O PROJETO, DESCOMENTE (remova a "#" inicial) AS LINHAS ABAIXO 
+# para que os SEUS futuros logs e configurações pessoais da IA não sujem os commits!
+#
+# .opencode/
+# .agent/brain/
+# .agent/scratch/
+# .agent/history/
+# graphify-out/
+# .graphify/
+
+# ------------------------------------------------------------------------------
+# 3. Variáveis de Ambiente & Credenciais
+# ------------------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+.secrets.baseline
+
+# ------------------------------------------------------------------------------
+# 4. Dados Locais & Bancos SQLite (Analytics)
+# ------------------------------------------------------------------------------
+# Evitamos commitar as bases de dados e scrapings brutos pesados
+dashboard/data/*.db
+dashboard/data/sofascore/
+dashboard/data/sofascore_player*/
+dashboard/data/processed/
+dashboard/data/raw/
+statsbomb_aula/data/
+
+# ------------------------------------------------------------------------------
+# 5. Imagens e Gráficos Temporários
+# ------------------------------------------------------------------------------
+# Ignoramos imagens geradas soltas para não sujar os commits, mas
+# PERMITIMOS as pastas oficiais de assets (images/ e images_example/)
+/*.png
+/*.jpg
+/*.jpeg
+/*.webp
+
+# ------------------------------------------------------------------------------
+# 6. Testes, Linters e Ferramentas (Qualidade)
+# ------------------------------------------------------------------------------
+.pytest_cache/
+.coverage
+htmlcov/
+.ruff_cache/
+.mypy_cache/
+
+# ------------------------------------------------------------------------------
+# 7. IDEs & Editores
+# ------------------------------------------------------------------------------
+.idea/
+.vscode/
+*.swp
+*.swo

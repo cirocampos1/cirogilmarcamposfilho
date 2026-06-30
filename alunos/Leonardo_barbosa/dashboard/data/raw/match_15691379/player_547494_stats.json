@@ -1,0 +1,98 @@
+{
+    "player": {
+        "name": "Zizo",
+        "firstName": "",
+        "lastName": "",
+        "slug": "zizo",
+        "shortName": "Zizo",
+        "position": "M",
+        "jerseyNumber": "25",
+        "height": 174,
+        "userCount": 53062,
+        "gender": "M",
+        "sofascoreId": "Zizo",
+        "id": 547494,
+        "marketValueCurrency": "EUR",
+        "dateOfBirthTimestamp": 821232000,
+        "proposedMarketValueRaw": {
+            "value": 3700000,
+            "currency": "EUR"
+        },
+        "fieldTranslations": {
+            "nameTranslation": {
+                "ar": "زيزو",
+                "bn": "জিজো",
+                "hi": "ज़िज़ो"
+            },
+            "shortNameTranslation": {
+                "ar": "زيزو",
+                "bn": "জিজো",
+                "hi": "ज़िज़ो"
+            }
+        }
+    },
+    "team": {
+        "name": "Egypt",
+        "slug": "egypt",
+        "shortName": "Egypt",
+        "gender": "M",
+        "sport": {
+            "name": "Football",
+            "slug": "football",
+            "id": 1
+        },
+        "userCount": 617607,
+        "nameCode": "EGY",
+        "ranking": 29,
+        "disabled": false,
+        "national": true,
+        "type": 0,
+        "id": 4758,
+        "teamColors": {
+            "primary": "#f00000",
+            "secondary": "#ffffff",
+            "text": "#ffffff"
+        },
+        "fieldTranslations": {
+            "nameTranslation": {
+                "ar": "مصر",
+                "bn": "মিশর",
+                "hi": "इजिप्ट",
+                "ru": "Египет"
+            },
+            "shortNameTranslation": {}
+        }
+    },
+    "statistics": {
+        "totalPass": 6,
+        "accuratePass": 6,
+        "goalAssist": 0,
+        "accurateOwnHalfPasses": 2,
+        "totalOwnHalfPasses": 2,
+        "accurateOppositionHalfPasses": 4,
+        "totalOppositionHalfPasses": 4,
+        "shotOffTarget": 1,
+        "minutesPlayed": 12,
+        "touches": 7,
+        "rating": 6.5,
+        "totalBallCarriesDistance": 29.449060723681,
+        "ballCarriesCount": 4,
+        "totalProgression": 10.419417964592,
+        "progressiveBallCarriesCount": 0,
+        "ratingVersions": {
+            "original": 6.5,
+            "alternative": 6.6
+        },
+        "totalShots": 1,
+        "shotValueNormalized": -0.17,
+        "passValueNormalized": 0.06,
+        "dribbleValueNormalized": 0.03,
+        "defensiveValueNormalized": 0,
+        "statisticsType": {
+            "sportSlug": "football",
+            "statisticsType": "player"
+        }
+    },
+    "position": "F",
+    "extra": null
+}

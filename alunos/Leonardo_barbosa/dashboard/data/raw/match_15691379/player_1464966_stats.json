@@ -1,0 +1,73 @@
+{
+    "player": {
+        "name": "Rayan",
+        "firstName": "Rayan",
+        "slug": "rayan",
+        "shortName": "Rayan",
+        "position": "M",
+        "jerseyNumber": "37",
+        "height": 185,
+        "userCount": 48333,
+        "gender": "M",
+        "id": 1464966,
+        "marketValueCurrency": "EUR",
+        "dateOfBirthTimestamp": 1154563200,
+        "proposedMarketValueRaw": {
+            "value": 39000000,
+            "currency": "EUR"
+        },
+        "fieldTranslations": {
+            "nameTranslation": {
+                "ar": "ريان",
+                "bn": "রায়ান",
+                "hi": "रायन"
+            },
+            "shortNameTranslation": {
+                "ar": "ريان",
+                "bn": "রায়ান",
+                "hi": "रायन"
+            }
+        }
+    },
+    "team": {
+        "name": "Brazil",
+        "slug": "brazil",
+        "shortName": "Brazil",
+        "gender": "M",
+        "sport": {
+            "name": "Football",
+            "slug": "football",
+            "id": 1
+        },
+        "userCount": 2441982,
+        "nameCode": "BRA",
+        "ranking": 6,
+        "disabled": false,
+        "national": true,
+        "type": 0,
+        "id": 4748,
+        "teamColors": {
+            "primary": "#ffff00",
+            "secondary": "#009933",
+            "text": "#009933"
+        },
+        "fieldTranslations": {
+            "nameTranslation": {
+                "ar": "البرازيل",
+                "bn": "ব্রাজিল",
+                "hi": "ब्राजील",
+                "ru": "Бразилия"
+            },
+            "shortNameTranslation": {}
+        }
+    },
+    "statistics": {
+        "totalShots": 0,
+        "statisticsType": {
+            "sportSlug": "football",
+            "statisticsType": "player"
+        }
+    },
+    "position": "F",
+    "extra": null
+}

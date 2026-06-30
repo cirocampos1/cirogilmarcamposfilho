@@ -1,0 +1,69 @@
+{
+    "player": {
+        "name": "Mohamed Alaa",
+        "firstName": "Mohamed Alaa",
+        "slug": "mohamed-alaa",
+        "shortName": "M. Alaa",
+        "position": "G",
+        "jerseyNumber": "23",
+        "height": 188,
+        "userCount": 650,
+        "gender": "M",
+        "id": 1980828,
+        "marketValueCurrency": "EUR",
+        "dateOfBirthTimestamp": 936144000,
+        "proposedMarketValueRaw": {
+            "value": 825000,
+            "currency": "EUR"
+        },
+        "fieldTranslations": {
+            "nameTranslation": {
+                "ar": "محمد علاء"
+            },
+            "shortNameTranslation": {
+                "ar": "م. علاء"
+            }
+        }
+    },
+    "team": {
+        "name": "Egypt",
+        "slug": "egypt",
+        "shortName": "Egypt",
+        "gender": "M",
+        "sport": {
+            "name": "Football",
+            "slug": "football",
+            "id": 1
+        },
+        "userCount": 617607,
+        "nameCode": "EGY",
+        "ranking": 29,
+        "disabled": false,
+        "national": true,
+        "type": 0,
+        "id": 4758,
+        "teamColors": {
+            "primary": "#f00000",
+            "secondary": "#ffffff",
+            "text": "#ffffff"
+        },
+        "fieldTranslations": {
+            "nameTranslation": {
+                "ar": "مصر",
+                "bn": "মিশর",
+                "hi": "इजिप्ट",
+                "ru": "Египет"
+            },
+            "shortNameTranslation": {}
+        }
+    },
+    "statistics": {
+        "totalShots": 0,
+        "statisticsType": {
+            "sportSlug": "football",
+            "statisticsType": "player"
+        }
+    },
+    "position": "G",
+    "extra": null
+}

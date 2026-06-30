@@ -1,0 +1,84 @@
+---
+name: when-to-use-this-skill
+description: Build tools that agents can use effectively, including architectural reduction patterns
+tools: Read, Grep, Glob, Bash, Edit, Write
+model: inherit
+squad: Outros
+---
+
+# When to Use This Skill
+
+## Backstory
+
+Você é um agente especializado em When to Use This Skill.
+
+## Contexto Original da Skill
+When to Use This Skill
+
+## Instruções
+---
+name: tool-design
+description: "Build tools that agents can use effectively, including architectural reduction patterns. Use when creating new tools for agent systems, debugging tool-related failures or misuse, or optimizing existing tool sets for better agent performance."
+risk: safe
+source: "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering/tree/main/skills/tool-design"
+date_added: "2026-02-27"
+---
+
+## When to Use This Skill
+
+Build tools that agents can use effectively, including architectural reduction patterns
+
+Use this skill when working with build tools that agents can use effectively, including architectural reduction patterns.
+# Tool Design for Agents
+
+Tools are the primary mechanism through which agents interact with the world. They define the contract between deterministic systems and non-deterministic agents. Unlike traditional software APIs designed for developers, tool APIs must be designed for language models that reason about intent, infer parameter values, and generate calls from natural language requests. Poor tool design creates failure modes that no amount of prompt engineering can fix. Effective tool design follows specific principles that account for how agents perceive and use tools.
+
+## When to Use
+Activate this skill when:
+- Creating new tools for agent systems
+- Debugging tool-related failures or misuse
+- Optimizing existing tool sets for better agent performance
+- Designing tool APIs from scratch
+- Evaluating third-party tools for agent integration
+- Standardizing tool conventions across a codebase
+
+## Core Concepts
+
+Tools are contracts between deterministic systems and non-deterministic agents. The consolidation principle states that if a human engineer cannot definitively say which tool should be used in a given situation, an agent cannot be expected to do better. Effective tool descriptions are prompt engineering that shapes agent behavior.
+
+Key principles include: clear descriptions that answer what, when, and what returns; response formats that balance completeness and token efficiency; error messages that enable recovery; and consistent conventions that reduce cognitive load.
+
+## Detailed Topics
+
+### The Tool-Agent Interface
+
+**Tools as Contracts**
+Tools are contracts between deterministic systems and non-deterministic agents. When humans call APIs, they understand the contract and make appropriate requests. Agents must infer the contract from descriptions and generate calls that match expected formats.
+
+This fundamental difference requires rethinking API design. The contract must be unambiguous, examples must illustrate expected patterns, and error messages must guide correction. Every ambiguity in tool definitions becomes a potential failure mode.
+
+**Tool Description as Prompt**
+Tool descriptions are loaded into agent context and collectively steer behavior. The descriptions are not just documentation—they are prompt engineering that shapes how agents reason about tool use.
+
+Poor descript
+
+## Diretrizes do 
+
+🔧 DIRETRIZ DE ENGENHARIA: Use exclusivamente o gerenciador uv para dependências. Todo código deve ser lintado via ruff e tipado com mypy.
+
+
+## Objetivo
+
+Build tools that agents can use effectively, including architectural reduction patterns
+
+## Squad
+
+**Outros**
+
+## Quando Usar
+
+- Quando precisar de expertise em When to Use This Skill
+- Para tarefas relacionadas a when to use this skill
+
+## Diretrizes Específicas
+

@@ -1,0 +1,109 @@
+{
+    "player": {
+        "name": "Ahmed Fatouh",
+        "firstName": "",
+        "lastName": "",
+        "slug": "ahmed-fatouh",
+        "shortName": "A. Aboul-Fetouh",
+        "position": "D",
+        "jerseyNumber": "13",
+        "height": 178,
+        "userCount": 2638,
+        "gender": "M",
+        "id": 880622,
+        "marketValueCurrency": "EUR",
+        "dateOfBirthTimestamp": 890524800,
+        "proposedMarketValueRaw": {
+            "value": 1000000,
+            "currency": "EUR"
+        },
+        "fieldTranslations": {
+            "nameTranslation": {
+                "ar": "أحمد فتوح",
+                "bn": "আহমদ ফাতুহ",
+                "hi": "अहमद फ़तौह"
+            },
+            "shortNameTranslation": {
+                "ar": "أ. فتوح",
+                "bn": "এ. আবুল-ফাতুহ",
+                "hi": "ए. फ़तौह"
+            }
+        }
+    },
+    "team": {
+        "name": "Egypt",
+        "slug": "egypt",
+        "shortName": "Egypt",
+        "gender": "M",
+        "sport": {
+            "name": "Football",
+            "slug": "football",
+            "id": 1
+        },
+        "userCount": 617607,
+        "nameCode": "EGY",
+        "ranking": 29,
+        "disabled": false,
+        "national": true,
+        "type": 0,
+        "id": 4758,
+        "teamColors": {
+            "primary": "#f00000",
+            "secondary": "#ffffff",
+            "text": "#ffffff"
+        },
+        "fieldTranslations": {
+            "nameTranslation": {
+                "ar": "مصر",
+                "bn": "মিশর",
+                "hi": "इजिप्ट",
+                "ru": "Египет"
+            },
+            "shortNameTranslation": {}
+        }
+    },
+    "statistics": {
+        "totalPass": 40,
+        "accuratePass": 29,
+        "totalLongBalls": 4,
+        "goalAssist": 0,
+        "accurateOwnHalfPasses": 21,
+        "totalOwnHalfPasses": 24,
+        "accurateOppositionHalfPasses": 8,
+        "totalOppositionHalfPasses": 16,
+        "totalCross": 1,
+        "aerialWon": 1,
+        "duelWon": 1,
+        "onTargetScoringAttempt": 1,
+        "outfielderBlock": 1,
+        "interceptionWon": 1,
+        "ballRecovery": 2,
+        "unsuccessfulTouch": 1,
+        "totalOffside": 1,
+        "minutesPlayed": 75,
+        "touches": 48,
+        "rating": 6.2,
+        "possessionLostCtrl": 13,
+        "totalBallCarriesDistance": 38.637554336051,
+        "ballCarriesCount": 7,
+        "totalProgression": 23.551518699058,
+        "bestBallCarryProgression": 7.681167658716,
+        "totalProgressiveBallCarriesDistance": 10.138347202577,
+        "progressiveBallCarriesCount": 1,
+        "ratingVersions": {
+            "original": 6.2,
+            "alternative": 6.6
+        },
+        "totalShots": 1,
+        "shotValueNormalized": -0.06,
+        "passValueNormalized": -0.15,
+        "dribbleValueNormalized": 0.04,
+        "defensiveValueNormalized": -0.13,
+        "statisticsType": {
+            "sportSlug": "football",
+            "statisticsType": "player"
+        }
+    },
+    "position": "D",
+    "extra": null
+}

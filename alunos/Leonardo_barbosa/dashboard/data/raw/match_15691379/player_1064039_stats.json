@@ -1,0 +1,110 @@
+{
+    "player": {
+        "name": "Danilo Oliveira",
+        "firstName": "Danilo",
+        "lastName": "Oliveira",
+        "slug": "danilo-oliveira",
+        "shortName": "D. Oliveira",
+        "position": "M",
+        "jerseyNumber": "8",
+        "height": 177,
+        "userCount": 17324,
+        "gender": "M",
+        "sofascoreId": "Danilo",
+        "id": 1064039,
+        "marketValueCurrency": "EUR",
+        "dateOfBirthTimestamp": 988329600,
+        "proposedMarketValueRaw": {
+            "value": 25000000,
+            "currency": "EUR"
+        },
+        "fieldTranslations": {
+            "nameTranslation": {
+                "ar": "دانييلو أوليفيرا",
+                "bn": "দানিলো",
+                "hi": "डेनिलो"
+            },
+            "shortNameTranslation": {
+                "ar": "د. أوليفيرا",
+                "bn": "দানিলো",
+                "hi": "डेनिलो"
+            }
+        }
+    },
+    "team": {
+        "name": "Brazil",
+        "slug": "brazil",
+        "shortName": "Brazil",
+        "gender": "M",
+        "sport": {
+            "name": "Football",
+            "slug": "football",
+            "id": 1
+        },
+        "userCount": 2441982,
+        "nameCode": "BRA",
+        "ranking": 6,
+        "disabled": false,
+        "national": true,
+        "type": 0,
+        "id": 4748,
+        "teamColors": {
+            "primary": "#ffff00",
+            "secondary": "#009933",
+            "text": "#009933"
+        },
+        "fieldTranslations": {
+            "nameTranslation": {
+                "ar": "البرازيل",
+                "bn": "ব্রাজিল",
+                "hi": "ब्राजील",
+                "ru": "Бразилия"
+            },
+            "shortNameTranslation": {}
+        }
+    },
+    "statistics": {
+        "totalPass": 18,
+        "accuratePass": 12,
+        "totalLongBalls": 1,
+        "goalAssist": 0,
+        "accurateOwnHalfPasses": 3,
+        "totalOwnHalfPasses": 3,
+        "accurateOppositionHalfPasses": 9,
+        "totalOppositionHalfPasses": 15,
+        "aerialWon": 2,
+        "duelLost": 2,
+        "duelWon": 5,
+        "challengeLost": 1,
+        "dispossessed": 1,
+        "totalContest": 1,
+        "wonContest": 1,
+        "ballRecovery": 1,
+        "totalTackle": 2,
+        "wonTackle": 1,
+        "unsuccessfulTouch": 1,
+        "minutesPlayed": 45,
+        "touches": 25,
+        "rating": 6.9,
+        "possessionLostCtrl": 8,
+        "totalBallCarriesDistance": 11.534842308603,
+        "ballCarriesCount": 2,
+        "totalProgression": -2.7413484217622,
+        "progressiveBallCarriesCount": 0,
+        "keyPass": 1,
+        "ratingVersions": {
+            "original": 6.9,
+            "alternative": 6.9
+        },
+        "totalShots": 0,
+        "passValueNormalized": 0.07,
+        "dribbleValueNormalized": -0.01,
+        "defensiveValueNormalized": 0.13,
+        "statisticsType": {
+            "sportSlug": "football",
+            "statisticsType": "player"
+        }
+    },
+    "position": "M",
+    "extra": null
+}

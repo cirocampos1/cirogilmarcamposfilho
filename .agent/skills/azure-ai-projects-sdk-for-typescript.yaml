@@ -1,0 +1,46 @@
+name: azure-ai-projects-sdk-for-typescript
+role: Azure AI Projects SDK for TypeScript
+goal: High-level SDK for Azure AI Foundry projects with agents, connections, deployments,
+  and evaluations.
+backstory: "Você é um agente especializado em Azure AI Projects SDK for TypeScript.\n\
+  \n## Contexto Original da Skill\nAzure AI Projects SDK for TypeScript\n\n## Instruções\n\
+  ---\nname: azure-ai-projects-ts\ndescription: \"High-level SDK for Azure AI Foundry\
+  \ projects with agents, connections, deployments, and evaluations.\"\nrisk: unknown\n\
+  source: community\ndate_added: \"2026-02-27\"\n---\n\n# Azure AI Projects SDK for\
+  \ TypeScript\n\nHigh-level SDK for Azure AI Foundry projects with agents, connections,\
+  \ deployments, and evaluations.\n\n## Installation\n\n```bash\nnpm install @azure/ai-projects\
+  \ @azure/identity\n```\n\nFor tracing:\n```bash\nnpm install @azure/monitor-opentelemetry\
+  \ @opentelemetry/api\n```\n\n## Environment Variables\n\n```bash\nAZURE_AI_PROJECT_ENDPOINT=https://<resource>.services.ai.azure.com/api/projects/<project>\n\
+  MODEL_DEPLOYMENT_NAME=gpt-4o\n```\n\n## Authentication\n\n```typescript\nimport\
+  \ { AIProjectClient } from \"@azure/ai-projects\";\nimport { DefaultAzureCredential\
+  \ } from \"@azure/identity\";\n\nconst client = new AIProjectClient(\n  process.env.AZURE_AI_PROJECT_ENDPOINT!,\n\
+  \  new DefaultAzureCredential()\n);\n```\n\n## Operation Groups\n\n| Group | Purpose\
+  \ |\n|-------|---------|\n| `client.agents` | Create and manage AI agents |\n| `client.connections`\
+  \ | List connected Azure resources |\n| `client.deployments` | List model deployments\
+  \ |\n| `client.datasets` | Upload and manage datasets |\n| `client.indexes` | Create\
+  \ and manage search indexes |\n| `client.evaluators` | Manage evaluation metrics\
+  \ |\n| `client.memoryStores` | Manage agent memory |\n\n## Getting OpenAI Client\n\
+  \n```typescript\nconst openAIClient = await client.getOpenAIClient();\n\n// Use\
+  \ for responses\nconst response = await openAIClient.responses.create({\n  model:\
+  \ \"gpt-4o\",\n  input: \"What is the capital of France?\"\n});\n\n// Use for conversations\n\
+  const conversation = await openAIClient.conversations.create({\n  items: [{ type:\
+  \ \"message\", role: \"user\", content: \"Hello!\" }]\n});\n```\n\n## Agents\n\n\
+  ### Create Agent\n\n```typescript\nconst agent = await client.agents.createVersion(\"\
+  my-agent\", {\n  kind: \"prompt\",\n  model: \"gpt-4o\",\n  instructions: \"You\
+  \ are a helpful assistant.\"\n});\n```\n\n### Agent with Tools\n\n```typescript\n\
+  // Code Interpreter\nconst agent = await client.agents.createVersion(\"code-agent\"\
+  , {\n  kind: \"prompt\",\n  model: \"gpt-4o\",\n  instructions: \"You can execute\
+  \ code.\",\n  tools: [{ type: \"code_interpreter\", container: { type: \"auto\"\
+  \ } }]\n});\n\n// File Search\nconst agent = await client.agents.createVersion(\"\
+  search-agent\", {\n  kind: \"prompt\",\n  model: \"gpt-4o\",\n  tools: [{ type:\
+  \ \"file_search\", vector_store_ids: [vectorStoreId] }]\n});\n\n// Web Search\n\
+  const agent = await client.agents.createVersion(\"web-agent\", {\n  kind: \"prompt\"\
+  ,\n  model: \"gpt-4o\",\n  tools: [{\n    type: \"web_search_preview\",\n    user_location:\
+  \ { type: \"approximate\", country: \"US\", city: \"Seattle\" }\n  }]\n});\n\n//\
+  \ Azure AI Search\nconst agent = await client.agents.createVersion(\"aisearch-agent\"\
+  , {\n  kind: \"prompt\",\n  model: \"gpt-4o\",\n  tools: [{\n    type: \"azure_ai_search\"\
+  ,\n    azure_ai_search: {\n      indexes: [{\n        project_connection_id: connectionId,\n\
+  \        index_name: \"my-index\",\n        query_type: \"simple\"\n      }]\n \
+  \   }\n  }]\n});\n\n## Diretrizes do \n\n\U0001F527 DIRETRIZ DE ENGENHARIA:\
+  \ Use exclusivamente o gerenciador uv para dependências. Todo código deve ser lintado\
+  \ via ruff e tipado com mypy.\n"

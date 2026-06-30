@@ -1,0 +1,90 @@
+{
+    "player": {
+        "name": "Ceadach O'Neill",
+        "slug": "ceadach-oneill",
+        "shortName": "C. O'Neill",
+        "position": "F",
+        "jerseyNumber": "76",
+        "height": 175,
+        "userCount": 731,
+        "gender": "M",
+        "id": 1590853,
+        "marketValueCurrency": "EUR",
+        "dateOfBirthTimestamp": 1207785600,
+        "fieldTranslations": {
+            "nameTranslation": {
+                "ar": "سيداخ أونيل",
+                "ru": "Кеадах О'Нил"
+            },
+            "shortNameTranslation": {
+                "ar": "س. أونيل",
+                "ru": "К. О'Нил"
+            }
+        }
+    },
+    "team": {
+        "name": "Northern Ireland",
+        "slug": "northern-ireland",
+        "shortName": "Northern Ireland",
+        "gender": "M",
+        "sport": {
+            "name": "Football",
+            "slug": "football",
+            "id": 1
+        },
+        "userCount": 28246,
+        "nameCode": "NIR",
+        "ranking": 70,
+        "disabled": false,
+        "national": true,
+        "type": 0,
+        "id": 4786,
+        "teamColors": {
+            "primary": "#1c9239",
+            "secondary": "#ffffff",
+            "text": "#ffffff"
+        },
+        "fieldTranslations": {
+            "nameTranslation": {
+                "ar": "أيرلندا الشمالية",
+                "bn": "নর্দান আয়ারল্যান্ড",
+                "hi": "नॉर्दर्न आयरलैंड",
+                "ru": "Северная Ирландия"
+            },
+            "shortNameTranslation": {}
+        }
+    },
+    "statistics": {
+        "totalPass": 1,
+        "accuratePass": 1,
+        "goalAssist": 0,
+        "accurateOppositionHalfPasses": 1,
+        "totalOppositionHalfPasses": 1,
+        "totalCross": 1,
+        "aerialWon": 1,
+        "duelWon": 2,
+        "totalTackle": 1,
+        "minutesPlayed": 11,
+        "touches": 4,
+        "rating": 6.7,
+        "possessionLostCtrl": 1,
+        "totalBallCarriesDistance": 4.270901661242,
+        "ballCarriesCount": 1,
+        "totalProgression": 2.7051024577898,
+        "progressiveBallCarriesCount": 0,
+        "ratingVersions": {
+            "original": 6.7,
+            "alternative": 6.6
+        },
+        "totalShots": 0,
+        "passValueNormalized": 0.01,
+        "dribbleValueNormalized": 0.01,
+        "defensiveValueNormalized": -0.01,
+        "statisticsType": {
+            "sportSlug": "football",
+            "statisticsType": "player"
+        }
+    },
+    "position": "F",
+    "extra": null
+}

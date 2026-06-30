@@ -1,0 +1,75 @@
+{
+    "player": {
+        "name": "Ederson",
+        "firstName": "Ederson",
+        "lastName": "Ederson",
+        "slug": "ederson",
+        "shortName": "Ederson",
+        "position": "G",
+        "jerseyNumber": "31",
+        "height": 188,
+        "userCount": 50319,
+        "gender": "M",
+        "sofascoreId": "Ederson93",
+        "id": 254491,
+        "marketValueCurrency": "EUR",
+        "dateOfBirthTimestamp": 745545600,
+        "proposedMarketValueRaw": {
+            "value": 9200000,
+            "currency": "EUR"
+        },
+        "fieldTranslations": {
+            "nameTranslation": {
+                "ar": "إيدرسون",
+                "bn": "এডারসন",
+                "hi": "एडरसन"
+            },
+            "shortNameTranslation": {
+                "ar": "إيدرسون",
+                "bn": "এডারসন",
+                "hi": "एडरसन"
+            }
+        }
+    },
+    "team": {
+        "name": "Brazil",
+        "slug": "brazil",
+        "shortName": "Brazil",
+        "gender": "M",
+        "sport": {
+            "name": "Football",
+            "slug": "football",
+            "id": 1
+        },
+        "userCount": 2441982,
+        "nameCode": "BRA",
+        "ranking": 6,
+        "disabled": false,
+        "national": true,
+        "type": 0,
+        "id": 4748,
+        "teamColors": {
+            "primary": "#ffff00",
+            "secondary": "#009933",
+            "text": "#009933"
+        },
+        "fieldTranslations": {
+            "nameTranslation": {
+                "ar": "البرازيل",
+                "bn": "ব্রাজিল",
+                "hi": "ब्राजील",
+                "ru": "Бразилия"
+            },
+            "shortNameTranslation": {}
+        }
+    },
+    "statistics": {
+        "totalShots": 0,
+        "statisticsType": {
+            "sportSlug": "football",
+            "statisticsType": "player"
+        }
+    },
+    "position": "G",
+    "extra": null
+}

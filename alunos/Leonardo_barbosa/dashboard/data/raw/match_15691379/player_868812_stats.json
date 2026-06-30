@@ -1,0 +1,109 @@
+{
+    "player": {
+        "name": "Vinícius Júnior",
+        "slug": "vinicius-junior",
+        "shortName": "Vinícius Jr.",
+        "position": "F",
+        "jerseyNumber": "7",
+        "height": 176,
+        "userCount": 1419648,
+        "gender": "M",
+        "sofascoreId": "ViniJr",
+        "id": 868812,
+        "marketValueCurrency": "EUR",
+        "dateOfBirthTimestamp": 963360000,
+        "proposedMarketValueRaw": {
+            "value": 156000000,
+            "currency": "EUR"
+        },
+        "fieldTranslations": {
+            "nameTranslation": {
+                "ar": "فينيسيوس جونيور",
+                "bn": "ভিনিসিয়াস জুনিয়র",
+                "hi": "विनीसियस जूनियर"
+            },
+            "shortNameTranslation": {
+                "ar": "فينيسيوس",
+                "bn": "ভিনিসিয়াস",
+                "hi": "विनीसियस"
+            }
+        }
+    },
+    "team": {
+        "name": "Brazil",
+        "slug": "brazil",
+        "shortName": "Brazil",
+        "gender": "M",
+        "sport": {
+            "name": "Football",
+            "slug": "football",
+            "id": 1
+        },
+        "userCount": 2441982,
+        "nameCode": "BRA",
+        "ranking": 6,
+        "disabled": false,
+        "national": true,
+        "type": 0,
+        "id": 4748,
+        "teamColors": {
+            "primary": "#ffff00",
+            "secondary": "#009933",
+            "text": "#009933"
+        },
+        "fieldTranslations": {
+            "nameTranslation": {
+                "ar": "البرازيل",
+                "bn": "ব্রাজিল",
+                "hi": "ब्राजील",
+                "ru": "Бразилия"
+            },
+            "shortNameTranslation": {}
+        }
+    },
+    "statistics": {
+        "totalPass": 10,
+        "accuratePass": 7,
+        "goalAssist": 0,
+        "accurateOwnHalfPasses": 3,
+        "totalOwnHalfPasses": 3,
+        "accurateOppositionHalfPasses": 4,
+        "totalOppositionHalfPasses": 7,
+        "duelLost": 3,
+        "duelWon": 3,
+        "totalContest": 3,
+        "wonContest": 2,
+        "bigChanceMissed": 2,
+        "onTargetScoringAttempt": 2,
+        "ballRecovery": 1,
+        "unsuccessfulTouch": 3,
+        "wasFouled": 1,
+        "fouls": 2,
+        "minutesPlayed": 45,
+        "touches": 20,
+        "rating": 6.9,
+        "possessionLostCtrl": 7,
+        "totalBallCarriesDistance": 53.28784557578,
+        "ballCarriesCount": 4,
+        "totalProgression": 38.547521968903,
+        "bestBallCarryProgression": 20.859384626614,
+        "totalProgressiveBallCarriesDistance": 25.159258812612,
+        "progressiveBallCarriesCount": 1,
+        "keyPass": 2,
+        "ratingVersions": {
+            "original": 6.9,
+            "alternative": 6.4
+        },
+        "totalShots": 2,
+        "shotValueNormalized": -0.49,
+        "passValueNormalized": 0.26,
+        "dribbleValueNormalized": 0.34,
+        "defensiveValueNormalized": 0.13,
+        "statisticsType": {
+            "sportSlug": "football",
+            "statisticsType": "player"
+        }
+    },
+    "position": "F",
+    "extra": null
+}

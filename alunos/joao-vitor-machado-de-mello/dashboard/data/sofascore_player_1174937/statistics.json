@@ -1,0 +1,106 @@
+{
+	"player": {
+		"name": "Endrick",
+		"slug": "endrick",
+		"shortName": "Endrick",
+		"position": "F",
+		"jerseyNumber": "9",
+		"height": 173,
+		"userCount": 461736,
+		"gender": "M",
+		"sofascoreId": "Endrick",
+		"id": 1174937,
+		"marketValueCurrency": "EUR",
+		"dateOfBirthTimestamp": 1153440000,
+		"proposedMarketValueRaw": {
+			"value": 42000000,
+			"currency": "EUR"
+		},
+		"fieldTranslations": {
+			"nameTranslation": {
+				"ar": "إندريك",
+				"ru": "Эндрик"
+			},
+			"shortNameTranslation": {
+				"ar": "إندريك",
+				"ru": "Эндрик"
+			}
+		}
+	},
+	"team": {
+		"name": "Brazil",
+		"slug": "brazil",
+		"shortName": "Brazil",
+		"gender": "M",
+		"sport": {
+			"name": "Football",
+			"slug": "football",
+			"id": 1
+		},
+		"userCount": 2507976,
+		"nameCode": "BRA",
+		"ranking": 6,
+		"disabled": false,
+		"national": true,
+		"type": 0,
+		"id": 4748,
+		"teamColors": {
+			"primary": "#ffff00",
+			"secondary": "#009933",
+			"text": "#009933"
+		},
+		"fieldTranslations": {
+			"nameTranslation": {
+				"ar": "البرازيل",
+				"bn": "ব্রাজিল",
+				"hi": "ब्राजील",
+				"ru": "Бразилия"
+			},
+			"shortNameTranslation": {}
+		}
+	},
+	"statistics": {
+		"totalPass": 12,
+		"accuratePass": 8,
+		"totalLongBalls": 1,
+		"goalAssist": 0,
+		"accurateOwnHalfPasses": 2,
+		"totalOwnHalfPasses": 2,
+		"accurateOppositionHalfPasses": 6,
+		"totalOppositionHalfPasses": 10,
+		"aerialLost": 2,
+		"duelLost": 2,
+		"duelWon": 1,
+		"onTargetScoringAttempt": 1,
+		"blockedScoringAttempt": 1,
+		"goals": 1,
+		"interceptionWon": 1,
+		"ballRecovery": 1,
+		"unsuccessfulTouch": 1,
+		"wasFouled": 1,
+		"fouls": 1,
+		"minutesPlayed": 45,
+		"touches": 17,
+		"rating": 7.4,
+		"possessionLostCtrl": 5,
+		"totalBallCarriesDistance": 8.1111923291215,
+		"ballCarriesCount": 1,
+		"totalProgression": 7.8038845904425,
+		"progressiveBallCarriesCount": 0,
+		"ratingVersions": {
+			"original": 7.4,
+			"alternative": 7.3
+		},
+		"totalShots": 2,
+		"shotValueNormalized": 0.49,
+		"passValueNormalized": 0.04,
+		"dribbleValueNormalized": 0.05,
+		"defensiveValueNormalized": -0.01,
+		"statisticsType": {
+			"sportSlug": "football",
+			"statisticsType": "player"
+		}
+	},
+	"position": "F",
+	"extra": null
+}

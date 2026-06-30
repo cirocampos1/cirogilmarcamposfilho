@@ -1,0 +1,249 @@
+{
+  "agente": "ExploradorSQL",
+  "tarefa_id": 1,
+  "status": "CONCLUIDO",
+  "data": "2026-03-19",
+  "fonte_dados": "/home/leonardobarbosa/dev/doc_sankhya/sankhya_assessment_project",
+  "descobertas": {
+    "colunas_custom": {
+      "AD_NUFAP": {
+        "tabela": "TGFCAB",
+        "tipo": "VARCHAR/STRING",
+        "status": "CONFIRMADO",
+        "uso_crm": true,
+        "descricao": "Número da FAP (Ficha de Acompanhamento de Projeto) vinculada ao pedido/orçamento",
+        "referencias_encontradas": [
+          "documentacao_tecnica_completa/Triggers/TRG_I_FAP_.md",
+          "documentacao_tecnica_completa/Procedures/STP_RECRIAFAP_.md",
+          "documentacao_tecnica_completa/Views/AD_TCSFAPOSE.md",
+          "documentacao_tecnica_completa/Triggers/TRG_CONCLUI_EXPEDICAO.md"
+        ]
+      },
+      "AD_VAL_LIB_ORC": {
+        "tabela": "TGFCAB",
+        "tipo": "DECIMAL/NUMERIC",
+        "status": "CONFIRMADO",
+        "uso_crm": true,
+        "descricao": "Valor liberado para orçamento - usado no trigger AD_VAL_LIB_ORC_",
+        "observacao": "Coluna utilizada pela trigger TSILIB para controle de liberação orçamentária",
+        "referencias_encontradas": [
+          "documentacao_tecnica_completa/Triggers/AD_VAL_LIB_ORC_.md"
+        ]
+      },
+      "AD_OBSERVACAO": {
+        "tabela": "TGFCAB",
+        "tipo": "VARCHAR/TEXT",
+        "status": "NAO_ENCONTRADO_DIRETO",
+        "uso_crm": true,
+        "descricao": "Campo de observação do pedido - verificar se é AD_OBSERVACAOETAPA na TCSFAP",
+        "observacao": "No Sankhya encontramos AD_OBSERVACAOETAPA na TCSFAP. A coluna AD_OBSERVACAO na TGFCAB pode ser customização não documentada ou diferente.",
+        "referencias_alternativas": [
+          "documentacao_tecnica_completa/Procedures/STP_ADC_OBSFAP.md (usa AD_OBSERVACAOETAPA)",
+          "documentacao_tecnica_completa/Procedures/STP_TCSFAP_INC_OBS_ABERTA.md"
+        ]
+      },
+      "AD_NROPROPOSTA": {
+        "tabela": "TGFCAB",
+        "tipo": "INT",
+        "status": "CONFIRMADO",
+        "uso_crm": false,
+        "descricao": "Número da proposta original vinculada ao pedido (usado na FAP)",
+        "referencias_encontradas": [
+          "documentacao_tecnica_completa/Functions/FC_SALDOPROP_.md",
+          "documentacao_tecnica_completa/Functions/FN_VALIDA_VINCULACAO_PEDIDO.md"
+        ]
+      },
+      "AD_NUNOTAPEDIDO": {
+        "tabela": "TGFCAB",
+        "tipo": "INT",
+        "status": "CONFIRMADO",
+        "uso_crm": false,
+        "descricao": "Número da nota do pedido vinculada (usado em ordens de serviço)",
+        "referencias_encontradas": [
+          "documentacao_tecnica_completa/Functions/FC_SALDOPED_.md",
+          "documentacao_tecnica_completa/Functions/FC_SALDOPROP_.md"
+        ]
+      }
+    },
+    "funcoes": {
+      "FC_SALDOPROP_": {
+        "schema": "dbo",
+        "tipo": "SQL_SCALAR_FUNCTION",
+        "status": "CONFIRMADO",
+        "uso_crm": true,
+        "parametros": ["@v_nroproposta INT"],
+        "retorno": "DECIMAL(18,2)",
+        "descricao": "Calcula o saldo de uma proposta (custo total - valor em OS)",
+        "criado_em": "2025-04-10 02:31:46.780000",
+        "modificado_em": "2025-08-01 14:08:30.037000",
+        "tabelas_referenciadas": ["TGFCAB", "TGFITE", "TGFVAR", "TGFPRO"],
+        "arquivo_fonte": "source_sql_/FC_SALDOPROP_.sql"
+      },
+      "FC_SALDOPED_": {
+        "schema": "dbo",
+        "tipo": "SQL_SCALAR_FUNCTION",
+        "status": "CONFIRMADO",
+        "uso_crm": false,
+        "parametros": ["@v_nropedido INT"],
+        "retorno": "DECIMAL(18,2)",
+        "descricao": "Calcula o saldo de um pedido (similar à FC_SALDOPROP mas para pedidos)",
+        "criado_em": "2025-04-10 01:23:06.950000",
+        "modificado_em": "2025-05-19 15:16:57.637000",
+        "tabelas_referenciadas": ["TGFCAB", "TGFITE"],
+        "arquivo_fonte": "documentacao_tecnica_completa/Functions/FC_SALDOPED_.md"
+      },
+      "FC_SALDOPROP__POR_PARC": {
+        "schema": "dbo",
+        "tipo": "SQL_SCALAR_FUNCTION (presumido)",
+        "status": "REFERENCIADO_NAO_AVALIADO",
+        "uso_crm": true,
+        "referencia": "app/services/advisor_service.py linha 39",
+        "descricao": "Função usada no AdvisorService para calcular saúde financeira por parceiro"
+      }
+    },
+    "views": {
+      "VW_STATUS_PEDIDO": {
+        "schema": "sankhya",
+        "tipo": "VIEW",
+        "status": "CONFIRMADO",
+        "uso_crm": true,
+        "descricao": "View que retorna o status consolidado de pedidos/orçamentos",
+        "colunas": ["NUNOTA", "TIPMOV", "DTNEG", "STATUSNFE", "STATUS"],
+        "valores_status": ["FATURADO", "DENEGADA", "BLOQUEADO", "ATENDIDO", "LIBERADO", "PENDENTE", "CANCELADO", "EXCLUIDO"],
+        "criado_em": "2022-10-17 22:29:12.790000",
+        "tabelas_referenciadas": ["TGFCAB", "TGFCAB_EXC", "TGFTOP", "TSILIB"],
+        "arquivo_fonte": "documentacao_tecnica_completa/Views/VW_STATUS_PEDIDO.md"
+      }
+    },
+    "triggers": {
+      "AD_VAL_LIB_ORC_": {
+        "schema": "sankhya",
+        "tipo": "TRIGGER",
+        "status": "CONFIRMADO",
+        "tabela": "TSILIB",
+        "eventos": ["INSERT", "UPDATE"],
+        "nivel_risco": "CRITICO",
+        "descricao": "Trigger que valida liberação orçamentária ao liberar documentos",
+        "criado_em": "2024-11-03 09:41:52.030000",
+        "modificado_em": "2026-01-08 16:22:24.040000",
+        "arquivo_fonte": "documentacao_tecnica_completa/Triggers/AD_VAL_LIB_ORC_.md"
+      }
+    },
+    "tabelas": {
+      "TGFCAB": {
+        "descricao": "Cabeçalho de Notas/Pedidos/Orçamentos",
+        "tipo": "TABELA_CORE",
+        "chave_primaria": "NUNOTA",
+        "colunas_crm_confirmadas": ["NUNOTA", "NUMNOTA", "DTNEG", "VLRNOTA", "STATUSNOTA", "CODPARC", "CODVEND", "CODTIPOPER", "TIPMOV", "DTALTER"],
+        "colunas_custom_confirmadas": ["AD_NUFAP", "AD_VAL_LIB_ORC", "AD_NROPROPOSTA", "AD_NUNOTAPEDIDO"],
+        "colunas_custom_pendentes": ["AD_OBSERVACAO"]
+      },
+      "TGFITE": {
+        "descricao": "Itens de Notas",
+        "tipo": "TABELA_CORE",
+        "chave_primaria": ["NUNOTA", "SEQUENCIA"],
+        "colunas_crm_confirmadas": ["NUNOTA", "SEQUENCIA", "CODPROD", "QTDNEG", "VLRUNIT", "VLRTOT", "PERCDESC", "VLRDESC", "CODVOL", "DTENTREGA"]
+      },
+      "TGFPAR": {
+        "descricao": "Parceiros (Clientes/Fornecedores)",
+        "tipo": "TABELA_CORE",
+        "chave_primaria": "CODPARC",
+        "colunas_crm_confirmadas": ["CODPARC", "NOMEPARC", "RAZAOSOCIAL", "CGC_CPF", "EMAIL", "TELEFONE", "FAX", "CIDADE", "UF", "ENDERECO", "NUMEND", "BAIRRO", "CEP", "CODVEND", "LIMCRED", "DTCAD", "DTALTER", "ATIVO", "CLIENTE"]
+      },
+      "TGFVEN": {
+        "descricao": "Vendedores",
+        "tipo": "TABELA_CORE",
+        "chave_primaria": "CODVEND",
+        "colunas_crm_confirmadas": ["CODVEND", "NOMEVEND", "APELIDO", "ATIVO", "CODGER", "COMISSAO", "EMAIL", "TELEFONE"]
+      },
+      "TGFPRO": {
+        "descricao": "Produtos",
+        "tipo": "TABELA_CORE",
+        "chave_primaria": "CODPROD",
+        "colunas_crm_confirmadas": ["CODPROD", "DESCRPROD", "REFERENCIA"]
+      },
+      "TGFTOP": {
+        "descricao": "Tipos de Operação",
+        "tipo": "TABELA_AUXILIAR",
+        "colunas_referenciadas": ["CODTIPOPER", "DHALTER", "TOPAPI", "TIPMOV", "DESCRICAO"]
+      },
+      "TSILIB": {
+        "descricao": "Liberações (controle de workflow)",
+        "tipo": "TABELA_CORE",
+        "observacao": "Possui trigger AD_VAL_LIB_ORC_ para validação orçamentária"
+      },
+      "TCSFAP": {
+        "descricao": "Ficha de Acompanhamento de Projeto",
+        "tipo": "TABELA_CUSTOM_",
+        "colunas_referenciadas": ["NUFAP", "AD_OBSERVACAOETAPA"]
+      }
+    }
+  },
+  "validacao_crm": {
+    "queries_validadas": [
+      {
+        "arquivo": "crm/lib/sankhya/services/pedidos.ts",
+        "query": "SELECT c.AD_NUFAP, c.AD_VAL_LIB_ORC, COALESCE(sp.STATUS, 'PENDENTE') AS STATUS_PEDIDO, c.AD_OBSERVACAO, COALESCE(dbo.FC_SALDOPROP_(c.NUNOTA), 0) AS SAUDE_FINANCEIRA",
+        "status": "VALIDADO_COM_RESSALVAS",
+        "observacoes": [
+          "FC_SALDOPROP_ existe e está correta",
+          "VW_STATUS_PEDIDO existe e está correta",
+          "AD_NUFAP e AD_VAL_LIB_ORC confirmados na TGFCAB",
+          "AD_OBSERVACAO necessita confirmação - pode ser AD_OBSERVACAOETAPA da TCSFAP"
+        ]
+      },
+      {
+        "arquivo": "app/routers/crm.py",
+        "status": "VALIDADO_COM_FALLBACK",
+        "observacoes": [
+          "Código já implementa fallback de 3 níveis para compatibilidade",
+          "Nível 1: Full (com todas as colunas custom)",
+          "Nível 2: Sem VW_STATUS_PEDIDO",
+          "Nível 3: Safe Mode (sem colunas custom)"
+        ]
+      }
+    ]
+  },
+  "recomendacoes": [
+    {
+      "tipo": "INFO",
+      "mensagem": "A função FC_SALDOPROP_ existe e está corretamente implementada no Sankhya",
+      "acao": "Nenhuma ação necessária"
+    },
+    {
+      "tipo": "INFO",
+      "mensagem": "A view VW_STATUS_PEDIDO existe e está corretamente implementada",
+      "acao": "Nenhuma ação necessária"
+    },
+    {
+      "tipo": "INFO",
+      "mensagem": "As colunas AD_NUFAP e AD_VAL_LIB_ORC existem na TGFCAB conforme documentação",
+      "acao": "Nenhuma ação necessária"
+    },
+    {
+      "tipo": "ALERTA",
+      "mensagem": "A coluna AD_OBSERVACAO na TGFCAB não foi encontrada na documentação do assessment",
+      "detalhe": "O Sankhya usa AD_OBSERVACAOETAPA na tabela TCSFAP. Verificar se AD_OBSERVACAO é coluna custom da TGFCAB ou se deve usar JOIN com TCSFAP via AD_NUFAP",
+      "acao": "Verificar no banco se existe AD_OBSERVACAO na TGFCAB ou ajustar query para buscar de TCSFAP",
+      "arquivos_afetados": ["crm/lib/sankhya/services/pedidos.ts", "app/routers/crm.py"]
+    },
+    {
+      "tipo": "SUGESTAO",
+      "mensagem": "O backend Python (crm.py) já implementa estratégia de fallback robusta para lidar com colunas inexistentes",
+      "acao": "Manter a estratégia de fallback em produção até confirmar todas as colunas custom"
+    },
+    {
+      "tipo": "SUGESTAO",
+      "mensagem": "As tabelas core TGFCAB, TGFITE, TGFPAR, TGFVEN, TGFPRO estão todas documentadas e suas PKs confirmadas",
+      "acao": "Relações JOIN estão corretas no código"
+    }
+  ],
+  "resumo_executivo": {
+    "total_elementos_verificados": 6,
+    "confirmados": 5,
+    "pendentes": 1,
+    "nao_encontrados": 0,
+    "status_geral": "COMPATIVEL_COM_RESSALVAS",
+    "risco": "BAIXO - Apenas AD_OBSERVACAO necessita verificação adicional"
+  }
+}

@@ -1,0 +1,100 @@
+{
+    "shotmap": [
+        {
+            "player": {
+                "name": "Ahmed Fatouh",
+                "firstName": "",
+                "lastName": "",
+                "slug": "ahmed-fatouh",
+                "shortName": "A. Aboul-Fetouh",
+                "position": "D",
+                "jerseyNumber": "13",
+                "userCount": 2638,
+                "gender": "M",
+                "id": 880622,
+                "fieldTranslations": {
+                    "nameTranslation": {
+                        "ar": "أحمد فتوح",
+                        "bn": "আহমদ ফাতুহ",
+                        "hi": "अहमद फ़तौह"
+                    },
+                    "shortNameTranslation": {
+                        "ar": "أ. فتوح",
+                        "bn": "এ. আবুল-ফাতুহ",
+                        "hi": "ए. फ़तौह"
+                    }
+                }
+            },
+            "isHome": false,
+            "shotType": "save",
+            "situation": "assisted",
+            "playerCoordinates": {
+                "x": 5.2,
+                "y": 25.5,
+                "z": 0
+            },
+            "bodyPart": "left-foot",
+            "goalMouthLocation": "high-centre",
+            "goalMouthCoordinates": {
+                "x": 0,
+                "y": 49.8,
+                "z": 31
+            },
+            "blockCoordinates": {
+                "x": 0.90000000000001,
+                "y": 46,
+                "z": 0
+            },
+            "goalkeeper": {
+                "name": "Weverton",
+                "firstName": "Weverton",
+                "lastName": "Weverton",
+                "slug": "weverton",
+                "shortName": "Weverton",
+                "position": "G",
+                "jerseyNumber": "1",
+                "userCount": 8942,
+                "gender": "M",
+                "sofascoreId": "Weverton",
+                "id": 243529,
+                "fieldTranslations": {
+                    "nameTranslation": {
+                        "ar": "ويفرتون",
+                        "bn": "ওয়েভারটন",
+                        "hi": "वेवर्टन"
+                    },
+                    "shortNameTranslation": {
+                        "ar": "ويفرتون",
+                        "bn": "ওয়েভারটন",
+                        "hi": "वेवर्टन"
+                    }
+                }
+            },
+            "id": 7461094,
+            "time": 64,
+            "timeSeconds": 3809,
+            "draw": {
+                "start": {
+                    "x": 25.5,
+                    "y": 5.2
+                },
+                "block": {
+                    "x": 46,
+                    "y": 0.90000000000001
+                },
+                "end": {
+                    "x": 50.2,
+                    "y": 0
+                },
+                "goal": {
+                    "x": 50.2,
+                    "y": 69
+                }
+            },
+            "reversedPeriodTime": 27,
+            "reversedPeriodTimeSeconds": 1591,
+            "periodTimeSeconds": 1109,
+            "incidentType": "shot"
+        }
+    ]
+}

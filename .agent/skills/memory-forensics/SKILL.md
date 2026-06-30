@@ -1,0 +1,183 @@
+---
+name: memory-forensics
+description: Comprehensive techniques for acquiring, analyzing, and extracting artifacts from memory dumps for incident response and malware analysis.
+tools: Read, Grep, Glob, Bash, Edit, Write
+model: inherit
+squad: Outros
+---
+
+# Memory Forensics
+
+## Backstory
+
+Você é um agente especializado em Memory Forensics.
+
+## Contexto Original da Skill
+Memory Forensics
+
+## Instruções
+---
+name: memory-forensics
+description: "Comprehensive techniques for acquiring, analyzing, and extracting artifacts from memory dumps for incident response and malware analysis."
+risk: unknown
+source: community
+date_added: "2026-02-27"
+---
+
+# Memory Forensics
+
+Comprehensive techniques for acquiring, analyzing, and extracting artifacts from memory dumps for incident response and malware analysis.
+
+## Use this skill when
+
+- Working on memory forensics tasks or workflows
+- Needing guidance, best practices, or checklists for memory forensics
+
+## Do not use this skill when
+
+- The task is unrelated to memory forensics
+- You need a different domain or tool outside this scope
+
+## Instructions
+
+- Clarify goals, constraints, and required inputs.
+- Apply relevant best practices and validate outcomes.
+- Provide actionable steps and verification.
+- If detailed examples are required, open `resources/implementation-playbook.md`.
+
+## Memory Acquisition
+
+### Live Acquisition Tools
+
+#### Windows
+```powershell
+# WinPmem (Recommended)
+winpmem_mini_x64.exe memory.raw
+
+# DumpIt
+DumpIt.exe
+
+# Belkasoft RAM Capturer
+# GUI-based, outputs raw format
+
+# Magnet RAM Capture
+# GUI-based, outputs raw format
+```
+
+#### Linux
+```bash
+# LiME (Linux Memory Extractor)
+sudo insmod lime.ko "path=/tmp/memory.lime format=lime"
+
+# /dev/mem (limited, requires permissions)
+sudo dd if=/dev/mem of=memory.raw bs=1M
+
+# /proc/kcore (ELF format)
+sudo cp /proc/kcore memory.elf
+```
+
+#### macOS
+```bash
+# osxpmem
+sudo ./osxpmem -o memory.raw
+
+# MacQuisition (commercial)
+```
+
+### Virtual Machine Memory
+
+```bash
+# VMware: .vmem file is raw memory
+cp vm.vmem memory.raw
+
+# VirtualBox: Use debug console
+vboxmanage debugvm "VMName" dumpvmcore --filename memory.elf
+
+# QEMU
+virsh dump <domain> memory.raw --memory-only
+
+# Hyper-V
+# Checkpoint contains memory state
+```
+
+## Volatility 3 Framework
+
+### Installation and Setup
+
+```bash
+# Install Volatility 3
+pip install volatility3
+
+# Install symbol tables (Windows)
+# Download from https://downloads.volatilityfoundation.org/volatility3/symbols/
+
+# Basic usage
+vol -f memory.raw <plugin>
+
+# With symbol path
+vol -f memory.raw -s /path/to/symbols windows.pslist
+```
+
+### Essential Plugins
+
+#### Process Analysis
+```bash
+# List processes
+vol -f memory.raw windows.pslist
+
+# Process tree (parent-child relationships)
+vol -f memory.raw windows.pstree
+
+# Hidden process detection
+vol -f memory.raw windows.psscan
+
+# Process memory dumps
+vol -f memory.raw windows.memmap --pid <PID> --dump
+
+# Process environment variables
+vol -f memory.raw windows.envars --pid <PID>
+
+# Command line arguments
+vol -f memory.raw windows.cmdline
+```
+
+#### Network Analysis
+```bash
+# Network connections
+vol -f memory.raw windows.netscan
+
+# Network connection state
+vol -f memory.raw windows.netstat
+```
+
+#### DLL and Module Analysis
+```bash
+# Loaded DLLs per process
+vol -f memory.raw windows.dlllist --pid <PID>
+
+# Find hidden/injected DLLs
+vol -f memory.raw windows.ldrmodules
+
+# Kernel modules
+vol -f m
+
+## Diretrizes do 
+
+🔧 DIRETRIZ DE ENGENHARIA: Use exclusivamente o gerenciador uv para dependências. Todo código deve ser lintado via ruff e tipado com mypy.
+
+
+## Objetivo
+
+Comprehensive techniques for acquiring, analyzing, and extracting artifacts from memory dumps for incident response and malware analysis.
+
+## Squad
+
+**Outros**
+
+## Quando Usar
+
+- Quando precisar de expertise em Memory Forensics
+- Para tarefas relacionadas a memory forensics
+
+## Diretrizes Específicas
+

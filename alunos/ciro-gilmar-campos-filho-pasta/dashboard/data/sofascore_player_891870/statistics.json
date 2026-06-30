@@ -1,0 +1,111 @@
+{
+    "player": {
+        "name": "Ali McCann",
+        "firstName": "Ali",
+        "lastName": "McCann",
+        "slug": "ali-mccann",
+        "shortName": "A. McCann",
+        "position": "M",
+        "jerseyNumber": "8",
+        "height": 176,
+        "userCount": 118,
+        "gender": "M",
+        "id": 891870,
+        "marketValueCurrency": "EUR",
+        "dateOfBirthTimestamp": 944265600,
+        "proposedMarketValueRaw": {
+            "value": 2300000,
+            "currency": "EUR"
+        },
+        "fieldTranslations": {
+            "nameTranslation": {
+                "ar": "أليستر ماكان",
+                "bn": "অ্যালিস্টার ম্যাকক্যান",
+                "hi": "एलिस्टेयर मैककैन",
+                "ru": "Али МаКкан"
+            },
+            "shortNameTranslation": {
+                "ar": "أ. ماكان",
+                "bn": "এ. ম্যাককান",
+                "hi": "ए. मैककैन",
+                "ru": "А. МаКкан"
+            }
+        }
+    },
+    "team": {
+        "name": "Northern Ireland",
+        "slug": "northern-ireland",
+        "shortName": "Northern Ireland",
+        "gender": "M",
+        "sport": {
+            "name": "Football",
+            "slug": "football",
+            "id": 1
+        },
+        "userCount": 28272,
+        "nameCode": "NIR",
+        "ranking": 70,
+        "disabled": false,
+        "national": true,
+        "type": 0,
+        "id": 4786,
+        "teamColors": {
+            "primary": "#1c9239",
+            "secondary": "#ffffff",
+            "text": "#ffffff"
+        },
+        "fieldTranslations": {
+            "nameTranslation": {
+                "ar": "أيرلندا الشمالية",
+                "bn": "নর্দান আয়ারল্যান্ড",
+                "hi": "नॉर्दर्न आयरलैंड",
+                "ru": "Северная Ирландия"
+            },
+            "shortNameTranslation": {}
+        }
+    },
+    "statistics": {
+        "totalPass": 29,
+        "accuratePass": 26,
+        "goalAssist": 0,
+        "accurateOwnHalfPasses": 20,
+        "totalOwnHalfPasses": 23,
+        "accurateOppositionHalfPasses": 6,
+        "totalOppositionHalfPasses": 6,
+        "aerialLost": 1,
+        "aerialWon": 1,
+        "duelLost": 7,
+        "duelWon": 3,
+        "challengeLost": 1,
+        "dispossessed": 4,
+        "ballRecovery": 2,
+        "totalTackle": 1,
+        "wonTackle": 1,
+        "errorLeadToAShot": 1,
+        "unsuccessfulTouch": 1,
+        "wasFouled": 1,
+        "fouls": 1,
+        "minutesPlayed": 63,
+        "touches": 39,
+        "rating": 6.1,
+        "possessionLostCtrl": 8,
+        "totalBallCarriesDistance": 28.652183574166,
+        "ballCarriesCount": 5,
+        "totalProgression": 6.1353483291663,
+        "progressiveBallCarriesCount": 0,
+        "ratingVersions": {
+            "original": 6.1,
+            "alternative": 6
+        },
+        "totalShots": 0,
+        "passValueNormalized": 0.02,
+        "dribbleValueNormalized": 0.02,
+        "defensiveValueNormalized": -0.22,
+        "statisticsType": {
+            "sportSlug": "football",
+            "statisticsType": "player"
+        }
+    },
+    "position": "M",
+    "extra": null
+}

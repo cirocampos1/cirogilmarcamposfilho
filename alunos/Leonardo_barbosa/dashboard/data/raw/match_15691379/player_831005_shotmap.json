@@ -1,0 +1,188 @@
+{
+    "shotmap": [
+        {
+            "player": {
+                "name": "Raphinha",
+                "slug": "raphinha",
+                "shortName": "Raphinha",
+                "position": "M",
+                "jerseyNumber": "11",
+                "userCount": 1119585,
+                "gender": "M",
+                "sofascoreId": "Raphinha",
+                "id": 831005,
+                "fieldTranslations": {
+                    "nameTranslation": {
+                        "ar": "رافينيا",
+                        "bn": "রাফিনহা",
+                        "hi": "राफिन्हा"
+                    },
+                    "shortNameTranslation": {
+                        "ar": "رافينيا",
+                        "bn": "রাফিনহা",
+                        "hi": "राफिन्हा"
+                    }
+                }
+            },
+            "isHome": true,
+            "shotType": "save",
+            "situation": "assisted",
+            "playerCoordinates": {
+                "x": 8,
+                "y": 28.7,
+                "z": 0
+            },
+            "bodyPart": "left-foot",
+            "goalMouthLocation": "low-left",
+            "goalMouthCoordinates": {
+                "x": 0,
+                "y": 53.6,
+                "z": 3.2
+            },
+            "blockCoordinates": {
+                "x": 1.4,
+                "y": 44.9,
+                "z": 0
+            },
+            "goalkeeper": {
+                "name": "Mostafa Shobeir",
+                "slug": "mostafa-shobeir",
+                "shortName": "M. Shobeir",
+                "position": "G",
+                "jerseyNumber": "31",
+                "userCount": 6456,
+                "gender": "M",
+                "id": 1048378,
+                "fieldTranslations": {
+                    "nameTranslation": {
+                        "ar": "مصطفى شوبير",
+                        "bn": "মোস্তফা শোবের",
+                        "hi": "मुस्तफा शोबैर"
+                    },
+                    "shortNameTranslation": {
+                        "ar": "م. شوبير",
+                        "bn": "এম. শোবের",
+                        "hi": "एम. शोबैर"
+                    }
+                }
+            },
+            "id": 7460438,
+            "time": 33,
+            "timeSeconds": 1942,
+            "draw": {
+                "start": {
+                    "x": 28.7,
+                    "y": 8
+                },
+                "block": {
+                    "x": 44.9,
+                    "y": 1.4
+                },
+                "end": {
+                    "x": 46.4,
+                    "y": 0
+                },
+                "goal": {
+                    "x": 46.4,
+                    "y": 96.8
+                }
+            },
+            "reversedPeriodTime": 13,
+            "reversedPeriodTimeSeconds": 758,
+            "periodTimeSeconds": 1942,
+            "incidentType": "shot"
+        },
+        {
+            "player": {
+                "name": "Raphinha",
+                "slug": "raphinha",
+                "shortName": "Raphinha",
+                "position": "M",
+                "jerseyNumber": "11",
+                "userCount": 1119585,
+                "gender": "M",
+                "sofascoreId": "Raphinha",
+                "id": 831005,
+                "fieldTranslations": {
+                    "nameTranslation": {
+                        "ar": "رافينيا",
+                        "bn": "রাফিনহা",
+                        "hi": "राफिन्हा"
+                    },
+                    "shortNameTranslation": {
+                        "ar": "رافينيا",
+                        "bn": "রাফিনহা",
+                        "hi": "राफिन्हा"
+                    }
+                }
+            },
+            "isHome": true,
+            "shotType": "save",
+            "situation": "assisted",
+            "playerCoordinates": {
+                "x": 5.8,
+                "y": 28.4,
+                "z": 0
+            },
+            "bodyPart": "left-foot",
+            "goalMouthLocation": "low-left",
+            "goalMouthCoordinates": {
+                "x": 0,
+                "y": 53.9,
+                "z": 3.8
+            },
+            "blockCoordinates": {
+                "x": 1.1,
+                "y": 45.7,
+                "z": 0
+            },
+            "goalkeeper": {
+                "name": "Mostafa Shobeir",
+                "slug": "mostafa-shobeir",
+                "shortName": "M. Shobeir",
+                "position": "G",
+                "jerseyNumber": "31",
+                "userCount": 6456,
+                "gender": "M",
+                "id": 1048378,
+                "fieldTranslations": {
+                    "nameTranslation": {
+                        "ar": "مصطفى شوبير",
+                        "bn": "মোস্তফা শোবের",
+                        "hi": "मुस्तफा शोबैर"
+                    },
+                    "shortNameTranslation": {
+                        "ar": "م. شوبير",
+                        "bn": "এম. শোবের",
+                        "hi": "एम. शोबैर"
+                    }
+                }
+            },
+            "id": 7460434,
+            "time": 28,
+            "timeSeconds": 1653,
+            "draw": {
+                "start": {
+                    "x": 28.4,
+                    "y": 5.8
+                },
+                "block": {
+                    "x": 45.7,
+                    "y": 1.1
+                },
+                "end": {
+                    "x": 46.1,
+                    "y": 0
+                },
+                "goal": {
+                    "x": 46.1,
+                    "y": 96.2
+                }
+            },
+            "reversedPeriodTime": 18,
+            "reversedPeriodTimeSeconds": 1047,
+            "periodTimeSeconds": 1653,
+            "incidentType": "shot"
+        }
+    ]
+}

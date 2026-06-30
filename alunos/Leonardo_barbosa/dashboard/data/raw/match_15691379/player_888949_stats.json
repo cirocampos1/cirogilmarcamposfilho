@@ -1,0 +1,107 @@
+{
+    "player": {
+        "name": "Roger Ibañez",
+        "firstName": "",
+        "lastName": "",
+        "slug": "roger-ibanez",
+        "shortName": "R. Ibañez",
+        "position": "D",
+        "jerseyNumber": "3",
+        "height": 185,
+        "userCount": 6263,
+        "gender": "M",
+        "id": 888949,
+        "marketValueCurrency": "EUR",
+        "dateOfBirthTimestamp": 911779200,
+        "proposedMarketValueRaw": {
+            "value": 16500000,
+            "currency": "EUR"
+        },
+        "fieldTranslations": {
+            "nameTranslation": {
+                "ar": "روجر إيبانيز",
+                "bn": "রজার ইবানেজ",
+                "hi": "रोजर इबानेज़"
+            },
+            "shortNameTranslation": {
+                "ar": "ر. إيبانيز",
+                "bn": "আর. ইবানেজ",
+                "hi": "आर. इबानेज़"
+            }
+        }
+    },
+    "team": {
+        "name": "Brazil",
+        "slug": "brazil",
+        "shortName": "Brazil",
+        "gender": "M",
+        "sport": {
+            "name": "Football",
+            "slug": "football",
+            "id": 1
+        },
+        "userCount": 2441982,
+        "nameCode": "BRA",
+        "ranking": 6,
+        "disabled": false,
+        "national": true,
+        "type": 0,
+        "id": 4748,
+        "teamColors": {
+            "primary": "#ffff00",
+            "secondary": "#009933",
+            "text": "#009933"
+        },
+        "fieldTranslations": {
+            "nameTranslation": {
+                "ar": "البرازيل",
+                "bn": "ব্রাজিল",
+                "hi": "ब्राजील",
+                "ru": "Бразилия"
+            },
+            "shortNameTranslation": {}
+        }
+    },
+    "statistics": {
+        "totalPass": 46,
+        "accuratePass": 46,
+        "goalAssist": 0,
+        "accurateOwnHalfPasses": 36,
+        "totalOwnHalfPasses": 36,
+        "accurateOppositionHalfPasses": 10,
+        "totalOppositionHalfPasses": 10,
+        "aerialLost": 1,
+        "duelLost": 1,
+        "duelWon": 4,
+        "totalClearance": 1,
+        "interceptionWon": 1,
+        "ballRecovery": 6,
+        "totalTackle": 4,
+        "wonTackle": 3,
+        "unsuccessfulTouch": 2,
+        "minutesPlayed": 45,
+        "touches": 57,
+        "rating": 6.9,
+        "possessionLostCtrl": 2,
+        "totalBallCarriesDistance": 236.83464940706,
+        "ballCarriesCount": 29,
+        "totalProgression": 153.10041947774,
+        "bestBallCarryProgression": 18.746517655426,
+        "totalProgressiveBallCarriesDistance": 35.391931640637,
+        "progressiveBallCarriesCount": 2,
+        "ratingVersions": {
+            "original": 6.9,
+            "alternative": 7
+        },
+        "totalShots": 0,
+        "passValueNormalized": 0.26,
+        "dribbleValueNormalized": 0.17,
+        "defensiveValueNormalized": -0.11,
+        "statisticsType": {
+            "sportSlug": "football",
+            "statisticsType": "player"
+        }
+    },
+    "position": "D",
+    "extra": null
+}

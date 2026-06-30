@@ -1,0 +1,68 @@
+{
+    "player": {
+        "name": "Nabil Donga",
+        "slug": "nabil-donga",
+        "shortName": "N. Donga",
+        "position": "M",
+        "jerseyNumber": "80",
+        "height": 179,
+        "userCount": 2141,
+        "gender": "M",
+        "id": 918505,
+        "marketValueCurrency": "EUR",
+        "dateOfBirthTimestamp": 828748800,
+        "proposedMarketValueRaw": {
+            "value": 1300000,
+            "currency": "EUR"
+        },
+        "fieldTranslations": {
+            "nameTranslation": {
+                "ar": "نبيل عماد"
+            },
+            "shortNameTranslation": {
+                "ar": "ن. عماد"
+            }
+        }
+    },
+    "team": {
+        "name": "Egypt",
+        "slug": "egypt",
+        "shortName": "Egypt",
+        "gender": "M",
+        "sport": {
+            "name": "Football",
+            "slug": "football",
+            "id": 1
+        },
+        "userCount": 617607,
+        "nameCode": "EGY",
+        "ranking": 29,
+        "disabled": false,
+        "national": true,
+        "type": 0,
+        "id": 4758,
+        "teamColors": {
+            "primary": "#f00000",
+            "secondary": "#ffffff",
+            "text": "#ffffff"
+        },
+        "fieldTranslations": {
+            "nameTranslation": {
+                "ar": "مصر",
+                "bn": "মিশর",
+                "hi": "इजिप्ट",
+                "ru": "Египет"
+            },
+            "shortNameTranslation": {}
+        }
+    },
+    "statistics": {
+        "totalShots": 0,
+        "statisticsType": {
+            "sportSlug": "football",
+            "statisticsType": "player"
+        }
+    },
+    "position": "M",
+    "extra": null
+}

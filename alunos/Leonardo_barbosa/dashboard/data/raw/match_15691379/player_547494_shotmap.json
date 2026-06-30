@@ -1,0 +1,93 @@
+{
+    "shotmap": [
+        {
+            "player": {
+                "name": "Zizo",
+                "firstName": "",
+                "lastName": "",
+                "slug": "zizo",
+                "shortName": "Zizo",
+                "position": "M",
+                "jerseyNumber": "25",
+                "userCount": 53062,
+                "gender": "M",
+                "sofascoreId": "Zizo",
+                "id": 547494,
+                "fieldTranslations": {
+                    "nameTranslation": {
+                        "ar": "زيزو",
+                        "bn": "জিজো",
+                        "hi": "ज़िज़ो"
+                    },
+                    "shortNameTranslation": {
+                        "ar": "زيزو",
+                        "bn": "জিজো",
+                        "hi": "ज़िज़ो"
+                    }
+                }
+            },
+            "isHome": false,
+            "shotType": "miss",
+            "situation": "assisted",
+            "playerCoordinates": {
+                "x": 18.4,
+                "y": 67.2,
+                "z": 0
+            },
+            "bodyPart": "left-foot",
+            "goalMouthLocation": "close-left",
+            "goalMouthCoordinates": {
+                "x": 0,
+                "y": 57.6,
+                "z": 18.1
+            },
+            "goalkeeper": {
+                "name": "Weverton",
+                "firstName": "Weverton",
+                "lastName": "Weverton",
+                "slug": "weverton",
+                "shortName": "Weverton",
+                "position": "G",
+                "jerseyNumber": "1",
+                "userCount": 8942,
+                "gender": "M",
+                "sofascoreId": "Weverton",
+                "id": 243529,
+                "fieldTranslations": {
+                    "nameTranslation": {
+                        "ar": "ويفرتون",
+                        "bn": "ওয়েভারটন",
+                        "hi": "वेवर्टन"
+                    },
+                    "shortNameTranslation": {
+                        "ar": "ويفرتون",
+                        "bn": "ওয়েভারটন",
+                        "hi": "वेवर्टन"
+                    }
+                }
+            },
+            "id": 7461281,
+            "time": 90,
+            "addedTime": 3,
+            "timeSeconds": 5567,
+            "draw": {
+                "start": {
+                    "x": 67.2,
+                    "y": 18.4
+                },
+                "end": {
+                    "x": 42.4,
+                    "y": 0
+                },
+                "goal": {
+                    "x": 42.4,
+                    "y": 81.9
+                }
+            },
+            "reversedPeriodTime": 1,
+            "reversedPeriodTimeSeconds": 733,
+            "periodTimeSeconds": 167,
+            "incidentType": "shot"
+        }
+    ]
+}

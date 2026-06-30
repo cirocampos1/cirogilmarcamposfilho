@@ -1,0 +1,25 @@
+{
+  "agente": "FrontendDev",
+  "tarefa_id": 4,
+  "status": "CONCLUIDO",
+  "data": "2026-03-19",
+  "alteracoes": [
+    {
+      "arquivo": "crm/lib//client.ts",
+      "acao": "REMOVIDO campo AD_OBSERVACAO da interface PedidoSankhya",
+      "motivo": "Campo nao existe mais na base de dados - removido conforme instrucoes do BackendDev"
+    },
+    {
+      "arquivo": "crm/lib/actions/sankhya-pedidos.ts",
+      "acao": "REMOVIDO campo observacao da interface PedidoKanban e do mapper mapPedido()",
+      "motivo": "Campo derivado de AD_OBSERVACAO removido da API - frontend nao deve mais esperar este dado"
+    },
+    {
+      "arquivo": "crm/lib/sankhya/services/pedidos.ts",
+      "acao": "REMOVIDO campo AD_OBSERVACAO da interface Pedido e das queries SQL (linhas 122 e 165)",
+      "motivo": "Service de Sankhya nao deve referenciar campos inexistentes no banco - queries ajustadas"
+    }
+  ],
+  "build_status": "SUCESSO",
+  "observacoes": "Frontend CRM Next.js integrado com APIs reais do . Todas as referencias ao campo AD_OBSERVACAO foram eliminadas do codigo frontend. O build estatico foi gerado com sucesso em crm/out/. As APIs /api/crm/clientes, /api/crm/pedidos e /api/crm/vendedores estao prontas para consumo. Dashboard page.tsx ja utiliza buscarOrcamentosAction() corretamente e o mapeamento de leads esta funcionando."
+}

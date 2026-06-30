@@ -1,0 +1,75 @@
+{
+    "player": {
+        "name": "Gabriel Magalhães",
+        "firstName": "Gabriel",
+        "lastName": "Magalhães",
+        "slug": "gabriel-magalhaes",
+        "shortName": "G. Magalhães",
+        "position": "D",
+        "jerseyNumber": "6",
+        "height": 190,
+        "userCount": 62847,
+        "gender": "M",
+        "sofascoreId": "GabrielMagalhães",
+        "id": 869792,
+        "marketValueCurrency": "EUR",
+        "dateOfBirthTimestamp": 882489600,
+        "proposedMarketValueRaw": {
+            "value": 70000000,
+            "currency": "EUR"
+        },
+        "fieldTranslations": {
+            "nameTranslation": {
+                "ar": "غابرييل ماغالهايس",
+                "bn": "গ্যাব্রিয়েল ম্যাগালহায়েস",
+                "hi": "गेब्रियल मैगलहेस"
+            },
+            "shortNameTranslation": {
+                "ar": "غ. ماغالهايس",
+                "bn": "গ্যাব্রিয়েল",
+                "hi": "गेब्रियल मैगलहेस"
+            }
+        }
+    },
+    "team": {
+        "name": "Brazil",
+        "slug": "brazil",
+        "shortName": "Brazil",
+        "gender": "M",
+        "sport": {
+            "name": "Football",
+            "slug": "football",
+            "id": 1
+        },
+        "userCount": 2441982,
+        "nameCode": "BRA",
+        "ranking": 6,
+        "disabled": false,
+        "national": true,
+        "type": 0,
+        "id": 4748,
+        "teamColors": {
+            "primary": "#ffff00",
+            "secondary": "#009933",
+            "text": "#009933"
+        },
+        "fieldTranslations": {
+            "nameTranslation": {
+                "ar": "البرازيل",
+                "bn": "ব্রাজিল",
+                "hi": "ब्राजील",
+                "ru": "Бразилия"
+            },
+            "shortNameTranslation": {}
+        }
+    },
+    "statistics": {
+        "totalShots": 0,
+        "statisticsType": {
+            "sportSlug": "football",
+            "statisticsType": "player"
+        }
+    },
+    "position": "D",
+    "extra": null
+}

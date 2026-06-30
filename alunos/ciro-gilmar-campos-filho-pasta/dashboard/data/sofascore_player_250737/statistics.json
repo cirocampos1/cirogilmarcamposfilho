@@ -1,0 +1,115 @@
+{
+    "player": {
+        "name": "Adrien Rabiot",
+        "firstName": "Adrien",
+        "lastName": "Rabiot",
+        "slug": "adrien-rabiot",
+        "shortName": "A. Rabiot",
+        "position": "M",
+        "jerseyNumber": "12",
+        "height": 191,
+        "userCount": 13923,
+        "gender": "M",
+        "sofascoreId": "adrienrabiot_25",
+        "id": 250737,
+        "marketValueCurrency": "EUR",
+        "dateOfBirthTimestamp": 796867200,
+        "proposedMarketValueRaw": {
+            "value": 17300000,
+            "currency": "EUR"
+        },
+        "fieldTranslations": {
+            "nameTranslation": {
+                "ar": "أدريان رابيو",
+                "bn": "অ্যাড্রিয়েন রাবিওট",
+                "hi": "एड्रियन रेबियोट",
+                "ru": "Адриен Рабьо"
+            },
+            "shortNameTranslation": {
+                "ar": "أ. رابيو",
+                "bn": "এ. রাবিওট",
+                "hi": "ए. रेबियोट",
+                "ru": "А. Рабьо"
+            }
+        }
+    },
+    "team": {
+        "name": "France",
+        "slug": "france",
+        "shortName": "France",
+        "gender": "M",
+        "sport": {
+            "name": "Football",
+            "slug": "football",
+            "id": 1
+        },
+        "userCount": 1591843,
+        "nameCode": "FRA",
+        "ranking": 3,
+        "disabled": false,
+        "national": true,
+        "type": 0,
+        "id": 4481,
+        "teamColors": {
+            "primary": "#01509e",
+            "secondary": "#e30613",
+            "text": "#e30613"
+        },
+        "fieldTranslations": {
+            "nameTranslation": {
+                "ar": "فرنسا",
+                "bn": "ফ্রান্স",
+                "hi": "फ्रांस",
+                "ru": "Франция"
+            },
+            "shortNameTranslation": {}
+        }
+    },
+    "statistics": {
+        "totalPass": 81,
+        "accuratePass": 75,
+        "totalLongBalls": 5,
+        "accurateLongBalls": 5,
+        "goalAssist": 0,
+        "accurateOwnHalfPasses": 26,
+        "totalOwnHalfPasses": 26,
+        "accurateOppositionHalfPasses": 49,
+        "totalOppositionHalfPasses": 55,
+        "aerialWon": 1,
+        "duelLost": 4,
+        "duelWon": 3,
+        "totalContest": 1,
+        "shotOffTarget": 1,
+        "interceptionWon": 1,
+        "ballRecovery": 5,
+        "totalTackle": 2,
+        "wonTackle": 1,
+        "fouls": 3,
+        "minutesPlayed": 89,
+        "touches": 89,
+        "rating": 7.4,
+        "possessionLostCtrl": 9,
+        "totalBallCarriesDistance": 202.76383288431,
+        "ballCarriesCount": 25,
+        "totalProgression": 49.444222428033,
+        "bestBallCarryProgression": 9.9610619983229,
+        "totalProgressiveBallCarriesDistance": 10.291615227942,
+        "progressiveBallCarriesCount": 1,
+        "keyPass": 1,
+        "ratingVersions": {
+            "original": 7.4,
+            "alternative": 7.3
+        },
+        "totalShots": 1,
+        "shotValueNormalized": -0.08,
+        "passValueNormalized": 0.57,
+        "dribbleValueNormalized": 0.05,
+        "defensiveValueNormalized": -0.05,
+        "statisticsType": {
+            "sportSlug": "football",
+            "statisticsType": "player"
+        }
+    },
+    "position": "M",
+    "extra": null
+}

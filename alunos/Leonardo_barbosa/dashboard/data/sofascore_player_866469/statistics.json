@@ -1,0 +1,111 @@
+{
+    "player": {
+        "name": "Bruno Guimarães",
+        "slug": "bruno-guimaraes",
+        "shortName": "B. Guimarães",
+        "position": "M",
+        "jerseyNumber": "39",
+        "height": 182,
+        "userCount": 37615,
+        "gender": "M",
+        "sofascoreId": "BrunoGuimarães",
+        "id": 866469,
+        "marketValueCurrency": "EUR",
+        "dateOfBirthTimestamp": 879638400,
+        "proposedMarketValueRaw": {
+            "value": 77000000,
+            "currency": "EUR"
+        },
+        "fieldTranslations": {
+            "nameTranslation": {
+                "ar": "برونو غيماريش",
+                "bn": "ব্রুনো গুইমারেস",
+                "hi": "ब्रूनो गीमरेस"
+            },
+            "shortNameTranslation": {
+                "ar": "ب. غيمارايش",
+                "bn": "বি. গুইমারেস",
+                "hi": "बी. गीमरेस"
+            }
+        }
+    },
+    "team": {
+        "name": "Brazil",
+        "slug": "brazil",
+        "shortName": "Brazil",
+        "gender": "M",
+        "sport": {
+            "name": "Football",
+            "slug": "football",
+            "id": 1
+        },
+        "userCount": 2470014,
+        "nameCode": "BRA",
+        "ranking": 6,
+        "disabled": false,
+        "national": true,
+        "type": 0,
+        "id": 4748,
+        "teamColors": {
+            "primary": "#ffff00",
+            "secondary": "#009933",
+            "text": "#009933"
+        },
+        "fieldTranslations": {
+            "nameTranslation": {
+                "ar": "البرازيل",
+                "bn": "ব্রাজিল",
+                "hi": "ब्राजील",
+                "ru": "Бразилия"
+            },
+            "shortNameTranslation": {}
+        }
+    },
+    "statistics": {
+        "totalPass": 35,
+        "accuratePass": 33,
+        "totalLongBalls": 1,
+        "goalAssist": 0,
+        "accurateOwnHalfPasses": 14,
+        "totalOwnHalfPasses": 14,
+        "accurateOppositionHalfPasses": 19,
+        "totalOppositionHalfPasses": 21,
+        "totalCross": 2,
+        "duelLost": 2,
+        "duelWon": 4,
+        "totalContest": 2,
+        "wonContest": 1,
+        "bigChanceCreated": 1,
+        "onTargetScoringAttempt": 1,
+        "goals": 1,
+        "ballRecovery": 6,
+        "totalTackle": 1,
+        "wonTackle": 1,
+        "wasFouled": 2,
+        "fouls": 1,
+        "minutesPlayed": 45,
+        "touches": 45,
+        "rating": 8.1,
+        "possessionLostCtrl": 5,
+        "totalBallCarriesDistance": 101.61544586814,
+        "ballCarriesCount": 12,
+        "totalProgression": 22.648176502623,
+        "progressiveBallCarriesCount": 0,
+        "keyPass": 1,
+        "ratingVersions": {
+            "original": 8.1,
+            "alternative": 7.9
+        },
+        "totalShots": 1,
+        "shotValueNormalized": 0.51,
+        "passValueNormalized": 0.28,
+        "dribbleValueNormalized": 0.18,
+        "defensiveValueNormalized": -0.04,
+        "statisticsType": {
+            "sportSlug": "football",
+            "statisticsType": "player"
+        }
+    },
+    "position": "M",
+    "extra": null
+}

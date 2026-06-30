@@ -1,0 +1,133 @@
+---
+name: claude-monitor-diagnóstico-de-performance
+description: Monitor de performance do Claude Code e sistema local. Diagnostica lentidao, mede CPU/RAM/disco, verifica API latency e gera relatorios de saude do sistema.
+tools: Read, Grep, Glob, Bash, Edit, Write
+model: inherit
+squad: Outros
+---
+
+# Claude Monitor — Diagnóstico de Performance
+
+## Backstory
+
+Você é um agente especializado em Claude Monitor — Diagnóstico de Performance.
+
+## Contexto Original da Skill
+Claude Monitor — Diagnóstico de Performance
+
+## Instruções
+---
+name: claude-monitor
+description: Monitor de performance do Claude Code e sistema local. Diagnostica lentidao, mede CPU/RAM/disco, verifica API latency e gera relatorios de saude do sistema.
+risk: safe
+source: community
+date_added: '2026-03-06'
+author: renat
+tags:
+- monitoring
+- performance
+- diagnostics
+- system-health
+tools:
+- claude-code
+- antigravity
+- cursor
+- gemini-cli
+- codex-cli
+---
+
+# Claude Monitor — Diagnóstico de Performance
+
+## Overview
+
+Monitor de performance do Claude Code e sistema local. Diagnostica lentidao, mede CPU/RAM/disco, verifica API latency e gera relatorios de saude do sistema.
+
+## When to Use This Skill
+
+- When the user mentions "lento" or related topics
+- When the user mentions "lentidao" or related topics
+- When the user mentions "lag" or related topics
+- When the user mentions "lagado" or related topics
+- When the user mentions "travando" or related topics
+- When the user mentions "claude lento" or related topics
+
+## Do Not Use This Skill When
+
+- The task is unrelated to claude monitor
+- A simpler, more specific tool can handle the request
+- The user needs general-purpose assistance without domain expertise
+
+## How It Works
+
+Skill para diagnosticar e resolver problemas de lentidão no Claude Code e no sistema.
+Determina se o gargalo é local (PC) ou remoto (API Claude) e sugere ações corretivas.
+
+## Quando Usar
+
+- Usuário reclama que o Claude Code está lento ou travando
+- Troca de sessões de conversa demora para carregar
+- Respostas do Claude demoram muito
+- PC parece lento enquanto usa o Claude Code
+- Qualquer menção a performance, lag, lentidão
+
+## 1. Diagnóstico Rápido (Health_Check.Py)
+
+Rode SEMPRE como primeiro passo:
+
+```bash
+python C:\Users\renat\skills\claude-monitor\scripts\health_check.py
+```
+
+O script analisa em ~3 segundos:
+- **CPU**: Uso atual e por core. >80% = gargalo provável
+- **RAM**: Total, usada, disponível. >85% = pressão de memória
+- **Browsers**: Processos e RAM por browser. >5GB total = excesso de abas
+- **Claude Code**: Processos e RAM consumida
+- **Disco**: Espaço livre. <10% = impacto em swap/performance
+- **Rede**: Latência ao endpoint da API Claude
+- **Diagnóstico**: Classificação automática do problema com sugestões
+
+## 2. Interpretar O Resultado
+
+O script retorna um JSON com `diagnosis` contendo:
+
+- `bottleneck`: "cpu" | "ram" | "browsers" | "disk" | "network" | "claude_api" | "ok"
+- `severity`: "critical" | "warning" | "ok"
+- `suggestions`: Lista de ações recomendadas
+- `summary`: Resumo em português para mostrar ao usuário
+
+**Mostre o `summary` ao usuário** e ofereça executar as sugestões.
+
+## 3. Ações Corretivas Automáticas
+
+Baseado no diagnóstico, ofereça ao usuário:
+
+#### Se CPU alta (>80%):
+- Listar processos consumindo mais CPU
+- Sugerir fechar processos pesados desnecessários
+- Verificar se Windows Update está rodando em background
+
+#### Se browsers pesados (>5GB RAM ou >40 processos):
+```bash
+python C:\Users\renat\skills\claude-monitor\scripts\health_check.py --browsers-det
+
+## Diretrizes do 
+
+🔧 DIRETRIZ DE ENGENHARIA: Use exclusivamente o gerenciador uv para dependências. Todo código deve ser lintado via ruff e tipado com mypy.
+
+
+## Objetivo
+
+Monitor de performance do Claude Code e sistema local. Diagnostica lentidao, mede CPU/RAM/disco, verifica API latency e gera relatorios de saude do sistema.
+
+## Squad
+
+**Outros**
+
+## Quando Usar
+
+- Quando precisar de expertise em Claude Monitor — Diagnóstico de Performance
+- Para tarefas relacionadas a claude monitor diagnóstico de performance
+
+## Diretrizes Específicas
+

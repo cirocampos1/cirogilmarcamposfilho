@@ -1,0 +1,43 @@
+name: gradio
+role: Gradio
+goal: Use this skill when a user wants a Gradio demo, UI prototype, or Python-based
+  ML interface.
+backstory: "Você é um agente especializado em Gradio.\n\n## Contexto Original da Skill\n\
+  Gradio\n\n## Instruções\n---\nsource: \"https://github.com/huggingface/skills/tree/main/skills/huggingface-gradio\"\
+  \nname: hugging-face-gradio\ndescription: Build or edit Gradio apps, layouts, components,\
+  \ and chat interfaces in Python.\nrisk: unknown\n---\n\n# Gradio\n\n## When to Use\n\
+  \nUse this skill when a user wants a Gradio demo, UI prototype, or Python-based\
+  \ ML interface.\n\nGradio is a Python library for building interactive web UIs and\
+  \ ML demos. This skill covers the core API, patterns, and examples.\n\n## Guides\n\
+  \nDetailed guides on specific topics (read these when relevant):\n\n- [Quickstart](https://www.gradio.app/guides/quickstart)\n\
+  - [The Interface Class](https://www.gradio.app/guides/the-interface-class)\n- [Blocks\
+  \ and Event Listeners](https://www.gradio.app/guides/blocks-and-event-listeners)\n\
+  - [Controlling Layout](https://www.gradio.app/guides/controlling-layout)\n- [More\
+  \ Blocks Features](https://www.gradio.app/guides/more-blocks-features)\n- [Custom\
+  \ CSS and JS](https://www.gradio.app/guides/custom-CSS-and-JS)\n- [Streaming Outputs](https://www.gradio.app/guides/streaming-outputs)\n\
+  - [Streaming Inputs](https://www.gradio.app/guides/streaming-inputs)\n- [Sharing\
+  \ Your App](https://www.gradio.app/guides/sharing-your-app)\n- [Custom HTML Components](https://www.gradio.app/guides/custom-HTML-components)\n\
+  - [Getting Started with the Python Client](https://www.gradio.app/guides/getting-started-with-the-python-client)\n\
+  - [Getting Started with the JS Client](https://www.gradio.app/guides/getting-started-with-the-js-client)\n\
+  \n## Core Patterns\n\n**Interface** (high-level): wraps a function with input/output\
+  \ components.\n\n```python\nimport gradio as gr\n\ndef greet(name):\n    return\
+  \ f\"Hello {name}!\"\n\ngr.Interface(fn=greet, inputs=\"text\", outputs=\"text\"\
+  ).launch()\n```\n\n**Blocks** (low-level): flexible layout with explicit event wiring.\n\
+  \n```python\nimport gradio as gr\n\nwith gr.Blocks() as demo:\n    name = gr.Textbox(label=\"\
+  Name\")\n    output = gr.Textbox(label=\"Greeting\")\n    btn = gr.Button(\"Greet\"\
+  )\n    btn.click(fn=lambda n: f\"Hello {n}!\", inputs=name, outputs=output)\n\n\
+  demo.launch()\n```\n\n**ChatInterface**: high-level wrapper for chatbot UIs.\n\n\
+  ```python\nimport gradio as gr\n\ndef respond(message, history):\n    return f\"\
+  You said: {message}\"\n\ngr.ChatInterface(fn=respond).launch()\n```\n\n## Key Component\
+  \ Signatures\n\n### `Textbox(value: str | I18nData | Callable | None = None, type:\
+  \ Literal['text', 'password', 'email'] = \"text\", lines: int = 1, max_lines: int\
+  \ | None = None, placeholder: str | I18nData | None = None, label: str | I18nData\
+  \ | None = None, info: str | I18nData | None = None, every: Timer | float | None\
+  \ = None, inputs: Component | Sequence[Component] | set[Component] | None = None,\
+  \ show_label: bool | None = None, container: bool = True, scale: int | None = None,\
+  \ min_width: int = 160, interactive: bool | None = None, visible: bool | Literal['hidden']\
+  \ = True, elem_id: str | None = None, autofocus: bool = False, autoscroll: bool\
+  \ = True, elem_classes: list[str] | str | None = None, render: bool = True, key:\n\
+  \n## Diretrizes do \n\n\U0001F527 DIRETRIZ DE ENGENHARIA: Use exclusivamente\
+  \ o gerenciador uv para dependências. Todo código deve ser lintado via ruff e tipado\
+  \ com mypy.\n"

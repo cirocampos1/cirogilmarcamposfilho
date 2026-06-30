@@ -1,0 +1,90 @@
+{
+    "shotmap": [
+        {
+            "player": {
+                "name": "Adrien Rabiot",
+                "firstName": "Adrien",
+                "lastName": "Rabiot",
+                "slug": "adrien-rabiot",
+                "shortName": "A. Rabiot",
+                "position": "M",
+                "jerseyNumber": "12",
+                "userCount": 13923,
+                "gender": "M",
+                "sofascoreId": "adrienrabiot_25",
+                "id": 250737,
+                "fieldTranslations": {
+                    "nameTranslation": {
+                        "ar": "أدريان رابيو",
+                        "bn": "অ্যাড্রিয়েন রাবিওট",
+                        "hi": "एड्रियन रेबियोट",
+                        "ru": "Адриен Рабьо"
+                    },
+                    "shortNameTranslation": {
+                        "ar": "أ. رابيو",
+                        "bn": "এ. রাবিওট",
+                        "hi": "ए. रेबियोट",
+                        "ru": "А. Рабьо"
+                    }
+                }
+            },
+            "isHome": true,
+            "shotType": "miss",
+            "situation": "assisted",
+            "playerCoordinates": {
+                "x": 21.5,
+                "y": 24.4,
+                "z": 0
+            },
+            "bodyPart": "left-foot",
+            "goalMouthLocation": "close-high",
+            "goalMouthCoordinates": {
+                "x": 0,
+                "y": 52.3,
+                "z": 59.7
+            },
+            "goalkeeper": {
+                "name": "Pierce Charles",
+                "firstName": "Pierce Charles",
+                "slug": "charles-pierce",
+                "shortName": "P. Charles",
+                "position": "G",
+                "jerseyNumber": "1",
+                "userCount": 599,
+                "gender": "M",
+                "id": 1154937,
+                "fieldTranslations": {
+                    "nameTranslation": {
+                        "ar": "تشارلز بيرس",
+                        "ru": "Чарльз, Пирс"
+                    },
+                    "shortNameTranslation": {
+                        "ar": "ت. بيرس",
+                        "ru": "П. Чарльз"
+                    }
+                }
+            },
+            "id": 7475387,
+            "time": 18,
+            "timeSeconds": 1054,
+            "draw": {
+                "start": {
+                    "x": 24.4,
+                    "y": 21.5
+                },
+                "end": {
+                    "x": 47.7,
+                    "y": 0
+                },
+                "goal": {
+                    "x": 47.7,
+                    "y": 40.3
+                }
+            },
+            "reversedPeriodTime": 28,
+            "reversedPeriodTimeSeconds": 1646,
+            "periodTimeSeconds": 1054,
+            "incidentType": "shot"
+        }
+    ]
+}

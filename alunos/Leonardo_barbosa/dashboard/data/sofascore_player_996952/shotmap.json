@@ -1,0 +1,84 @@
+{
+    "shotmap": [
+        {
+            "player": {
+                "name": "Bradley Barcola",
+                "slug": "barcola-bradley",
+                "shortName": "B. Barcola",
+                "position": "F",
+                "jerseyNumber": "29",
+                "userCount": 43338,
+                "gender": "M",
+                "sofascoreId": "bradley_b",
+                "id": 996952,
+                "fieldTranslations": {
+                    "nameTranslation": {
+                        "ar": "برادلي باركولا",
+                        "bn": "বারকোলা, ব্র্যাডলি",
+                        "hi": "बारकोला, ब्रैडली"
+                    },
+                    "shortNameTranslation": {
+                        "ar": "ب. باركولا",
+                        "bn": "বি. বারকোলা",
+                        "hi": "बी. बारकोला"
+                    }
+                }
+            },
+            "isHome": true,
+            "shotType": "miss",
+            "situation": "assisted",
+            "playerCoordinates": {
+                "x": 16.4,
+                "y": 40.1,
+                "z": 0
+            },
+            "bodyPart": "right-foot",
+            "goalMouthLocation": "high",
+            "goalMouthCoordinates": {
+                "x": 0,
+                "y": 44.5,
+                "z": 81.9
+            },
+            "goalkeeper": {
+                "name": "Pierce Charles",
+                "firstName": "Pierce Charles",
+                "slug": "charles-pierce",
+                "shortName": "P. Charles",
+                "position": "G",
+                "jerseyNumber": "1",
+                "userCount": 568,
+                "gender": "M",
+                "id": 1154937,
+                "fieldTranslations": {
+                    "nameTranslation": {
+                        "ar": "تشارلز بيرس"
+                    },
+                    "shortNameTranslation": {
+                        "ar": "ت. بيرس"
+                    }
+                }
+            },
+            "id": 7475692,
+            "time": 89,
+            "timeSeconds": 5329,
+            "draw": {
+                "start": {
+                    "x": 40.1,
+                    "y": 16.4
+                },
+                "end": {
+                    "x": 55.5,
+                    "y": 0
+                },
+                "goal": {
+                    "x": 55.5,
+                    "y": 18.1
+                }
+            },
+            "reversedPeriodTime": 2,
+            "reversedPeriodTimeSeconds": 71,
+            "periodTimeSeconds": 2629,
+            "incidentType": "shot"
+        }
+    ]
+}

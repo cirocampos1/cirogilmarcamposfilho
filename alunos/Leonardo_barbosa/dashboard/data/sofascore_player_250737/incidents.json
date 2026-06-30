@@ -1,0 +1,1960 @@
+{
+    "incidents": [
+        {
+            "text": "FT",
+            "homeScore": 2,
+            "awayScore": 1,
+            "isLive": false,
+            "time": 90,
+            "addedTime": 999,
+            "timeSeconds": 5400,
+            "reversedPeriodTime": 1,
+            "reversedPeriodTimeSeconds": 0,
+            "periodTimeSeconds": 2700,
+            "incidentType": "period"
+        },
+        {
+            "length": 5,
+            "time": 90,
+            "addedTime": 0,
+            "reversedPeriodTime": 1,
+            "incidentType": "injuryTime"
+        },
+        {
+            "playerIn": {
+                "name": "Hamza Abdelkarim",
+                "firstName": "Hamza Abdelkarim",
+                "slug": "hamza-abdelkarim",
+                "shortName": "H. Abdelkarim",
+                "position": "F",
+                "jerseyNumber": "39",
+                "height": 182,
+                "userCount": 38667,
+                "gender": "M",
+                "id": 1961596,
+                "marketValueCurrency": "EUR",
+                "dateOfBirthTimestamp": 1199145600,
+                "proposedMarketValueRaw": {
+                    "value": 1000000,
+                    "currency": "EUR"
+                },
+                "fieldTranslations": {
+                    "nameTranslation": {
+                        "ar": "حمزة عبد الكريم"
+                    },
+                    "shortNameTranslation": {
+                        "ar": "ح. الكريم"
+                    }
+                }
+            },
+            "playerOut": {
+                "name": "Omar Marmoush",
+                "firstName": "Omar",
+                "lastName": "Marmoush",
+                "slug": "omar-marmoush",
+                "shortName": "O. Marmoush",
+                "position": "F",
+                "jerseyNumber": "7",
+                "height": 183,
+                "userCount": 214944,
+                "gender": "M",
+                "sofascoreId": "OMarmoush",
+                "id": 873554,
+                "marketValueCurrency": "EUR",
+                "dateOfBirthTimestamp": 918345600,
+                "proposedMarketValueRaw": {
+                    "value": 65000000,
+                    "currency": "EUR"
+                },
+                "fieldTranslations": {
+                    "nameTranslation": {
+                        "ar": "عمر مرموش",
+                        "bn": "ওমর মারমাউস",
+                        "hi": "उमर मार्मौश"
+                    },
+                    "shortNameTranslation": {
+                        "ar": "ع. مرموش",
+                        "bn": "ও. মারমাউস",
+                        "hi": "ओ. मार्मौश"
+                    }
+                }
+            },
+            "id": 126385713,
+            "time": 85,
+            "injury": false,
+            "isHome": false,
+            "incidentClass": "regular",
+            "reversedPeriodTime": 6,
+            "incidentType": "substitution"
+        },
+        {
+            "playerIn": {
+                "name": "Zizo",
+                "firstName": "",
+                "lastName": "",
+                "slug": "zizo",
+                "shortName": "Zizo",
+                "position": "M",
+                "jerseyNumber": "25",
+                "height": 174,
+                "userCount": 53062,
+                "gender": "M",
+                "sofascoreId": "Zizo",
+                "id": 547494,
+                "marketValueCurrency": "EUR",
+                "dateOfBirthTimestamp": 821232000,
+                "proposedMarketValueRaw": {
+                    "value": 3700000,
+                    "currency": "EUR"
+                },
+                "fieldTranslations": {
+                    "nameTranslation": {
+                        "ar": "زيزو",
+                        "bn": "জিজো",
+                        "hi": "ज़िज़ो"
+                    },
+                    "shortNameTranslation": {
+                        "ar": "زيزو",
+                        "bn": "জিজো",
+                        "hi": "ज़िज़ो"
+                    }
+                }
+            },
+            "playerOut": {
+                "name": "Marwan Attia",
+                "firstName": "",
+                "lastName": "",
+                "slug": "attia-marwan",
+                "shortName": "M. Attia",
+                "position": "M",
+                "jerseyNumber": "13",
+                "height": 172,
+                "userCount": 6458,
+                "gender": "M",
+                "id": 1013699,
+                "marketValueCurrency": "EUR",
+                "dateOfBirthTimestamp": 902880000,
+                "proposedMarketValueRaw": {
+                    "value": 3900000,
+                    "currency": "EUR"
+                },
+                "fieldTranslations": {
+                    "nameTranslation": {
+                        "ar": "مروان عطية",
+                        "bn": "আতিয়া, মারওয়ান",
+                        "hi": "अत्तिया, मरवान"
+                    },
+                    "shortNameTranslation": {
+                        "ar": "م. عطية",
+                        "bn": "এম. আতিয়া",
+                        "hi": "एम. अत्तिया"
+                    }
+                }
+            },
+            "id": 126385712,
+            "time": 85,
+            "injury": false,
+            "isHome": false,
+            "incidentClass": "regular",
+            "reversedPeriodTime": 6,
+            "incidentType": "substitution"
+        },
+        {
+            "playerIn": {
+                "name": "Ibrahim Adel",
+                "firstName": "",
+                "lastName": "",
+                "slug": "ibrahim-adel",
+                "shortName": "I. Adel",
+                "position": "M",
+                "jerseyNumber": "14",
+                "height": 173,
+                "userCount": 8441,
+                "gender": "M",
+                "id": 1008171,
+                "marketValueCurrency": "EUR",
+                "dateOfBirthTimestamp": 987984000,
+                "proposedMarketValueRaw": {
+                    "value": 2600000,
+                    "currency": "EUR"
+                },
+                "fieldTranslations": {
+                    "nameTranslation": {
+                        "ar": "إبراهيم عادل",
+                        "bn": "ইব্রাহিম আদেল",
+                        "hi": "इब्राहीम अदेल"
+                    },
+                    "shortNameTranslation": {
+                        "ar": "إ. عادل",
+                        "bn": "আই. আদেল",
+                        "hi": "आई. अदेल"
+                    }
+                }
+            },
+            "playerOut": {
+                "name": "Mostafa Ziko",
+                "firstName": "Mostafa Ziko",
+                "lastName": "",
+                "slug": "mostafa-ziko",
+                "shortName": "M. Ziko",
+                "position": "M",
+                "jerseyNumber": "11",
+                "height": 180,
+                "userCount": 1102,
+                "gender": "M",
+                "id": 1418782,
+                "marketValueCurrency": "EUR",
+                "dateOfBirthTimestamp": 862099200,
+                "proposedMarketValueRaw": {
+                    "value": 2000000,
+                    "currency": "EUR"
+                },
+                "fieldTranslations": {
+                    "nameTranslation": {
+                        "ar": "مصطفى زيكو"
+                    },
+                    "shortNameTranslation": {
+                        "ar": "م. زيكو"
+                    }
+                }
+            },
+            "id": 126385687,
+            "time": 76,
+            "injury": false,
+            "isHome": false,
+            "incidentClass": "regular",
+            "reversedPeriodTime": 15,
+            "incidentType": "substitution"
+        },
+        {
+            "playerIn": {
+                "name": "Tarek Alaa",
+                "slug": "tariq-alaa",
+                "shortName": "T. Alaa",
+                "position": "D",
+                "jerseyNumber": "23",
+                "height": 178,
+                "userCount": 353,
+                "gender": "M",
+                "id": 1480544,
+                "marketValueCurrency": "EUR",
+                "dateOfBirthTimestamp": 1010188800,
+                "proposedMarketValueRaw": {
+                    "value": 155000,
+                    "currency": "EUR"
+                },
+                "fieldTranslations": {
+                    "nameTranslation": {
+                        "ar": "طارق علاء"
+                    },
+                    "shortNameTranslation": {
+                        "ar": "ط. علاء"
+                    }
+                }
+            },
+            "playerOut": {
+                "name": "Mohamed Hany",
+                "slug": "mohamed-hany",
+                "shortName": "M. Hany",
+                "position": "D",
+                "jerseyNumber": "30",
+                "height": 180,
+                "userCount": 5340,
+                "gender": "M",
+                "id": 826545,
+                "marketValueCurrency": "EUR",
+                "dateOfBirthTimestamp": 822528000,
+                "proposedMarketValueRaw": {
+                    "value": 1400000,
+                    "currency": "EUR"
+                },
+                "fieldTranslations": {
+                    "nameTranslation": {
+                        "ar": "محمد هاني",
+                        "bn": "মোহাম্মদ হানি",
+                        "hi": "मोहम्मद हनी"
+                    },
+                    "shortNameTranslation": {
+                        "ar": "م. هاني",
+                        "bn": "এম. হ্যানি",
+                        "hi": "एम. हनी"
+                    }
+                }
+            },
+            "id": 126385686,
+            "time": 75,
+            "injury": false,
+            "isHome": false,
+            "incidentClass": "regular",
+            "reversedPeriodTime": 16,
+            "incidentType": "substitution"
+        },
+        {
+            "playerIn": {
+                "name": "Karim Hafez",
+                "slug": "karim-hafez",
+                "shortName": "K. Hafez",
+                "position": "D",
+                "jerseyNumber": "29",
+                "height": 175,
+                "userCount": 650,
+                "gender": "M",
+                "id": 577736,
+                "marketValueCurrency": "EUR",
+                "dateOfBirthTimestamp": 826588800,
+                "proposedMarketValueRaw": {
+                    "value": 635000,
+                    "currency": "EUR"
+                },
+                "fieldTranslations": {
+                    "nameTranslation": {
+                        "ar": "كريم حافظ",
+                        "bn": "করিম হাফেজ",
+                        "hi": "करीम हाफ़िज़"
+                    },
+                    "shortNameTranslation": {
+                        "ar": "ك. حافظ",
+                        "bn": "কে. হাফেজ",
+                        "hi": "के. हाफ़िज़"
+                    }
+                }
+            },
+            "playerOut": {
+                "name": "Ahmed Fatouh",
+                "firstName": "",
+                "lastName": "",
+                "slug": "ahmed-fatouh",
+                "shortName": "A. Aboul-Fetouh",
+                "position": "D",
+                "jerseyNumber": "13",
+                "height": 178,
+                "userCount": 2638,
+                "gender": "M",
+                "id": 880622,
+                "marketValueCurrency": "EUR",
+                "dateOfBirthTimestamp": 890524800,
+                "proposedMarketValueRaw": {
+                    "value": 1000000,
+                    "currency": "EUR"
+                },
+                "fieldTranslations": {
+                    "nameTranslation": {
+                        "ar": "أحمد فتوح",
+                        "bn": "আহমদ ফাতুহ",
+                        "hi": "अहमद फ़तौह"
+                    },
+                    "shortNameTranslation": {
+                        "ar": "أ. فتوح",
+                        "bn": "এ. আবুল-ফাতুহ",
+                        "hi": "ए. फ़तौह"
+                    }
+                }
+            },
+            "id": 126385685,
+            "time": 75,
+            "injury": false,
+            "isHome": false,
+            "incidentClass": "regular",
+            "reversedPeriodTime": 16,
+            "incidentType": "substitution"
+        },
+        {
+            "playerIn": {
+                "name": "Emam Ashour",
+                "firstName": "",
+                "lastName": "",
+                "slug": "emam-ashour",
+                "shortName": "E. Ashour",
+                "position": "M",
+                "jerseyNumber": "22",
+                "height": 182,
+                "userCount": 99696,
+                "gender": "M",
+                "sofascoreId": "emam.ashour90",
+                "id": 967032,
+                "marketValueCurrency": "EUR",
+                "dateOfBirthTimestamp": 887932800,
+                "proposedMarketValueRaw": {
+                    "value": 4200000,
+                    "currency": "EUR"
+                },
+                "fieldTranslations": {
+                    "nameTranslation": {
+                        "ar": "إمام عاشور",
+                        "bn": "ইমাম আশুর",
+                        "hi": "इमाम अशौर"
+                    },
+                    "shortNameTranslation": {
+                        "ar": "إ. عاشور",
+                        "bn": "ই. আশুর",
+                        "hi": "ई. अशौर"
+                    }
+                }
+            },
+            "playerOut": {
+                "name": "Mohanad Lasheen",
+                "firstName": "",
+                "lastName": "",
+                "slug": "mohanad-lasheen",
+                "shortName": "M. Lasheen",
+                "position": "M",
+                "jerseyNumber": "14",
+                "height": 179,
+                "userCount": 897,
+                "gender": "M",
+                "id": 918506,
+                "marketValueCurrency": "EUR",
+                "dateOfBirthTimestamp": 833328000,
+                "proposedMarketValueRaw": {
+                    "value": 3200000,
+                    "currency": "EUR"
+                },
+                "fieldTranslations": {
+                    "nameTranslation": {
+                        "ar": "مهند لاشين",
+                        "bn": "মোহনাদ লাশীন",
+                        "hi": "मोहनद लाशीन"
+                    },
+                    "shortNameTranslation": {
+                        "ar": "م. لاشين",
+                        "bn": "এম. লাশিন",
+                        "hi": "एम. लाशीन"
+                    }
+                }
+            },
+            "id": 126385684,
+            "time": 75,
+            "injury": false,
+            "isHome": false,
+            "incidentClass": "regular",
+            "reversedPeriodTime": 16,
+            "incidentType": "substitution"
+        },
+        {
+            "playerIn": {
+                "name": "Gabriel Martinelli",
+                "slug": "gabriel-martinelli",
+                "shortName": "G. Martinelli",
+                "position": "F",
+                "jerseyNumber": "11",
+                "height": 180,
+                "userCount": 74055,
+                "gender": "M",
+                "sofascoreId": "GabiMartinelli",
+                "id": 922573,
+                "marketValueCurrency": "EUR",
+                "dateOfBirthTimestamp": 992822400,
+                "proposedMarketValueRaw": {
+                    "value": 42000000,
+                    "currency": "EUR"
+                },
+                "fieldTranslations": {
+                    "nameTranslation": {
+                        "ar": "غابرييل مارتينيلي",
+                        "bn": "গ্যাব্রিয়েল মার্টিনেলি",
+                        "hi": "गेब्रियल मार्टिनेली"
+                    },
+                    "shortNameTranslation": {
+                        "ar": "غ. مارتينيلي",
+                        "bn": "জি. মার্টিনেলি",
+                        "hi": "जी. मार्टिनेली"
+                    }
+                }
+            },
+            "playerOut": {
+                "name": "Raphinha",
+                "slug": "raphinha",
+                "shortName": "Raphinha",
+                "position": "M",
+                "jerseyNumber": "11",
+                "height": 176,
+                "userCount": 1119585,
+                "gender": "M",
+                "sofascoreId": "Raphinha",
+                "id": 831005,
+                "marketValueCurrency": "EUR",
+                "dateOfBirthTimestamp": 850521600,
+                "proposedMarketValueRaw": {
+                    "value": 72000000,
+                    "currency": "EUR"
+                },
+                "fieldTranslations": {
+                    "nameTranslation": {
+                        "ar": "رافينيا",
+                        "bn": "রাফিনহা",
+                        "hi": "राफिन्हा"
+                    },
+                    "shortNameTranslation": {
+                        "ar": "رافينيا",
+                        "bn": "রাফিনহা",
+                        "hi": "राफिन्हा"
+                    }
+                }
+            },
+            "id": 126385681,
+            "time": 71,
+            "injury": false,
+            "isHome": true,
+            "incidentClass": "regular",
+            "reversedPeriodTime": 20,
+            "incidentType": "substitution"
+        },
+        {
+            "playerIn": {
+                "name": "Alex Sandro",
+                "slug": "alex-sandro",
+                "shortName": "A. Sandro",
+                "position": "D",
+                "jerseyNumber": "26",
+                "height": 181,
+                "userCount": 15537,
+                "gender": "M",
+                "sofascoreId": "alxsndro12",
+                "id": 84854,
+                "marketValueCurrency": "EUR",
+                "dateOfBirthTimestamp": 664848000,
+                "proposedMarketValueRaw": {
+                    "value": 1500000,
+                    "currency": "EUR"
+                },
+                "fieldTranslations": {
+                    "nameTranslation": {
+                        "ar": "أليكس ساندرو",
+                        "bn": "অ্যালেক্স স্যান্ড্রো",
+                        "hi": "एलेक्स सैंड्रो"
+                    },
+                    "shortNameTranslation": {
+                        "ar": "أ. ساندرو",
+                        "bn": "এ. স্যান্ড্রো",
+                        "hi": "ए. सैंड्रो"
+                    }
+                }
+            },
+            "playerOut": {
+                "name": "Douglas Santos",
+                "firstName": "Douglas",
+                "lastName": "Santos",
+                "slug": "douglas-santos",
+                "shortName": "D. Santos",
+                "position": "D",
+                "jerseyNumber": "3",
+                "height": 174,
+                "userCount": 8726,
+                "gender": "M",
+                "id": 243583,
+                "marketValueCurrency": "EUR",
+                "dateOfBirthTimestamp": 764294400,
+                "proposedMarketValueRaw": {
+                    "value": 7000000,
+                    "currency": "EUR"
+                },
+                "fieldTranslations": {
+                    "nameTranslation": {
+                        "ar": "دوغلاس سانتوس",
+                        "bn": "ডগলাস স্যান্টোস",
+                        "hi": "डगलस सैंटोस"
+                    },
+                    "shortNameTranslation": {
+                        "ar": "د. سانتوس",
+                        "bn": "ডি. সান্তোস",
+                        "hi": "डी. सैंटोस"
+                    }
+                }
+            },
+            "id": 126385680,
+            "time": 71,
+            "injury": false,
+            "isHome": true,
+            "incidentClass": "regular",
+            "reversedPeriodTime": 20,
+            "incidentType": "substitution"
+        },
+        {
+            "homeScore": 2,
+            "awayScore": 1,
+            "player": {
+                "name": "Endrick",
+                "slug": "endrick",
+                "shortName": "Endrick",
+                "position": "F",
+                "jerseyNumber": "19",
+                "height": 173,
+                "userCount": 460633,
+                "gender": "M",
+                "sofascoreId": "Endrick",
+                "id": 1174937,
+                "marketValueCurrency": "EUR",
+                "dateOfBirthTimestamp": 1153440000,
+                "proposedMarketValueRaw": {
+                    "value": 42000000,
+                    "currency": "EUR"
+                },
+                "fieldTranslations": {
+                    "nameTranslation": {
+                        "ar": "إندريك"
+                    },
+                    "shortNameTranslation": {
+                        "ar": "إندريك"
+                    }
+                }
+            },
+            "assist1": {
+                "name": "Raphinha",
+                "slug": "raphinha",
+                "shortName": "Raphinha",
+                "position": "M",
+                "jerseyNumber": "11",
+                "height": 176,
+                "userCount": 1119585,
+                "gender": "M",
+                "sofascoreId": "Raphinha",
+                "id": 831005,
+                "marketValueCurrency": "EUR",
+                "dateOfBirthTimestamp": 850521600,
+                "proposedMarketValueRaw": {
+                    "value": 72000000,
+                    "currency": "EUR"
+                },
+                "fieldTranslations": {
+                    "nameTranslation": {
+                        "ar": "رافينيا",
+                        "bn": "রাফিনহা",
+                        "hi": "राफिन्हा"
+                    },
+                    "shortNameTranslation": {
+                        "ar": "رافينيا",
+                        "bn": "রাফিনহা",
+                        "hi": "राफिन्हा"
+                    }
+                }
+            },
+            "footballPassingNetworkAction": [
+                {
+                    "player": {
+                        "name": "Raphinha",
+                        "slug": "raphinha",
+                        "shortName": "Raphinha",
+                        "position": "M",
+                        "jerseyNumber": "11",
+                        "height": 176,
+                        "userCount": 1119585,
+                        "gender": "M",
+                        "sofascoreId": "Raphinha",
+                        "id": 831005,
+                        "marketValueCurrency": "EUR",
+                        "dateOfBirthTimestamp": 850521600,
+                        "proposedMarketValueRaw": {
+                            "value": 72000000,
+                            "currency": "EUR"
+                        },
+                        "fieldTranslations": {
+                            "nameTranslation": {
+                                "ar": "رافينيا",
+                                "bn": "রাফিনহা",
+                                "hi": "राफिन्हा"
+                            },
+                            "shortNameTranslation": {
+                                "ar": "رافينيا",
+                                "bn": "রাফিনহা",
+                                "hi": "राफिन्हा"
+                            }
+                        }
+                    },
+                    "eventType": "pass",
+                    "isAssist": true,
+                    "time": 52,
+                    "playerCoordinates": {
+                        "x": 97,
+                        "y": 73.8
+                    },
+                    "passEndCoordinates": {
+                        "x": 92.1,
+                        "y": 56.2
+                    },
+                    "isHome": true
+                },
+                {
+                    "player": {
+                        "name": "Endrick",
+                        "slug": "endrick",
+                        "shortName": "Endrick",
+                        "position": "F",
+                        "jerseyNumber": "19",
+                        "height": 173,
+                        "userCount": 460633,
+                        "gender": "M",
+                        "sofascoreId": "Endrick",
+                        "id": 1174937,
+                        "marketValueCurrency": "EUR",
+                        "dateOfBirthTimestamp": 1153440000,
+                        "proposedMarketValueRaw": {
+                            "value": 42000000,
+                            "currency": "EUR"
+                        },
+                        "fieldTranslations": {
+                            "nameTranslation": {
+                                "ar": "إندريك"
+                            },
+                            "shortNameTranslation": {
+                                "ar": "إندريك"
+                            }
+                        }
+                    },
+                    "eventType": "goal",
+                    "bodyPart": "left-foot",
+                    "time": 52,
+                    "playerCoordinates": {
+                        "x": 92.1,
+                        "y": 56.2
+                    },
+                    "gkCoordinates": {
+                        "x": 98.1,
+                        "y": 52.5
+                    },
+                    "goalShotCoordinates": {
+                        "x": 100,
+                        "y": 47.8
+                    },
+                    "goalMouthCoordinates": {
+                        "x": 61.83,
+                        "y": 53.67
+                    },
+                    "goalkeeper": {
+                        "name": "Mostafa Shobeir",
+                        "slug": "mostafa-shobeir",
+                        "shortName": "M. Shobeir",
+                        "position": "G",
+                        "jerseyNumber": "23",
+                        "height": 185,
+                        "userCount": 6456,
+                        "gender": "M",
+                        "id": 1048378,
+                        "marketValueCurrency": "EUR",
+                        "dateOfBirthTimestamp": 953251200,
+                        "proposedMarketValueRaw": {
+                            "value": 1300000,
+                            "currency": "EUR"
+                        },
+                        "fieldTranslations": {
+                            "nameTranslation": {
+                                "ar": "مصطفى شوبير",
+                                "bn": "মোস্তফা শোবের",
+                                "hi": "मुस्तफा शोबैर"
+                            },
+                            "shortNameTranslation": {
+                                "ar": "م. شوبير",
+                                "bn": "এম. শোবের",
+                                "hi": "एम. शोबैर"
+                            }
+                        }
+                    },
+                    "isHome": true,
+                    "goalType": "regular"
+                }
+            ],
+            "id": 351046728,
+            "time": 52,
+            "isHome": true,
+            "incidentClass": "regular",
+            "reversedPeriodTime": 39,
+            "incidentType": "goal"
+        },
+        {
+            "playerIn": {
+                "name": "Mohamed Salah",
+                "firstName": "Mohamed",
+                "lastName": "Salah",
+                "slug": "mohamed-salah",
+                "shortName": "M. Salah",
+                "position": "M",
+                "jerseyNumber": "11",
+                "height": 175,
+                "userCount": 611111,
+                "gender": "M",
+                "sofascoreId": "MoSalah",
+                "id": 159665,
+                "marketValueCurrency": "EUR",
+                "dateOfBirthTimestamp": 708566400,
+                "proposedMarketValueRaw": {
+                    "value": 21000000,
+                    "currency": "EUR"
+                },
+                "fieldTranslations": {
+                    "nameTranslation": {
+                        "ar": "محمد صلاح",
+                        "bn": "মোহাম্মদ সালাহ",
+                        "hi": "मोहम्मद सलाह"
+                    },
+                    "shortNameTranslation": {
+                        "ar": "م. صلاح",
+                        "bn": "এম. সালাহ",
+                        "hi": "एम. सलाह"
+                    }
+                }
+            },
+            "playerOut": {
+                "name": "Haissem Hassan",
+                "slug": "haissem-hassan",
+                "shortName": "H. Hassan",
+                "position": "M",
+                "jerseyNumber": "10",
+                "height": 175,
+                "userCount": 12168,
+                "gender": "M",
+                "id": 942836,
+                "marketValueCurrency": "EUR",
+                "dateOfBirthTimestamp": 1013126400,
+                "proposedMarketValueRaw": {
+                    "value": 4099999,
+                    "currency": "EUR"
+                },
+                "fieldTranslations": {
+                    "nameTranslation": {
+                        "ar": "هيثم حسن",
+                        "bn": "হাইসেম হাসান",
+                        "hi": "हैसेम हसन"
+                    },
+                    "shortNameTranslation": {
+                        "ar": "ه. حسن",
+                        "bn": "এইচ. হাসান",
+                        "hi": "एच. हसन"
+                    }
+                }
+            },
+            "id": 126385599,
+            "time": 46,
+            "injury": false,
+            "isHome": false,
+            "incidentClass": "regular",
+            "reversedPeriodTime": 45,
+            "incidentType": "substitution"
+        },
+        {
+            "playerIn": {
+                "name": "Mohamed Abdelmonem",
+                "firstName": "",
+                "lastName": "",
+                "slug": "mohamed-abdelmonem",
+                "shortName": "M. Abdelmonem",
+                "position": "D",
+                "jerseyNumber": "5",
+                "height": 183,
+                "userCount": 33016,
+                "gender": "M",
+                "sofascoreId": "mohamed_abdelmonem66",
+                "id": 926506,
+                "marketValueCurrency": "EUR",
+                "dateOfBirthTimestamp": 917827200,
+                "proposedMarketValueRaw": {
+                    "value": 2700000,
+                    "currency": "EUR"
+                },
+                "fieldTranslations": {
+                    "nameTranslation": {
+                        "ar": "محمد عبد المنعم",
+                        "bn": "মোহাম্মদ আবদেলমোনেম",
+                        "hi": "मोहम्मद अब्देलमोनम"
+                    },
+                    "shortNameTranslation": {
+                        "ar": "م. عبد المنعم",
+                        "bn": "এম.আবদেলমোনেম",
+                        "hi": "एम. अब्देलमोनम"
+                    }
+                }
+            },
+            "playerOut": {
+                "name": "Mahmoud Trézéguet",
+                "slug": "mahmoud-trezeguet",
+                "shortName": "M. Trézéguet",
+                "position": "M",
+                "jerseyNumber": "7",
+                "height": 179,
+                "userCount": 40989,
+                "gender": "M",
+                "sofascoreId": "mahmoudtrezeguet",
+                "id": 295361,
+                "marketValueCurrency": "EUR",
+                "dateOfBirthTimestamp": 780969600,
+                "proposedMarketValueRaw": {
+                    "value": 4099999,
+                    "currency": "EUR"
+                },
+                "fieldTranslations": {
+                    "nameTranslation": {
+                        "ar": "محمود تريزيجيه",
+                        "bn": "মাহমুদ ট্রেজেগুয়েট",
+                        "hi": "महमूद ट्रेज़ेगेट"
+                    },
+                    "shortNameTranslation": {
+                        "ar": "م. تريزيجيه",
+                        "bn": "এম. ট্রেজেগুয়েট",
+                        "hi": "एम. ट्रेज़ेगेट"
+                    }
+                }
+            },
+            "id": 126385598,
+            "time": 46,
+            "injury": false,
+            "isHome": false,
+            "incidentClass": "regular",
+            "reversedPeriodTime": 45,
+            "incidentType": "substitution"
+        },
+        {
+            "playerIn": {
+                "name": "Endrick",
+                "slug": "endrick",
+                "shortName": "Endrick",
+                "position": "F",
+                "jerseyNumber": "19",
+                "height": 173,
+                "userCount": 460633,
+                "gender": "M",
+                "sofascoreId": "Endrick",
+                "id": 1174937,
+                "marketValueCurrency": "EUR",
+                "dateOfBirthTimestamp": 1153440000,
+                "proposedMarketValueRaw": {
+                    "value": 42000000,
+                    "currency": "EUR"
+                },
+                "fieldTranslations": {
+                    "nameTranslation": {
+                        "ar": "إندريك"
+                    },
+                    "shortNameTranslation": {
+                        "ar": "إندريك"
+                    }
+                }
+            },
+            "playerOut": {
+                "name": "Igor Thiago",
+                "firstName": "",
+                "lastName": "",
+                "slug": "igor-thiago",
+                "shortName": "I. Thiago",
+                "position": "F",
+                "jerseyNumber": "9",
+                "height": 191,
+                "userCount": 47425,
+                "gender": "M",
+                "id": 1016907,
+                "marketValueCurrency": "EUR",
+                "dateOfBirthTimestamp": 993513600,
+                "proposedMarketValueRaw": {
+                    "value": 52000000,
+                    "currency": "EUR"
+                },
+                "fieldTranslations": {
+                    "nameTranslation": {
+                        "ar": "إيغور تياغو",
+                        "bn": "ইগর থিয়াগো",
+                        "hi": "इगोर थियागो"
+                    },
+                    "shortNameTranslation": {
+                        "ar": "إ. تياغو",
+                        "bn": "আই. থিয়াগো",
+                        "hi": "आई. थियागो"
+                    }
+                }
+            },
+            "id": 126385597,
+            "time": 46,
+            "injury": false,
+            "isHome": true,
+            "incidentClass": "regular",
+            "reversedPeriodTime": 45,
+            "incidentType": "substitution"
+        },
+        {
+            "playerIn": {
+                "name": "Matheus Cunha",
+                "firstName": "Matheus",
+                "lastName": "Cunha",
+                "slug": "matheus-cunha",
+                "shortName": "M. Cunha",
+                "position": "F",
+                "jerseyNumber": "10",
+                "height": 184,
+                "userCount": 82048,
+                "gender": "M",
+                "sofascoreId": "Cunha",
+                "id": 886363,
+                "marketValueCurrency": "EUR",
+                "dateOfBirthTimestamp": 927763200,
+                "proposedMarketValueRaw": {
+                    "value": 73000000,
+                    "currency": "EUR"
+                },
+                "fieldTranslations": {
+                    "nameTranslation": {
+                        "ar": "ماثيوس كونيا",
+                        "bn": "ম্যাথিউস কুনহা",
+                        "hi": "मैथियस कुन्हा"
+                    },
+                    "shortNameTranslation": {
+                        "ar": "م. كونيا",
+                        "bn": "এম. কুনহা",
+                        "hi": "एम. कुन्हा"
+                    }
+                }
+            },
+            "playerOut": {
+                "name": "Vinícius Júnior",
+                "slug": "vinicius-junior",
+                "shortName": "Vinícius Jr.",
+                "position": "F",
+                "jerseyNumber": "7",
+                "height": 176,
+                "userCount": 1419648,
+                "gender": "M",
+                "sofascoreId": "ViniJr",
+                "id": 868812,
+                "marketValueCurrency": "EUR",
+                "dateOfBirthTimestamp": 963360000,
+                "proposedMarketValueRaw": {
+                    "value": 156000000,
+                    "currency": "EUR"
+                },
+                "fieldTranslations": {
+                    "nameTranslation": {
+                        "ar": "فينيسيوس جونيور",
+                        "bn": "ভিনিসিয়াস জুনিয়র",
+                        "hi": "विनीसियस जूनियर"
+                    },
+                    "shortNameTranslation": {
+                        "ar": "فينيسيوس",
+                        "bn": "ভিনিসিয়াস",
+                        "hi": "विनीसियस"
+                    }
+                }
+            },
+            "id": 126385596,
+            "time": 46,
+            "injury": false,
+            "isHome": true,
+            "incidentClass": "regular",
+            "reversedPeriodTime": 45,
+            "incidentType": "substitution"
+        },
+        {
+            "playerIn": {
+                "name": "Luiz Henrique",
+                "firstName": "Luiz Henrique",
+                "lastName": "",
+                "slug": "luiz-henrique",
+                "shortName": "L. Henrique",
+                "position": "M",
+                "jerseyNumber": "11",
+                "height": 182,
+                "userCount": 24749,
+                "gender": "M",
+                "sofascoreId": "luizhenrique_07",
+                "id": 1035995,
+                "marketValueCurrency": "EUR",
+                "dateOfBirthTimestamp": 978393600,
+                "proposedMarketValueRaw": {
+                    "value": 25000000,
+                    "currency": "EUR"
+                },
+                "fieldTranslations": {
+                    "nameTranslation": {
+                        "ar": "لويس هنريكي",
+                        "bn": "লুইজ হেনরিক",
+                        "hi": "लुईज़ हेनरिक"
+                    },
+                    "shortNameTranslation": {
+                        "ar": "ل. هنريكي",
+                        "bn": "এল. হেনরিক নেটো",
+                        "hi": "एल. हेनरिक"
+                    }
+                }
+            },
+            "playerOut": {
+                "name": "Lucas Paquetá",
+                "firstName": "Lucas",
+                "lastName": "Paqueta",
+                "slug": "lucas-paqueta",
+                "shortName": "L. Paquetá",
+                "position": "M",
+                "jerseyNumber": "20",
+                "height": 180,
+                "userCount": 73712,
+                "gender": "M",
+                "sofascoreId": "Paqueta",
+                "id": 839981,
+                "marketValueCurrency": "EUR",
+                "dateOfBirthTimestamp": 872553600,
+                "proposedMarketValueRaw": {
+                    "value": 36000000,
+                    "currency": "EUR"
+                },
+                "fieldTranslations": {
+                    "nameTranslation": {
+                        "ar": "لوكاس باكيتا",
+                        "bn": "লুকাস পাকেতা",
+                        "hi": "लुकास पेकटा"
+                    },
+                    "shortNameTranslation": {
+                        "ar": "ل. باكيتا",
+                        "bn": "এল. পাকেতা",
+                        "hi": "एल. पेकटा"
+                    }
+                }
+            },
+            "id": 126385595,
+            "time": 46,
+            "injury": false,
+            "isHome": true,
+            "incidentClass": "regular",
+            "reversedPeriodTime": 45,
+            "incidentType": "substitution"
+        },
+        {
+            "playerIn": {
+                "name": "Danilo Oliveira",
+                "firstName": "Danilo",
+                "lastName": "Oliveira",
+                "slug": "danilo-oliveira",
+                "shortName": "D. Oliveira",
+                "position": "M",
+                "jerseyNumber": "8",
+                "height": 177,
+                "userCount": 17324,
+                "gender": "M",
+                "sofascoreId": "Danilo",
+                "id": 1064039,
+                "marketValueCurrency": "EUR",
+                "dateOfBirthTimestamp": 988243200,
+                "proposedMarketValueRaw": {
+                    "value": 25000000,
+                    "currency": "EUR"
+                },
+                "fieldTranslations": {
+                    "nameTranslation": {
+                        "ar": "دانييلو أوليفيرا",
+                        "bn": "দানিলো",
+                        "hi": "डेनिलो"
+                    },
+                    "shortNameTranslation": {
+                        "ar": "د. أوليفيرا",
+                        "bn": "দানিলো",
+                        "hi": "डेनिलो"
+                    }
+                }
+            },
+            "playerOut": {
+                "name": "Bruno Guimarães",
+                "slug": "bruno-guimaraes",
+                "shortName": "B. Guimarães",
+                "position": "M",
+                "jerseyNumber": "8",
+                "height": 182,
+                "userCount": 37479,
+                "gender": "M",
+                "sofascoreId": "BrunoGuimarães",
+                "id": 866469,
+                "marketValueCurrency": "EUR",
+                "dateOfBirthTimestamp": 879638400,
+                "proposedMarketValueRaw": {
+                    "value": 77000000,
+                    "currency": "EUR"
+                },
+                "fieldTranslations": {
+                    "nameTranslation": {
+                        "ar": "برونو غيماريش",
+                        "bn": "ব্রুনো গুইমারেস",
+                        "hi": "ब्रूनो गीमरेस"
+                    },
+                    "shortNameTranslation": {
+                        "ar": "ب. غيمارايش",
+                        "bn": "বি. গুইমারেস",
+                        "hi": "बी. गीमरेस"
+                    }
+                }
+            },
+            "id": 126385589,
+            "time": 46,
+            "injury": false,
+            "isHome": true,
+            "incidentClass": "regular",
+            "reversedPeriodTime": 45,
+            "incidentType": "substitution"
+        },
+        {
+            "playerIn": {
+                "name": "Fabinho",
+                "firstName": "Fabio",
+                "lastName": "Fabinho",
+                "slug": "fabinho",
+                "shortName": "Fabinho",
+                "position": "M",
+                "jerseyNumber": "8",
+                "height": 187,
+                "userCount": 11879,
+                "gender": "M",
+                "sofascoreId": "Fabinho",
+                "id": 243585,
+                "marketValueCurrency": "EUR",
+                "dateOfBirthTimestamp": 751334400,
+                "proposedMarketValueRaw": {
+                    "value": 11900000,
+                    "currency": "EUR"
+                },
+                "fieldTranslations": {
+                    "nameTranslation": {
+                        "ar": "فابينيو",
+                        "bn": "ফ্যাবিনহো",
+                        "hi": "फैबिन्हो"
+                    },
+                    "shortNameTranslation": {
+                        "ar": "فابينيو",
+                        "bn": "ফ্যাবিনহো",
+                        "hi": "फैबिन्हो"
+                    }
+                }
+            },
+            "playerOut": {
+                "name": "Casemiro",
+                "firstName": "Carlos Henrique",
+                "lastName": "Casemiro",
+                "slug": "casemiro",
+                "shortName": "Casemiro",
+                "position": "M",
+                "jerseyNumber": "18",
+                "height": 185,
+                "userCount": 99211,
+                "gender": "M",
+                "sofascoreId": "Casemiro",
+                "id": 122951,
+                "marketValueCurrency": "EUR",
+                "dateOfBirthTimestamp": 698803200,
+                "proposedMarketValueRaw": {
+                    "value": 7300000,
+                    "currency": "EUR"
+                },
+                "fieldTranslations": {
+                    "nameTranslation": {
+                        "ar": "كاسيميرو",
+                        "bn": "ক্যাসেমিরো",
+                        "hi": "कैसेमिरो"
+                    },
+                    "shortNameTranslation": {
+                        "ar": "كاسيميرو",
+                        "bn": "ক্যাসেমিরো",
+                        "hi": "कैसेमिरो"
+                    }
+                }
+            },
+            "id": 126385588,
+            "time": 46,
+            "injury": false,
+            "isHome": true,
+            "incidentClass": "regular",
+            "reversedPeriodTime": 45,
+            "incidentType": "substitution"
+        },
+        {
+            "playerIn": {
+                "name": "Léo Pereira",
+                "slug": "leo-pereira",
+                "shortName": "L. Pereira",
+                "position": "D",
+                "jerseyNumber": "4",
+                "height": 189,
+                "userCount": 14715,
+                "gender": "M",
+                "sofascoreId": "leopereira4",
+                "id": 358548,
+                "marketValueCurrency": "EUR",
+                "dateOfBirthTimestamp": 823046400,
+                "proposedMarketValueRaw": {
+                    "value": 9400000,
+                    "currency": "EUR"
+                },
+                "fieldTranslations": {
+                    "nameTranslation": {
+                        "ar": "ليو بيريرا",
+                        "bn": "লিও পেরেইরা",
+                        "hi": "लियो परेरा"
+                    },
+                    "shortNameTranslation": {
+                        "ar": "ل. بيريرا",
+                        "bn": "এল. পেরেরা",
+                        "hi": "एल. परेरा"
+                    }
+                }
+            },
+            "playerOut": {
+                "name": "Roger Ibañez",
+                "firstName": "",
+                "lastName": "",
+                "slug": "roger-ibanez",
+                "shortName": "R. Ibañez",
+                "position": "D",
+                "jerseyNumber": "3",
+                "height": 185,
+                "userCount": 6263,
+                "gender": "M",
+                "id": 888949,
+                "marketValueCurrency": "EUR",
+                "dateOfBirthTimestamp": 911779200,
+                "proposedMarketValueRaw": {
+                    "value": 16500000,
+                    "currency": "EUR"
+                },
+                "fieldTranslations": {
+                    "nameTranslation": {
+                        "ar": "روجر إيبانيز",
+                        "bn": "রজার ইবানেজ",
+                        "hi": "रोजर इबानेज़"
+                    },
+                    "shortNameTranslation": {
+                        "ar": "ر. إيبانيز",
+                        "bn": "আর. ইবানেজ",
+                        "hi": "आर. इबानेज़"
+                    }
+                }
+            },
+            "id": 126385586,
+            "time": 46,
+            "injury": false,
+            "isHome": true,
+            "incidentClass": "regular",
+            "reversedPeriodTime": 45,
+            "incidentType": "substitution"
+        },
+        {
+            "playerIn": {
+                "name": "Bremer",
+                "firstName": "",
+                "lastName": "",
+                "slug": "bremer",
+                "shortName": "Bremer",
+                "position": "D",
+                "jerseyNumber": "3",
+                "height": 188,
+                "userCount": 13905,
+                "gender": "M",
+                "sofascoreId": "Bremer",
+                "id": 885197,
+                "marketValueCurrency": "EUR",
+                "dateOfBirthTimestamp": 858643200,
+                "proposedMarketValueRaw": {
+                    "value": 33000000,
+                    "currency": "EUR"
+                },
+                "fieldTranslations": {
+                    "nameTranslation": {
+                        "ar": "بريمر",
+                        "bn": "ব্রেমার",
+                        "hi": "ब्रेमर"
+                    },
+                    "shortNameTranslation": {
+                        "ar": "بريمر",
+                        "bn": "ব্রেমার",
+                        "hi": "ब्रेमर"
+                    }
+                }
+            },
+            "playerOut": {
+                "name": "Marquinhos",
+                "firstName": "Marcos",
+                "lastName": "Marquinhos",
+                "slug": "marquinhos",
+                "shortName": "Marquinhos",
+                "position": "D",
+                "jerseyNumber": "5",
+                "height": 183,
+                "userCount": 42806,
+                "gender": "M",
+                "sofascoreId": "marquinhosm5",
+                "id": 155995,
+                "marketValueCurrency": "EUR",
+                "dateOfBirthTimestamp": 768873600,
+                "proposedMarketValueRaw": {
+                    "value": 29000000,
+                    "currency": "EUR"
+                },
+                "fieldTranslations": {
+                    "nameTranslation": {
+                        "ar": "ماركينيوس",
+                        "bn": "মারকুইনহোস",
+                        "hi": "मार्क्विन्होस"
+                    },
+                    "shortNameTranslation": {
+                        "ar": "ماركينيوس",
+                        "bn": "মারকুইনহোস",
+                        "hi": "मार्क्विन्होस"
+                    }
+                }
+            },
+            "id": 126385585,
+            "time": 46,
+            "injury": false,
+            "isHome": true,
+            "incidentClass": "regular",
+            "reversedPeriodTime": 45,
+            "incidentType": "substitution"
+        },
+        {
+            "playerIn": {
+                "name": "Weverton",
+                "firstName": "Weverton",
+                "lastName": "Weverton",
+                "slug": "weverton",
+                "shortName": "Weverton",
+                "position": "G",
+                "jerseyNumber": "1",
+                "height": 189,
+                "userCount": 8942,
+                "gender": "M",
+                "sofascoreId": "Weverton",
+                "id": 243529,
+                "marketValueCurrency": "EUR",
+                "dateOfBirthTimestamp": 566352000,
+                "proposedMarketValueRaw": {
+                    "value": 750000,
+                    "currency": "EUR"
+                },
+                "fieldTranslations": {
+                    "nameTranslation": {
+                        "ar": "ويفرتون",
+                        "bn": "ওয়েভারটন",
+                        "hi": "वेवर्टन"
+                    },
+                    "shortNameTranslation": {
+                        "ar": "ويفرتون",
+                        "bn": "ওয়েভারটন",
+                        "hi": "वेवर्टन"
+                    }
+                }
+            },
+            "playerOut": {
+                "name": "Alisson",
+                "firstName": "Alisson Ramses",
+                "lastName": "Alisson",
+                "slug": "alisson",
+                "shortName": "Alisson",
+                "position": "G",
+                "jerseyNumber": "1",
+                "height": 193,
+                "userCount": 71842,
+                "gender": "M",
+                "sofascoreId": "AlissonBecker",
+                "id": 243609,
+                "marketValueCurrency": "EUR",
+                "dateOfBirthTimestamp": 717984000,
+                "proposedMarketValueRaw": {
+                    "value": 18700000,
+                    "currency": "EUR"
+                },
+                "fieldTranslations": {
+                    "nameTranslation": {
+                        "ar": "أليسون",
+                        "bn": "অ্যালিসন",
+                        "hi": "एलिसन"
+                    },
+                    "shortNameTranslation": {
+                        "ar": "أليسون",
+                        "bn": "অ্যালিসন",
+                        "hi": "एलिसन"
+                    }
+                }
+            },
+            "id": 126385583,
+            "time": 46,
+            "injury": false,
+            "isHome": true,
+            "incidentClass": "regular",
+            "reversedPeriodTime": 45,
+            "incidentType": "substitution"
+        },
+        {
+            "text": "HT",
+            "homeScore": 1,
+            "awayScore": 1,
+            "isLive": false,
+            "time": 45,
+            "addedTime": 999,
+            "timeSeconds": 2700,
+            "reversedPeriodTime": 1,
+            "reversedPeriodTimeSeconds": 0,
+            "periodTimeSeconds": 2700,
+            "incidentType": "period"
+        },
+        {
+            "length": 4,
+            "time": 45,
+            "addedTime": 0,
+            "reversedPeriodTime": 1,
+            "incidentType": "injuryTime"
+        },
+        {
+            "player": {
+                "name": "Mohamed Hany",
+                "slug": "mohamed-hany",
+                "shortName": "M. Hany",
+                "position": "D",
+                "jerseyNumber": "30",
+                "height": 180,
+                "userCount": 5340,
+                "gender": "M",
+                "id": 826545,
+                "marketValueCurrency": "EUR",
+                "dateOfBirthTimestamp": 822528000,
+                "proposedMarketValueRaw": {
+                    "value": 1400000,
+                    "currency": "EUR"
+                },
+                "fieldTranslations": {
+                    "nameTranslation": {
+                        "ar": "محمد هاني",
+                        "bn": "মোহাম্মদ হানি",
+                        "hi": "मोहम्मद हनी"
+                    },
+                    "shortNameTranslation": {
+                        "ar": "م. هاني",
+                        "bn": "এম. হ্যানি",
+                        "hi": "एम. हनी"
+                    }
+                }
+            },
+            "playerName": "Mohamed Hany",
+            "reason": "Foul",
+            "rescinded": false,
+            "id": 125266442,
+            "time": 43,
+            "isHome": false,
+            "incidentClass": "yellow",
+            "reversedPeriodTime": 3,
+            "incidentType": "card"
+        },
+        {
+            "player": {
+                "name": "Marquinhos",
+                "firstName": "Marcos",
+                "lastName": "Marquinhos",
+                "slug": "marquinhos",
+                "shortName": "Marquinhos",
+                "position": "D",
+                "jerseyNumber": "5",
+                "height": 183,
+                "userCount": 42806,
+                "gender": "M",
+                "sofascoreId": "marquinhosm5",
+                "id": 155995,
+                "marketValueCurrency": "EUR",
+                "dateOfBirthTimestamp": 768873600,
+                "proposedMarketValueRaw": {
+                    "value": 29000000,
+                    "currency": "EUR"
+                },
+                "fieldTranslations": {
+                    "nameTranslation": {
+                        "ar": "ماركينيوس",
+                        "bn": "মারকুইনহোস",
+                        "hi": "मार्क्विन्होस"
+                    },
+                    "shortNameTranslation": {
+                        "ar": "ماركينيوس",
+                        "bn": "মারকুইনহোস",
+                        "hi": "मार्क्विन्होस"
+                    }
+                }
+            },
+            "playerName": "Marquinhos",
+            "reason": "Foul",
+            "rescinded": false,
+            "id": 125266412,
+            "time": 22,
+            "isHome": true,
+            "incidentClass": "yellow",
+            "reversedPeriodTime": 24,
+            "incidentType": "card"
+        },
+        {
+            "playerIn": {
+                "name": "Danilo",
+                "firstName": "Danilo Luiz",
+                "lastName": "Danilo",
+                "slug": "danilo",
+                "shortName": "Danilo",
+                "position": "D",
+                "jerseyNumber": "13",
+                "height": 184,
+                "userCount": 17863,
+                "gender": "M",
+                "sofascoreId": "Danilo",
+                "id": 124992,
+                "marketValueCurrency": "EUR",
+                "dateOfBirthTimestamp": 679536000,
+                "proposedMarketValueRaw": {
+                    "value": 2600000,
+                    "currency": "EUR"
+                },
+                "fieldTranslations": {
+                    "nameTranslation": {
+                        "ar": "دانيلو",
+                        "bn": "দানিলো",
+                        "hi": "डेनिलो"
+                    },
+                    "shortNameTranslation": {
+                        "ar": "دانيلو",
+                        "bn": "দানিলো",
+                        "hi": "डेनिलो"
+                    }
+                }
+            },
+            "playerOut": {
+                "name": "Wesley",
+                "slug": "wesley-franca",
+                "shortName": "Wesley",
+                "position": "M",
+                "jerseyNumber": "43",
+                "height": 178,
+                "userCount": 30931,
+                "gender": "M",
+                "sofascoreId": "WesleyFranca03",
+                "id": 1134200,
+                "marketValueCurrency": "EUR",
+                "dateOfBirthTimestamp": 1062806400,
+                "proposedMarketValueRaw": {
+                    "value": 43000000,
+                    "currency": "EUR"
+                },
+                "fieldTranslations": {
+                    "nameTranslation": {
+                        "ar": "ويسلي",
+                        "bn": "ওয়েসলি",
+                        "hi": "वेस्ली"
+                    },
+                    "shortNameTranslation": {
+                        "ar": "ويسلي",
+                        "bn": "ওয়েসলি",
+                        "hi": "वेस्ली"
+                    }
+                }
+            },
+            "id": 126385426,
+            "time": 17,
+            "injury": true,
+            "isHome": true,
+            "incidentClass": "injury",
+            "reversedPeriodTime": 29,
+            "incidentType": "substitution"
+        },
+        {
+            "homeScore": 1,
+            "awayScore": 1,
+            "player": {
+                "name": "Mostafa Ziko",
+                "firstName": "Mostafa Ziko",
+                "lastName": "",
+                "slug": "mostafa-ziko",
+                "shortName": "M. Ziko",
+                "position": "M",
+                "jerseyNumber": "11",
+                "height": 180,
+                "userCount": 1102,
+                "gender": "M",
+                "id": 1418782,
+                "marketValueCurrency": "EUR",
+                "dateOfBirthTimestamp": 862099200,
+                "proposedMarketValueRaw": {
+                    "value": 2000000,
+                    "currency": "EUR"
+                },
+                "fieldTranslations": {
+                    "nameTranslation": {
+                        "ar": "مصطفى زيكو"
+                    },
+                    "shortNameTranslation": {
+                        "ar": "م. زيكو"
+                    }
+                }
+            },
+            "footballPassingNetworkAction": [
+                {
+                    "player": {
+                        "name": "Mostafa Ziko",
+                        "firstName": "Mostafa Ziko",
+                        "lastName": "",
+                        "slug": "mostafa-ziko",
+                        "shortName": "M. Ziko",
+                        "position": "M",
+                        "jerseyNumber": "11",
+                        "height": 180,
+                        "userCount": 1102,
+                        "gender": "M",
+                        "id": 1418782,
+                        "marketValueCurrency": "EUR",
+                        "dateOfBirthTimestamp": 862099200,
+                        "proposedMarketValueRaw": {
+                            "value": 2000000,
+                            "currency": "EUR"
+                        },
+                        "fieldTranslations": {
+                            "nameTranslation": {
+                                "ar": "مصطفى زيكو"
+                            },
+                            "shortNameTranslation": {
+                                "ar": "م. زيكو"
+                            }
+                        }
+                    },
+                    "eventType": "goal",
+                    "bodyPart": "right-foot",
+                    "time": 11,
+                    "playerCoordinates": {
+                        "x": 17.8,
+                        "y": 33.6
+                    },
+                    "gkCoordinates": {
+                        "x": 12.8,
+                        "y": 38.3
+                    },
+                    "goalShotCoordinates": {
+                        "x": 0,
+                        "y": 53.1
+                    },
+                    "goalMouthCoordinates": {
+                        "x": 66.67,
+                        "y": 94.67
+                    },
+                    "goalkeeper": {
+                        "name": "Alisson",
+                        "firstName": "Alisson Ramses",
+                        "lastName": "Alisson",
+                        "slug": "alisson",
+                        "shortName": "Alisson",
+                        "position": "G",
+                        "jerseyNumber": "1",
+                        "height": 193,
+                        "userCount": 71842,
+                        "gender": "M",
+                        "sofascoreId": "AlissonBecker",
+                        "id": 243609,
+                        "marketValueCurrency": "EUR",
+                        "dateOfBirthTimestamp": 717984000,
+                        "proposedMarketValueRaw": {
+                            "value": 18700000,
+                            "currency": "EUR"
+                        },
+                        "fieldTranslations": {
+                            "nameTranslation": {
+                                "ar": "أليسون",
+                                "bn": "অ্যালিসন",
+                                "hi": "एलिसन"
+                            },
+                            "shortNameTranslation": {
+                                "ar": "أليسون",
+                                "bn": "অ্যালিসন",
+                                "hi": "एलिसन"
+                            }
+                        }
+                    },
+                    "isHome": false,
+                    "goalType": "regular"
+                }
+            ],
+            "id": 351043429,
+            "time": 11,
+            "isHome": false,
+            "incidentClass": "regular",
+            "reversedPeriodTime": 35,
+            "incidentType": "goal"
+        },
+        {
+            "homeScore": 1,
+            "awayScore": 0,
+            "player": {
+                "name": "Bruno Guimarães",
+                "slug": "bruno-guimaraes",
+                "shortName": "B. Guimarães",
+                "position": "M",
+                "jerseyNumber": "8",
+                "height": 182,
+                "userCount": 37479,
+                "gender": "M",
+                "sofascoreId": "BrunoGuimarães",
+                "id": 866469,
+                "marketValueCurrency": "EUR",
+                "dateOfBirthTimestamp": 879638400,
+                "proposedMarketValueRaw": {
+                    "value": 77000000,
+                    "currency": "EUR"
+                },
+                "fieldTranslations": {
+                    "nameTranslation": {
+                        "ar": "برونو غيماريش",
+                        "bn": "ব্রুনো গুইমারেস",
+                        "hi": "ब्रूनो गीमरेस"
+                    },
+                    "shortNameTranslation": {
+                        "ar": "ب. غيمارايش",
+                        "bn": "বি. গুইমারেস",
+                        "hi": "बी. गीमरेस"
+                    }
+                }
+            },
+            "footballPassingNetworkAction": [
+                {
+                    "player": {
+                        "name": "Bruno Guimarães",
+                        "slug": "bruno-guimaraes",
+                        "shortName": "B. Guimarães",
+                        "position": "M",
+                        "jerseyNumber": "8",
+                        "height": 182,
+                        "userCount": 37479,
+                        "gender": "M",
+                        "sofascoreId": "BrunoGuimarães",
+                        "id": 866469,
+                        "marketValueCurrency": "EUR",
+                        "dateOfBirthTimestamp": 879638400,
+                        "proposedMarketValueRaw": {
+                            "value": 77000000,
+                            "currency": "EUR"
+                        },
+                        "fieldTranslations": {
+                            "nameTranslation": {
+                                "ar": "برونو غيماريش",
+                                "bn": "ব্রুনো গুইমারেস",
+                                "hi": "ब्रूनो गीमरेस"
+                            },
+                            "shortNameTranslation": {
+                                "ar": "ب. غيمارايش",
+                                "bn": "বি. গুইমারেস",
+                                "hi": "बी. गीमरेस"
+                            }
+                        }
+                    },
+                    "eventType": "tackle",
+                    "time": 7,
+                    "playerCoordinates": {
+                        "x": 79.1,
+                        "y": 65.5
+                    },
+                    "isHome": true
+                },
+                {
+                    "player": {
+                        "name": "Bruno Guimarães",
+                        "slug": "bruno-guimaraes",
+                        "shortName": "B. Guimarães",
+                        "position": "M",
+                        "jerseyNumber": "8",
+                        "height": 182,
+                        "userCount": 37479,
+                        "gender": "M",
+                        "sofascoreId": "BrunoGuimarães",
+                        "id": 866469,
+                        "marketValueCurrency": "EUR",
+                        "dateOfBirthTimestamp": 879638400,
+                        "proposedMarketValueRaw": {
+                            "value": 77000000,
+                            "currency": "EUR"
+                        },
+                        "fieldTranslations": {
+                            "nameTranslation": {
+                                "ar": "برونو غيماريش",
+                                "bn": "ব্রুনো গুইমারেস",
+                                "hi": "ब्रूनो गीमरेस"
+                            },
+                            "shortNameTranslation": {
+                                "ar": "ب. غيمارايش",
+                                "bn": "বি. গুইমারেস",
+                                "hi": "बी. गीमरेस"
+                            }
+                        }
+                    },
+                    "eventType": "goal",
+                    "bodyPart": "right-foot",
+                    "time": 7,
+                    "playerCoordinates": {
+                        "x": 84.4,
+                        "y": 58.3
+                    },
+                    "gkCoordinates": {
+                        "x": 95.6,
+                        "y": 52
+                    },
+                    "goalShotCoordinates": {
+                        "x": 100,
+                        "y": 46.1
+                    },
+                    "goalMouthCoordinates": {
+                        "x": 70.97,
+                        "y": 93.67
+                    },
+                    "goalkeeper": {
+                        "name": "Mostafa Shobeir",
+                        "slug": "mostafa-shobeir",
+                        "shortName": "M. Shobeir",
+                        "position": "G",
+                        "jerseyNumber": "23",
+                        "height": 185,
+                        "userCount": 6456,
+                        "gender": "M",
+                        "id": 1048378,
+                        "marketValueCurrency": "EUR",
+                        "dateOfBirthTimestamp": 953251200,
+                        "proposedMarketValueRaw": {
+                            "value": 1300000,
+                            "currency": "EUR"
+                        },
+                        "fieldTranslations": {
+                            "nameTranslation": {
+                                "ar": "مصطفى شوبير",
+                                "bn": "মোস্তফা শোবের",
+                                "hi": "मुस्तफा शोबैर"
+                            },
+                            "shortNameTranslation": {
+                                "ar": "م. شوبير",
+                                "bn": "এম. শোবের",
+                                "hi": "एम. शोबैर"
+                            }
+                        }
+                    },
+                    "isHome": true,
+                    "goalType": "regular"
+                }
+            ],
+            "id": 351043342,
+            "time": 7,
+            "isHome": true,
+            "incidentClass": "regular",
+            "reversedPeriodTime": 39,
+            "incidentType": "goal"
+        }
+    ],
+    "home": {
+        "goalkeeperColor": {
+            "primary": "47484d",
+            "number": "c8d77c",
+            "outline": "47484d",
+            "fancyNumber": "ffffff"
+        },
+        "playerColor": {
+            "primary": "eae380",
+            "number": "1edb80",
+            "outline": "eae380",
+            "fancyNumber": "222226"
+        }
+    },
+    "away": {
+        "goalkeeperColor": {
+            "primary": "2d6e86",
+            "number": "050505",
+            "outline": "2d6e86",
+            "fancyNumber": "ffffff"
+        },
+        "playerColor": {
+            "primary": "ff0000",
+            "number": "d0c190",
+            "outline": "ff0000",
+            "fancyNumber": "ffffff"
+        }
+    }
+}

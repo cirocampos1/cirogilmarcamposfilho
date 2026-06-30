@@ -1,0 +1,45 @@
+name: project-guidelines-skill-example
+role: ject Guidelines Skill (Example)
+goal: This is an example of a project-specific skill. Use this as a template for your
+  own projects.
+backstory: "Você é um agente especializado em ject Guidelines Skill (Example).\n\n\
+  ## Contexto Original da Skill\nProject Guidelines Skill (Example)\n\n## Instruções\n\
+  ---\nname: cc-skill-project-guidelines-example\ndescription: \"Project Guidelines\
+  \ Skill (Example)\"\nrisk: unknown\nsource: community\ndate_added: \"2026-02-27\"\
+  \n---\n\n# Project Guidelines Skill (Example)\n\nThis is an example of a project-specific\
+  \ skill. Use this as a template for your own projects.\n\nBased on a real production\
+  \ application: [Zenith](https://zenith.chat) - AI-powered customer discovery platform.\n\
+  \n---\n\n## When to Use\nReference this skill when working on the specific project\
+  \ it's designed for. Project skills contain:\n- Architecture overview\n- File structure\n\
+  - Code patterns\n- Testing requirements\n- Deployment workflow\n\n---\n\n## Architecture\
+  \ Overview\n\n**Tech Stack:**\n- **Frontend**: Next.js 15 (App Router), TypeScript,\
+  \ React\n- **Backend**: FastAPI (Python), Pydantic models\n- **Database**: Supabase\
+  \ (PostgreSQL)\n- **AI**: Claude API with tool calling and structured output\n-\
+  \ **Deployment**: Google Cloud Run\n- **Testing**: Playwright (E2E), pytest (backend),\
+  \ React Testing Library\n\n**Services:**\n```\n┌─────────────────────────────────────────────────────────────┐\n\
+  │                         Frontend                            │\n│  Next.js 15 +\
+  \ TypeScript + TailwindCSS                     │\n│  Deployed: Vercel / Cloud Run\
+  \                              │\n└─────────────────────────────────────────────────────────────┘\n\
+  \                              │\n                              ▼\n┌─────────────────────────────────────────────────────────────┐\n\
+  │                         Backend                             │\n│  FastAPI + Python\
+  \ 3.11 + Pydantic                          │\n│  Deployed: Cloud Run           \
+  \                            │\n└─────────────────────────────────────────────────────────────┘\n\
+  \                              │\n              ┌───────────────┼───────────────┐\n\
+  \              ▼               ▼               ▼\n        ┌──────────┐   ┌──────────┐\
+  \   ┌──────────┐\n        │ Supabase │   │  Claude  │   │  Redis   │\n        │\
+  \ Database │   │   API    │   │  Cache   │\n        └──────────┘   └──────────┘\
+  \   └──────────┘\n```\n\n---\n\n## File Structure\n\n```\nproject/\n├── frontend/\n\
+  │   └── src/\n│       ├── app/              # Next.js app router pages\n│      \
+  \ │   ├── api/          # API routes\n│       │   ├── (auth)/       # Auth-protected\
+  \ routes\n│       │   └── workspace/    # Main app workspace\n│       ├── components/\
+  \       # React components\n│       │   ├── ui/           # Base UI components\n\
+  │       │   ├── forms/        # Form components\n│       │   └── layouts/      #\
+  \ Layout components\n│       ├── hooks/            # Custom React hooks\n│     \
+  \  ├── lib/              # Utilities\n│       ├── types/            # TypeScript\
+  \ definitions\n│       └── config/           # Configuration\n│\n├── backend/\n\
+  │   ├── routers/              # FastAPI route handlers\n│   ├── models.py      \
+  \       # Pydantic models\n│   ├── main.py               # FastAPI app entry\n│\
+  \   ├── auth_system.py        # Authentication\n│   ├── database.py           #\
+  \ Database operations\n│   ├── services/         \n\n## Diretrizes do \n\
+  \n\U0001F527 DIRETRIZ DE ENGENHARIA: Use exclusivamente o gerenciador uv para dependências.\
+  \ Todo código deve ser lintado via ruff e tipado com mypy.\n"

@@ -1,0 +1,109 @@
+{
+    "player": {
+        "name": "Casemiro",
+        "firstName": "Carlos Henrique",
+        "lastName": "Casemiro",
+        "slug": "casemiro",
+        "shortName": "Casemiro",
+        "position": "M",
+        "jerseyNumber": "18",
+        "height": 185,
+        "userCount": 99211,
+        "gender": "M",
+        "sofascoreId": "Casemiro",
+        "id": 122951,
+        "marketValueCurrency": "EUR",
+        "dateOfBirthTimestamp": 698803200,
+        "proposedMarketValueRaw": {
+            "value": 7300000,
+            "currency": "EUR"
+        },
+        "fieldTranslations": {
+            "nameTranslation": {
+                "ar": "كاسيميرو",
+                "bn": "ক্যাসেমিরো",
+                "hi": "कैसेमिरो"
+            },
+            "shortNameTranslation": {
+                "ar": "كاسيميرو",
+                "bn": "ক্যাসেমিরো",
+                "hi": "कैसेमिरो"
+            }
+        }
+    },
+    "team": {
+        "name": "Brazil",
+        "slug": "brazil",
+        "shortName": "Brazil",
+        "gender": "M",
+        "sport": {
+            "name": "Football",
+            "slug": "football",
+            "id": 1
+        },
+        "userCount": 2441982,
+        "nameCode": "BRA",
+        "ranking": 6,
+        "disabled": false,
+        "national": true,
+        "type": 0,
+        "id": 4748,
+        "teamColors": {
+            "primary": "#ffff00",
+            "secondary": "#009933",
+            "text": "#009933"
+        },
+        "fieldTranslations": {
+            "nameTranslation": {
+                "ar": "البرازيل",
+                "bn": "ব্রাজিল",
+                "hi": "ब्राजील",
+                "ru": "Бразилия"
+            },
+            "shortNameTranslation": {}
+        }
+    },
+    "statistics": {
+        "totalPass": 23,
+        "accuratePass": 17,
+        "totalLongBalls": 2,
+        "accurateLongBalls": 2,
+        "goalAssist": 0,
+        "accurateOwnHalfPasses": 9,
+        "totalOwnHalfPasses": 10,
+        "accurateOppositionHalfPasses": 8,
+        "totalOppositionHalfPasses": 13,
+        "aerialLost": 1,
+        "duelLost": 2,
+        "duelWon": 3,
+        "shotOffTarget": 1,
+        "ballRecovery": 1,
+        "totalTackle": 3,
+        "wonTackle": 2,
+        "fouls": 1,
+        "minutesPlayed": 45,
+        "touches": 27,
+        "rating": 6.5,
+        "possessionLostCtrl": 6,
+        "totalBallCarriesDistance": 24.123376206878,
+        "ballCarriesCount": 4,
+        "totalProgression": -1.0365964103219,
+        "progressiveBallCarriesCount": 0,
+        "keyPass": 1,
+        "ratingVersions": {
+            "original": 6.5,
+            "alternative": 6.9
+        },
+        "totalShots": 1,
+        "shotValueNormalized": -0.58,
+        "passValueNormalized": 0.16,
+        "dribbleValueNormalized": 0,
+        "defensiveValueNormalized": -0.04,
+        "statisticsType": {
+            "sportSlug": "football",
+            "statisticsType": "player"
+        }
+    },
+    "position": "M",
+    "extra": null
+}

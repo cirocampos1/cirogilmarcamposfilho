@@ -1,0 +1,223 @@
+{
+  "atividades": [
+    {
+      "id": 1,
+      "titulo": "Análise Exploratória do CRM - Identificar estado atual e problemas",
+      "estado": "CONCLUIDO",
+      "plano_validado": false,
+      "responsavel": "Explorador",
+      "pre_requisitos": [],
+      "criado_em": "2026-03-18T16:47:53.842842"
+    },
+    {
+      "id": 2,
+      "titulo": "Configurar Banco de Dados SQLite e Drizzle Migrations",
+      "estado": "PENDENTE",
+      "plano_validado": false,
+      "responsavel": "Executor-Backend",
+      "pre_requisitos": [
+        1
+      ],
+      "criado_em": "2026-03-18T16:47:54.804593"
+    },
+    {
+      "id": 3,
+      "titulo": "Verificar e Corrigir Autenticação ",
+      "estado": "PENDENTE",
+      "plano_validado": false,
+      "responsavel": "Executor-Backend",
+      "pre_requisitos": [
+        2
+      ],
+      "criado_em": "2026-03-18T16:47:55.965581"
+    },
+    {
+      "id": 4,
+      "titulo": "Verificar Componentes Frontend e dependências",
+      "estado": "PENDENTE",
+      "plano_validado": false,
+      "responsavel": "Executor-Frontend",
+      "pre_requisitos": [
+        2,
+        3
+      ],
+      "criado_em": "2026-03-18T16:47:56.842705"
+    },
+    {
+      "id": 5,
+      "titulo": "Testar e Validar CRM Funcionando",
+      "estado": "PENDENTE",
+      "plano_validado": false,
+      "responsavel": "Auditor",
+      "pre_requisitos": [
+        2,
+        3,
+        4
+      ],
+      "criado_em": "2026-03-18T16:47:57.695705"
+    },
+    {
+      "id": 6,
+      "titulo": "Registrar Router CRM no Main.py e ativar APIs",
+      "estado": "CONCLUIDO",
+      "plano_validado": false,
+      "responsavel": "Executor-Backend",
+      "pre_requisitos": [],
+      "criado_em": "2026-03-18T16:54:07.917816"
+    },
+    {
+      "id": 7,
+      "titulo": "Build Next.js como Static Files",
+      "estado": "CONCLUIDO",
+      "plano_validado": false,
+      "responsavel": "Executor-Frontend",
+      "pre_requisitos": [],
+      "criado_em": "2026-03-18T16:54:08.734157"
+    },
+    {
+      "id": 8,
+      "titulo": "Montar CRM Static no  (/crm)",
+      "estado": "PENDENTE",
+      "plano_validado": false,
+      "responsavel": "Executor-Backend",
+      "pre_requisitos": [
+        1,
+        2
+      ],
+      "criado_em": "2026-03-18T16:54:09.677029"
+    },
+    {
+      "id": 9,
+      "titulo": "Integrar Autenticação  (remover mock)",
+      "estado": "PENDENTE",
+      "plano_validado": false,
+      "responsavel": "Executor-Backend",
+      "pre_requisitos": [
+        3
+      ],
+      "criado_em": "2026-03-18T16:54:10.636549"
+    },
+    {
+      "id": 10,
+      "titulo": "Implementar Advisor AI no CRM",
+      "estado": "PENDENTE",
+      "plano_validado": false,
+      "responsavel": "Executor-AI",
+      "pre_requisitos": [
+        3
+      ],
+      "criado_em": "2026-03-18T16:54:11.378615"
+    },
+    {
+      "id": 11,
+      "titulo": "Testar Fluxo Completo e Validar",
+      "estado": "PENDENTE",
+      "plano_validado": false,
+      "responsavel": "Auditor",
+      "pre_requisitos": [
+        4,
+        5,
+        6
+      ],
+      "criado_em": "2026-03-18T16:54:12.217581"
+    },
+    {
+      "id": 12,
+      "titulo": "CRM - Configurar Next.js para standalone (porta 3000)",
+      "estado": "CONCLUIDO",
+      "plano_validado": false,
+      "responsavel": "Executor-Frontend",
+      "pre_requisitos": [],
+      "criado_em": "2026-03-18T17:01:32.964383"
+    },
+    {
+      "id": 13,
+      "titulo": "CRM - Configurar SQLite e Drizzle Migrations",
+      "estado": "CONCLUIDO",
+      "plano_validado": false,
+      "responsavel": "Executor-Backend",
+      "pre_requisitos": [
+        1
+      ],
+      "criado_em": "2026-03-18T17:01:34.182672"
+    },
+    {
+      "id": 14,
+      "titulo": "CRM - Configurar Autenticação (modo dev)",
+      "estado": "CONCLUIDO",
+      "plano_validado": false,
+      "responsavel": "Executor-Backend",
+      "pre_requisitos": [
+        1
+      ],
+      "criado_em": "2026-03-18T17:01:35.378620"
+    },
+    {
+      "id": 15,
+      "titulo": "CRM - Testar build e start na porta 3000",
+      "estado": "CONCLUIDO",
+      "plano_validado": false,
+      "responsavel": "Auditor",
+      "pre_requisitos": [
+        1,
+        2,
+        3
+      ],
+      "criado_em": "2026-03-18T17:01:36.661837"
+    },
+    {
+      "id": 16,
+      "titulo": "Explorar MCP Server e opções de conexão Sankhya",
+      "estado": "CONCLUIDO",
+      "plano_validado": false,
+      "responsavel": "Explorador",
+      "pre_requisitos": [],
+      "criado_em": "2026-03-19T07:14:28.867841"
+    },
+    {
+      "id": 17,
+      "titulo": "Criar conector MCP/Banco no CRM",
+      "estado": "CONCLUIDO",
+      "plano_validado": false,
+      "responsavel": "Executor-Backend",
+      "pre_requisitos": [
+        1
+      ],
+      "criado_em": "2026-03-19T07:14:30.159626"
+    },
+    {
+      "id": 18,
+      "titulo": "Criar APIs para dados reais (Clientes/Pedidos)",
+      "estado": "CONCLUIDO",
+      "plano_validado": false,
+      "responsavel": "Executor-Backend",
+      "pre_requisitos": [
+        2
+      ],
+      "criado_em": "2026-03-19T07:14:31.389027"
+    },
+    {
+      "id": 19,
+      "titulo": "Atualizar Frontend para consumir dados reais",
+      "estado": "CONCLUIDO",
+      "plano_validado": false,
+      "responsavel": "Executor-Frontend",
+      "pre_requisitos": [
+        3
+      ],
+      "criado_em": "2026-03-19T07:14:32.493318"
+    },
+    {
+      "id": 20,
+      "titulo": "Testar integração completa com Sankhya",
+      "estado": "CONCLUIDO",
+      "plano_validado": false,
+      "responsavel": "Auditor",
+      "pre_requisitos": [
+        4
+      ],
+      "criado_em": "2026-03-19T07:14:33.546088"
+    }
+  ],
+  "integrantes": []
+}
