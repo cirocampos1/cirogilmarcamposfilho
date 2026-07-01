@@ -65,7 +65,7 @@ export class Dashboard {
             this.currentMatchId = initialMatchId;
 
             const initialPlayerId = await this.selector.load(initialMatchId);
-            this.currentPlayerId = initialPlayerId;
+            
             
             // Carrega lista de jogadores para popular dropdown de comparação
             this.playersList = await api.getPlayers(initialMatchId);
