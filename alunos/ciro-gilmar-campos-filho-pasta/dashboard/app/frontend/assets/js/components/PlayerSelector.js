@@ -1,4 +1,4 @@
-import { api } from '../services/api.js?v=3';
+import { api } from '../services/api.js?v=4';
 
 export class PlayerSelector {
     constructor(selectElement) {

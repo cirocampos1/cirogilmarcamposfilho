@@ -1,7 +1,7 @@
-import { api } from '../services/api.js?v=3';
-import { PlayerSelector } from './PlayerSelector.js?v=3';
-import { MatchSelector } from './MatchSelector.js?v=3';
-import { StatsRadar } from './StatsRadar.js?v=3';
+import { api } from '../services/api.js?v=4';
+import { PlayerSelector } from './PlayerSelector.js?v=4';
+import { MatchSelector } from './MatchSelector.js?v=4';
+import { StatsRadar } from './StatsRadar.js?v=4';
 
 const STAT_GROUPS = {
     attack: [
