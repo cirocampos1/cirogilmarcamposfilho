@@ -135,6 +135,7 @@ export class Dashboard {
         document.getElementById('events-skeleton').classList.add('active');
         document.getElementById('radar-skeleton').classList.add('active');
         document.querySelectorAll('.img-placeholder').forEach(p => p.classList.remove('active'));
+        document.querySelectorAll('.map-view-box img').forEach(img => img.classList.add('hidden'));
         document.getElementById('stats-grid').innerHTML = '';
         document.getElementById('events-grid').classList.add('hidden');
         document.getElementById('events-empty').classList.add('hidden');
