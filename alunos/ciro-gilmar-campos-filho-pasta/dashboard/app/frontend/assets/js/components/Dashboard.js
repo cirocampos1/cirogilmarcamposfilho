@@ -1,7 +1,7 @@
-import { api } from '../services/api.js?v=4';
-import { PlayerSelector } from './PlayerSelector.js?v=4';
-import { MatchSelector } from './MatchSelector.js?v=4';
-import { StatsRadar } from './StatsRadar.js?v=4';
+import { api } from '../services/api.js?v=3';
+import { PlayerSelector } from './PlayerSelector.js?v=3';
+import { MatchSelector } from './MatchSelector.js?v=3';
+import { StatsRadar } from './StatsRadar.js?v=3';
 
 const STAT_GROUPS = {
     attack: [
@@ -40,22 +40,11 @@ export class Dashboard {
         this.selector = new PlayerSelector(
             document.getElementById('player-select')
         );
-        this.compareSelector = document.getElementById('compare-player-select');
         this.radar = new StatsRadar(
             document.getElementById('stats-radar')
         );
         this.currentMatchId = null;
         this.currentPlayerId = null;
-        this.comparePlayerId = null;
-        
-        this.lastStats = null;
-        this.compareStats = null;
-        this.lastImages = null;
-        this.compareImages = null;
-        this.lastEvents = null;
-        
-        this.playersList = [];
-        this.activeEventFilter = 'all'; // 'all', 'success', 'failed'
         this.loading = false;
     }
 
@@ -65,11 +54,7 @@ export class Dashboard {
             this.currentMatchId = initialMatchId;
 
             const initialPlayerId = await this.selector.load(initialMatchId);
-            
-            
-            // Carrega lista de jogadores para popular dropdown de comparação
-            this.playersList = await api.getPlayers(initialMatchId);
-            this.populateCompareSelect(initialPlayerId);
+            this.currentPlayerId = initialPlayerId;
 
             this.matchSelector.onChange(async (matchId) => {
                 await this.loadMatch(matchId);
@@ -78,19 +63,9 @@ export class Dashboard {
             this.selector.onChange(async (playerId) => {
                 await this.loadPlayer(playerId);
             });
-            
-            this.compareSelector.addEventListener('change', async (e) => {
-                const compareId = e.target.value;
-                if (compareId) {
-                    await this.loadComparison(compareId);
-                } else {
-                    this.clearComparison();
-                }
-            });
 
             await this.loadPlayer(initialPlayerId);
             this.initStatTabs();
-            this.initEventFilters();
         } catch (error) {
             console.error('Error initializing dashboard:', error);
             this.showError('Falha ao inicializar dashboard');
@@ -101,12 +76,9 @@ export class Dashboard {
         if (this.loading || matchId === this.currentMatchId) return;
         this.currentMatchId = matchId;
         this.showLoading();
-        this.clearComparison();
 
         try {
             const newPlayerId = await this.selector.load(matchId);
-            this.playersList = await api.getPlayers(matchId);
-            this.populateCompareSelect(newPlayerId);
             this.matchSelector.enable();
             await this.loadPlayer(newPlayerId, true);
         } catch (error) {
@@ -135,7 +107,6 @@ export class Dashboard {
         document.getElementById('events-skeleton').classList.add('active');
         document.getElementById('radar-skeleton').classList.add('active');
         document.querySelectorAll('.img-placeholder').forEach(p => p.classList.remove('active'));
-        document.querySelectorAll('.map-view-box img').forEach(img => img.classList.add('hidden'));
         document.getElementById('stats-grid').innerHTML = '';
         document.getElementById('events-grid').classList.add('hidden');
         document.getElementById('events-empty').classList.add('hidden');
@@ -160,17 +131,10 @@ export class Dashboard {
         if ((this.loading || playerId === this.currentPlayerId) && !force) return;
         this.currentPlayerId = playerId;
         this.showLoading();
-        
-        // Limpa a comparação caso mude o jogador principal
-        this.clearComparison();
-        this.populateCompareSelect(playerId);
 
         try {
             const data = await api.getDashboardData(playerId, this.currentMatchId);
             this.lastStats = data.stats;
-            this.lastEvents = data.events;
-            this.lastImages = data.images;
-            
             this.renderImages(data.images);
             this.renderEvents(data.events, data.stats);
             this.radar.render(data.stats);
@@ -189,10 +153,10 @@ export class Dashboard {
     }
 
     renderImages(images) {
-        this.lastImages = images;
         ['heatmap', 'shotmap', 'passmap'].forEach(type => {
             const img = document.getElementById(`${type}-img`);
             const placeholder = document.getElementById(`${type}-placeholder`);
+            const wrapper = document.getElementById(`${type}-wrapper`);
 
             if (images?.[type]) {
                 img.src = 'data:image/png;base64,' + images[type];
@@ -219,15 +183,7 @@ export class Dashboard {
         let hasAny = false;
 
         eventTypes.forEach(({ type, color }) => {
-            let list = events?.[type] || [];
-            
-            // Aplica filtro de sucesso/falha
-            if (this.activeEventFilter === 'success') {
-                list = list.filter(e => e.outcome !== false);
-            } else if (this.activeEventFilter === 'failed') {
-                list = list.filter(e => e.outcome === false);
-            }
-            
+            const list = events?.[type] || [];
             const countEl = document.getElementById(`event-${type}-count`);
             const barEl = document.getElementById(`event-${type}-bar`);
             const detailEl = document.getElementById(`event-${type}-detail`);
@@ -236,7 +192,7 @@ export class Dashboard {
             if (list.length > 0) {
                 hasAny = true;
                 const success = list.filter(e => e.outcome !== false).length;
-                const pct = list.length > 0 ? Math.round((success / list.length) * 100) : 0;
+                const pct = Math.round((success / list.length) * 100);
                 barEl.style.width = Math.max(pct, type === 'defensive' ? 100 : (type === 'ball_carry' ? 80 : pct)) + '%';
                 barEl.style.background = color;
 
@@ -284,180 +240,20 @@ export class Dashboard {
 
         const keys = group === 'all' ? ALL_KEYS : STAT_GROUPS[group] || ALL_KEYS;
 
-        keys.forEach(({ key, label, icon, suffix, pct, base }, index) => {
-            let primaryValue = stats[key] ?? 0;
+        keys.forEach(({ key, label, icon, suffix, pct, base }) => {
+            let value = stats[key] ?? 0;
             if (pct && base) {
                 const baseVal = stats[base] ?? 0;
-                primaryValue = baseVal > 0 ? Math.round((primaryValue / baseVal) * 100) : 0;
+                value = baseVal > 0 ? Math.round((value / baseVal) * 100) : 0;
             }
-
             const card = document.createElement('div');
             card.className = 'stat-card';
-            card.style.animationDelay = (index * 0.03) + 's';
-
-            if (this.compareStats) {
-                let compareValue = this.compareStats[key] ?? 0;
-                if (pct && base) {
-                    const baseVal = this.compareStats[base] ?? 0;
-                    compareValue = baseVal > 0 ? Math.round((compareValue / baseVal) * 100) : 0;
-                }
-
-                card.classList.add('compare-card');
-                
-                const isPrimaryBetter = primaryValue > compareValue;
-                const isCompareBetter = compareValue > primaryValue;
-
-                card.innerHTML = `
-                    <div class="stat-compare-values">
-                        <span class="primary-val ${isPrimaryBetter ? 'winner' : (isCompareBetter ? 'loser' : '')}">${primaryValue}${suffix}</span>
-                        <span class="compare-separator">vs</span>
-                        <span class="compare-val ${isCompareBetter ? 'winner' : (isPrimaryBetter ? 'loser' : '')}">${compareValue}${suffix}</span>
-                    </div>
-                    <div class="stat-label">${icon} ${label}</div>
-                `;
-            } else {
-                card.innerHTML = `
-                    <div class="stat-value">${primaryValue}${suffix}</div>
-                    <div class="stat-label">${icon} ${label}</div>
-                `;
-            }
+            card.style.animationDelay = (keys.indexOf({ key, label, icon, suffix, pct, base }) * 0.05) + 's';
+            card.innerHTML = `
+                <div class="stat-value">${value}${suffix}</div>
+                <div class="stat-label">${icon} ${label}</div>
+            `;
             grid.appendChild(card);
-        });
-    }
-
-    /* ── MÉTODOS AUXILIARES DE COMPARAÇÃO & FILTRO ────────────── */
-
-    populateCompareSelect(primaryPlayerId) {
-        this.compareSelector.innerHTML = '<option value="">Comparar com...</option>';
-        if (!this.playersList || this.playersList.length === 0) {
-            this.compareSelector.disabled = true;
-            return;
-        }
-
-        this.playersList.forEach(p => {
-            if (p.id !== primaryPlayerId) {
-                const option = document.createElement('option');
-                option.value = p.id;
-                option.textContent = p.name;
-                this.compareSelector.appendChild(option);
-            }
-        });
-        this.compareSelector.disabled = false;
-    }
-
-    async loadComparison(compareId) {
-        if (this.loading || compareId === this.comparePlayerId) return;
-        this.comparePlayerId = compareId;
-        this.showLoading();
-
-        try {
-            const data = await api.getDashboardData(compareId, this.currentMatchId);
-            this.compareStats = data.stats;
-            this.compareImages = data.images;
-
-            // Renderiza mapas lado a lado
-            this.renderComparisonImages(this.lastImages, this.compareImages);
-            
-            // Renderiza radar com sobreposição dos dois jogadores
-            this.radar.render(this.lastStats, this.compareStats);
-
-            // Atualiza o grid de estatísticas gerais no modo comparação
-            this.renderStatsGrid(this.lastStats, document.querySelector('.stat-tab.active')?.dataset.group || 'all');
-
-            // Habilita classes CSS do modo de comparação
-            ['heatmap', 'shotmap', 'passmap'].forEach(type => {
-                document.getElementById(`${type}-grid`).classList.add('compare-active');
-                document.getElementById(`${type}-box-compare`).classList.remove('hidden');
-                document.getElementById(`${type}-label-primary`).classList.remove('hidden');
-            });
-
-            // Insere os nomes nas labels dos mapas
-            const primaryName = this.selector.select.options[this.selector.select.selectedIndex]?.text || 'Jogador A';
-            const compareName = this.compareSelector.options[this.compareSelector.selectedIndex]?.text || 'Jogador B';
-            
-            ['heatmap', 'shotmap', 'passmap'].forEach(type => {
-                document.getElementById(`${type}-label-primary`).textContent = primaryName;
-                document.getElementById(`${type}-label-compare`).textContent = compareName;
-            });
-
-            this.hideLoading();
-            this.compareSelector.disabled = false;
-        } catch (error) {
-            console.error('Error loading comparison:', error);
-            this.hideLoading();
-            this.compareSelector.disabled = false;
-            this.showError('Erro ao carregar comparação');
-        }
-    }
-
-    clearComparison() {
-        this.comparePlayerId = null;
-        this.compareStats = null;
-        this.compareImages = null;
-        this.compareSelector.value = '';
-
-        // Remove classes de comparação e esconde os elementos do segundo jogador
-        ['heatmap', 'shotmap', 'passmap'].forEach(type => {
-            const grid = document.getElementById(`${type}-grid`);
-            if (grid) grid.classList.remove('compare-active');
-            
-            const compareBox = document.getElementById(`${type}-box-compare`);
-            if (compareBox) compareBox.classList.add('hidden');
-            
-            const primaryLabel = document.getElementById(`${type}-label-primary`);
-            if (primaryLabel) primaryLabel.classList.add('hidden');
-        });
-
-        // Re-renderiza o radar e as estatísticas apenas com o jogador principal
-        if (this.lastStats) {
-            this.radar.render(this.lastStats);
-            this.renderStatsGrid(this.lastStats, document.querySelector('.stat-tab.active')?.dataset.group || 'all');
-        }
-    }
-
-    renderComparisonImages(primaryImages, compareImages) {
-        ['heatmap', 'shotmap', 'passmap'].forEach(type => {
-            const primaryImg = document.getElementById(`${type}-img`);
-            const compareImg = document.getElementById(`${type}-compare-img`);
-            const placeholder = document.getElementById(`${type}-placeholder`);
-
-            const hasPrimary = !!primaryImages?.[type];
-            const hasCompare = !!compareImages?.[type];
-
-            if (hasPrimary || hasCompare) {
-                placeholder.classList.remove('active');
-                
-                if (hasPrimary) {
-                    primaryImg.src = 'data:image/png;base64,' + primaryImages[type];
-                    primaryImg.classList.remove('hidden');
-                } else {
-                    primaryImg.classList.add('hidden');
-                }
-                
-                if (hasCompare) {
-                    compareImg.src = 'data:image/png;base64,' + compareImages[type];
-                    compareImg.classList.remove('hidden');
-                } else {
-                    compareImg.classList.add('hidden');
-                }
-            } else {
-                primaryImg.classList.add('hidden');
-                compareImg.classList.add('hidden');
-                placeholder.classList.add('active');
-            }
-        });
-    }
-
-    initEventFilters() {
-        document.querySelectorAll('.event-filter-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
-                document.querySelectorAll('.event-filter-btn').forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                this.activeEventFilter = btn.dataset.filter;
-                if (this.lastEvents && this.lastStats) {
-                    this.renderEvents(this.lastEvents, this.lastStats);
-                }
-            });
         });
     }
 }

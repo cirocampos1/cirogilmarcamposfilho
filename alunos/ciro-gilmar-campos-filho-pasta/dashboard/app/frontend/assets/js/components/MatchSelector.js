@@ -1,4 +1,4 @@
-import { api } from '../services/api.js?v=4';
+import { api } from '../services/api.js?v=3';
 
 export class MatchSelector {
     constructor(selectElement) {

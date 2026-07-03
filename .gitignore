@@ -48,6 +48,8 @@ dashboard/data/sofascore_player*/
 dashboard/data/processed/
 dashboard/data/raw/
 statsbomb_aula/data/
+alunos/**/data/
+alunos/**/*.db
 
 # ------------------------------------------------------------------------------
 # 5. Imagens e Gráficos Temporários

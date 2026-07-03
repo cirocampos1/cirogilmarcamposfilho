@@ -7,7 +7,7 @@ from app.infra.database import DatabaseService
 
 router = APIRouter()
 
-MATCH_ID = "15186850"
+MATCH_ID = "16130149"
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
 db = DatabaseService()
 
@@ -18,11 +18,9 @@ def data_dir_player(player_id):
 
 def data_dir_match(match_id=None):
     m_id = match_id or MATCH_ID
-    # Tenta primeiro a pasta bruta da partida
     path = os.path.join(ROOT, "data", "raw", f"match_{m_id}")
     if os.path.exists(path):
         return path
-    # Se não existir, tenta usar a pasta sofascore como fallback de lineups/incidents
     return os.path.join(ROOT, "data", "sofascore")
 
 def read_json(*path_parts):
@@ -37,16 +35,17 @@ def read_json(*path_parts):
 @router.get("/api/players")
 def get_players(match_id: int = None):
     """Retorna lista de jogadores (primeiro tenta banco, fallback JSON)."""
-    m_id = match_id or int(MATCH_ID)
+    if not match_id:
+        match_id = int(MATCH_ID)
         
-    db_players = db.get_match_players(m_id)
+    db_players = db.get_match_players(match_id)
     if db_players:
         players = [{"id": str(p["player_id"]), "name": p["name"]}
                    for p in db_players]
         players = sorted(players, key=lambda x: x["name"] or "")
         return {"players": players}
 
-    match_lineups = os.path.join(data_dir_match(m_id), "lineups.json")
+    match_lineups = os.path.join(data_dir_match(match_id), "lineups.json")
     if os.path.exists(match_lineups):
         with open(match_lineups, "r", encoding="utf-8") as f:
             data = json.load(f)
@@ -112,13 +111,8 @@ def get_dashboard_data(player_id: str = "866469", match_id: int = None):
 
     # Stats
     stats_raw = read_json(match_dir, f"player_{player_id}_stats.json")
-    if not stats_raw:
-        stats_raw = read_json(player_dir, "player_statistics.json") or read_json(player_dir, "statistics.json")
-    
-    if stats_raw and isinstance(stats_raw, dict):
+    if stats_raw:
         stats_data = stats_raw.get("statistics", stats_raw)
-        if not isinstance(stats_data, dict):
-            stats_data = {}
     else:
         stats_data = {}
 
@@ -246,17 +240,7 @@ def _build_response(stats_row, heatmap_pts, shotmap_pts,
 
 @router.get("/api/matches")
 def list_matches():
-    matches = db.list_matches(20)
-    # Garante que a partida da França vs Irlanda do Norte (16130149) esteja disponível
-    if not any(m["match_id"] == 16130149 for m in matches):
-        matches.append({
-            "match_id": 16130149,
-            "home_team": "França",
-            "away_team": "Irlanda do Norte",
-            "match_date": "2026-06-08",
-            "competition": "Amistoso Internacional"
-        })
-    return {"matches": matches}
+    return {"matches": db.list_matches(20)}
 
 
 @router.get("/api/players/db")

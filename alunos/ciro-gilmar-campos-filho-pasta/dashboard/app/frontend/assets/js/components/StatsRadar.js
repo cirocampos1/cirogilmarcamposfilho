@@ -4,7 +4,7 @@ export class StatsRadar {
         this.chart = null;
     }
 
-    render(stats, compareStats = null) {
+    render(stats) {
         if (!stats) {
             this.destroy();
             return;
@@ -32,60 +32,28 @@ export class StatsRadar {
             stats.clearances || 0,
         ];
 
-        let compareValues = null;
-        if (compareStats) {
-            compareValues = [
-                compareStats.accuratePass || 0,
-                compareStats.wonTackle || 0,
-                compareStats.totalTackle || 0,
-                compareStats.duelWon || 0,
-                compareStats.interceptions || 0,
-                compareStats.onTargetScoringAttempt || 0,
-                compareStats.wasFouled || 0,
-                compareStats.clearances || 0,
-            ];
-        }
-
-        const allValues = compareValues ? [...values, ...compareValues] : values;
-        const maxVal = Math.max(...allValues, 1);
+        const maxVal = Math.max(...values, 1);
 
         if (this.chart) {
             this.chart.destroy();
-        }
-
-        const datasets = [{
-            label: 'Jogador Principal',
-            data: values.map(v => (v / maxVal) * 100),
-            backgroundColor: 'rgba(16, 185, 129, 0.12)',
-            borderColor: '#10b981',
-            pointBackgroundColor: '#10b981',
-            pointBorderColor: '#fff',
-            pointHoverBackgroundColor: '#fff',
-            pointHoverBorderColor: '#10b981',
-            borderWidth: 2,
-            pointRadius: 4,
-        }];
-
-        if (compareValues) {
-            datasets.push({
-                label: 'Jogador Comparado',
-                data: compareValues.map(v => (v / maxVal) * 100),
-                backgroundColor: 'rgba(245, 158, 11, 0.12)',
-                borderColor: '#f59e0b',
-                pointBackgroundColor: '#f59e0b',
-                pointBorderColor: '#fff',
-                pointHoverBackgroundColor: '#fff',
-                pointHoverBorderColor: '#f59e0b',
-                borderWidth: 2,
-                pointRadius: 4,
-            });
         }
 
         this.chart = new Chart(this.canvas.getContext('2d'), {
             type: 'radar',
             data: {
                 labels,
-                datasets
+                datasets: [{
+                    label: 'Atributos do Jogador',
+                    data: values.map(v => (v / maxVal) * 100),
+                    backgroundColor: 'rgba(16, 185, 129, 0.15)',
+                    borderColor: '#10b981',
+                    pointBackgroundColor: '#10b981',
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: '#10b981',
+                    borderWidth: 2,
+                    pointRadius: 4,
+                }]
             },
             options: {
                 responsive: true,
@@ -102,19 +70,12 @@ export class StatsRadar {
                     }
                 },
                 plugins: {
-                    legend: {
-                        display: !!compareStats,
-                        labels: {
-                            color: '#94a3b8',
-                            font: { family: 'Outfit', size: 11 }
-                        }
-                    },
+                    legend: { display: false },
                     tooltip: {
                         callbacks: {
                             label: (ctx) => {
                                 const idx = ctx.dataIndex;
-                                const val = ctx.datasetIndex === 0 ? values[idx] : compareValues[idx];
-                                return `${ctx.dataset.label} - ${labels[idx]}: ${val}`;
+                                return `${labels[idx]}: ${values[idx]}`;
                             }
                         }
                     }

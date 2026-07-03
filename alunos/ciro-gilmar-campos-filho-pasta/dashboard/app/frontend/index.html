@@ -22,10 +22,7 @@
             </div>
             <div class="player-selector">
                 <select id="player-select" disabled>
-                    <option value="">Carregando jogador...</option>
-                </select>
-                <select id="compare-player-select" disabled>
-                    <option value="">Comparar com...</option>
+                    <option value="">Carregando jogadores...</option>
                 </select>
                 <div id="player-info" class="player-info"></div>
             </div>
@@ -35,16 +32,7 @@
             <div class="glass-panel map-container" id="panel-heatmap">
                 <h2>Mapa de Calor (Heatmap)</h2>
                 <div class="img-wrapper" id="heatmap-wrapper">
-                    <div class="maps-comparison-grid" id="heatmap-grid">
-                        <div class="map-view-box" id="heatmap-box-primary">
-                            <span class="player-map-label hidden" id="heatmap-label-primary">Jogador A</span>
-                            <img id="heatmap-img" src="" alt="Carregando heatmap...">
-                        </div>
-                        <div class="map-view-box hidden" id="heatmap-box-compare">
-                            <span class="player-map-label" id="heatmap-label-compare">Jogador B</span>
-                            <img id="heatmap-compare-img" src="" alt="Carregando heatmap...">
-                        </div>
-                    </div>
+                    <img id="heatmap-img" src="" alt="Carregando heatmap...">
                     <div class="img-placeholder" id="heatmap-placeholder">
                         <span class="placeholder-icon">🗺️</span>
                         <span class="placeholder-text">Heatmap indisponível</span>
@@ -57,16 +45,7 @@
             <div class="glass-panel map-container" id="panel-shotmap">
                 <h2>Mapa de Chutes (Shotmap)</h2>
                 <div class="img-wrapper" id="shotmap-wrapper">
-                    <div class="maps-comparison-grid" id="shotmap-grid">
-                        <div class="map-view-box" id="shotmap-box-primary">
-                            <span class="player-map-label hidden" id="shotmap-label-primary">Jogador A</span>
-                            <img id="shotmap-img" src="" alt="Carregando shotmap...">
-                        </div>
-                        <div class="map-view-box hidden" id="shotmap-box-compare">
-                            <span class="player-map-label" id="shotmap-label-compare">Jogador B</span>
-                            <img id="shotmap-compare-img" src="" alt="Carregando shotmap...">
-                        </div>
-                    </div>
+                    <img id="shotmap-img" src="" alt="Carregando shotmap...">
                     <div class="img-placeholder" id="shotmap-placeholder">
                         <span class="placeholder-icon">🎯</span>
                         <span class="placeholder-text">Shotmap indisponível</span>
@@ -79,16 +58,7 @@
             <div class="glass-panel map-container" id="panel-passmap">
                 <h2>Mapa de Passes</h2>
                 <div class="img-wrapper" id="passmap-wrapper">
-                    <div class="maps-comparison-grid" id="passmap-grid">
-                        <div class="map-view-box" id="passmap-box-primary">
-                            <span class="player-map-label hidden" id="passmap-label-primary">Jogador A</span>
-                            <img id="passmap-img" src="" alt="Carregando passmap...">
-                        </div>
-                        <div class="map-view-box hidden" id="passmap-box-compare">
-                            <span class="player-map-label" id="passmap-label-compare">Jogador B</span>
-                            <img id="passmap-compare-img" src="" alt="Carregando passmap...">
-                        </div>
-                    </div>
+                    <img id="passmap-img" src="" alt="Carregando passmap...">
                     <div class="img-placeholder" id="passmap-placeholder">
                         <span class="placeholder-icon">↗️</span>
                         <span class="placeholder-text">Passmap indisponível</span>
@@ -119,11 +89,6 @@
 
             <div class="glass-panel events-container" id="panel-events">
                 <h2>Eventos da Partida</h2>
-                <div class="event-filters">
-                    <button class="event-filter-btn active" data-filter="all">Todos</button>
-                    <button class="event-filter-btn" data-filter="success">Sucesso</button>
-                    <button class="event-filter-btn" data-filter="failed">Falhas</button>
-                </div>
                 <div class="events-grid" id="events-grid">
                     <div class="event-category" data-type="pass">
                         <div class="event-header">
@@ -195,6 +160,6 @@
         </div>
     </div>
 
-    <script type="module" src="assets/js/app.js?v=4"></script>
+    <script type="module" src="assets/js/app.js?v=3"></script>
 </body>
 </html>

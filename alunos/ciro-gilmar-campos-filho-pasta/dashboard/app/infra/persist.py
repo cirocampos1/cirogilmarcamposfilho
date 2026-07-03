@@ -23,10 +23,24 @@ def ingest_match_data(db: DatabaseService, match_id: str = MATCH_ID):
     with open(lineups_path, "r", encoding="utf-8") as f:
         lineups = json.load(f)
 
-    home_team = lineups.get("home", {}).get("name", "Home")
-    away_team = lineups.get("away", {}).get("name", "Away")
+    if str(match_id) == "15691379":
+        home_team = "Brasil Sub-23"
+        away_team = "Egito Sub-23"
+        competition = "Jogos Olímpicos"
+        match_date = "2021-07-31"
+    elif str(match_id) == "15186850":
+        home_team = "França"
+        away_team = "Irlanda"
+        competition = "Eliminatórias Euro"
+        match_date = "2023-09-07"
+    else:
+        home_team = lineups.get("home", {}).get("name", "Home")
+        away_team = lineups.get("away", {}).get("name", "Away")
+        competition = "Friendly"
+        match_date = "2024"
+
     db.upsert_match(int(match_id), home_team, away_team,
-                    match_date="2024", competition="Friendly")
+                    match_date=match_date, competition=competition)
 
     for team_side in ("home", "away"):
         for item in lineups.get(team_side, {}).get("players", []):
@@ -138,5 +152,55 @@ def ingest_sofascore_data(db: DatabaseService, match_id: str = "15186850"):
 
 if __name__ == "__main__":
     db = DatabaseService()
-    ingest_match_data(db)
-    ingest_sofascore_data(db)
+    
+    # 1. Ingerir todas as partidas da pasta data/raw
+    import glob
+    raw_dir = os.path.join(ROOT, "data", "raw")
+    if os.path.exists(raw_dir):
+        for mdir in glob.glob(os.path.join(raw_dir, "match_*")):
+            mid = os.path.basename(mdir).replace("match_", "")
+            print(f"Ingerindo partida {mid} a partir de raw...")
+            ingest_match_data(db, mid)
+            
+    # 2. Ingerir a partida padrão do sofascore (16130149) a partir do match_info.json
+    info_path = os.path.join(ROOT, "data", "sofascore", "match_info.json")
+    if os.path.exists(info_path):
+        with open(info_path, "r", encoding="utf-8") as f:
+            match_info = json.load(f)
+        event = match_info.get("event", {})
+        mid = event.get("id", 16130149)
+        home_team = event.get("homeTeam", {}).get("name", "Home")
+        away_team = event.get("awayTeam", {}).get("name", "Away")
+        comp = event.get("tournament", {}).get("name", "Friendly")
+        date_ts = event.get("startTimestamp", None)
+        import datetime
+        date_str = datetime.datetime.fromtimestamp(date_ts).strftime("%Y-%m-%d") if date_ts else "2026-06-08"
+        
+        db.upsert_match(mid, home_team, away_team,
+                        match_date=date_str, competition=comp)
+                        
+        # Ingerir jogadores da partida 16130149 a partir do lineups.json
+        lineups_path = os.path.join(ROOT, "data", "sofascore", "lineups.json")
+        if os.path.exists(lineups_path):
+            with open(lineups_path, "r", encoding="utf-8") as f:
+                lineups = json.load(f)
+            for team_side in ("home", "away"):
+                for item in lineups.get(team_side, {}).get("players", []):
+                    p = item.get("player", {})
+                    pid = str(p.get("id"))
+                    name = p.get("name", "")
+                    pos = p.get("position", "")
+                    shirt = p.get("shirtNumber")
+                    stats = item.get("statistics", {})
+
+                    db.upsert_player(pid, name, position=pos)
+                    db.upsert_match_player(
+                        mid, pid, team_side,
+                        is_starter=1,
+                        shirt_number=shirt,
+                        rating=stats.get("rating"),
+                        minutes_played=stats.get("minutesPlayed"),
+                    )
+        
+        # Ingerir os dados do sofascore para a partida 16130149
+        ingest_sofascore_data(db, str(mid))
