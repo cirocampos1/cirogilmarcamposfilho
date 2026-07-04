@@ -7,7 +7,14 @@ router = APIRouter()
 @router.get("/api/matches")
 def get_matches():
     matches = statsbomb_parser.get_matches()
-    return {"matches": matches}
+    translated_matches = []
+    for m in matches:
+        m_copy = dict(m)
+        m_copy["home_team"] = statsbomb_parser.translate_team(m.get("home_team"))
+        m_copy["away_team"] = statsbomb_parser.translate_team(m.get("away_team"))
+        translated_matches.append(m_copy)
+    return {"matches": translated_matches}
+
 
 @router.get("/api/matches/{match_id}")
 def get_match_detail(match_id: int):
@@ -30,10 +37,14 @@ def get_match_detail(match_id: int):
     adv_metrics = statsbomb_parser.calculate_advanced_metrics(events, home_team, away_team)
     xg_flow_data = statsbomb_parser.extract_xg_flow(shots, home_team, away_team)
     
+    # Translate team names for visualization
+    home_team_pt = statsbomb_parser.translate_team(home_team)
+    away_team_pt = statsbomb_parser.translate_team(away_team)
+    
     # Render maps
     shotmap_b64 = plotter.plot_jointgrid_shotmap(shots, lineups)
     passmap_b64 = plotter.plot_pass_network(passes, lineups)
-    xg_flow_b64 = plotter.plot_xg_flow(xg_flow_data, home_team, away_team)
+    xg_flow_b64 = plotter.plot_xg_flow(xg_flow_data, home_team_pt, away_team_pt)
     pressure_heatmap_b64 = plotter.plot_pressure_heatmap(pressures, home_team, away_team)
 
     summary = {
@@ -70,16 +81,17 @@ def get_match_players(match_id: int):
     
     result = {}
     for team, players in lineups.items():
-        result[team] = []
+        team_pt = statsbomb_parser.translate_team(team)
+        result[team_pt] = []
         for p in players:
             name = p.get("player_nickname") or p.get("player_name")
-            result[team].append({
+            result[team_pt].append({
                 "player_id": statsbomb_parser.clean_id(p.get("player_id")),
                 "name": name,
                 "jersey_number": p.get("jersey_number")
             })
         # Sort players by name
-        result[team] = sorted(result[team], key=lambda x: x["name"])
+        result[team_pt] = sorted(result[team_pt], key=lambda x: x["name"])
     return result
 
 
@@ -94,6 +106,10 @@ def get_player_detail(match_id: int, player_id: str):
     player_stats = all_player_stats.get(str(player_id))
     if not player_stats:
         raise HTTPException(status_code=404, detail="Player statistics not found for this match")
+        
+    # Translate player's team name
+    if isinstance(player_stats, dict) and "team" in player_stats:
+        player_stats["team"] = statsbomb_parser.translate_team(player_stats["team"])
         
     # Render player-specific maps
     heatmap_b64 = plotter.plot_player_heatmap(events, player_id)

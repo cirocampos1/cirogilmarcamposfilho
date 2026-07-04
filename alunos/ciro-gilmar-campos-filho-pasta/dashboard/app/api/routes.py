@@ -111,10 +111,14 @@ def get_dashboard_data(player_id: str = "866469", match_id: int = None):
 
     # Stats
     stats_raw = read_json(match_dir, f"player_{player_id}_stats.json")
-    if stats_raw:
-        stats_data = stats_raw.get("statistics", stats_raw)
-    else:
-        stats_data = {}
+    if not stats_raw:
+        stats_raw = read_json(player_dir, "statistics.json") or read_json(player_dir, "player_statistics.json")
+        
+    stats_data = {}
+    if stats_raw and isinstance(stats_raw, dict):
+        raw_data = stats_raw.get("statistics", stats_raw)
+        if isinstance(raw_data, dict):
+            stats_data = raw_data
 
     # Events
     rating_data = read_json(player_dir, "rating_breakdown.json") or {}

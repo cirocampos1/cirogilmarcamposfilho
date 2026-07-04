@@ -19,9 +19,9 @@
                 "slug": "n-golo-kante",
                 "shortName": "N. Kanté",
                 "position": "M",
-                "jerseyNumber": "7",
+                "jerseyNumber": "17",
                 "height": 169,
-                "userCount": 47352,
+                "userCount": 49648,
                 "gender": "M",
                 "sofascoreId": "nglkante",
                 "id": 234148,
@@ -35,12 +35,14 @@
                     "nameTranslation": {
                         "ar": "نغولو كانتي",
                         "bn": "এন'গোলো কান্তে",
-                        "hi": "नगोलो कंटे"
+                        "hi": "नगोलो कंटे",
+                        "ru": "Н'Голо Канте"
                     },
                     "shortNameTranslation": {
                         "ar": "ن. كانتي",
                         "bn": "এন. কান্তে",
-                        "hi": "एन. कंटे"
+                        "hi": "एन. कंटे",
+                        "ru": "Н. Канте"
                     }
                 }
             },
@@ -53,7 +55,7 @@
                 "position": "M",
                 "jerseyNumber": "12",
                 "height": 191,
-                "userCount": 12835,
+                "userCount": 14228,
                 "gender": "M",
                 "sofascoreId": "adrienrabiot_25",
                 "id": 250737,
@@ -67,12 +69,14 @@
                     "nameTranslation": {
                         "ar": "أدريان رابيو",
                         "bn": "অ্যাড্রিয়েন রাবিওট",
-                        "hi": "एड्रियन रेबियोट"
+                        "hi": "एड्रियन रेबियोट",
+                        "ru": "Адриен Рабьо"
                     },
                     "shortNameTranslation": {
                         "ar": "أ. رابيو",
                         "bn": "এ. রাবিওট",
-                        "hi": "ए. रेबियोट"
+                        "hi": "ए. रेबियोट",
+                        "ru": "А. Рабьо"
                     }
                 }
             },
@@ -102,8 +106,9 @@
                 "position": "M",
                 "jerseyNumber": "11",
                 "height": 183,
-                "userCount": 8652,
+                "userCount": 9604,
                 "gender": "M",
+                "sofascoreId": "iwvgyc",
                 "id": 1130939,
                 "marketValueCurrency": "EUR",
                 "dateOfBirthTimestamp": 1014595200,
@@ -115,12 +120,14 @@
                     "nameTranslation": {
                         "ar": "ماغنيس أكليوش",
                         "bn": "ম্যাগনেস আকলিউচে",
-                        "hi": "माघनेस अक्लिओचे"
+                        "hi": "माघनेस अक्लिओचे",
+                        "ru": "Магнес Аклиуш"
                     },
                     "shortNameTranslation": {
                         "ar": "م. أكليوش",
                         "bn": "এম. আকলিউচে",
-                        "hi": "एम. अक्लिओचे"
+                        "hi": "एम. अक्लिओचे",
+                        "ru": "М. Аклиуш"
                     }
                 }
             },
@@ -133,7 +140,7 @@
                 "position": "M",
                 "jerseyNumber": "11",
                 "height": 184,
-                "userCount": 224798,
+                "userCount": 284925,
                 "gender": "M",
                 "sofascoreId": "MOlise",
                 "id": 978838,
@@ -147,12 +154,14 @@
                     "nameTranslation": {
                         "ar": "مايكل أوليس",
                         "bn": "মাইকেল ওলিস",
-                        "hi": "माइकल ओलिस"
+                        "hi": "माइकल ओलिस",
+                        "ru": "Майкл Олисе"
                     },
                     "shortNameTranslation": {
                         "ar": "م. أوليس",
                         "bn": "এম. ওলিস",
-                        "hi": "एम. ओलिस"
+                        "hi": "एम. ओलिस",
+                        "ru": "М. Олисе"
                     }
                 }
             },
@@ -174,8 +183,9 @@
                 "position": "M",
                 "jerseyNumber": "17",
                 "height": 186,
-                "userCount": 7890,
+                "userCount": 11057,
                 "gender": "M",
+                "sofascoreId": "6ggbdw",
                 "id": 974087,
                 "marketValueCurrency": "EUR",
                 "dateOfBirthTimestamp": 990057600,
@@ -187,12 +197,14 @@
                     "nameTranslation": {
                         "ar": "مانو كوني",
                         "bn": "মনু কোনে",
-                        "hi": "मनु कोने"
+                        "hi": "मनु कोने",
+                        "ru": "Ману Коне"
                     },
                     "shortNameTranslation": {
                         "ar": "م. كوني",
                         "bn": "এম. কোনে",
-                        "hi": "एम. कोने"
+                        "hi": "एम. कोने",
+                        "ru": "М. Коне"
                     }
                 }
             },
@@ -205,26 +217,28 @@
                 "position": "M",
                 "jerseyNumber": "8",
                 "height": 188,
-                "userCount": 157298,
+                "userCount": 160628,
                 "gender": "M",
                 "sofascoreId": "ATchouaméni",
                 "id": 859025,
                 "marketValueCurrency": "EUR",
                 "dateOfBirthTimestamp": 948931200,
                 "proposedMarketValueRaw": {
-                    "value": 78000000,
+                    "value": 73000000,
                     "currency": "EUR"
                 },
                 "fieldTranslations": {
                     "nameTranslation": {
                         "ar": "أوريليان تشواميني",
                         "bn": "অরেলিয়ান চৌমেনি",
-                        "hi": "ऑरेलियन टचौमेनी"
+                        "hi": "ऑरेलियन टचौमेनी",
+                        "ru": "Орельен Тчуамени"
                     },
                     "shortNameTranslation": {
                         "ar": "أ. تشواميني",
                         "bn": "এ. চৌমেনি",
-                        "hi": "ए. टचौमेनी"
+                        "hi": "ए. टचौमेनी",
+                        "ru": "О. Тчуамени"
                     }
                 }
             },
@@ -246,8 +260,9 @@
                 "position": "M",
                 "jerseyNumber": "38",
                 "height": 183,
-                "userCount": 104,
+                "userCount": 107,
                 "gender": "M",
+                "sofascoreId": "rs5n96",
                 "id": 1136418,
                 "marketValueCurrency": "EUR",
                 "dateOfBirthTimestamp": 1076889600,
@@ -259,12 +274,14 @@
                     "nameTranslation": {
                         "ar": "جيمي ماكدونيل",
                         "bn": "জেমি ম্যাকডোনেল",
-                        "hi": "जेमी मैकडॉनेल"
+                        "hi": "जेमी मैकडॉनेल",
+                        "ru": "Джейми Макиндоннелл"
                     },
                     "shortNameTranslation": {
                         "ar": "ج. ماكدونيل",
                         "bn": "জে. ম্যাকডোনেল",
-                        "hi": "जे. मैकडॉनेल"
+                        "hi": "जे. मैकडॉनेल",
+                        "ru": "Д. Макиндоннелл"
                     }
                 }
             },
@@ -277,8 +294,9 @@
                 "position": "M",
                 "jerseyNumber": "21",
                 "height": 178,
-                "userCount": 967,
+                "userCount": 989,
                 "gender": "M",
+                "sofascoreId": "vut8q3",
                 "id": 1066059,
                 "marketValueCurrency": "EUR",
                 "dateOfBirthTimestamp": 1064534400,
@@ -290,12 +308,14 @@
                     "nameTranslation": {
                         "ar": "إسحاق برايس",
                         "bn": "আইজ্যাক প্রাইস",
-                        "hi": "इसहाक प्राइस"
+                        "hi": "इसहाक प्राइस",
+                        "ru": "Айзек Прайс"
                     },
                     "shortNameTranslation": {
                         "ar": "إ. برايس",
                         "bn": "আই. প্রাইস",
-                        "hi": "आई. प्राइस"
+                        "hi": "आई. प्राइस",
+                        "ru": "А. Прайс"
                     }
                 }
             },
@@ -315,17 +335,20 @@
                 "position": "F",
                 "jerseyNumber": "76",
                 "height": 175,
-                "userCount": 722,
+                "userCount": 739,
                 "gender": "M",
+                "sofascoreId": "zbvccn",
                 "id": 1590853,
                 "marketValueCurrency": "EUR",
                 "dateOfBirthTimestamp": 1207785600,
                 "fieldTranslations": {
                     "nameTranslation": {
-                        "ar": "سيداخ أونيل"
+                        "ar": "سيداخ أونيل",
+                        "ru": "Кеадах О'Нил"
                     },
                     "shortNameTranslation": {
-                        "ar": "س. أونيل"
+                        "ar": "س. أونيل",
+                        "ru": "К. О'Нил"
                     }
                 }
             },
@@ -336,8 +359,9 @@
                 "position": "M",
                 "jerseyNumber": "2",
                 "height": 183,
-                "userCount": 122,
+                "userCount": 179,
                 "gender": "M",
+                "sofascoreId": "iwv6bx",
                 "id": 1127791,
                 "marketValueCurrency": "EUR",
                 "dateOfBirthTimestamp": 1096675200,
@@ -347,10 +371,12 @@
                 },
                 "fieldTranslations": {
                     "nameTranslation": {
-                        "ar": "باتريك كيلي"
+                        "ar": "باتريك كيلي",
+                        "ru": "Патрик Келли"
                     },
                     "shortNameTranslation": {
-                        "ar": "ب. كيلي"
+                        "ar": "ب. كيلي",
+                        "ru": "П. Келли"
                     }
                 }
             },
@@ -370,8 +396,9 @@
                 "position": "F",
                 "jerseyNumber": "27",
                 "height": 188,
-                "userCount": 123,
+                "userCount": 124,
                 "gender": "M",
+                "sofascoreId": "wmbntk",
                 "id": 73262,
                 "marketValueCurrency": "EUR",
                 "dateOfBirthTimestamp": 650678400,
@@ -383,12 +410,14 @@
                     "nameTranslation": {
                         "ar": "جوش ماجينيس",
                         "bn": "জোশ ম্যাগেনিস",
-                        "hi": "जोश मैगनिस"
+                        "hi": "जोश मैगनिस",
+                        "ru": "Джош Магеннис"
                     },
                     "shortNameTranslation": {
                         "ar": "ج. ماجينيس",
                         "bn": "জে. ম্যাগেনিস",
-                        "hi": "जे. मैगनिस"
+                        "hi": "जे. मैगनिस",
+                        "ru": "Д. Магеннис"
                     }
                 }
             },
@@ -399,10 +428,11 @@
                 "slug": "jamie-donley",
                 "shortName": "J. Donley",
                 "position": "M",
-                "jerseyNumber": "33",
+                "jerseyNumber": "43",
                 "height": 183,
-                "userCount": 1470,
+                "userCount": 1506,
                 "gender": "M",
+                "sofascoreId": "dq2rr5",
                 "id": 1150934,
                 "marketValueCurrency": "EUR",
                 "dateOfBirthTimestamp": 1104710400,
@@ -414,12 +444,14 @@
                     "nameTranslation": {
                         "ar": "جيمي دونلي",
                         "bn": "জেমি ডনলি",
-                        "hi": "जेमी डोनली"
+                        "hi": "जेमी डोनली",
+                        "ru": "Джейми Донли"
                     },
                     "shortNameTranslation": {
                         "ar": "ج. دونلي",
                         "bn": "জে. ডনলি",
-                        "hi": "जे. डोनली"
+                        "hi": "जे. डोनली",
+                        "ru": "Д. Донли"
                     }
                 }
             },
@@ -443,7 +475,7 @@
                 "position": "M",
                 "jerseyNumber": "11",
                 "height": 184,
-                "userCount": 224798,
+                "userCount": 284925,
                 "gender": "M",
                 "sofascoreId": "MOlise",
                 "id": 978838,
@@ -457,12 +489,14 @@
                     "nameTranslation": {
                         "ar": "مايكل أوليس",
                         "bn": "মাইকেল ওলিস",
-                        "hi": "माइकल ओलिस"
+                        "hi": "माइकल ओलिस",
+                        "ru": "Майкл Олисе"
                     },
                     "shortNameTranslation": {
                         "ar": "م. أوليس",
                         "bn": "এম. ওলিস",
-                        "hi": "एम. ओलिस"
+                        "hi": "एम. ओलिस",
+                        "ru": "М. Олисе"
                     }
                 }
             },
@@ -473,7 +507,7 @@
                 "position": "D",
                 "jerseyNumber": "2",
                 "height": 179,
-                "userCount": 21334,
+                "userCount": 22397,
                 "gender": "M",
                 "sofascoreId": "malogst",
                 "id": 996958,
@@ -487,12 +521,14 @@
                     "nameTranslation": {
                         "ar": "مالو غوستو",
                         "bn": "গুস্টো, মালো",
-                        "hi": "गुस्टो, मालो"
+                        "hi": "गुस्टो, मालो",
+                        "ru": "Мало Густо"
                     },
                     "shortNameTranslation": {
                         "ar": "م. غوستو",
                         "bn": "এম. গুস্টো",
-                        "hi": "एम. गुस्टो"
+                        "hi": "एम. गुस्टो",
+                        "ru": "М. Густо"
                     }
                 }
             },
@@ -507,26 +543,28 @@
                         "position": "M",
                         "jerseyNumber": "8",
                         "height": 188,
-                        "userCount": 157298,
+                        "userCount": 160628,
                         "gender": "M",
                         "sofascoreId": "ATchouaméni",
                         "id": 859025,
                         "marketValueCurrency": "EUR",
                         "dateOfBirthTimestamp": 948931200,
                         "proposedMarketValueRaw": {
-                            "value": 78000000,
+                            "value": 73000000,
                             "currency": "EUR"
                         },
                         "fieldTranslations": {
                             "nameTranslation": {
                                 "ar": "أوريليان تشواميني",
                                 "bn": "অরেলিয়ান চৌমেনি",
-                                "hi": "ऑरेलियन टचौमेनी"
+                                "hi": "ऑरेलियन टचौमेनी",
+                                "ru": "Орельен Тчуамени"
                             },
                             "shortNameTranslation": {
                                 "ar": "أ. تشواميني",
                                 "bn": "এ. চৌমেনি",
-                                "hi": "ए. टचौमेनी"
+                                "hi": "ए. टचौमेनी",
+                                "ru": "О. Тчуамени"
                             }
                         }
                     },
@@ -550,26 +588,28 @@
                         "position": "D",
                         "jerseyNumber": "3",
                         "height": 178,
-                        "userCount": 5366,
+                        "userCount": 6185,
                         "gender": "M",
                         "sofascoreId": "LDigne",
                         "id": 96538,
                         "marketValueCurrency": "EUR",
                         "dateOfBirthTimestamp": 743126400,
                         "proposedMarketValueRaw": {
-                            "value": 7400000,
+                            "value": 5500000,
                             "currency": "EUR"
                         },
                         "fieldTranslations": {
                             "nameTranslation": {
                                 "ar": "لوكاس دينييه",
                                 "bn": "লুকাস ডিগনে",
-                                "hi": "लुकास डिग्ने"
+                                "hi": "लुकास डिग्ने",
+                                "ru": "Лукас Динь"
                             },
                             "shortNameTranslation": {
                                 "ar": "ل. دينييه",
                                 "bn": "এল. ডিগনে",
-                                "hi": "एल. डिग्ने"
+                                "hi": "एल. डिग्ने",
+                                "ru": "Л. Динь"
                             }
                         }
                     },
@@ -593,7 +633,7 @@
                         "position": "F",
                         "jerseyNumber": "12",
                         "height": 182,
-                        "userCount": 43338,
+                        "userCount": 47088,
                         "gender": "M",
                         "sofascoreId": "bradley_b",
                         "id": 996952,
@@ -607,12 +647,14 @@
                             "nameTranslation": {
                                 "ar": "برادلي باركولا",
                                 "bn": "বারকোলা, ব্র্যাডলি",
-                                "hi": "बारकोला, ब्रैडली"
+                                "hi": "बारकोला, ब्रैडली",
+                                "ru": "Брэдли Баркола"
                             },
                             "shortNameTranslation": {
                                 "ar": "ب. باركولا",
                                 "bn": "বি. বারকোলা",
-                                "hi": "बी. बारकोला"
+                                "hi": "बी. बारकोला",
+                                "ru": "Б. Баркола"
                             }
                         }
                     },
@@ -636,7 +678,7 @@
                         "position": "F",
                         "jerseyNumber": "12",
                         "height": 182,
-                        "userCount": 43338,
+                        "userCount": 47088,
                         "gender": "M",
                         "sofascoreId": "bradley_b",
                         "id": 996952,
@@ -650,12 +692,14 @@
                             "nameTranslation": {
                                 "ar": "برادلي باركولا",
                                 "bn": "বারকোলা, ব্র্যাডলি",
-                                "hi": "बारकोला, ब्रैडली"
+                                "hi": "बारकोला, ब्रैडली",
+                                "ru": "Брэдли Баркола"
                             },
                             "shortNameTranslation": {
                                 "ar": "ب. باركولا",
                                 "bn": "বি. বারকোলা",
-                                "hi": "बी. बारकोला"
+                                "hi": "बी. बारकोला",
+                                "ru": "Б. Баркола"
                             }
                         }
                     },
@@ -681,7 +725,7 @@
                         "position": "D",
                         "jerseyNumber": "4",
                         "height": 185,
-                        "userCount": 17287,
+                        "userCount": 19168,
                         "gender": "M",
                         "sofascoreId": "Upamecano",
                         "id": 798583,
@@ -695,12 +739,14 @@
                             "nameTranslation": {
                                 "ar": "دايوت أوباميكانو",
                                 "bn": "ডেওট উপমেকানো",
-                                "hi": "दयोत उपामेकानो"
+                                "hi": "दयोत उपामेकानो",
+                                "ru": "Дайот Упамекано"
                             },
                             "shortNameTranslation": {
                                 "ar": "د. أوباميكانو",
                                 "bn": "ডি. উপমেকানো",
-                                "hi": "डी. उपामेकानो"
+                                "hi": "डी. उपामेकानो",
+                                "ru": "Д. Упамекано"
                             }
                         }
                     },
@@ -724,7 +770,7 @@
                         "position": "D",
                         "jerseyNumber": "2",
                         "height": 179,
-                        "userCount": 21334,
+                        "userCount": 22397,
                         "gender": "M",
                         "sofascoreId": "malogst",
                         "id": 996958,
@@ -738,12 +784,14 @@
                             "nameTranslation": {
                                 "ar": "مالو غوستو",
                                 "bn": "গুস্টো, মালো",
-                                "hi": "गुस्टो, मालो"
+                                "hi": "गुस्टो, मालो",
+                                "ru": "Мало Густо"
                             },
                             "shortNameTranslation": {
                                 "ar": "م. غوستو",
                                 "bn": "এম. গুস্টো",
-                                "hi": "एम. गुस्टो"
+                                "hi": "एम. गुस्टो",
+                                "ru": "М. Густо"
                             }
                         }
                     },
@@ -770,7 +818,7 @@
                         "position": "M",
                         "jerseyNumber": "11",
                         "height": 184,
-                        "userCount": 224798,
+                        "userCount": 284925,
                         "gender": "M",
                         "sofascoreId": "MOlise",
                         "id": 978838,
@@ -784,12 +832,14 @@
                             "nameTranslation": {
                                 "ar": "مايكل أوليس",
                                 "bn": "মাইকেল ওলিস",
-                                "hi": "माइकल ओलिस"
+                                "hi": "माइकल ओलिस",
+                                "ru": "Майкл Олисе"
                             },
                             "shortNameTranslation": {
                                 "ar": "م. أوليس",
                                 "bn": "এম. ওলিস",
-                                "hi": "एम. ओलिस"
+                                "hi": "एम. ओलिस",
+                                "ru": "М. Олисе"
                             }
                         }
                     },
@@ -812,7 +862,7 @@
                         "position": "M",
                         "jerseyNumber": "11",
                         "height": 184,
-                        "userCount": 224798,
+                        "userCount": 284925,
                         "gender": "M",
                         "sofascoreId": "MOlise",
                         "id": 978838,
@@ -826,12 +876,14 @@
                             "nameTranslation": {
                                 "ar": "مايكل أوليس",
                                 "bn": "মাইকেল ওলিস",
-                                "hi": "माइकल ओलिस"
+                                "hi": "माइकल ओलिस",
+                                "ru": "Майкл Олисе"
                             },
                             "shortNameTranslation": {
                                 "ar": "م. أوليس",
                                 "bn": "এম. ওলিস",
-                                "hi": "एम. ओलिस"
+                                "hi": "एम. ओलिस",
+                                "ru": "М. Олисе"
                             }
                         }
                     },
@@ -862,8 +914,9 @@
                         "position": "G",
                         "jerseyNumber": "1",
                         "height": 186,
-                        "userCount": 568,
+                        "userCount": 601,
                         "gender": "M",
+                        "sofascoreId": "b76nt7",
                         "id": 1154937,
                         "marketValueCurrency": "EUR",
                         "dateOfBirthTimestamp": 1121904000,
@@ -873,10 +926,12 @@
                         },
                         "fieldTranslations": {
                             "nameTranslation": {
-                                "ar": "تشارلز بيرس"
+                                "ar": "تشارلز بيرس",
+                                "ru": "Чарльз, Пирс"
                             },
                             "shortNameTranslation": {
-                                "ar": "ت. بيرس"
+                                "ar": "ت. بيرس",
+                                "ru": "П. Чарльз"
                             }
                         }
                     },
@@ -901,8 +956,9 @@
                 "position": "M",
                 "jerseyNumber": "2",
                 "height": 183,
-                "userCount": 122,
+                "userCount": 179,
                 "gender": "M",
+                "sofascoreId": "iwv6bx",
                 "id": 1127791,
                 "marketValueCurrency": "EUR",
                 "dateOfBirthTimestamp": 1096675200,
@@ -912,10 +968,12 @@
                 },
                 "fieldTranslations": {
                     "nameTranslation": {
-                        "ar": "باتريك كيلي"
+                        "ar": "باتريك كيلي",
+                        "ru": "Патрик Келли"
                     },
                     "shortNameTranslation": {
-                        "ar": "ب. كيلي"
+                        "ar": "ب. كيلي",
+                        "ru": "П. Келли"
                     }
                 }
             },
@@ -928,25 +986,28 @@
                 "position": "M",
                 "jerseyNumber": "19",
                 "height": 189,
-                "userCount": 1119,
+                "userCount": 1165,
                 "gender": "M",
+                "sofascoreId": "b7ybii",
                 "id": 1131449,
                 "marketValueCurrency": "EUR",
                 "dateOfBirthTimestamp": 1067990400,
                 "proposedMarketValueRaw": {
-                    "value": 9700000,
+                    "value": 14500000,
                     "currency": "EUR"
                 },
                 "fieldTranslations": {
                     "nameTranslation": {
                         "ar": "شيا تشارلز",
                         "bn": "শিয়া চার্লস",
-                        "hi": "शिया चार्ल्स"
+                        "hi": "शिया चार्ल्स",
+                        "ru": "Шиа Чарльз"
                     },
                     "shortNameTranslation": {
                         "ar": "ش. تشارلز",
                         "bn": "এস. চার্লস",
-                        "hi": "एस. चार्ल्स"
+                        "hi": "एस. चार्ल्स",
+                        "ru": "Ш. Чарльз"
                     }
                 }
             },
@@ -961,25 +1022,28 @@
                         "position": "M",
                         "jerseyNumber": "19",
                         "height": 189,
-                        "userCount": 1119,
+                        "userCount": 1165,
                         "gender": "M",
+                        "sofascoreId": "b7ybii",
                         "id": 1131449,
                         "marketValueCurrency": "EUR",
                         "dateOfBirthTimestamp": 1067990400,
                         "proposedMarketValueRaw": {
-                            "value": 9700000,
+                            "value": 14500000,
                             "currency": "EUR"
                         },
                         "fieldTranslations": {
                             "nameTranslation": {
                                 "ar": "شيا تشارلز",
                                 "bn": "শিয়া চার্লস",
-                                "hi": "शिया चार्ल्स"
+                                "hi": "शिया चार्ल्स",
+                                "ru": "Шиа Чарльз"
                             },
                             "shortNameTranslation": {
                                 "ar": "ش. تشارلز",
                                 "bn": "এস. চার্লস",
-                                "hi": "एस. चार्ल्स"
+                                "hi": "एस. चार्ल्स",
+                                "ru": "Ш. Чарльз"
                             }
                         }
                     },
@@ -1004,8 +1068,9 @@
                         "position": "M",
                         "jerseyNumber": "2",
                         "height": 183,
-                        "userCount": 122,
+                        "userCount": 179,
                         "gender": "M",
+                        "sofascoreId": "iwv6bx",
                         "id": 1127791,
                         "marketValueCurrency": "EUR",
                         "dateOfBirthTimestamp": 1096675200,
@@ -1015,10 +1080,12 @@
                         },
                         "fieldTranslations": {
                             "nameTranslation": {
-                                "ar": "باتريك كيلي"
+                                "ar": "باتريك كيلي",
+                                "ru": "Патрик Келли"
                             },
                             "shortNameTranslation": {
-                                "ar": "ب. كيلي"
+                                "ar": "ب. كيلي",
+                                "ru": "П. Келли"
                             }
                         }
                     },
@@ -1050,7 +1117,7 @@
                         "position": "G",
                         "jerseyNumber": "16",
                         "height": 190,
-                        "userCount": 17182,
+                        "userCount": 18772,
                         "gender": "M",
                         "sofascoreId": "MMaignan",
                         "id": 191210,
@@ -1064,12 +1131,14 @@
                             "nameTranslation": {
                                 "ar": "مايك مانيان",
                                 "bn": "মাইক ম্যাগনান",
-                                "hi": "माइक मैग्नन"
+                                "hi": "माइक मैग्नन",
+                                "ru": "Майк Меньян"
                             },
                             "shortNameTranslation": {
                                 "ar": "م. ميانيان",
                                 "bn": "এম. ম্যাগনান",
-                                "hi": "एम. मैग्नन"
+                                "hi": "एम. मैग्नन",
+                                "ru": "М. Меньян"
                             }
                         }
                     },
@@ -1094,8 +1163,9 @@
                 "position": "M",
                 "jerseyNumber": "30",
                 "height": 175,
-                "userCount": 419,
+                "userCount": 436,
                 "gender": "M",
+                "sofascoreId": "z46ppd",
                 "id": 158661,
                 "marketValueCurrency": "EUR",
                 "dateOfBirthTimestamp": 989539200,
@@ -1107,12 +1177,14 @@
                     "nameTranslation": {
                         "ar": "إيثان جالبريث",
                         "bn": "ইথান গালব্রেথ",
-                        "hi": "एथन गैलब्रेथ"
+                        "hi": "एथन गैलब्रेथ",
+                        "ru": "Итан Гэлбрайт"
                     },
                     "shortNameTranslation": {
                         "ar": "إ. جالبراث",
                         "bn": "ই. গালব্রেথ",
-                        "hi": "ई. गैलब्रेथ"
+                        "hi": "ई. गैलब्रेथ",
+                        "ru": "И. Гэлбрайт"
                     }
                 }
             },
@@ -1125,8 +1197,9 @@
                 "position": "M",
                 "jerseyNumber": "8",
                 "height": 176,
-                "userCount": 113,
+                "userCount": 117,
                 "gender": "M",
+                "sofascoreId": "pqqa47",
                 "id": 891870,
                 "marketValueCurrency": "EUR",
                 "dateOfBirthTimestamp": 944265600,
@@ -1138,12 +1211,14 @@
                     "nameTranslation": {
                         "ar": "أليستر ماكان",
                         "bn": "অ্যালিস্টার ম্যাকক্যান",
-                        "hi": "एलिस्टेयर मैककैन"
+                        "hi": "एलिस्टेयर मैककैन",
+                        "ru": "Али МаКкан"
                     },
                     "shortNameTranslation": {
                         "ar": "أ. ماكان",
                         "bn": "এ. ম্যাককান",
-                        "hi": "ए. मैककैन"
+                        "hi": "ए. मैककैन",
+                        "ru": "А. МаКкан"
                     }
                 }
             },
@@ -1163,7 +1238,7 @@
                 "position": "F",
                 "jerseyNumber": "12",
                 "height": 182,
-                "userCount": 43338,
+                "userCount": 47088,
                 "gender": "M",
                 "sofascoreId": "bradley_b",
                 "id": 996952,
@@ -1177,12 +1252,14 @@
                     "nameTranslation": {
                         "ar": "برادلي باركولا",
                         "bn": "বারকোলা, ব্র্যাডলি",
-                        "hi": "बारकोला, ब्रैडली"
+                        "hi": "बारकोला, ब्रैडली",
+                        "ru": "Брэдли Баркола"
                     },
                     "shortNameTranslation": {
                         "ar": "ب. باركولا",
                         "bn": "বি. বারকোলা",
-                        "hi": "बी. बारकोला"
+                        "hi": "बी. बारकोला",
+                        "ru": "Б. Баркола"
                     }
                 }
             },
@@ -1195,7 +1272,7 @@
                 "position": "F",
                 "jerseyNumber": "14",
                 "height": 181,
-                "userCount": 111889,
+                "userCount": 120511,
                 "gender": "M",
                 "sofascoreId": "DD14",
                 "id": 1154605,
@@ -1209,12 +1286,14 @@
                     "nameTranslation": {
                         "ar": "ديزيري دويه",
                         "bn": "ডিজায়ার ডুয়ে",
-                        "hi": "डेसिरे डौए"
+                        "hi": "डेसिरे डौए",
+                        "ru": "Дезире Дуэ"
                     },
                     "shortNameTranslation": {
                         "ar": "ديزيري دويه",
                         "bn": "ডি. ডুয়ে",
-                        "hi": "डी. डौए"
+                        "hi": "डी. डौए",
+                        "ru": "Д. Дуэ"
                     }
                 }
             },
@@ -1234,26 +1313,28 @@
                 "position": "D",
                 "jerseyNumber": "3",
                 "height": 178,
-                "userCount": 5366,
+                "userCount": 6185,
                 "gender": "M",
                 "sofascoreId": "LDigne",
                 "id": 96538,
                 "marketValueCurrency": "EUR",
                 "dateOfBirthTimestamp": 743126400,
                 "proposedMarketValueRaw": {
-                    "value": 7400000,
+                    "value": 5500000,
                     "currency": "EUR"
                 },
                 "fieldTranslations": {
                     "nameTranslation": {
                         "ar": "لوكاس دينييه",
                         "bn": "লুকাস ডিগনে",
-                        "hi": "लुकास डिग्ने"
+                        "hi": "लुकास डिग्ने",
+                        "ru": "Лукас Динь"
                     },
                     "shortNameTranslation": {
                         "ar": "ل. دينييه",
                         "bn": "এল. ডিগনে",
-                        "hi": "एल. डिग्ने"
+                        "hi": "एल. डिग्ने",
+                        "ru": "Л. Динь"
                     }
                 }
             },
@@ -1266,26 +1347,28 @@
                 "position": "D",
                 "jerseyNumber": "19",
                 "height": 184,
-                "userCount": 27874,
+                "userCount": 29339,
                 "gender": "M",
                 "sofascoreId": "TheoHdez",
                 "id": 788027,
                 "marketValueCurrency": "EUR",
                 "dateOfBirthTimestamp": 876096000,
                 "proposedMarketValueRaw": {
-                    "value": 30000000,
+                    "value": 21000000,
                     "currency": "EUR"
                 },
                 "fieldTranslations": {
                     "nameTranslation": {
                         "ar": "ثيو هيرنانديز",
                         "bn": "থিও হার্নান্দেজ",
-                        "hi": "थियो हर्नांडेज़"
+                        "hi": "थियो हर्नांडेज़",
+                        "ru": "Тео Эрнандес"
                     },
                     "shortNameTranslation": {
                         "ar": "ث. هيرنانديز",
                         "bn": "টি. হার্নান্দেজ",
-                        "hi": "टी. हर्नांडेज़"
+                        "hi": "टी. हर्नांडेज़",
+                        "ru": "Т. Эрнандес"
                     }
                 }
             },
@@ -1307,26 +1390,28 @@
                 "position": "M",
                 "jerseyNumber": "10",
                 "height": 176,
-                "userCount": 101456,
+                "userCount": 105533,
                 "gender": "M",
                 "sofascoreId": "rayan_cherki",
                 "id": 979128,
                 "marketValueCurrency": "EUR",
                 "dateOfBirthTimestamp": 1061078400,
                 "proposedMarketValueRaw": {
-                    "value": 71000000,
+                    "value": 98000000,
                     "currency": "EUR"
                 },
                 "fieldTranslations": {
                     "nameTranslation": {
                         "ar": "ريان شرقي",
                         "bn": "চেরকি, রায়ান",
-                        "hi": "चेरकी, रायन"
+                        "hi": "चेरकी, रायन",
+                        "ru": "Раян Шерки"
                     },
                     "shortNameTranslation": {
                         "ar": "ر. شرقي",
                         "bn": "আর. চেরকি",
-                        "hi": "आर. चेरकी"
+                        "hi": "आर. चेरकी",
+                        "ru": "Р. Шерки"
                     }
                 }
             },
@@ -1339,7 +1424,7 @@
                 "position": "F",
                 "jerseyNumber": "10",
                 "height": 178,
-                "userCount": 300467,
+                "userCount": 335914,
                 "gender": "M",
                 "sofascoreId": "ODembélé",
                 "id": 818244,
@@ -1353,12 +1438,14 @@
                     "nameTranslation": {
                         "ar": "عثمان ديمبيلي",
                         "bn": "উসমান ডেম্বেলে",
-                        "hi": "उस्मान डेम्बेले"
+                        "hi": "उस्मान डेम्बेले",
+                        "ru": "Усман Дембеле"
                     },
                     "shortNameTranslation": {
                         "ar": "ع. ديمبيلي",
                         "bn": "ও. ডেম্বেলে",
-                        "hi": "ओ. डेम्बेले"
+                        "hi": "ओ. डेम्बेले",
+                        "ru": "У. Дембеле"
                     }
                 }
             },
@@ -1382,7 +1469,7 @@
                 "position": "M",
                 "jerseyNumber": "11",
                 "height": 184,
-                "userCount": 224798,
+                "userCount": 284925,
                 "gender": "M",
                 "sofascoreId": "MOlise",
                 "id": 978838,
@@ -1396,12 +1483,14 @@
                     "nameTranslation": {
                         "ar": "مايكل أوليس",
                         "bn": "মাইকেল ওলিস",
-                        "hi": "माइकल ओलिस"
+                        "hi": "माइकल ओलिस",
+                        "ru": "Майкл Олисе"
                     },
                     "shortNameTranslation": {
                         "ar": "م. أوليس",
                         "bn": "এম. ওলিস",
-                        "hi": "एम. ओलिस"
+                        "hi": "एम. ओलिस",
+                        "ru": "М. Олисе"
                     }
                 }
             },
@@ -1416,7 +1505,7 @@
                         "position": "M",
                         "jerseyNumber": "11",
                         "height": 184,
-                        "userCount": 224798,
+                        "userCount": 284925,
                         "gender": "M",
                         "sofascoreId": "MOlise",
                         "id": 978838,
@@ -1430,12 +1519,14 @@
                             "nameTranslation": {
                                 "ar": "مايكل أوليس",
                                 "bn": "মাইকেল ওলিস",
-                                "hi": "माइकल ओलिस"
+                                "hi": "माइकल ओलिस",
+                                "ru": "Майкл Олисе"
                             },
                             "shortNameTranslation": {
                                 "ar": "م. أوليس",
                                 "bn": "এম. ওলিস",
-                                "hi": "एम. ओलिस"
+                                "hi": "एम. ओलिस",
+                                "ru": "М. Олисе"
                             }
                         }
                     },
@@ -1466,8 +1557,9 @@
                         "position": "G",
                         "jerseyNumber": "1",
                         "height": 186,
-                        "userCount": 568,
+                        "userCount": 601,
                         "gender": "M",
+                        "sofascoreId": "b76nt7",
                         "id": 1154937,
                         "marketValueCurrency": "EUR",
                         "dateOfBirthTimestamp": 1121904000,
@@ -1477,10 +1569,12 @@
                         },
                         "fieldTranslations": {
                             "nameTranslation": {
-                                "ar": "تشارلز بيرس"
+                                "ar": "تشارلز بيرس",
+                                "ru": "Чарльз, Пирс"
                             },
                             "shortNameTranslation": {
-                                "ar": "ت. بيرس"
+                                "ar": "ت. بيرس",
+                                "ru": "П. Чарльз"
                             }
                         }
                     },
@@ -1505,25 +1599,28 @@
                 "position": "D",
                 "jerseyNumber": "5",
                 "height": 192,
-                "userCount": 10085,
+                "userCount": 11673,
                 "gender": "M",
+                "sofascoreId": "txiy85",
                 "id": 879674,
                 "marketValueCurrency": "EUR",
                 "dateOfBirthTimestamp": 954979200,
                 "proposedMarketValueRaw": {
-                    "value": 43000000,
+                    "value": 54000000,
                     "currency": "EUR"
                 },
                 "fieldTranslations": {
                     "nameTranslation": {
                         "ar": "ماكسنس لاكروآ",
                         "bn": "ম্যাক্সেন্স ল্যাক্রোইক্স",
-                        "hi": "मैक्सेंस लैक्रोइक्स"
+                        "hi": "मैक्सेंस लैक्रोइक्स",
+                        "ru": "Максенс Лакруа"
                     },
                     "shortNameTranslation": {
                         "ar": "م. لاكروآ",
                         "bn": "এম. ল্যাক্রোইক্স",
-                        "hi": "एम. लैक्रोइक्स"
+                        "hi": "एम. लैक्रोइक्स",
+                        "ru": "М. Лакруа"
                     }
                 }
             },
@@ -1536,26 +1633,28 @@
                 "position": "D",
                 "jerseyNumber": "2",
                 "height": 193,
-                "userCount": 47916,
+                "userCount": 50355,
                 "gender": "M",
                 "sofascoreId": "WSaliba4",
                 "id": 941168,
                 "marketValueCurrency": "EUR",
                 "dateOfBirthTimestamp": 985392000,
                 "proposedMarketValueRaw": {
-                    "value": 85000000,
+                    "value": 94000000,
                     "currency": "EUR"
                 },
                 "fieldTranslations": {
                     "nameTranslation": {
                         "ar": "ويليام ساليبا",
                         "bn": "উইলিয়াম সালিবা",
-                        "hi": "विलियम सलीबा"
+                        "hi": "विलियम सलीबा",
+                        "ru": "Уильям Салиба"
                     },
                     "shortNameTranslation": {
                         "ar": "و. ساليبا",
                         "bn": "ডব্লিউ. সালিবা",
-                        "hi": "डब्लू. सलीबा"
+                        "hi": "डब्लू. सलीबा",
+                        "ru": "У. Салиба"
                     }
                 }
             },
@@ -1575,7 +1674,7 @@
                 "position": "D",
                 "jerseyNumber": "2",
                 "height": 179,
-                "userCount": 21334,
+                "userCount": 22397,
                 "gender": "M",
                 "sofascoreId": "malogst",
                 "id": 996958,
@@ -1589,12 +1688,14 @@
                     "nameTranslation": {
                         "ar": "مالو غوستو",
                         "bn": "গুস্টো, মালো",
-                        "hi": "गुस्टो, मालो"
+                        "hi": "गुस्टो, मालो",
+                        "ru": "Мало Густо"
                     },
                     "shortNameTranslation": {
                         "ar": "م. غوستو",
                         "bn": "এম. গুস্টো",
-                        "hi": "एम. गुस्टो"
+                        "hi": "एम. गुस्टो",
+                        "ru": "М. Густо"
                     }
                 }
             },
@@ -1607,26 +1708,28 @@
                 "position": "D",
                 "jerseyNumber": "23",
                 "height": 180,
-                "userCount": 162559,
+                "userCount": 165109,
                 "gender": "M",
                 "sofascoreId": "JKoundé",
                 "id": 827212,
                 "marketValueCurrency": "EUR",
                 "dateOfBirthTimestamp": 910828800,
                 "proposedMarketValueRaw": {
-                    "value": 69000000,
+                    "value": 64000000,
                     "currency": "EUR"
                 },
                 "fieldTranslations": {
                     "nameTranslation": {
                         "ar": "جوليس كوندي",
                         "bn": "জুলস কাউন্ডে",
-                        "hi": "जूल्स कौंडे"
+                        "hi": "जूल्स कौंडे",
+                        "ru": "Жюль Кунде"
                     },
                     "shortNameTranslation": {
                         "ar": "ج. كوندي",
                         "bn": "জে. কাউন্ডে",
-                        "hi": "जे. कौंडे"
+                        "hi": "जे. कौंडे",
+                        "ru": "Ж. Кунде"
                     }
                 }
             },
@@ -1670,7 +1773,7 @@
                 "position": "M",
                 "jerseyNumber": "11",
                 "height": 184,
-                "userCount": 224798,
+                "userCount": 284925,
                 "gender": "M",
                 "sofascoreId": "MOlise",
                 "id": 978838,
@@ -1684,12 +1787,14 @@
                     "nameTranslation": {
                         "ar": "مايكل أوليس",
                         "bn": "মাইকেল ওলিস",
-                        "hi": "माइकल ओलिस"
+                        "hi": "माइकल ओलिस",
+                        "ru": "Майкл Олисе"
                     },
                     "shortNameTranslation": {
                         "ar": "م. أوليس",
                         "bn": "এম. ওলিস",
-                        "hi": "एम. ओलिस"
+                        "hi": "एम. ओलिस",
+                        "ru": "М. Олисе"
                     }
                 }
             },
@@ -1704,7 +1809,7 @@
                         "position": "M",
                         "jerseyNumber": "11",
                         "height": 184,
-                        "userCount": 224798,
+                        "userCount": 284925,
                         "gender": "M",
                         "sofascoreId": "MOlise",
                         "id": 978838,
@@ -1718,12 +1823,14 @@
                             "nameTranslation": {
                                 "ar": "مايكل أوليس",
                                 "bn": "মাইকেল ওলিস",
-                                "hi": "माइकल ओलिस"
+                                "hi": "माइकल ओलिस",
+                                "ru": "Майкл Олисе"
                             },
                             "shortNameTranslation": {
                                 "ar": "م. أوليس",
                                 "bn": "এম. ওলিস",
-                                "hi": "एम. ओलिस"
+                                "hi": "एम. ओलिस",
+                                "ru": "М. Олисе"
                             }
                         }
                     },
@@ -1735,8 +1842,8 @@
                         "y": 46.4
                     },
                     "gkCoordinates": {
-                        "x": 99,
-                        "y": 50.4
+                        "x": 98.8,
+                        "y": 50.7
                     },
                     "goalShotCoordinates": {
                         "x": 100,
@@ -1754,8 +1861,9 @@
                         "position": "G",
                         "jerseyNumber": "1",
                         "height": 186,
-                        "userCount": 568,
+                        "userCount": 601,
                         "gender": "M",
+                        "sofascoreId": "b76nt7",
                         "id": 1154937,
                         "marketValueCurrency": "EUR",
                         "dateOfBirthTimestamp": 1121904000,
@@ -1765,10 +1873,12 @@
                         },
                         "fieldTranslations": {
                             "nameTranslation": {
-                                "ar": "تشارلز بيرس"
+                                "ar": "تشارلز بيرس",
+                                "ru": "Чарльз, Пирс"
                             },
                             "shortNameTranslation": {
-                                "ar": "ت. بيرس"
+                                "ar": "ت. بيرس",
+                                "ru": "П. Чарльз"
                             }
                         }
                     },

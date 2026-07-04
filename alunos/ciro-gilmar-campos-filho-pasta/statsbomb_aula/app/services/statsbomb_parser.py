@@ -5,6 +5,47 @@ import math
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 DATA_DIR = os.path.join(BASE_DIR, "data", "raw")
 
+TEAM_TRANSLATIONS = {
+    "Argentina": "Argentina",
+    "Australia": "Austrália",
+    "Belgium": "Bélgica",
+    "Brazil": "Brasil",
+    "Cameroon": "Camarões",
+    "Canada": "Canadá",
+    "Costa Rica": "Costa Rica",
+    "Croatia": "Croácia",
+    "Denmark": "Dinamarca",
+    "Ecuador": "Equador",
+    "England": "Inglaterra",
+    "France": "França",
+    "Germany": "Alemanha",
+    "Ghana": "Gana",
+    "Iran": "Irã",
+    "Japan": "Japão",
+    "Mexico": "México",
+    "Morocco": "Marrocos",
+    "Netherlands": "Holanda",
+    "Poland": "Polônia",
+    "Portugal": "Portugal",
+    "Qatar": "Catar",
+    "Saudi Arabia": "Arábia Saudita",
+    "Senegal": "Senegal",
+    "Serbia": "Sérvia",
+    "South Korea": "Coreia do Sul",
+    "Spain": "Espanha",
+    "Switzerland": "Suíça",
+    "Tunisia": "Tunísia",
+    "United States": "Estados Unidos",
+    "Uruguay": "Uruguai",
+    "Wales": "País de Gales"
+}
+
+def translate_team(name):
+    if not name:
+        return name
+    return TEAM_TRANSLATIONS.get(name, name)
+
+
 def replace_nan(obj):
     if isinstance(obj, float) and math.isnan(obj):
         return None
@@ -20,7 +61,13 @@ def get_matches():
         return []
     with open(matches_file, "r", encoding="utf-8") as f:
         data = json.load(f)
-        return replace_nan(data)
+        # Filter matches that actually have data folders in data/raw
+        filtered_data = []
+        for m in data:
+            match_id = m.get("match_id")
+            if match_id and os.path.exists(os.path.join(DATA_DIR, f"match_{match_id}")):
+                filtered_data.append(m)
+        return replace_nan(filtered_data)
 
 def get_match_events(match_id):
     events_file = os.path.join(DATA_DIR, f"match_{match_id}", "events.json")

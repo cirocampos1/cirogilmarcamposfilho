@@ -5,6 +5,7 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from mplsoccer import Pitch
 import seaborn as sns
+from app.services import statsbomb_parser
 
 def get_base64_image(fig):
     buf = io.BytesIO()
@@ -100,10 +101,12 @@ def plot_jointgrid_shotmap(shots, lineups):
         elif 'right' in axs: sns.kdeplot(y=away_y, color=away_color, fill=True, ax=axs['right'])
 
     # Pitch scatter
+    home_label = statsbomb_parser.translate_team(home_team)
+    away_label = statsbomb_parser.translate_team(away_team)
     if home_x:
-        pitch.scatter(home_x, home_y, s=100, color=home_color, edgecolors='white', alpha=0.8, ax=axs['pitch'], label=home_team)
+        pitch.scatter(home_x, home_y, s=100, color=home_color, edgecolors='white', alpha=0.8, ax=axs['pitch'], label=home_label)
     if away_x:
-        pitch.scatter(away_x, away_y, s=100, color=away_color, edgecolors='white', alpha=0.8, ax=axs['pitch'], label=away_team)
+        pitch.scatter(away_x, away_y, s=100, color=away_color, edgecolors='white', alpha=0.8, ax=axs['pitch'], label=away_label)
 
     axs['pitch'].legend(loc='lower center', ncol=2, frameon=False, labelcolor='white')
 
@@ -206,7 +209,8 @@ def plot_pass_network(passes, lineups):
         short_name = name_parts[-1] if len(name_parts) > 1 else name_parts[0]
         ax.text(loc[0], loc[1] + 2, short_name, color='white', fontsize=9, ha='center', zorder=3)
         
-    ax.set_title(f"Rede de Passes: {home_team}", color='white', fontsize=14)
+    home_label = statsbomb_parser.translate_team(home_team)
+    ax.set_title(f"Rede de Passes: {home_label}", color='white', fontsize=14)
     return get_base64_image(fig)
 
 def plot_xg_flow(xg_data, home_team, away_team):

@@ -12,11 +12,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         body { 
-            background-color: #0B0F19; 
+            background-color: #1A0006; 
             color: #F8FAFC; 
             font-family: 'Outfit', sans-serif; 
-            background-image: radial-gradient(circle at 10% 20%, rgba(16, 185, 129, 0.05) 0%, transparent 40%),
-                              radial-gradient(circle at 90% 80%, rgba(59, 130, 246, 0.05) 0%, transparent 40%);
+            background-image: radial-gradient(circle at 20% 20%, rgba(138, 21, 56, 0.35) 0%, transparent 55%),
+                              linear-gradient(135deg, #8A1538 0%, #100004 100%);
         }
         
         .glass-panel { 
@@ -73,7 +73,7 @@
         }
         
         ::-webkit-scrollbar { width: 6px; height: 6px; }
-        ::-webkit-scrollbar-track { background: #0B0F19; }
+        ::-webkit-scrollbar-track { background: #0F0005; }
         ::-webkit-scrollbar-thumb { background: #1E293B; border-radius: 3px; }
         ::-webkit-scrollbar-thumb:hover { background: #334155; }
     </style>
@@ -112,7 +112,7 @@
         </aside>
 
         <!-- Main Content -->
-        <main class="flex-1 flex flex-col overflow-y-auto relative bg-[#0D1321]/30">
+        <main class="flex-1 flex flex-col overflow-y-auto relative bg-[#0F0005]/20">
             <!-- Empty State -->
             <div id="empty-state" class="absolute inset-0 flex items-center justify-center text-slate-500 flex-col p-8 transition-all duration-300">
                 <div class="w-16 h-16 rounded-2xl bg-slate-900/50 border border-slate-800 flex items-center justify-center mb-4 shadow-inner">
@@ -464,6 +464,9 @@
 
             try {
                 const response = await fetch(`/api/matches/${matchId}`);
+                if (!response.ok) {
+                    throw new Error("Não foi possível carregar os detalhes desta partida.");
+                }
                 const data = await response.json();
                 
                 if (data.summary) {
@@ -503,6 +506,9 @@
 
                 // Load players for match
                 const playersResponse = await fetch(`/api/matches/${matchId}/players`);
+                if (!playersResponse.ok) {
+                    throw new Error("Não foi possível carregar a lista de jogadores.");
+                }
                 const playersData = await playersResponse.json();
                 
                 const selectEl = document.getElementById('player-select');
@@ -527,7 +533,7 @@
                 
             } catch (err) {
                 console.error(err);
-                alert("Erro ao analisar partida. Verifique se os dados estão corretos no servidor.");
+                alert("Erro ao analisar partida: " + (err.message || err));
             } finally {
                 document.getElementById('loading-overlay').classList.add('hidden');
             }
