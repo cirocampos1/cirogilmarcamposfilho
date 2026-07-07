@@ -8,4 +8,5 @@
 - [x] Atualizar `plot_jointgrid_shotmap` em `plotter.py` para usar labels em português
 - [x] Atualizar `plot_pass_network` em `plotter.py` para usar título com nome em português
 - [x] Executar testes de API para validar integridade
-- [ ] Verificar no navegador se os nomes e gráficos aparecem traduzidos
+- [x] Verificar no navegador se os nomes e gráficos aparecem traduzidos
+- [x] Formatar as datas no padrão Dia/mês/ano (DD/MM/YYYY)

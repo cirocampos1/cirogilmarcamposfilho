@@ -9,6 +9,14 @@ def test_get_matches():
     data = response.json()
     assert "matches" in data
     assert len(data["matches"]) > 0
+    import re
+    assert "match_date" in data["matches"][0]
+    assert re.match(r"^\d{2}/\d{2}/\d{4}$", data["matches"][0]["match_date"])
+    assert data["matches"][0]["competition_stage"] in [
+        "Fase de Grupos", "Oitavas de Final", "Quartas de Final", "Semifinais", "Disputa do 3º Lugar", "Final"
+    ]
+    assert "kick_off" in data["matches"][0]
+    assert re.match(r"^\d{2}:\d{2}$", data["matches"][0]["kick_off"])
 
 def test_get_match_detail():
     # Use the test match ID 3857296
@@ -20,6 +28,12 @@ def test_get_match_detail():
     assert "images" in data
     assert "shotmap" in data["images"]
     assert "pass_network" in data["images"]
+    import re
+    assert "date" in data["summary"]
+    assert re.match(r"^\d{2}/\d{2}/\d{4}$", data["summary"]["date"])
+    assert data["summary"]["competition_stage"] == "Fase de Grupos"
+    assert "kick_off" in data["summary"]
+    assert re.match(r"^\d{2}:\d{2}$", data["summary"]["kick_off"])
 
 def test_get_match_players():
     response = client.get("/api/matches/3857296/players")

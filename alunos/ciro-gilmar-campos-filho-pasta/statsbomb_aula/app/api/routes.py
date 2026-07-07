@@ -12,6 +12,28 @@ def get_matches():
         m_copy = dict(m)
         m_copy["home_team"] = statsbomb_parser.translate_team(m.get("home_team"))
         m_copy["away_team"] = statsbomb_parser.translate_team(m.get("away_team"))
+        m_copy["competition_stage"] = statsbomb_parser.translate_stage(m.get("competition_stage"))
+        
+        # Format match_date to DD/MM/YYYY
+        date_str = m.get("match_date")
+        if date_str:
+            try:
+                parts = date_str.split("-")
+                if len(parts) == 3:
+                    m_copy["match_date"] = f"{parts[2]}/{parts[1]}/{parts[0]}"
+            except Exception:
+                pass
+
+        # Format kick_off to HH:MM
+        kick_off_str = m.get("kick_off")
+        if kick_off_str:
+            try:
+                parts = kick_off_str.split(":")
+                if len(parts) >= 2:
+                    m_copy["kick_off"] = f"{parts[0]}:{parts[1]}"
+            except Exception:
+                pass
+                
         translated_matches.append(m_copy)
     return {"matches": translated_matches}
 
@@ -47,17 +69,39 @@ def get_match_detail(match_id: int):
     xg_flow_b64 = plotter.plot_xg_flow(xg_flow_data, home_team_pt, away_team_pt)
     pressure_heatmap_b64 = plotter.plot_pressure_heatmap(pressures, home_team, away_team)
 
+    # Format match_date to DD/MM/YYYY
+    date_str = match_info.get("match_date")
+    formatted_date = date_str
+    if date_str:
+        try:
+            parts = date_str.split("-")
+            if len(parts) == 3:
+                formatted_date = f"{parts[2]}/{parts[1]}/{parts[0]}"
+        except Exception:
+            pass
+
+    # Format kick_off to HH:MM
+    kick_off_str = match_info.get("kick_off")
+    formatted_kick_off = kick_off_str
+    if kick_off_str:
+        try:
+            parts = kick_off_str.split(":")
+            if len(parts) >= 2:
+                formatted_kick_off = f"{parts[0]}:{parts[1]}"
+        except Exception:
+            pass
+
     summary = {
         "total_shots": len(shots),
         "total_passes": len(passes),
-        "competition_stage": match_info.get("competition_stage", ""),
+        "competition_stage": statsbomb_parser.translate_stage(match_info.get("competition_stage", "")),
         "stadium": f'{match_info.get("stadium", "")}, {match_info.get("stadium_country_name", "")}',
         "referee": match_info.get("referee", ""),
         "home_manager": match_info.get("home_managers", ""),
         "away_manager": match_info.get("away_managers", ""),
         "score": f'{match_info.get("home_score", 0)} - {match_info.get("away_score", 0)}',
-        "date": match_info.get("match_date"),
-        "kick_off": match_info.get("kick_off"),
+        "date": formatted_date,
+        "kick_off": formatted_kick_off,
         "advanced_metrics": adv_metrics
     }
 

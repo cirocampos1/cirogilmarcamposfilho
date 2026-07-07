@@ -46,6 +46,21 @@ def translate_team(name):
     return TEAM_TRANSLATIONS.get(name, name)
 
 
+STAGE_TRANSLATIONS = {
+    "Group Stage": "Fase de Grupos",
+    "Round of 16": "Oitavas de Final",
+    "Quarter-finals": "Quartas de Final",
+    "Semi-finals": "Semifinais",
+    "3rd Place Final": "Disputa do 3º Lugar",
+    "Final": "Final"
+}
+
+def translate_stage(stage):
+    if not stage:
+        return stage
+    return STAGE_TRANSLATIONS.get(stage, stage)
+
+
 def replace_nan(obj):
     if isinstance(obj, float) and math.isnan(obj):
         return None
